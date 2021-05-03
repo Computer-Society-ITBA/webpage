@@ -5,9 +5,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="App-header bg-brand_primary">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p className="text-typography_primary">
           Welcome to CS ITBA!
         </p>
         <a

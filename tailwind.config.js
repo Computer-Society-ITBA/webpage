@@ -7,7 +7,7 @@ module.exports = {
         'brand_primary': '#FFA300',
         'brand_secondary': '#00B5E2',
         'brand_tertiary': '#75787B',
-        'text_typography_primary': '#000000'
+        'typography_primary': '#000000'
       }
     },
   },
