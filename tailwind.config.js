@@ -13,6 +13,15 @@ module.exports = {
         'text': ['Roboto', 'sans-serif'],
         'highlight': ['Montserrat', 'sans-serif'] 
       },
+      fontSize: {
+        'sm': '0.75rem',
+        'base': '1rem',
+        'h1': '3rem',
+        'h2': '2.5rem',
+        'h3': '2rem',
+        'h4': '1.5rem',
+        'h5': '1.25rem'
+      },
     },
   },
   variants: {
