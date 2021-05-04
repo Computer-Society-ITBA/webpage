@@ -4,10 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand_primary': '#FFA300',
-        'brand_secondary': '#00B5E2',
+        'brand_primary': '#F67C01',
+        'brand_secondary': '#FFB200',
         'brand_tertiary': '#75787B',
-        'typography_primary': '#000000'
+        'typography_primary': '#212121'
       },
       fontFamily: {
         'text': ['Roboto', 'sans-serif'],
@@ -16,8 +16,8 @@ module.exports = {
       fontSize: {
         'sm': '0.75rem',
         'base': '1rem',
-        'h1': '3rem',
-        'h2': '2.5rem',
+        'h1': '4rem',
+        'h2': '3rem',
         'h3': '2rem',
         'h4': '1.5rem',
         'h5': '1.25rem'
