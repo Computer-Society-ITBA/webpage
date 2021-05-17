@@ -10,10 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 // Router
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  BrowserRouter as Router
 } from "react-router-dom";
 
 function App() {
