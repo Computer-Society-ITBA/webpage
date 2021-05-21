@@ -2,7 +2,7 @@ module.exports = {
   purge: {
     content:['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
     options: {
-      whitelist: [/^bg-/]
+      whitelistPatterns: [/^bg-/]
      }
   },
   darkMode: false, // or 'media' or 'class'
