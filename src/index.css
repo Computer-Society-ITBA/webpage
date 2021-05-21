@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 html, body, #root, #App {
-  @apply text-typography_primary font-text w-screen h-screen;
+  @apply text-typography_primary font-text w-full h-screen;
 }
 
 /* Headings */
