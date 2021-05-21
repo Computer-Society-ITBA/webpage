@@ -3,24 +3,50 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply text-typography_primary font-text;
+html, body, #root, #App {
+  @apply text-typography_primary font-text w-screen h-screen;
 }
 
 h1 {
-  @apply font-highlight;
+  @apply font-highlight text-h1-sm leading-h1-sm mb-8;
 }
 
 h2 {
-  @apply font-highlight;
+  @apply font-highlight text-h2-sm leading-h2-sm mb-6;
 }
 
 h3 {
-  @apply font-highlight;
+  @apply font-highlight text-h3-sm leading-h3-sm mb-4;
 }
 
 h4 {
-  @apply font-highlight;
+  @apply font-highlight text-h4-sm leading-h4-sm mb-2;
+}
+
+h5 {
+  @apply font-highlight text-h5-sm leading-h5-sm mb-1;
+}
+
+@screen sm {
+  h1 {
+    @apply font-highlight text-h1 leading-h1;
+  }
+  
+  h2 {
+    @apply font-highlight text-h2 leading-h2;
+  }
+  
+  h3 {
+    @apply font-highlight text-h3 leading-h3;
+  }
+  
+  h4 {
+    @apply font-highlight text-h4 leading-h4;
+  }
+
+  h5 {
+    @apply font-highlight text-h5 leading-h5;
+  }
 }
 
 body {
