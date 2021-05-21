@@ -44,14 +44,14 @@ function Hero () {
                 </SplitText>
             </motion.div>
         </h4>
-        <h1>
+        <h1 className="mb-2 sm:mb-0">
             <AnimatePresence>
                 {(
                 <motion.div
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className='text-brand_primary font-bold mt-12 mb-2 sm:mb-0'
+                    className='text-brand_primary font-bold mt-12'
                 >
                     <SplitText
                     initial={{ y: '100%' }}

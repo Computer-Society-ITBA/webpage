@@ -1,5 +1,10 @@
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  purge: {
+    content:['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+    options: {
+      safelist: [/^bg-/]
+    }
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -49,7 +54,8 @@ module.exports = {
         '-25_': '-25%'
       },
       height: {
-        'screen-half': '50vh'
+        'screen-half': '50vh',
+        'screen-3/4': '75vh'
       }
     },
   },
