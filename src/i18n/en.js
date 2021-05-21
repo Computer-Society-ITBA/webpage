@@ -1,5 +1,9 @@
 const i18n_en = {
-    welcome_wip: 'Welcome to CS ITBA, this is a work in progress!'
+    welcome: {
+        greet: 'We are',
+        cs: 'IEEE Computer Society',
+        itba: 'Instituto Tecnológico de Buenos Aires'
+    }
 }
 
 export default i18n_en;
