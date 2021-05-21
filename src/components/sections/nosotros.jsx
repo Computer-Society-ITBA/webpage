@@ -9,7 +9,7 @@ import { InView } from 'react-intersection-observer';
 const Section = React.lazy(() => import('../section'));
 
 function Nosotros () {
-  return (<Section id="about-us" bgColor="brand_primary" sizeMobile="full" size="almost" sizeLg="half" flex="only">
+  return (<Section id="about-us" bgColor="bg-brand_primary" sizeMobile="full" size="almost" sizeLg="half" flex="only">
       <div className="flex flex-col sm:flex-row items-center">
         <InView threshold={0.5}>
           {({ref, inView}) => (
