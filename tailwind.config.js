@@ -49,7 +49,8 @@ module.exports = {
         '-25_': '-25%'
       },
       height: {
-        'screen-half': '50vh'
+        'screen-half': '50vh',
+        'screen-3/4': '75vh'
       }
     },
   },
