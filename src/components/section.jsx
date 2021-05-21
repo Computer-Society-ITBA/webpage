@@ -9,7 +9,7 @@ function Section (props) {
     const flex = props.flex === 'col' ? 'flex flex-col' : (props.flex === 'row' ? 'flex flex-row' : '')
 
     return (
-    <section className={classlist([
+    <section id={props.id} className={classlist([
         alignment,
         bgColor,
         padding,
