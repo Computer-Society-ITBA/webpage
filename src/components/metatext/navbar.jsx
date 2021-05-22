@@ -32,8 +32,8 @@ function NavBar() {
           <MenuToggle toggle={() => setCollapsed(!collapsed)} />
         </motion.div>
         {(width > 1020 || !collapsed) && (
-          <div class="w-full block flex-grow lg:background-black lg:mr-12 lg:flex lg:items-center lg:w-auto">
-            <div class=" font-highlight-semibold text-brand_primary  text-lg lg:flex-grow lg:flex lg:justify-end">
+          <div class="w-full flex-grow lg:mr-12 lg:flex lg:items-center lg:w-auto">
+            <div class="font-highlight-semibold text-brand_primary text-lg lg:flex-grow lg:flex lg:justify-end">
               <NavItem>TEST</NavItem>
               <NavItem>TEST</NavItem>
               <NavItem>TEST</NavItem>
