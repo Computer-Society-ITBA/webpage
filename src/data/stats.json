@@ -1,0 +1,14 @@
+[
+    {
+        "stat": "stats.stat_events.stat",
+        "title": "stats.stat_events.title"
+    },
+    {
+        "stat": "stats.stat_participants.stat",
+        "title": "stats.stat_participants.title"
+    },
+    {
+        "stat": "stats.stat_countries.stat",
+        "title": "stats.stat_countries.title"
+    }
+]

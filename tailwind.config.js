@@ -21,6 +21,7 @@ module.exports = {
       fontSize: {
         'sm': '0.75rem',
         'base': '1rem',
+        'highlight': '5rem',
         'h1': '4rem',
         'h2': '3rem',
         'h3': '2rem',
@@ -35,6 +36,7 @@ module.exports = {
       lineHeight: {
         'sm': '1rem',
         'base': '1.25rem',
+        'highlight': '5.5rem',
         'h1': '4.25rem',
         'h2': '3.25rem',
         'h3': '2.25rem',

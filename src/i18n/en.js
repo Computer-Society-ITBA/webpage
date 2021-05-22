@@ -13,6 +13,26 @@ const i18n_en = {
     work_with_us: {
         button: 'Contact us',
         work: 'Are you interested in working with us?'
+    },
+    stats: {
+        stat_events: {
+            stat: '+20',
+            title: 'Events held'
+        },
+        stat_participants: {
+            stat: '+2,500',
+            title: 'Participants in events'
+        },
+        stat_countries: {
+            stat: '+10',
+            title: 'Countries reached'
+        }
+    },
+    mision_vision: {
+        mision: 'Mision',
+        vision: 'Vision',
+        mision_text: '"Encourage interest and spread knowledge about technology"',
+        vision_text: '"Complement academic training with the use of current tools and technologies as the way to train better professionals"'
     }
 }
 
