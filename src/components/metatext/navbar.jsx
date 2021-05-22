@@ -9,7 +9,7 @@ function NavBar() {
     <>
       <nav class="flex items-center justify-between flex-wrap p-3 sticky top-0 z-50 bg-white bg-opacity-90">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
-          <a href="#">
+          <a href="/#">
             <img src={logo} alt="Computer Society Logo" class="w-12 ml-5" />
           </a>
         </div>
@@ -33,25 +33,25 @@ function NavBar() {
           <div class="w-full block flex-grow lg:background-black lg:mr-12 lg:flex lg:items-center lg:w-auto">
             <div class=" font-highlight-semibold text-brand_primary  text-lg lg:flex-grow lg:flex lg:justify-end">
               <a
-                href="#sect1"
+                href="/#"
                 class="w-20 block lg:inline-block hover:text-brand_secondary mt-4 lg:mt-0 lg:mr-8 lg:w-auto"
               >
                 TEST
               </a>
               <a
-                href="#sect2"
+                href="/#"
                 class="w-20 block lg:inline-block hover:text-brand_secondary mt-4 lg:mt-0 lg:mr-8 lg:w-auto"
               >
                 TEST
               </a>
               <a
-                href="#sect3"
+                href="/#"
                 class="w-20 block lg:inline-block hover:text-brand_secondary mt-4 lg:mt-0 lg:mr-8 lg:w-auto"
               >
                 TEST
               </a>
               <a
-                href="#sect4"
+                href="/#"
                 class="w-20 block lg:inline-block hover:text-brand_secondary mt-4 lg:mt-0 lg:mr-8 lg:w-auto"
               >
                 TEST
