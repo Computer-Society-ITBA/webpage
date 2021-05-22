@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
+import useWindowDimensions from "../../hooks/useWindowDimensions";
+import { AnimatePresence, motion, useAnimation } from 'framer-motion'
 // Translations
 import i18n from '../../i18n/index.js';
 
 // Icons
 import Icon from '@mdi/react'
-import { mdiInstagram, mdiLinkedin, mdiWeb } from '@mdi/js';
+import { mdiInstagram, mdiLinkedin, mdiWeb, mdiChevronLeft, mdiChevronRight } from '@mdi/js';
 
 import team from '../../data/team'
 const teamImages = require.context("../../images/team/", true, /^.*$/)
@@ -12,14 +14,40 @@ const teamImages = require.context("../../images/team/", true, /^.*$/)
 // Components
 const Section = React.lazy(() => import('../section'));
 
+const cardWidth = 225;
+
 function Team () {
-  return (<Section id="our-team" bgColor="bg-white" textAlignment="center" className="h-full">
+  // Windowd width
+  const { width } = useWindowDimensions();
+  // Number of visible columns of cards
+  let visiblePages = Math.floor(width/cardWidth)
+  // Total number of card columns
+  let totalPages = Math.ceil(team.length/2)
+  // Limit to pages
+  const pageLimit = totalPages - visiblePages
+  // Slider Page
+  const [page, setPage] = useState(0);
+  const handleLeftClick = () => {
+    if (page > 0) {
+      setPage(page - 1)
+    }
+  }
+  const handleRightClick = () => {
+    if (page < pageLimit) {
+      setPage(page + 1)
+    }
+  }
+
+  return (<Section id="our-team" bgColor="bg-white" textAlignment="center" className="h-full overflow-hidden">
       <h2>{i18n.t('team.title')}</h2>
-      <div className="flex flex-row flex-wrap h-full">
+      <motion.div 
+      className="grid grid-rows-2 grid-flow-col w-full"
+      animate={{x: -1 * page * cardWidth}}
+      >
         {
           team.map((person, index) => {
             return (
-              <div key={index} className="flex flex-col w-6/12 sm:w-4/12 md:w-3/12 lg:w-2/10 h-auto">
+              <div key={index} className="flex flex-col h-auto team-card">
                 <div className="flex flex-col rounded-xl items-center shadow-xl p-2 m-4 mb-6 h-full">
                   <img className="rounded-full w-9/12" src={teamImages(`./${person.image.src}`).default} alt={i18n.t(person.image.alt)} />
                   <h4>{person.name}</h4>
@@ -59,6 +87,25 @@ function Team () {
             )
           })
         }
+      </motion.div>
+      <div className="flex flex-row w-full items-center justify-center">
+        <button 
+        disabled={page === 0} 
+        onClick={handleLeftClick} 
+        className={'focus:outline-none mr-4 rounded-full bg-light ' + (page === 0 ? 'opacity-50' : 'transition duration-150 hover:text-brand_primary')}>
+          <Icon path={mdiChevronLeft}
+          size={3}
+          />
+        </button>
+        <button 
+        disabled={page >= pageLimit} 
+        onClick={handleRightClick}
+        className={'focus:outline-none rounded-full bg-light ' + (page >= pageLimit ? 'opacity-50' : 'transition duration-150 hover:text-brand_primary')}
+        >
+          <Icon path={mdiChevronRight}
+          size={3}
+          />
+        </button>
       </div>
     </Section>)
 }

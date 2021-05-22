@@ -60,3 +60,8 @@ h5 {
 p {
   @apply font-text text-base leading-base;
 }
+
+.team-card {
+  min-width: 225px;
+  max-width: 225px;
+}

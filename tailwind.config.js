@@ -12,7 +12,8 @@ module.exports = {
         'brand_primary': '#F67C01',
         'brand_secondary': '#FFB200',
         'brand_tertiary': '#75787B',
-        'typography_primary': '#212121'
+        'typography_primary': '#212121',
+        'light': '#F7F7F7'
       },
       fontFamily: {
         'text': ['Roboto', 'sans-serif'],
