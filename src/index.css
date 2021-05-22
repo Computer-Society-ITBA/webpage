@@ -14,19 +14,19 @@ html, body, #root, #App {
 /* Headings */
 
 h1 {
-  @apply font-highlight text-h1-sm leading-h1-sm mb-8;
+  @apply font-highlight;
 }
 
 h2 {
-  @apply font-highlight text-h2-sm leading-h2-sm mb-6;
+  @apply font-highlight;
 }
 
 h3 {
-  @apply font-highlight text-h3-sm leading-h3-sm mb-4;
+  @apply font-highlight;
 }
 
 h4 {
-  @apply font-highlight text-h4-sm leading-h4-sm mb-2;
+  @apply font-highlight;
 }
 
 h5 {

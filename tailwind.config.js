@@ -1,10 +1,5 @@
 module.exports = {
-  purge: {
-    content:['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    options: {
-      safelist: [/^bg-/]
-    }
-  },
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -27,12 +22,7 @@ module.exports = {
         'h2': '3rem',
         'h3': '2rem',
         'h4': '1.5rem',
-        'h5': '1.25rem',
-        'h1-sm': '3rem',
-        'h2-sm': '2.25rem',
-        'h3-sm': '1.75rem',
-        'h4-sm': '1.5rem',
-        'h5-sm': '1.25rem'
+        'h5': '1.25rem'
       },
       lineHeight: {
         'sm': '1rem',
