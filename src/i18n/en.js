@@ -10,6 +10,20 @@ const i18n_en = {
         we_do: 'What do we do',
         we_do_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed tempor tellus, nec mattis arcu. Fusce in leo eu felis bibendum posuere. Vestibulum vel porttitor lectus, eget dictum massa. Nullam commodo dui ligula, eget imperdiet justo fermentum vitae. Sed elementum tortor ornare urna venenatis pellentesque. Nam tempus, urna ut imperdiet hendrerit, nisl erat aliquam risus, a placerat justo est ac magna. Sed sed mauris pellentesque diam eleifend eleifend.'
     },
+    stats: {
+        stat_events: {
+            stat: '+20',
+            title: 'Events held'
+        },
+        stat_participants: {
+            stat: '+2,500',
+            title: 'Participants in events'
+        },
+        stat_countries: {
+            stat: '+10',
+            title: 'Countries reached'
+        }
+    },
     mision_vision: {
         mision: 'Mision',
         vision: 'Vision',
