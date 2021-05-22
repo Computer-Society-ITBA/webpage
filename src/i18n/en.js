@@ -52,6 +52,14 @@ const i18n_en = {
     },
     contact: {
         title: 'Contact'
+    },
+    footer: {
+        love_1: 'Made with',
+        love_2: 'by IEEE Computer Society ITBA',
+        nav: {
+            about: "About",
+            future_events: "Future Events"
+        }
     }
 }
 

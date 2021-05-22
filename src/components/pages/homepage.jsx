@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-const NavBar = React.lazy(() => import('../metatext/navbar'));
+const Footer = React.lazy(() => import('../sections/footer'));
 const Hero = React.lazy(() => import('../sections/hero'));
 const MisionVision = React.lazy(() => import('../sections/mision_vision'));
+const NavBar = React.lazy(() => import('../metatext/navbar'));
 const Nosotros = React.lazy(() => import('../sections/nosotros'));
 const PastEvents = React.lazy(() => import('../sections/past_events'));
 const Sponsors = React.lazy(() => import('../sections/sponsors'));
@@ -24,6 +25,7 @@ class Homepage extends Component {
         <WorkWithUs/>
         <Team/>
         <Sponsors/>
+        <Footer/>
     </React.Fragment>
   }
 }
