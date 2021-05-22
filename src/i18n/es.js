@@ -48,6 +48,14 @@ const i18n_es = {
     },
     contact: {
         title: 'Contacto'
+    },
+    footer: {
+        love_1: 'Hecho con',
+        love_2: 'por IEEE Computer Society ITBA',
+        nav: {
+            about: "Nosotros",
+            future_events: "Próximos Eventos"
+        }
     }
 }
 

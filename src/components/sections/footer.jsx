@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { SplitText } from '../../animations/SplitText'
-import { AnimatePresence, motion, useAnimation } from 'framer-motion'
+import React from 'react';
 import i18n from '../../i18n/index.js';
 import logoCompleto from '../../images/logo_completo.png';
 
@@ -24,7 +22,7 @@ function Footer () {
                 {
                     footer.nav.map((item, index) => {
                         return (
-                            <a key={index} href={item.href} target="_self" className="mx-2 text-h5 leading-h5">
+                            <a key={index} href={item.href} target="_self" className="m-2 text-h5 leading-h5 transition duration-150 hover:font-bold active:font-bold focus:font-bold focus:outline-none">
                                 {i18n.t(item.text)}
                             </a>
                         )
@@ -62,7 +60,7 @@ function Footer () {
                     }
 
                     return (
-                        <a key={index} href={item.href} target="_blank" className={className}>
+                        <a key={index} href={item.href} target="_blank" rel="noreferrer" className={className}>
                             <Icon path={icon}
                             size={1}
                             className="focus:outline-none"
