@@ -10,7 +10,7 @@ const Section = React.lazy(() => import('../section'));
 
 function Nosotros () {
   return (<Section id="about-us" bgColor="bg-brand_primary" sizeMobile="full" size="almost" sizeLg="half" flex="only">
-      <div className="flex flex-col sm:flex-row items-center">
+      <div className="flex flex-col sm:flex-row justify-between sm:justify-center">
         <InView threshold={0.5}>
           {({ref, inView}) => (
             <motion.div 
