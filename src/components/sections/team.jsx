@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { AnimatePresence, motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 // Translations
 import i18n from '../../i18n/index.js';
 
