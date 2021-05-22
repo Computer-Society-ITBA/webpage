@@ -1,0 +1,244 @@
+[
+    {
+        "name": "Rodrigo Navarro Lajous",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Ignacio Villanueva",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Florencia Petrikovich",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Juan Perez",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Juan Perez",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Juan Perez",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Juan Perez",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Juan Perez",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Juan Perez",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Juan Perez",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    },
+    {
+        "name": "Juan Perez",
+        "title": "Directivo",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "#"
+            },
+            {
+                "logo": "linkedin",
+                "href": "#"
+            },
+            {
+                "logo": "web",
+                "href": "#"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Headshot of Juan Perez"
+        }
+    }
+]
