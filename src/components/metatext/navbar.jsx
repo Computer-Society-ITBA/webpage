@@ -1,10 +1,13 @@
-import { React, useState } from "react";
+import { React, useState, useRef } from "react";
 import logo from "../../images/logo_icon.png";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import {MenuToggle} from "./menu_toggle"
+import { motion } from 'framer-motion'
 
 function NavBar() {
   const [collapsed, setCollapsed] = useState(false);
-  const { width } = useWindowDimensions();
+  const { width,height } = useWindowDimensions();
+  const containerRef = useRef(null);
   return (
     <>
       <nav class="flex items-center justify-between flex-wrap p-3 sticky top-0 z-50 bg-white bg-opacity-90 
@@ -14,7 +17,10 @@ function NavBar() {
             <img src={logo} alt="Computer Society Logo" class="w-12 ml-5" />
           </a>
         </div>
-        <div class="block lg:hidden">
+        <motion.div class="block lg:hidden" animate={!collapsed?"open":"closed"}>
+          <MenuToggle toggle={() => setCollapsed(!collapsed)}/>
+        </motion.div>
+            {/* <div class="block lg:hidden">
           <button
             class="bg-brand_secondary flex items-center px-3 py-2 border rounded text-brand_primary
           border-brand_primary hover:bg-brand_secondary hover:text-white hover:border-white focus:outline-none"
@@ -29,7 +35,7 @@ function NavBar() {
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
           </button>
-        </div>
+        </div> */}
         { (width > 1020 || !collapsed) &&
           <div class="w-full block flex-grow lg:background-black lg:mr-12 lg:flex lg:items-center lg:w-auto">
             <div class=" font-highlight-semibold text-brand_primary  text-lg lg:flex-grow lg:flex lg:justify-end">
@@ -57,6 +63,7 @@ function NavBar() {
               >
                 TEST
               </a>
+            
             </div>
           </div>
         }
