@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+const NavBar = React.lazy(() => import('../metatext/navbar'));
 const Hero = React.lazy(() => import('../sections/hero'));
 const MisionVision = React.lazy(() => import('../sections/mision_vision'));
 const Nosotros = React.lazy(() => import('../sections/nosotros'));
@@ -13,6 +14,7 @@ const WorkWithUs = React.lazy(() => import('../sections/work_with_us'));
 class Homepage extends Component {
   render() {
     return <React.Fragment>
+        <NavBar/>
         <Hero/>
         <Nosotros/>
         <MisionVision/>
