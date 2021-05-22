@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { SplitText } from '../animations/SplitText'
+import { SplitText } from '../../animations/SplitText'
 import { AnimatePresence, motion, useAnimation } from 'framer-motion'
-import i18n from '../i18n/index.js';
-import logo from '../images/logo_icon.png';
+import i18n from '../../i18n/index.js';
+import logo from '../../images/logo_icon.png';
 
 function Hero () {
     // UseEffect + controls to trigger animations

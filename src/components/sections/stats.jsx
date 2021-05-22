@@ -9,7 +9,7 @@ import stats from '../../data/stats.json'
 const Section = React.lazy(() => import('../section'));
 
 function Stats () {
-  return (<Section id="about-us" bgColor="bg-brand_primary" sizeMobile="full" size="half" sizeLg="half" flex="only">
+  return (<Section id="about-us" bgColor="bg-brand_primary" sizeMobile="full" size="third" sizeLg="third" flex="only">
       <div className="flex flex-col w-full sm:flex-row items-center justify-center">
         {stats.map(stat => {
           return (

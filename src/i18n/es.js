@@ -33,6 +33,21 @@ const i18n_es = {
         vision: 'Visión',
         mision_text: '"Fomentar el interés y difundir conocimientos sobre tecnología"',
         vision_text: '"Complementar la formación académica con el uso de herramientas y tecnologías actuales como el camino para formar mejores profesionales"'
+    },
+    upcoming_events: {
+        title: 'Próximos Eventos'
+    },
+    past_events: {
+        title: 'Eventos Pasados'
+    },
+    team: {
+        title: 'Nuestro Equipo'
+    },
+    sponsors: {
+        title: 'Nuestros Sponsors'
+    },
+    contact: {
+        title: 'Contacto'
     }
 }
 

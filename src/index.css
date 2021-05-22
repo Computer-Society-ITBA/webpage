@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body, #root, #App {
   @apply text-typography_primary font-text w-full h-screen;
 }

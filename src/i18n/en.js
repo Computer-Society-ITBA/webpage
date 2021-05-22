@@ -33,6 +33,21 @@ const i18n_en = {
         vision: 'Vision',
         mision_text: '"Encourage interest and spread knowledge about technology"',
         vision_text: '"Complement academic training with the use of current tools and technologies as the way to train better professionals"'
+    },
+    upcoming_events: {
+        title: 'Upcoming Events'
+    },
+    past_events: {
+        title: 'Past Events'
+    },
+    team: {
+        title: 'Our Team'
+    },
+    sponsors: {
+        title: 'Our Sponsors'
+    },
+    contact: {
+        title: 'Contact'
     }
 }
 

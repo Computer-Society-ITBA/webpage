@@ -56,6 +56,7 @@ module.exports = {
         '-25_': '-25%'
       },
       height: {
+        'screen-third': '33vh',
         'screen-half': '50vh',
         'screen-3/4': '75vh'
       }
