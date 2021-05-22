@@ -1,9 +1,6 @@
 import React from 'react';
 // Translations
 import i18n from '../../i18n/index.js';
-// Animations
-import { motion } from 'framer-motion'
-import { InView } from 'react-intersection-observer';
 
 // Components
 const Section = React.lazy(() => import('../section'));
