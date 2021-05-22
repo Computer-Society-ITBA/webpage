@@ -44,7 +44,11 @@ const i18n_es = {
         title: 'Nuestro Equipo'
     },
     sponsors: {
-        title: 'Nuestros Sponsors'
+        title: 'Nuestros Sponsors',
+        logos: {
+            sec: 'Logo de Siempre en Casa',
+            zx: 'Logo de ZX Ventures'
+        }
     },
     contact: {
         title: 'Contacto'

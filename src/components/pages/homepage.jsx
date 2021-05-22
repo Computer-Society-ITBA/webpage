@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 const Footer = React.lazy(() => import('../sections/footer'));
 const Hero = React.lazy(() => import('../sections/hero'));
 const MisionVision = React.lazy(() => import('../sections/mision_vision'));
+const NavBar = React.lazy(() => import('../metatext/navbar'));
 const Nosotros = React.lazy(() => import('../sections/nosotros'));
 const PastEvents = React.lazy(() => import('../sections/past_events'));
 const Sponsors = React.lazy(() => import('../sections/sponsors'));
@@ -14,6 +15,7 @@ const WorkWithUs = React.lazy(() => import('../sections/work_with_us'));
 class Homepage extends Component {
   render() {
     return <React.Fragment>
+        <NavBar/>
         <Hero/>
         <Nosotros/>
         <MisionVision/>
