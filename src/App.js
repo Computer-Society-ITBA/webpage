@@ -14,11 +14,11 @@ const Homepage = React.lazy(() => import('./components/pages/homepage'));
 function App() {
   return (
     <Suspense fallback="loading">
-      <Router>
-        <div className="App">
+      <div className="App">
+        <Router>
           <Homepage/>
-        </div>
-      </Router>
+        </Router>
+      </div>
     </Suspense>
   );
 }

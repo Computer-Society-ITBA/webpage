@@ -12,7 +12,7 @@ const Path = props => (
 );
 
 export const MenuToggle = ({ toggle }) => (
-  <button onClick={toggle} class=" lg:hidden focus:outline-none mt-2">
+  <button onClick={toggle} className=" lg:hidden focus:outline-none mt-2">
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{

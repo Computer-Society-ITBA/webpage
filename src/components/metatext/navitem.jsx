@@ -6,7 +6,7 @@ const NavItem = (props) => {
     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
       <a
         href="/#"
-        class="w-20 lg:inline-block hover:text-brand_secondary lg:mt-2` lg:mr-8 lg:w-auto"
+        className="w-20 lg:inline-block hover:text-brand_secondary lg:mt-2` lg:mr-8 lg:w-auto"
       >
         {props.children}
       </a>

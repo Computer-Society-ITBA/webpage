@@ -1,10 +1,26 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 module.exports = {
-    style: {
-      postcss: {
-        plugins: [
-          require('tailwindcss'),
-          require('autoprefixer'),
-        ],
-      },
+  webpack: {
+    plugins: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          compress: {
+            warnings: false,
+            drop_debugger: true,
+            drop_console: true,
+          },
+        },
+        sourceMap: false,
+        parallel: true,
+      })
+    ],
+  },
+  style: {
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer'),
+      ],
     },
   }
+}
