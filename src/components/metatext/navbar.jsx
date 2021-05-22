@@ -7,7 +7,8 @@ function NavBar() {
   const { width } = useWindowDimensions();
   return (
     <>
-      <nav class="flex items-center justify-between flex-wrap p-3 sticky top-0 z-50 bg-white bg-opacity-90">
+      <nav class="flex items-center justify-between flex-wrap p-3 sticky top-0 z-50 bg-white bg-opacity-90 
+      border-b-4 border-black border-opacity-20 lg:border-none">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <a href="/#">
             <img src={logo} alt="Computer Society Logo" class="w-12 ml-5" />
@@ -15,8 +16,8 @@ function NavBar() {
         </div>
         <div class="block lg:hidden">
           <button
-            class="bg-brand_primary flex items-center px-3 py-2 border rounded text-brand_secondary 
-          border-brand_secondary hover:bg-brand_secondary hover:text-white hover:border-white"
+            class="bg-brand_secondary flex items-center px-3 py-2 border rounded text-brand_primary
+          border-brand_primary hover:bg-brand_secondary hover:text-white hover:border-white focus:outline-none"
             onClick={() => setCollapsed(!collapsed)}
           >
             <svg
