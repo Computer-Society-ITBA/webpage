@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+const Footer = React.lazy(() => import('../sections/footer'));
 const Hero = React.lazy(() => import('../sections/hero'));
 const MisionVision = React.lazy(() => import('../sections/mision_vision'));
 const Nosotros = React.lazy(() => import('../sections/nosotros'));
@@ -22,6 +23,7 @@ class Homepage extends Component {
         <WorkWithUs/>
         <Team/>
         <Sponsors/>
+        <Footer/>
     </React.Fragment>
   }
 }
