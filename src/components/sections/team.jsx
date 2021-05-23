@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import usePaging from "../../hooks/usePaging";
 import { motion } from "framer-motion";
 // Translations
