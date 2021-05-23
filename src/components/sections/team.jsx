@@ -6,7 +6,7 @@ import i18n from '../../i18n/index.js';
 
 // Icons
 import Icon from '@mdi/react'
-import { mdiInstagram, mdiLinkedin, mdiWeb, mdiChevronLeft, mdiChevronRight } from '@mdi/js';
+import { mdiInstagram, mdiLinkedin, mdiWeb, mdiGithub, mdiChevronLeft, mdiChevronRight } from '@mdi/js';
 
 import team from '../../data/team'
 const teamImages = require.context("../../images/team/", true, /^.*$/)
@@ -65,6 +65,10 @@ function Team () {
                         case 'linkedin': 
                           icon = mdiLinkedin
                           className = className + "hover:text-blue-700 hover:scale-125 focus:text-blue-700 focus:scale-125 focus:outline-none"
+                        break;
+                        case 'github': 
+                          icon = mdiGithub
+                          className = className + "hover:text-green-700 hover:scale-125 focus:text-green-700 focus:scale-125 focus:outline-none"
                         break;
                         case 'instagram': 
                         default:
