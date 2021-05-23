@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useWindowDimensions from "./useWindowDimensions";
 
 export default function usePaging(elemWidth, elemsLength, rows) {
