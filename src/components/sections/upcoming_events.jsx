@@ -41,7 +41,7 @@ function UpcomingEvents() {
           return (
             <div
               key={index}
-              className="flex flex-col h-auto rounded-xl shadow-xl p-8 m-4 mb-6 upcoming-card items-start"
+              className="bg-tan flex flex-col h-auto rounded-xl shadow-xl p-8 m-4 mb-6 upcoming-card items-start"
             >
               <h3 className="mt-5">{event.name}</h3>
               <p className="font-light opacity-60 font-medium mb-2 ">
