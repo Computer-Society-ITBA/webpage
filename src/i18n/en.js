@@ -38,7 +38,16 @@ const i18n_en = {
         title: 'Upcoming Events'
     },
     past_events: {
-        title: 'Past Events'
+        title: 'Past Events',
+        inscriptions: '+{{n}} enrolled',
+        watch: "Watch on Youtube",
+        button: "View All",
+        events: {
+            web_backend: {
+                date: 'March 2021',
+                description: '4 3-hour classes of API development in Python using Django and the Django Rest Framework. During this course people learnt both basic and advanced concepts in the development and security of APIs. At the end of this hands-on course, people had created their own basic API for banking.'
+            }
+        }
     },
     team: {
         title: 'Our Team'

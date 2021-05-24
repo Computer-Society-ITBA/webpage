@@ -1,8 +1,9 @@
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const { whenProd } = require("@craco/craco");
 module.exports = {
   webpack: {
     plugins: [
-      new UglifyJsPlugin({
+      ...whenProd(() => [new UglifyJsPlugin({
         uglifyOptions: {
           compress: {
             warnings: false,
@@ -25,7 +26,7 @@ module.exports = {
         },
         sourceMap: false,
         parallel: true,
-      })
+      })], [])
     ],
   },
   style: {

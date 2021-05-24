@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const Footer = React.lazy(() => import('../sections/footer'));
 const Hero = React.lazy(() => import('../sections/hero'));
@@ -12,22 +12,20 @@ const Team = React.lazy(() => import('../sections/team'));
 const UpcomingEvents = React.lazy(() => import('../sections/upcoming_events'));
 const WorkWithUs = React.lazy(() => import('../sections/work_with_us'));
 
-class Homepage extends Component {
-  render() {
-    return <React.Fragment>
-        <NavBar/>
-        <Hero/>
-        <Nosotros/>
-        <MisionVision/>
-        <UpcomingEvents/>
-        <Stats/>
-        <PastEvents/>
-        <WorkWithUs/>
-        <Team/>
-        <Sponsors/>
-        <Footer/>
-    </React.Fragment>
-  }
+function Homepage () {
+  return (<React.Fragment>
+      <NavBar/>
+      <Hero/>
+      <Nosotros/>
+      <MisionVision/>
+      <UpcomingEvents/>
+      <Stats/>
+      <PastEvents/>
+      <WorkWithUs/>
+      <Team/>
+      <Sponsors/>
+      <Footer/>
+  </React.Fragment>)
 }
 
 export default Homepage;
