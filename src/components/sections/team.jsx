@@ -66,7 +66,7 @@ function Team() {
                         icon = mdiWeb;
                         className =
                           className +
-                          "hover:text-red-700 hover:scale-125 focus:text-red-700 focus:scale-125 focus:outline-none";
+                          "hover:text-pink-700 hover:scale-125 focus:text-pink-700 focus:scale-125 focus:outline-none";
                         break;
                       case "linkedin":
                         icon = mdiLinkedin;
