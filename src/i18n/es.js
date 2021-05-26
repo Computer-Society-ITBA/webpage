@@ -38,7 +38,102 @@ const i18n_es = {
         title: 'Próximos Eventos'
     },
     past_events: {
-        title: 'Eventos Pasados'
+        title: 'Eventos Pasados',
+        inscriptions: '+{{n}} inscriptos',
+        watch: "Ver en Youtube",
+        button: "Ver Todos",
+        events: {
+            chat_internships: {
+                title: "Camino a una Pasantía",
+                date: 'Mayo 2021',
+                description: 'Una presentación de 1 hora sobre los diferentes procesos que utilizan Google, Facebook, Microsoft y Toptal a la hora de contratar pasantes y empleados a tiempo completo. Los oradores fueron 4 estudiantes del ITBA que trabajaron o trabajan actualmente en las empresas en cuestión o al menos pasaron por todo el proceso en una de esas empresas.'
+            },
+            branding_engineers: {
+                title: "Branding para Ingenieros",
+                date: 'Abril 2021',
+                description: 'Una charla con Ignacio Basso, cofundador de Seeds, donde habló sobre el branding personal en la vida laboral, así como consejos para tener más éxito en las entrevistas.'
+            },
+            cloud_101: {
+                title: "Cloud Computing 101",
+                date: 'Abril 2021',
+                description: 'DESCRIPCION'
+            },
+            qa_cs: {
+                title: "Computer Society Q&A",
+                date: 'Marzo 2021',
+                description: 'Presentación de Computer Society a los estudiantes del ITBA interesados ​​en conocer más sobre la organización, así como un Q&A con algunos miembros.'
+            },
+            bc_intro: {
+                title: "Introducción a Blockchain",
+                date: 'Marzo 2021',
+                description: 'Una charla introductoria al mundo de blockchain. En ella, repasamos los conceptos claves de la tecnología y sus aplicaciones en el mundo real, sumado al inmenso potencial que brinda al ecosistema emprendedor con Yemel Jardi.'
+            },
+            web_backend: {
+                title: "Curso de Web Backend",
+                date: 'Marzo 2021',
+                description: 'Cuatro clases de 3 horas de desarrollo de APIs en Python usando Django y Django Rest Framework. Durante este curso, los alumnos aprendieron conceptos básicos y avanzados sobre el desarrollo y la seguridad de las API. Al final de este curso práctico, las personas habían creado su propia API bancaria básica.'
+            },
+            intro_power_bi: {
+                title: "Introducción a Power Bi",
+                date: 'Diciembre 2020',
+                description: 'Tres charlas de una hora con el objetivo de introducir las herramientas básicas que otorgaba Power Bi, y su aplicación real en casos empresariales.'
+            },
+            ideaton_itba: {
+                title: "Ideaton ITBA",
+                date: 'Octubre 2020',
+                description: 'Competencia entre grupos de alumnos del ITBA en la cual cada grupo craneó una idea desde su existencia para realizar mejoras en su vida universitaria. Cada idea era completamente nueva e implementable con una aplicación web o móvil.'
+            },
+            git_adv: {
+                title: "Curso de Git Avanzado",
+                date: 'Octubre 2020',
+                description: 'Una clase avanzada con Juan Codagnone sobre teoria de Git, para profundizar aún más en la comprensión de la herramienta, y sobre la funcionalidad de Git, para crear comandos complejos que permitan un flujo de trabajo más flexible.'
+            },
+            git_intro: {
+                title: "Curso de Git Introductorio",
+                date: 'Octubre 2020',
+                description: 'Una clase introductoria sobre la teoria y funcionalidad basica de Git para aquellos que buscan comenzar a usar dicha herramienta de versionado en sus futuros proyectos.'
+            },
+            pre_xtreme: {
+                title: "PreXtreme",
+                date: 'Septiembre 2020',
+                description: 'Una competencia de programacion, donde a se le presenta una serie de problemas de programacion, y la solucion mas eficiente les hace ganar puntos. Un entrenamiento para la verdadera competencia, IEEEXtreme'
+            },
+            scav_hunt_hard: {
+                title: "Búsqueda del Tesoro Modo Difícil",
+                date: 'Septiembre 2020',
+                description: 'Versión difícil de la Scavenger Hunt. Consistió en una serie de 15 acertijos algo más desafiantes para evaluar el ingenio y la creatividad de los participantes. Cada respuesta correcta revelaba el siguiente acertijo hasta llegar al final.'
+            },
+            scav_hunt: {
+                title: "Búsqueda del Tesoro",
+                date: 'Agosto 2020',
+                description: 'Una búsqueda del tesoro, pero virtual y al estilo Computer Society. Consistió en una serie de 12 acertijos para evaluar el ingenio y la creatividad de los participantes. Cada respuesta correcta revelaba el siguiente acertijo hasta llegar al final.'
+            },
+            personalities_cup: {
+                title: "Mundial de Personalidades",
+                date: 'Junio 2020',
+                description: 'Un evento online donde se llevó a cabo un torneo a través de votaciones en Instagram para encontrar qué personalidad/figura del mundo tecnológico le gustaba más a nuestros seguidores. El resultado fue Elon Musk como ganador del torneo.'
+            },
+            prog_comp_team: {
+                title: "Equipo de Programación Competitiva",
+                date: 'Mayo 2020 - Septiembre 2020',
+                description: 'Un equipo, organizado y dirigido por un miembro del equipo de Computer Society, dedicado a practicar Programación Competitiva para poder competir en eventos.'
+            },
+            ml_course: {
+                title: "Curso de Machine Learning",
+                date: 'Mayo 2020',
+                description: 'Un curso introductorio de Machine Learning, donde se les presento una variedad de modelos de apredizaje, junto con una practica. Presentado por Mutt Data.'
+            },
+            gj_society: {
+                title: "Game Jam Society",
+                date: 'Mayo 2020',
+                description: 'Primera edición de la Computer Society Game Jam, los participantes tuvieron un fin de semana para crear videojuegos, ya sea solos o en grupo, siguiendo el tema "Cuanto más tienes, peor es". Todas las entregas se registraron en itch.io.'
+            },
+            agile_tdd: {
+                title: "Metodologías Ágiles y TDD",
+                date: 'Noviembre 2019',
+                description: 'Una clase magistral con Hernán Wilkinson, cofundador de Ten Pines, sobre metodologías ágiles, Test Driven Development y cómo esas metodologías y técnicas ayudan al proceso de desarrollo de software.'
+            }
+        }
     },
     team: {
         title: 'Nuestro Equipo'
@@ -58,7 +153,11 @@ const i18n_es = {
         love_2: 'por IEEE Computer Society ITBA',
         nav: {
             about: "Nosotros",
-            future_events: "Próximos Eventos"
+            future_events: "Próximos Eventos",
+            numbers: "Estadísticas", 
+            past_events: "Eventos Pasados", 
+            team: "Equipo",
+            sponsors: "Sponsors"
         }
     }
 }

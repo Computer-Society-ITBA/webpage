@@ -43,10 +43,95 @@ const i18n_en = {
         watch: "Watch on Youtube",
         button: "View All",
         events: {
-            web_backend: {
+            chat_internships: {
+                title: "Road to an Internship",
+                date: 'May 2021',
+                description: 'A 1-hour presentation about the different processes that Google, Facebook, Microsoft, and Toptal use when hiring interns and full-time employees. The speakers were 4 students from ITBA that either worked or currently works on the companies in question or at least went through all the process at one of those companies.'
+            },
+            branding_engineers: {
+                title: "Branding for Engineers",
+                date: 'April 2021',
+                description: 'A chat with Ignacio Basso, co-founder of Seeds, where he spoke about personal branding in work life, as well as tips to be more successful in interviews.'
+            },
+            cloud_101: {
+                title: "Cloud Computing 101",
+                date: 'April 2021',
+                description: 'DESCRIPTION'
+            },
+            qa_cs: {
+                title: "Computer Society Q&A",
                 date: 'March 2021',
-                description: '4 3-hour classes of API development in Python using Django and the Django Rest Framework. During this course people learnt both basic and advanced concepts in the development and security of APIs. At the end of this hands-on course, people had created their own basic API for banking.',
-                description_2: ' course people learnt both basic and advanced concepts in the development and security of APIs. At the end of this hands-on course, people had created their own basic API for banking.'
+                description: 'Presentation of Computer Society to students at ITBA that were interested in learning more about the organization, as well as a Q&A with some members.'
+            },
+            bc_intro: {
+                title: "Introduction to Blockchain",
+                date: 'March 2021',
+                description: 'A brief introduction to Blockchain technology and it\'s use cases. We discussed key concepts and its revolutionary potential to disrupt the financial system with Yemel Jardi, a software engineer experienced in crypto.'
+            },
+            web_backend: {
+                title: "Web Backend Course",
+                date: 'March 2021',
+                description: 'Four 3-hour classes of API development in Python using Django and the Django Rest Framework. During this course people learnt both basic and advanced concepts regarding the development and security for APIs. At the end of this hands-on course, people had created their own basic API for banking.'
+            },
+            intro_power_bi: {
+                title: "Introduction to Power Bi",
+                date: 'December 2020',
+                description: 'Three 1-hour talks with the objective of introducing basic tools of Power Bi, with additional information about applying it to real-life cases.'
+            },
+            ideaton_itba: {
+                title: "ITBA Ideaton",
+                date: 'October 2020',
+                description: 'Group competition between ITBA students in which each group brainstorm an idea from its existance to improve their university life. Each idea was completely new and could be implemented with a mobile or web application.'
+            },
+            git_adv: {
+                title: "Advanced Git Course",
+                date: 'October 2020',
+                description: 'An advanced lesson with Juan Codagnone on Git theory to further deepen the understanding of the tool and on Git funcionality to create complex commands which allow a more flexible workflow.'
+            },
+            git_intro: {
+                title: "Introductory Git Course",
+                date: 'October 2020',
+                description: 'An introductory lesson on Git\'s basic theory and functionality for those looking to start integrating this version control tool in their future projects.'
+            },
+            pre_xtreme: {
+                title: "PreXtreme",
+                date: 'September 2020',
+                description: 'A Programming Competition, where participants were presented with a series of programming challenges, where the most efficient solutions earn them points. A training for the real competition IEEEXtreme'
+            },
+            scav_hunt_hard: {
+                title: "Scavenger Hunt Hard Mode",
+                date: 'September 2020',
+                description: 'A new harder iteration of the Scavenger Hunt. Each participant had to solve 15 more challenging riddles that tested their creativity and wit. Each correct answer revealed the following riddle until correctly answering all of them.'
+            },
+            scav_hunt: {
+                title: "Scavenger Hunt",
+                date: 'August 2020',
+                description: 'A treasure hunt, but virtual and with Computer Society\'s style. Each participant had to solve 12 riddles that tested their creativity and wit. Each correct answer revealed the following riddle until correctly answering all of them.'
+            },
+            personalities_cup: {
+                title: "World Cup of Personalities",
+                date: 'June 2020',
+                description: 'An online event where a tournament through Instagram votes was carried out to find which tech personality/figure our followers liked the most. The outcome was Elon Musk as the winner of the tournament.'
+            },
+            prog_comp_team: {
+                title: "Comptetitive Programming Team",
+                date: 'May 2020 - September 2020',
+                description: 'A team, organized and led by a team member of Computer Society, dedicated to practicing Competitive Programming in order to compete in events.'
+            },
+            ml_course: {
+                title: "Machine Learning Course",
+                date: 'May 2020',
+                description: 'An introduction to Machine Learning, where we presented a variety of learning models, accompanied by practice exercices. Presented by Mutt Data.'
+            },
+            gj_society: {
+                title: "Game Jam Society",
+                date: 'May 2020',
+                description: 'First edition of the Computer Society Game Jam, participants had a weekend to create videogames, either alone or in groups, following the theme "The more you have, the worse it is". All the submissions were recorded on itch.io.'
+            },
+            agile_tdd: {
+                title: "Agile Methodologies and TDD",
+                date: 'November 2019',
+                description: 'A master class with Hernán Wilkinson, co-founder of Ten Pines, about Agile Methodologies, Test Driven Development, and how those methodologies and techniques help the software development process.'
             }
         }
     },
@@ -68,7 +153,11 @@ const i18n_en = {
         love_2: 'by IEEE Computer Society ITBA',
         nav: {
             about: "About",
-            future_events: "Future Events"
+            future_events: "Future Events",
+            numbers: "Numbers", 
+            past_events: "Past Events", 
+            team: "Team",
+            sponsors: "Sponsors"
         }
     }
 }

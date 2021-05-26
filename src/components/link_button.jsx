@@ -18,14 +18,25 @@ function LinkButton (props) {
             className = class_outlined
     }
 
-    return (
-    <Link to={props.href} className={classlist([
-        className,
-        props.className
-        ])}>
-        {props.text}
-    </Link>
-    )
+    if (props.external) {
+        return (
+            <a href={props.href} className={classlist([
+                className,
+                props.className
+                ])}>
+                {props.text}
+            </a>
+            )
+    } else {
+        return (
+            <Link to={props.href} className={classlist([
+                className,
+                props.className
+                ])}>
+                {props.text}
+            </Link>
+            )
+    }
 }
 
 export default LinkButton; 
