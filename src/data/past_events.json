@@ -1,5 +1,15 @@
 [
     {
+        "title": "past_events.events.que_tool.title",
+        "date": "past_events.events.que_tool.date",
+        "attendants": 0,
+        "description": "past_events.events.que_tool.description",
+        "link": {
+            "href": "https://www.instagram.com/stories/highlights/17887245425304917/", 
+            "logo": "instagram"
+        }
+    },
+    {
         "title": "past_events.events.chat_internships.title",
         "date": "past_events.events.chat_internships.date",
         "attendants": 140,
@@ -22,7 +32,7 @@
     {
         "title": "past_events.events.cloud_101.title",
         "date": "past_events.events.cloud_101.date",
-        "attendants": 30,
+        "attendants": 40,
         "description": "past_events.events.cloud_101.description",
         "link": {
             "href": "https://www.youtube.com/watch?v=2CVNwQ9rRBw", 
@@ -147,6 +157,16 @@
         "link": {
             "href": "https://itch.io/jam/game-jam-society", 
             "logo": "web"
+        }
+    },
+    {
+        "title": "past_events.events.que_ves.title",
+        "date": "past_events.events.que_ves.date",
+        "attendants": 500,
+        "description": "past_events.events.que_ves.description",
+        "link": {
+            "href": "https://www.instagram.com/stories/highlights/17892753058884719/?hl=en", 
+            "logo": "instagram"
         }
     },
     {

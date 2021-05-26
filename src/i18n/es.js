@@ -43,6 +43,11 @@ const i18n_es = {
         watch: "Ver en Youtube",
         button: "Ver Todos",
         events: {
+            que_tool: {
+                title: "¿Que Tool?",
+                date: 'Junio 2021 - Now',
+                description: 'Tips, atajos y trucos para el día a día de un usuario en su computadora. Semanalmente mediante historias de Instagram.'
+            },
             chat_internships: {
                 title: "Camino a una Pasantía",
                 date: 'Mayo 2021',
@@ -56,7 +61,7 @@ const i18n_es = {
             cloud_101: {
                 title: "Cloud Computing 101",
                 date: 'Abril 2021',
-                description: 'DESCRIPCION'
+                description: 'El objetivo de la charla fue difundir conocimientos basicos de cloud computing asi aquellos no versados en la materia puedan adentrarse mas. El orador fue Agustín Nasillo, estudiante del itba que ya ha obtenido mas de 7 certificaciones del tema.'
             },
             qa_cs: {
                 title: "Computer Society Q&A",
@@ -127,6 +132,11 @@ const i18n_es = {
                 title: "Game Jam Society",
                 date: 'Mayo 2020',
                 description: 'Primera edición de la Computer Society Game Jam, los participantes tuvieron un fin de semana para crear videojuegos, ya sea solos o en grupo, siguiendo el tema "Cuanto más tienes, peor es". Todas las entregas se registraron en itch.io.'
+            },
+            que_ves: {
+                title: "¿Que ves?",
+                date: 'Marzo 2020 - Now',
+                description: 'Un juego interactivo semanal vía Historias de Instagram. Acertijos de imágenes prediseñadas que esconden un concepto tech, de informática o de ingeniería en general. Premios mensuales para los ganadores.'
             },
             agile_tdd: {
                 title: "Metodologías Ágiles y TDD",
