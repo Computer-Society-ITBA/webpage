@@ -146,7 +146,20 @@ const i18n_en = {
         }
     },
     team: {
-        title: 'Our Team'
+        title: 'Our Team',
+        roles: {
+            cofounder: 'Co-Founder',
+            president: 'President',
+            vicepresident: 'Vice President',
+            logistics: 'Logistics',
+            media: 'Media',
+            fundraising: 'Fundraising',
+            grads: 'Grads',
+            director_media: 'Director of Media',
+            director_logistics: 'Director of Logistics',
+            director_fundraising: 'Director of Fundraising',
+            director_grads: 'Director of Grads'
+        }
     },
     sponsors: {
         title: 'Our Sponsors',

@@ -146,7 +146,20 @@ const i18n_es = {
         }
     },
     team: {
-        title: 'Nuestro Equipo'
+        title: 'Nuestro Equipo',
+        roles: {
+            cofounder: 'Cofundador',
+            president: 'Presidente',
+            vicepresident: 'Vicepresidente',
+            logistics: 'Logística',
+            media: 'Media',
+            fundraising: 'Fundraising',
+            grads: 'Grads',
+            director_media: 'Director de Media',
+            director_logistics: 'Director de Logística',
+            director_fundraising: 'Director de Fundraising',
+            director_grads: 'Director de Grads'
+        }
     },
     sponsors: {
         title: 'Nuestros Sponsors',
