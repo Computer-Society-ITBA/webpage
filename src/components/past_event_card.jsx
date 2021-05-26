@@ -35,7 +35,7 @@ function LinkButton (props) {
     return (
     <div key={index} className="flex flex-col w-full sm:w-6/12 md:w-4/12 h-auto">
         <div className="flex flex-col rounded-xl items-center text-left shadow-xl h-full p-4 m-2 mb-4 sm:m-4 sm:mb-6">
-          <h3 className="font-bold mb-2 flex flex-row justify-between self-start">
+          <h3 className="font-bold mb-2 w-full flex flex-row justify-between self-start">
             {i18n.t(event.title)}
             {event.link ? (<a
               href={event.link.href}
