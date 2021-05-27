@@ -1,5 +1,31 @@
 [
     {
+        "name": "Nacho Villanueva",
+        "title": "team.roles.cofounder",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/nacho.villanueva/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/ignacio-villanueva-256541176/"
+            },
+            {
+                "logo": "web",
+                "href": "https://ignacio.villanueva.it/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/nacho-villanueva"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Nacho Villanueva"
+        }
+    },
+    {
         "name": "Gonzalo Hirsch",
         "title": "team.roles.cofounder",
         "social": [
@@ -48,6 +74,152 @@
         }
     },
     {
+        "name": "Julián Tallar",
+        "title": "team.roles.director_logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/juliantallar/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/julian-tallar/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/jtallar"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Julián Tallar"
+        }
+    },
+    {
+        "name": "Catalina Lucena M.",
+        "title": "team.roles.president",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/catalucenam/?hl=en"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/catalina-lucena-maguire-322033169/"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Catalina Lucena M."
+        }
+    },
+    {
+        "name": "Florencia Petrikovich",
+        "title": "team.roles.logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/florpetrikovich/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/florencia-petrikovich-a2b3aa1a6"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/fpetrikovich"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Florencia Petrikovich"
+        }
+    },
+    {
+        "name": "Gian Luca Pecile",
+        "title": "team.roles.media",
+        "social": [
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/gian-luca-pecile-61094620a/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/glpecile"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Gian Luca Pecile"
+        }
+    },
+    {
+        "name": "Maximiliano Lombardia",
+        "title": "team.roles.vicepresident",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/cd_maxilombardia/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/maximiliano-lombard%C3%ADa-42423789/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/mlombardia"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Maximiliano Lombardia"
+        }
+    },
+    {
+        "name": "Agustin Ignacio Vergniaud",
+        "title": "team.roles.director_fundraising",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/agusvergniaud"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/agustin-vergniaud-97a956190"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/agusver1"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Agustin Ignacio Vergniaud"
+        }
+    },
+    {
+        "name": "Tomás Soracco",
+        "title": "team.roles.director_grads",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/tomsoracco/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/tom%C3%A1s-soracco-192604128/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/tomso11"
+            }
+        ],
+        "image": {
+            "src": "team.png",
+            "alt": "Tomás Soracco"
+        }
+    },
+    {
         "name": "Rodrigo Manuel Navarro Lajous",
         "title": "team.roles.logistics",
         "social": [
@@ -74,47 +246,47 @@
         }
     },
     {
-        "name": "Maximiliano Lombardia",
-        "title": "team.roles.vicepresident",
+        "name": "Marcos Dedeu",
+        "title": "team.roles.logistics",
         "social": [
             {
                 "logo": "instagram",
-                "href": "https://www.instagram.com/cd_maxilombardia/"
+                "href": "https://www.instagram.com/marcosdedeu"
             },
             {
                 "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/maximiliano-lombard%C3%ADa-42423789/"
+                "href": "https://www.linkedin.com/in/marcosdedeu/"
             },
             {
                 "logo": "github",
-                "href": "https://github.com/mlombardia"
+                "href": "https://github.com/mdedeu"
             }
         ],
         "image": {
             "src": "team.png",
-            "alt": "Maximiliano Lombardia"
+            "alt": "Marcos Dedeu"
         }
-    },
+    },    
     {
-        "name": "Julián Tallar",
-        "title": "team.roles.director_logistics",
+        "name": "Gianfranco Marchetti",
+        "title": "team.roles.logistics",
         "social": [
             {
                 "logo": "instagram",
-                "href": "https://www.instagram.com/juliantallar/"
+                "href": "https://www.instagram.com/gian.marchetti"
             },
             {
                 "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/julian-tallar/"
+                "href": "https://ar.linkedin.com/in/gianfranco-marchetti-97a13315b"
             },
             {
-                "logo": "github",
-                "href": "https://github.com/jtallar"
+                "logo": "web",
+                "href": "http://gianfranco.ar"
             }
         ],
         "image": {
             "src": "team.png",
-            "alt": "Julián Tallar"
+            "alt": "Gianfranco Marchetti"
         }
     },
     {
@@ -140,25 +312,21 @@
         }
     },
     {
-        "name": "Tomás Soracco",
-        "title": "team.roles.director_grads",
+        "name": "Enzo Uria",
+        "title": "team.roles.fundraising",
         "social": [
             {
                 "logo": "instagram",
-                "href": "https://www.instagram.com/tomsoracco/"
+                "href": "https://www.instagram.com/enzouria/"
             },
             {
                 "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/tom%C3%A1s-soracco-192604128/"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/tomso11"
+                "href": "https://www.linkedin.com/in/enzo-javier-uria-53322818a/"
             }
         ],
         "image": {
             "src": "team.png",
-            "alt": "Tomás Soracco"
+            "alt": "Enzo Uria"
         }
     },
     {
@@ -224,134 +392,6 @@
         }
     },
     {
-        "name": "Marcos Dedeu",
-        "title": "team.roles.logistics",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/marcosdedeu"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/marcosdedeu/"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/mdedeu"
-            }
-        ],
-        "image": {
-            "src": "team.png",
-            "alt": "Marcos Dedeu"
-        }
-    },
-    {
-        "name": "Nacho Villanueva",
-        "title": "team.roles.cofounder",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/nacho.villanueva/"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/ignacio-villanueva-256541176/"
-            },
-            {
-                "logo": "web",
-                "href": "https://ignacio.villanueva.it/"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/nacho-villanueva"
-            }
-        ],
-        "image": {
-            "src": "team.png",
-            "alt": "Nacho Villanueva"
-        }
-    },
-    {
-        "name": "Catalina Lucena M.",
-        "title": "team.roles.president",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/catalucenam/?hl=en"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/catalina-lucena-maguire-322033169/"
-            }
-        ],
-        "image": {
-            "src": "team.png",
-            "alt": "Catalina Lucena M."
-        }
-    },
-    {
-        "name": "Florencia Petrikovich",
-        "title": "team.roles.logistics",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/florpetrikovich/"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/florencia-petrikovich-a2b3aa1a6"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/fpetrikovich"
-            }
-        ],
-        "image": {
-            "src": "team.png",
-            "alt": "Florencia Petrikovich"
-        }
-    },
-    {
-        "name": "Gian Luca Pecile",
-        "title": "team.roles.media",
-        "social": [
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/gian-luca-pecile-61094620a/"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/glpecile"
-            }
-        ],
-        "image": {
-            "src": "team.png",
-            "alt": "Gian Luca Pecile"
-        }
-    },
-    {
-        "name": "Gianfranco Marchetti",
-        "title": "team.roles.logistics",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/gian.marchetti"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://ar.linkedin.com/in/gianfranco-marchetti-97a13315b"
-            },
-            {
-                "logo": "web",
-                "href": "http://gianfranco.ar"
-            }
-        ],
-        "image": {
-            "src": "team.png",
-            "alt": "Gianfranco Marchetti"
-        }
-    },
-    {
         "name": "Carolina Ingberg",
         "title": "team.roles.grads",
         "social": [
@@ -374,28 +414,6 @@
         }
     },
     {
-        "name": "Agustin Ignacio Vergniaud",
-        "title": "team.roles.director_fundraising",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/agusvergniaud"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/agustin-vergniaud-97a956190"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/agusver1"
-            }
-        ],
-        "image": {
-            "src": "team.png",
-            "alt": "Agustin Ignacio Vergniaud"
-        }
-    },
-    {
         "name": "Facundo Molina",
         "title": "team.roles.logistics",
         "social": [
@@ -415,24 +433,6 @@
         "image": {
             "src": "team.png",
             "alt": "Facundo Molina"
-        }
-    },
-    {
-        "name": "Enzo Uria",
-        "title": "team.roles.fundraising",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/enzouria/"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/enzo-javier-uria-53322818a/"
-            }
-        ],
-        "image": {
-            "src": "team.png",
-            "alt": "Enzo Uria"
         }
     },
     {
