@@ -17,7 +17,9 @@ const PastEvents = React.lazy(() => import('./components/pages/past_events'));
 
 function App() {
   return (
-    <Suspense fallback="loading">
+    <Suspense fallback={
+      (<div className="flex flex-row w-full h-screen items-center justify-center text-brand_primary">loading...</div>)
+    }>
       <div className="App">
         <Router>
           <Switch>
