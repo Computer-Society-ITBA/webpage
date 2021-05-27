@@ -33,7 +33,7 @@ function PastEvents () {
         {
           filteredEvents.map((event, index) => {
             return (
-              <PastEventCard event={event} index={index}/>
+              <PastEventCard key={index} event={event} index={index}/>
             )
           })
         }

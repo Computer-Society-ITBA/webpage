@@ -24,7 +24,7 @@ const Section = React.lazy(() => import("../section"));
 const cardWidth = 225;
 
 function Team() {
-  const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(
+  const [page, handleLeftClick, handleRightClick, pageLimit, limitLeft] = usePaging(
     cardWidth,
     team.length,
     2
@@ -41,6 +41,10 @@ function Team() {
       <motion.div
         className="grid grid-rows-2 grid-flow-col w-full"
         animate={{ x: -1 * page * cardWidth }}
+        drag="x"
+        dragConstraints={{left: limitLeft, right: 0}}
+        dragElastic={false}
+        dragMomentum={false}
       >
         {team.map((person, index) => {
           return (
@@ -49,7 +53,7 @@ function Team() {
                 <img
                   className="rounded-full w-9/12"
                   src={teamImages(`./${person.image.src}`).default}
-                  alt={i18n.t(person.image.alt)}
+                  alt={person.image.alt}
                 />
                 <h4>{person.name}</h4>
                 <p className="font-light uppercase opacity-75 mb-2">
