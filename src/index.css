@@ -70,7 +70,6 @@ p {
 }
 
 .upcoming-card {
-  width: 650px;
-  min-width: 650px;
-  max-width: 650px;
+  min-width: 400px;
+  max-width: 55%;
 }

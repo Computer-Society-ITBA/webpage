@@ -2,17 +2,15 @@
     {
         "name": "Curso de Web Backend",
         "date": "Marzo 2021",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet nibh nisl. Quisque malesuada, arcu non molestie aliquet, ex ipsum sagittis nibh, vitae sollicitudin erat enim vitae ante. Pellentesque lobortis laoreet metus non varius. Nunc iaculis consectetur augue, ut volutpat ligula. Fusce ac justo malesuada, faucibus enim ac, mollis elit. Mauris non arcu nec leo imperdiet congue. Pellentesque varius metus elit, iaculis semper leo auctor vel. Duis a enim id velit ornare mollis eu in dui. Pellentesque posuere, dolor sed ullamcorper dignissim, dui purus tempor augue, at molestie lacus enim sed diam. Proin semper mattis ipsum, a hendrerit justo ultrices facilisis. Aliquam ac augue libero. Nam non vestibulum neque, eu laoreet ligula. Sed convallis felis at tincidunt tincidunt. Phasellus mattis dui dui, eu laoreet mauris porta a."
-    },
-    {
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet nibh nisl. Quisque malesuada, arcu non molestie aliquet, ex ipsum sagittis nibh, vitae sollicitudin erat enim vitae ante. Pellentesque lobortis laoreet metus non varius. Nunc iaculis consectetur augue, ut volutpat ligula. Fusce ac justo malesuada, faucibus enim ac, mollis elit. Mauris non arcu nec leo imperdiet congue. "    
+   },
+   
+       {
         "name": "Curso de Web Backend",
         "date": "Marzo 2021",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet nibh nisl. Quisque malesuada, arcu non molestie aliquet, ex ipsum sagittis nibh, vitae sollicitudin erat enim vitae ante. Pellentesque lobortis laoreet metus non varius. Nunc iaculis consectetur augue, ut volutpat ligula. Fusce ac justo malesuada, faucibus enim ac, mollis elit. Mauris non arcu nec leo imperdiet congue. Pellentesque varius metus elit, iaculis semper leo auctor vel. Duis a enim id velit ornare mollis eu in dui. Pellentesque posuere, dolor sed ullamcorper dignissim, dui purus tempor augue, at molestie lacus enim sed diam. Proin semper mattis ipsum, a hendrerit justo ultrices facilisis. Aliquam ac augue libero. Nam non vestibulum neque, eu laoreet ligula. Sed convallis felis at tincidunt tincidunt. Phasellus mattis dui dui, eu laoreet mauris porta a."
-    },
-        {
-        "name": "Curso de Web Backend",
-        "date": "Marzo 2021",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet nibh nisl. Quisque malesuada, arcu non molestie aliquet, ex ipsum sagittis nibh, vitae sollicitudin erat enim vitae ante. Pellentesque lobortis laoreet metus non varius. Nunc iaculis consectetur augue, ut volutpat ligula. Fusce ac justo malesuada, faucibus enim ac, mollis elit. Mauris non arcu nec leo imperdiet congue. Pellentesque varius metus elit, iaculis semper leo auctor vel. Duis a enim id velit ornare mollis eu in dui. Pellentesque posuere, dolor sed ullamcorper dignissim, dui purus tempor augue, at molestie lacus enim sed diam. Proin semper mattis ipsum, a hendrerit justo ultrices facilisis. Aliquam ac augue libero. Nam non vestibulum neque, eu laoreet ligula. Sed convallis felis at tincidunt tincidunt. Phasellus mattis dui dui, eu laoreet mauris porta a."
-    }
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet nibh nisl. Quisque malesuada, arcu non molestie aliquet, ex ipsum sagittis nibh, vitae sollicitudin erat enim vitae ante. Pellentesque lobortis laoreet metus non varius. Nunc iaculis consectetur augue, ut volutpat ligula. Fusce ac justo malesuada, faucibus enim ac, mollis elit. Mauris non arcu nec leo imperdiet congue. "    
+   }
+   
+          
        
 ]
