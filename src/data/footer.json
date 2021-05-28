@@ -2,11 +2,27 @@
     "nav": [
         {
             "text": "footer.nav.about",
-            "href": "#about-us"
+            "href": "/#about-us"
         },
         {
             "text": "footer.nav.future_events",
-            "href": "#future-events"
+            "href": "/#upcoming-events"
+        },
+        {
+            "text": "footer.nav.numbers",
+            "href": "/#numbers"
+        },
+        {
+            "text": "footer.nav.past_events",
+            "href": "/#past-events"
+        },
+        {
+            "text": "footer.nav.team",
+            "href": "/#our-team"
+        },
+        {
+            "text": "footer.nav.sponsors",
+            "href": "/#our-sponsors"
         }
     ],
     "social": [

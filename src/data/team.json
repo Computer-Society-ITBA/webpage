@@ -1,248 +1,456 @@
 [
     {
-        "name": "Rodrigo Navarro Lajous",
-        "title": "Directivo",
+        "name": "Nacho Villanueva",
+        "title": "team.roles.cofounder",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/nacho.villanueva/"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/ignacio-villanueva-256541176/"
             },
             {
                 "logo": "web",
-                "href": "#"
+                "href": "https://ignacio.villanueva.it/"
             },
             {
                 "logo": "github",
-                "href": "#"
+                "href": "https://github.com/nacho-villanueva"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "Nacho-Villanueva.jpg",
+            "alt": "Nacho Villanueva"
         }
     },
     {
-        "name": "Ignacio Villanueva",
-        "title": "Directivo",
+        "name": "Gonzalo Hirsch",
+        "title": "team.roles.cofounder",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/gonzalohirsch/?hl=en"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/gonzalo-hirsch/"
             },
             {
                 "logo": "web",
-                "href": "#"
+                "href": "https://gonzalohirsch.com/#/en"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/GonzaloHirsch"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "Gonzalo-Hirsch.jpg",
+            "alt": "Gonzalo Hirsch"
+        }
+    },
+    {
+        "name": "Julián Vuoso",
+        "title": "team.roles.director_media",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/julianvuoso/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/julian-vuoso/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/julian-vuoso"
+            }
+        ],
+        "image": {
+            "src": "Julian-Vuoso.jpg",
+            "alt": "Julián Vuoso"
+        }
+    },
+    {
+        "name": "Julián Tallar",
+        "title": "team.roles.director_logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/juliantallar/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/julian-tallar/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/jtallar"
+            }
+        ],
+        "image": {
+            "src": "Julian-Tallar.jpg",
+            "alt": "Julián Tallar"
+        }
+    },
+    {
+        "name": "Catalina Lucena M.",
+        "title": "team.roles.president",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/catalucenam/?hl=en"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/catalina-lucena-maguire-322033169/"
+            }
+        ],
+        "image": {
+            "src": "Cata-Lucena-M.jpg",
+            "alt": "Catalina Lucena M."
         }
     },
     {
         "name": "Florencia Petrikovich",
-        "title": "Directivo",
+        "title": "team.roles.logistics",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/florpetrikovich/"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/florencia-petrikovich-a2b3aa1a6"
             },
             {
-                "logo": "web",
-                "href": "#"
+                "logo": "github",
+                "href": "https://github.com/fpetrikovich"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "Florencia-Petrikovich.jpg",
+            "alt": "Florencia Petrikovich"
         }
     },
     {
-        "name": "Juan Perez",
-        "title": "Directivo",
+        "name": "Gian Luca Pecile",
+        "title": "team.roles.media",
         "social": [
             {
-                "logo": "instagram",
-                "href": "#"
-            },
-            {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/gian-luca-pecile-61094620a/"
             },
             {
-                "logo": "web",
-                "href": "#"
+                "logo": "github",
+                "href": "https://github.com/glpecile"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "Gian-Luca-Pecile.jpg",
+            "alt": "Gian Luca Pecile"
         }
     },
     {
-        "name": "Juan Perez",
-        "title": "Directivo",
+        "name": "Maximiliano Lombardia",
+        "title": "team.roles.vicepresident",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/cd_maxilombardia/"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/maximiliano-lombard%C3%ADa-42423789/"
             },
             {
-                "logo": "web",
-                "href": "#"
+                "logo": "github",
+                "href": "https://github.com/mlombardia"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "Maxi-Lombardia.jpeg",
+            "alt": "Maximiliano Lombardia"
         }
     },
     {
-        "name": "Juan Perez",
-        "title": "Directivo",
+        "name": "Agustin Ignacio Vergniaud",
+        "title": "team.roles.director_fundraising",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/agusvergniaud"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/agustin-vergniaud-97a956190"
             },
             {
-                "logo": "web",
-                "href": "#"
+                "logo": "github",
+                "href": "https://github.com/agusver1"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "agustin_vergniaud.jpeg",
+            "alt": "Agustin Ignacio Vergniaud"
         }
     },
     {
-        "name": "Juan Perez",
-        "title": "Directivo",
+        "name": "Tomás Soracco",
+        "title": "team.roles.director_grads",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/tomsoracco/"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/tom%C3%A1s-soracco-192604128/"
             },
             {
-                "logo": "web",
-                "href": "#"
+                "logo": "github",
+                "href": "https://github.com/tomso11"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "tomas_soracco.jpeg",
+            "alt": "Tomás Soracco"
         }
     },
     {
-        "name": "Juan Perez",
-        "title": "Directivo",
+        "name": "Rodrigo Manuel Navarro Lajous",
+        "title": "team.roles.logistics",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/rodrigo_lajous/"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/rodrigo-manuel-navarro-lajous/"
             },
             {
                 "logo": "web",
-                "href": "#"
+                "href": "https://navarrolajous.com/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/rlajous"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "Rodrigo_navarro.jpg",
+            "alt": "Rodrigo Manuel Navarro Lajous"
         }
     },
     {
-        "name": "Juan Perez",
-        "title": "Directivo",
+        "name": "Marcos Dedeu",
+        "title": "team.roles.logistics",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/marcosdedeu"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/marcosdedeu/"
             },
             {
-                "logo": "web",
-                "href": "#"
+                "logo": "github",
+                "href": "https://github.com/mdedeu"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "Marcos-Dedeu.jpg",
+            "alt": "Marcos Dedeu"
+        }
+    },    
+    {
+        "name": "Gianfranco Marchetti",
+        "title": "team.roles.logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/gian.marchetti"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://ar.linkedin.com/in/gianfranco-marchetti-97a13315b"
+            },
+            {
+                "logo": "web",
+                "href": "http://gianfranco.ar"
+            }
+        ],
+        "image": {
+            "src": "default.png",
+            "alt": "Gianfranco Marchetti"
         }
     },
     {
-        "name": "Juan Perez",
-        "title": "Directivo",
+        "name": "Rodrigo Stampone",
+        "title": "team.roles.media",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/rodri.stampone/"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/rodrigo-stampone-b29093177/"
             },
             {
-                "logo": "web",
-                "href": "#"
+                "logo": "github",
+                "href": "https://github.com/Rstampone"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "rodrigo_stampone.jpeg",
+            "alt": "Rodrigo Stampone"
         }
     },
     {
-        "name": "Juan Perez",
-        "title": "Directivo",
+        "name": "Enzo Uria",
+        "title": "team.roles.fundraising",
         "social": [
             {
                 "logo": "instagram",
-                "href": "#"
+                "href": "https://www.instagram.com/enzouria/"
             },
             {
                 "logo": "linkedin",
-                "href": "#"
-            },
-            {
-                "logo": "web",
-                "href": "#"
+                "href": "https://www.linkedin.com/in/enzo-javier-uria-53322818a/"
             }
         ],
         "image": {
-            "src": "team.png",
-            "alt": "Headshot of Juan Perez"
+            "src": "default.png",
+            "alt": "Enzo Uria"
+        }
+    },
+    {
+        "name": "Juan Manuel De Luca",
+        "title": "team.roles.logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/juanmadeluca/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/juan-de-luca-870326143"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/juandl14"
+            }
+        ],
+        "image": {
+            "src": "Juan-Manuel-De-Luca.jpeg",
+            "alt": "Juan Manuel De Luca"
+        }
+    },
+    {
+        "name": "Francisco Lucioni",
+        "title": "team.roles.logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/pancholucioni/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/francisco-lucioni-4220b01b2/"
+            }
+        ],
+        "image": {
+            "src": "Francisco-Lucioni.jpg",
+            "alt": "Francisco Lucioni"
+        }
+    },
+    {
+        "name": "Juan Pablo Oriana",
+        "title": "team.roles.logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/juanoriana"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/juan-pablo-oriana-357b36210/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/JuanOriana"
+            }
+        ],
+        "image": {
+            "src": "juan_pablo_oriana.jpeg",
+            "alt": "Juan Pablo Oriana"
+        }
+    },
+    {
+        "name": "Carolina Ingberg",
+        "title": "team.roles.grads",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/caritoing"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/carolina-ingberg"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/caroing9"
+            }
+        ],
+        "image": {
+            "src": "default.png",
+            "alt": "Carolina Ingberg"
+        }
+    },
+    {
+        "name": "Facundo Molina",
+        "title": "team.roles.logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/fnmolina_/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/facundo-m-17900a142"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/fnmolina"
+            }
+        ],
+        "image": {
+            "src": "facundo_molina.jpeg",
+            "alt": "Facundo Molina"
+        }
+    },
+    {
+        "name": "Alejo Lucioni",
+        "title": "team.roles.grads",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/alelucioni/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://ar.linkedin.com/in/alejo-lucioni-7b069414b"
+            }
+        ],
+        "image": {
+            "src": "alejo_lucioni.jpeg",
+            "alt": "Alejo Lucioni"
         }
     }
 ]

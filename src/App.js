@@ -6,17 +6,31 @@ import React, {Suspense} from 'react'
 
 // Router
 import {
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
 } from "react-router-dom";
 
 const Homepage = React.lazy(() => import('./components/pages/homepage'));
+const PastEvents = React.lazy(() => import('./components/pages/past_events'));
 
 function App() {
   return (
-    <Suspense fallback="loading">
+    <Suspense fallback={
+      (<div className="flex flex-row w-full h-screen items-center justify-center text-brand_primary">loading...</div>)
+    }>
       <div className="App">
         <Router>
-          <Homepage/>
+          <Switch>
+            <Route exact path="/past-events">
+              <PastEvents/>
+            </Route>
+            <Route exact path="/">
+              <Homepage/>
+            </Route>
+            <Redirect from='*' to='/'/>
+          </Switch>
         </Router>
       </div>
     </Suspense>

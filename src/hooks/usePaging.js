@@ -12,6 +12,8 @@ export default function usePaging(elemWidth, elemsLength, rows) {
   const pageLimit = totalPages - visiblePages;
   // Slider Page
   const [page, setPage] = useState(0);
+  // Scrollable left limit
+  const limitLeft = -1 * pageLimit * elemWidth;
 
   const pageLeft = () => {
     if (page > 0) {
@@ -24,5 +26,5 @@ export default function usePaging(elemWidth, elemsLength, rows) {
     }
   };
 
-  return [page, pageLeft, pageRight, pageLimit];
+  return [page, pageLeft, pageRight, pageLimit, limitLeft];
 }

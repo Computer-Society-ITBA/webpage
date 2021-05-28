@@ -1,6 +1,7 @@
 import React from 'react';
 import i18n from '../../i18n/index.js';
 import logoCompleto from '../../images/logo_completo.png';
+import { HashLink as Link } from "react-router-hash-link";
 
 // Icons
 import Icon from '@mdi/react'
@@ -18,28 +19,27 @@ function Footer () {
             />
         </div>
         <nav className="w-full h-5/12 items-center justify-center">
-            <ul className="list-none flex flex-col sm:flex-row w-full h-full items-center justify-center">
+            <ul className="list-none flex flex-col flex-wrap sm:flex-row sm:flex-nowrap w-full h-full items-center justify-center">
                 {
                     footer.nav.map((item, index) => {
                         return (
-                            <a key={index} href={item.href} target="_self" className="m-2 text-h5 leading-h5 transition duration-150 hover:font-bold active:font-bold focus:font-bold focus:outline-none">
+                            <Link smooth key={index} to={item.href} className="m-2 sm:my-2 sm:mx-3 w-5/12 sm:w-auto text-h5 leading-h5 transition duration-150 hover:text-white focus:text-white focus:outline-none">
                                 {i18n.t(item.text)}
-                            </a>
+                            </Link>
                         )
                     })
                 }
             </ul>
         </nav>
         <div className="w-full h-3/12 sm:h-2/12 flex flex-col-reverse sm:flex-row justify-start sm:justify-between px-16 mb-2 sm:mb-4 items-center">
-            <p>
+            <div>
                 {i18n.t('footer.love_1')}
                 <Icon path={mdiHeart}
                 size={1}
-                color="black"
-                className="inline mx-1"
+                className="inline mx-1 transform duration-100 hover:text-red-700 hover:animate-pulse"
                 />
                 {i18n.t('footer.love_2')}
-            </p>
+            </div>
             <div className="flex flex-row justify-center items-center mb-2 sm:mb-0">
                 {footer.social.map((item, index) => {
                     let icon = undefined

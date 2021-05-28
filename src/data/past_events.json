@@ -1,0 +1,178 @@
+[
+    {
+        "title": "past_events.events.que_tool.title",
+        "date": "past_events.events.que_tool.date",
+        "attendants": 0,
+        "description": "past_events.events.que_tool.description",
+        "link": {
+            "href": "https://www.instagram.com/stories/highlights/17887245425304917/", 
+            "logo": "instagram"
+        }
+    },
+    {
+        "title": "past_events.events.chat_internships.title",
+        "date": "past_events.events.chat_internships.date",
+        "attendants": 140,
+        "description": "past_events.events.chat_internships.description",
+        "link": {
+            "href": "https://www.youtube.com/watch?v=xHZuTHynVFs", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.branding_engineers.title",
+        "date": "past_events.events.branding_engineers.date",
+        "attendants": 30,
+        "description": "past_events.events.branding_engineers.description",
+        "link": {
+            "href": "https://www.youtube.com/watch?v=0ctLgqoKyMk", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.cloud_101.title",
+        "date": "past_events.events.cloud_101.date",
+        "attendants": 40,
+        "description": "past_events.events.cloud_101.description",
+        "link": {
+            "href": "https://www.youtube.com/watch?v=2CVNwQ9rRBw", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.qa_cs.title",
+        "date": "past_events.events.qa_cs.date",
+        "attendants": 15,
+        "description": "past_events.events.qa_cs.description"
+    },
+    {
+        "title": "past_events.events.bc_intro.title",
+        "date": "past_events.events.bc_intro.date",
+        "attendants": 165,
+        "description": "past_events.events.bc_intro.description",
+        "link": {
+            "href": "https://www.youtube.com/watch?v=qZ6FggtrdHQ", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.web_backend.title",
+        "date": "past_events.events.web_backend.date",
+        "attendants": 550,
+        "description": "past_events.events.web_backend.description",
+        "link": {
+            "href": "https://www.youtube.com/playlist?list=PLTqiwJDd_R8xq4nmRZfFoHHM7WplEmAVr", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.intro_power_bi.title",
+        "date": "past_events.events.intro_power_bi.date",
+        "attendants": 130,
+        "description": "past_events.events.intro_power_bi.description",
+        "link": {
+            "href": "https://www.youtube.com/playlist?list=PLTqiwJDd_R8wGAA_D-k1xXQ0vzCqpS9xy", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.ideaton_itba.title",
+        "date": "past_events.events.ideaton_itba.date",
+        "attendants": 10,
+        "description": "past_events.events.ideaton_itba.description"
+    },
+    {
+        "title": "past_events.events.git_adv.title",
+        "date": "past_events.events.git_adv.date",
+        "attendants": 330,
+        "description": "past_events.events.git_adv.description",
+        "link": {
+            "href": "https://www.youtube.com/watch?v=ZvX642A3YXk&list=PLTqiwJDd_R8xlzD2NT_DLQt-YRiSzdtOk", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.git_intro.title",
+        "date": "past_events.events.git_intro.date",
+        "attendants": 550,
+        "description": "past_events.events.git_intro.description",
+        "link": {
+            "href": "https://www.youtube.com/watch?v=hJggz_hbeNs&list=PLTqiwJDd_R8xlzD2NT_DLQt-YRiSzdtOk", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.pre_xtreme.title",
+        "date": "past_events.events.pre_xtreme.date",
+        "attendants": 30,
+        "description": "past_events.events.pre_xtreme.description"
+    },
+    {
+        "title": "past_events.events.scav_hunt_hard.title",
+        "date": "past_events.events.scav_hunt_hard.date",
+        "attendants": 10,
+        "description": "past_events.events.scav_hunt_hard.description",
+        "link": {
+            "href": "https://cs-scavenger-hunt.web.app", 
+            "logo": "web"
+        }
+    },
+    {
+        "title": "past_events.events.scav_hunt.title",
+        "date": "past_events.events.scav_hunt.date",
+        "attendants": 30,
+        "description": "past_events.events.scav_hunt.description"
+    },
+    {
+        "title": "past_events.events.personalities_cup.title",
+        "date": "past_events.events.personalities_cup.date",
+        "attendants": 0,
+        "description": "past_events.events.personalities_cup.description",
+        "link": {
+            "href": "https://www.instagram.com/stories/highlights/17865385711895645/?hl=en", 
+            "logo": "instagram"
+        }
+    },
+    {
+        "title": "past_events.events.prog_comp_team.title",
+        "date": "past_events.events.prog_comp_team.date",
+        "attendants": 20,
+        "description": "past_events.events.prog_comp_team.description"
+    },
+    {
+        "title": "past_events.events.ml_course.title",
+        "date": "past_events.events.ml_course.date",
+        "attendants": 300,
+        "description": "past_events.events.ml_course.description",
+        "link": {
+            "href": "https://www.youtube.com/watch?v=O_BcqeWNJCQ&t=6215s", 
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.gj_society.title",
+        "date": "past_events.events.gj_society.date",
+        "attendants": 40,
+        "description": "past_events.events.gj_society.description",
+        "link": {
+            "href": "https://itch.io/jam/game-jam-society", 
+            "logo": "web"
+        }
+    },
+    {
+        "title": "past_events.events.que_ves.title",
+        "date": "past_events.events.que_ves.date",
+        "attendants": 500,
+        "description": "past_events.events.que_ves.description",
+        "link": {
+            "href": "https://www.instagram.com/stories/highlights/17892753058884719/?hl=en", 
+            "logo": "instagram"
+        }
+    },
+    {
+        "title": "past_events.events.agile_tdd.title",
+        "date": "past_events.events.agile_tdd.date",
+        "attendants": 30,
+        "description": "past_events.events.agile_tdd.description"
+    }
+]
