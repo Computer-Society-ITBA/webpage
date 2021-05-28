@@ -13,7 +13,7 @@ import { mdiChevronLeft, mdiChevronRight } from "@mdi/js";
 // Components
 const Section = React.lazy(() => import("../section"));
 
-const cardWidth = 400;
+const cardWidth = 335;
 
 function UpcomingEvents() {
   const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(
@@ -26,9 +26,6 @@ function UpcomingEvents() {
       id="upcoming-events"
       bgColor="bg-white"
       textAlignment="center"
-      sizeMobile="full"
-      size="full"
-      sizeLg="full"
       className="overflow-hidden"
     >
       <h2>{i18n.t("upcoming_events.title")}</h2>
@@ -41,7 +38,7 @@ function UpcomingEvents() {
           return (
             <div
               key={index}
-              className="bg-tan flex flex-col h-auto rounded-xl shadow-xl p-8 m-4 mb-6 upcoming-card items-start"
+              className="bg-tan flex flex-col h-auto rounded-xl shadow-xl p-8 mr-2 lg:mr-4 mb-6 upcoming-card items-start"
             >
               <h3 className="text-left mt-5">{event.name}</h3>
               <p className="font-light opacity-60 font-medium mb-2 ">
