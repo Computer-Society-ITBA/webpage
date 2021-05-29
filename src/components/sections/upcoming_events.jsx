@@ -16,11 +16,8 @@ const Section = React.lazy(() => import("../section"));
 const cardWidth = 335;
 
 function UpcomingEvents() {
-  const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(
-    cardWidth,
-    upcomingEvents.length,
-    1
-  );
+  const [page, handleLeftClick, handleRightClick, pageLimit, limitLeft] =
+    usePaging(cardWidth, upcomingEvents.length, 1);
   return (
     <Section
       id="upcoming-events"
@@ -33,6 +30,10 @@ function UpcomingEvents() {
       <motion.div
         className="flex flex-row flex-none"
         animate={{ x: -1 * page * cardWidth }}
+        drag="x"
+        dragConstraints={{ left: limitLeft, right: 0 }}
+        dragElastic={false}
+        dragMomentum={false}
       >
         {upcomingEvents.map((event, index) => {
           return (

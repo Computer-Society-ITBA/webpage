@@ -52,11 +52,9 @@ function LinkButton(props) {
         </h3>
         <div className="flex flex-row justify-between mb-4 w-full">
           <p className="font-light">{i18n.t(event.date)}</p>
-          {event.attendants > 0 && (
-            <p className="text-brand_primary">
-              {i18n.t("past_events.inscriptions", { n: event.attendants })}
-            </p>
-          )}
+          <p className="text-brand_primary">
+            {i18n.t("past_events.inscriptions", { n: event.attendants })}
+          </p>
         </div>
         <p>{i18n.t(event.description)}</p>
       </div>
