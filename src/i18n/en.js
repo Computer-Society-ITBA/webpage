@@ -171,6 +171,16 @@ const i18n_en = {
     contact: {
         title: 'Contact'
     },
+    contact_us: {
+        title: 'Contact Us',
+        email: 'Send us an email',
+        networks: 'Our social profiles',
+        form: {
+            subject: 'Subject of Email',
+            body: 'Body of Email',
+            send: 'Send'
+        }
+    },
     footer: {
         love_1: 'Made with',
         love_2: 'by IEEE Computer Society ITBA',
@@ -180,7 +190,8 @@ const i18n_en = {
             numbers: "Numbers", 
             past_events: "Past Events", 
             team: "Team",
-            sponsors: "Sponsors"
+            sponsors: "Sponsors",
+            contact: "Contact Us"
         }
     }
 }

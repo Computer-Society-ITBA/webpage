@@ -80,7 +80,11 @@ module.exports = {
   variants: {
     extend: {
       fontWeight: ['hover', 'focus'],
-      animation: ['hover', 'focus']
+      animation: ['hover', 'group-hover', 'focus', 'group-focus'],
+      animation: ['hover', 'group-hover', 'focus', 'group-focus'],
+      scale: ['group-hover'],
+      borderWidth: ['focus'],
+      borderColor: ['focus']
     }
   },
   plugins: [],

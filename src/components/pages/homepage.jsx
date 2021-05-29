@@ -1,5 +1,6 @@
 import React from 'react';
 
+const ContactUs = React.lazy(() => import('../sections/contact_us'));
 const Footer = React.lazy(() => import('../sections/footer'));
 const Hero = React.lazy(() => import('../sections/hero'));
 const MisionVision = React.lazy(() => import('../sections/mision_vision'));
@@ -24,6 +25,7 @@ function Homepage () {
       <WorkWithUs/>
       <Team/>
       <Sponsors/>
+      <ContactUs/>
       <Footer/>
   </React.Fragment>)
 }
