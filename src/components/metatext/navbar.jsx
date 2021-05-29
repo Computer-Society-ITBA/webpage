@@ -34,13 +34,17 @@ function NavBar() {
   return (
     <>
       <nav
-        className="flex items-start justify-between flex-wrap p-3 sticky top-0 z-50 bg-white bg-opacity-90 
-      border-b-4 border-black border-opacity-20 lg:border-none"
+        className="flex items-start justify-between flex-wrap p-3 fixed top-0 z-50 bg-white bg-opacity-90 
+      border-b-4 border-black border-opacity-20 lg:border-none w-full"
       >
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
             <a href="/#">
-              <img src={logo} alt="Computer Society Logo" className="w-12 ml-5" />
+              <img
+                src={logo}
+                alt="Computer Society Logo"
+                className="w-12 ml-5"
+              />
             </a>
           </motion.div>
         </div>
@@ -55,7 +59,7 @@ function NavBar() {
           animate={
             width > 1020 ? "nonCollapsed" : !collapsed ? "open" : "closed"
           }
-          className="w-full flex-grow lg:mr-12 lg:flex lg:items-center lg:w-auto"
+          className="w-full flex-grow lg:mr-12 lg:flex lg:items-center lg:w-auto lg:pt-2"
         >
           <div className="font-highlight-semibold text-brand_primary text-lg lg:flex-grow lg:flex lg:justify-end">
             <NavItem>TEST</NavItem>
