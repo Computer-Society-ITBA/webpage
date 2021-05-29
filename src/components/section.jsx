@@ -58,7 +58,7 @@ function Section(props) {
 
   return (
     <>
-      <a id={props.id} className="anchor-target" />
+      <a id={props.id} className="anchor-target" href={"#" + props.id} />
       <section
         id={props.id}
         className={classlist([
