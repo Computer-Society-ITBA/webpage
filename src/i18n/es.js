@@ -6,9 +6,9 @@ const i18n_es = {
     },
     about_us: {
         we_are: 'Quienes somos',
-        we_are_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed tempor tellus, nec mattis arcu. Fusce in leo eu felis bibendum posuere. Vestibulum vel porttitor lectus, eget dictum massa. Nullam commodo dui ligula, eget imperdiet justo fermentum vitae. Sed elementum tortor ornare urna venenatis pellentesque. Nam tempus, urna ut imperdiet hendrerit, nisl erat aliquam risus, a placerat justo est ac magna. Sed sed mauris pellentesque diam eleifend eleifend.',
+        we_are_text: 'Somos una sociedad técnica formada por alumnos y exalumnos del ITBA, dedicada a inspirar y educar en diversas áreas de tecnología mayormente relacionadas con la informática. Formamos una sub-rama académica de IEEE Computer Society, una de las redes más grandes que conectan profesionales en todo el mundo.',
         we_do: 'Que hacemos',
-        we_do_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed tempor tellus, nec mattis arcu. Fusce in leo eu felis bibendum posuere. Vestibulum vel porttitor lectus, eget dictum massa. Nullam commodo dui ligula, eget imperdiet justo fermentum vitae. Sed elementum tortor ornare urna venenatis pellentesque. Nam tempus, urna ut imperdiet hendrerit, nisl erat aliquam risus, a placerat justo est ac magna. Sed sed mauris pellentesque diam eleifend eleifend.'
+        we_do_text: 'Organizamos y dictamos charlas, workshops, cursos y juegos abordados desde una mirada tecnológica y actualizada. Nuestro fin es acercar toda esa información y conocimiento de forma didáctica y entretenida a los estudiantes de hoy y a cualquier interesado en aprender.'
     },
     work_with_us: {
         button: 'Contactanos',

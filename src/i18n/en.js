@@ -6,9 +6,9 @@ const i18n_en = {
     },
     about_us: {
         we_are: 'About us',
-        we_are_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed tempor tellus, nec mattis arcu. Fusce in leo eu felis bibendum posuere. Vestibulum vel porttitor lectus, eget dictum massa. Nullam commodo dui ligula, eget imperdiet justo fermentum vitae. Sed elementum tortor ornare urna venenatis pellentesque. Nam tempus, urna ut imperdiet hendrerit, nisl erat aliquam risus, a placerat justo est ac magna. Sed sed mauris pellentesque diam eleifend eleifend.',
+        we_are_text: 'We are a technical society made up of students and alumni of ITBA, dedicated to inspiring and educating in various areas of technology mostly related to software engineering and technology. We are an academic sub-branch of the IEEE Computer Society, one of the largest networks connecting professionals around the world.',
         we_do: 'What do we do',
-        we_do_text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed tempor tellus, nec mattis arcu. Fusce in leo eu felis bibendum posuere. Vestibulum vel porttitor lectus, eget dictum massa. Nullam commodo dui ligula, eget imperdiet justo fermentum vitae. Sed elementum tortor ornare urna venenatis pellentesque. Nam tempus, urna ut imperdiet hendrerit, nisl erat aliquam risus, a placerat justo est ac magna. Sed sed mauris pellentesque diam eleifend eleifend.'
+        we_do_text: 'We organize and deliver talks, workshops, courses, and games approached from a technological and modern perspective. Our aim is to bring all this information and knowledge in an educational and entertaining way to today\'s students and to anyone interested in learning.'
     },
     work_with_us: {
         button: 'Contact us',
