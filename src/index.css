@@ -7,7 +7,10 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body, #root, #App {
+html,
+body,
+#root,
+#App {
   @apply text-typography_primary font-text w-full h-screen;
 }
 
@@ -37,15 +40,15 @@ h5 {
   h1 {
     @apply font-highlight text-h1 leading-h1;
   }
-  
+
   h2 {
     @apply font-highlight text-h2 leading-h2;
   }
-  
+
   h3 {
     @apply font-highlight text-h3 leading-h3;
   }
-  
+
   h4 {
     @apply font-highlight text-h4 leading-h4;
   }
@@ -64,4 +67,9 @@ p {
 .team-card {
   min-width: 225px;
   max-width: 225px;
+}
+
+.upcoming-card {
+  min-width: 335px;
+  max-width: 55%;
 }

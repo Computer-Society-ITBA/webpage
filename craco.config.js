@@ -1,3 +1,4 @@
+
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const { whenProd } = require("@craco/craco");
 module.exports = {
@@ -31,10 +32,7 @@ module.exports = {
   },
   style: {
     postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-      ],
+      plugins: [require("tailwindcss"), require("autoprefixer")],
     },
-  }
-}
+  },
+};
