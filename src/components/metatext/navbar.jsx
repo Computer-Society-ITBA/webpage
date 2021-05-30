@@ -1,9 +1,11 @@
 import { React, useState } from "react";
+import i18n from "../../i18n/index.js";
 import logo from "../../images/logo_nav.png";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { MenuToggle } from "./menu_toggle";
 import { motion } from "framer-motion";
 import NavItem from "./navitem";
+import header from "../../data/header.json";
 
 function NavBar() {
   const [collapsed, setCollapsed] = useState(true);
@@ -62,10 +64,13 @@ function NavBar() {
           className="w-full flex-grow lg:mr-12 lg:flex lg:items-center lg:w-auto lg:pt-2"
         >
           <div className="font-highlight-semibold text-brand_primary text-lg lg:flex-grow lg:flex lg:justify-end">
-            <NavItem>TEST</NavItem>
-            <NavItem>TEST</NavItem>
-            <NavItem>TEST</NavItem>
-            <NavItem>TEST</NavItem>
+            {header.links.map((link, index) => {
+              return (
+                <NavItem key={index} href={link.href}>
+                  {i18n.t(link.text).toUpperCase()}
+                </NavItem>
+              );
+            })}
           </div>
         </motion.div>
       </nav>
