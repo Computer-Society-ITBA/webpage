@@ -12,13 +12,13 @@ const sponsorImages = require.context("../../images/sponsors/", true, /^.*$/)
 const Section = React.lazy(() => import('../section'));
 
 function Sponsors () {
-  return (<Section id="our-sponsors" bgColor="bg-white" textAlignment="center" sizeMobile="full" size="almost" sizeLg="almost">
+  return (<Section id="our-sponsors" bgColor="bg-white" textAlignment="center" sizeLg="almost">
       <h2>{i18n.t('sponsors.title')}</h2>
-      <div className="flex flex-row sm:flex-row flex-wrap justify-center items-center w-full h-full">
+      <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center w-full h-full">
         {
           sponsors.map((sponsor, index) => {
             return (
-              <div key={index} className="w-6/12 md:w-4/12 lg:w-3/12 h-1/6 sm:h-3/6 p-2 flex flex-col justify-center items-center">
+              <div key={index} className="w-full md:w-4/12 lg:w-3/12 h-2/6 sm:h-3/6 p-2 flex flex-col justify-center items-center">
                 <img className="max-h-full max-w-full object-contain" src={sponsorImages(`./${sponsor.src}`).default} alt={i18n.t(sponsor.alt)} />
               </div>
             )

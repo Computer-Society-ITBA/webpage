@@ -9,13 +9,13 @@ import { InView } from 'react-intersection-observer';
 const Section = React.lazy(() => import('../section'));
 
 function Nosotros () {
-  return (<Section id="about-us" bgColor="bg-brand_primary" sizeMobile="full" size="almost" sizeLg="half" flex="only">
+  return (<Section id="about-us" bgColor="bg-brand_primary" flex="only">
       <div className="flex flex-col sm:flex-row justify-between sm:justify-center">
         <InView threshold={0.5}>
           {({ref, inView}) => (
             <motion.div 
             ref={ref}
-            className="text-left mb-4 sm:mb-0"
+            className="text-left mb-4 sm:mb-0 w-full sm:w-6/12"
             initial='hidden'
             animate={inView ? {opacity: 1} : {opacity: 0}}
             transition={{duration: 0.5}}
@@ -40,7 +40,7 @@ function Nosotros () {
           {({ref, inView}) => (
             <motion.div 
             ref={ref}
-            className="text-right"
+            className="text-right w-full sm:w-6/12"
             initial='hidden'
             animate={inView ? {opacity: 1} : {opacity: 0}}
             transition={{duration: 0.5}}
