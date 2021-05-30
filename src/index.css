@@ -79,4 +79,5 @@ p {
   position: relative;
   top: -70px;
   visibility: hidden;
+  height: 0;
 }
