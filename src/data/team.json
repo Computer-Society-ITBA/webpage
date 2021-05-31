@@ -285,7 +285,7 @@
             }
         ],
         "image": {
-            "src": "default.png",
+            "src": "Gianfranco-Marchetti.jpeg",
             "alt": "Gianfranco Marchetti"
         }
     },
@@ -451,6 +451,42 @@
         "image": {
             "src": "alejo_lucioni.jpeg",
             "alt": "Alejo Lucioni"
+        }
+    },
+    {
+        "name": "Pedro Lopez",
+        "title": "team.roles.logistics",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/pedro_rulos/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/pedro-jeremias-lopez-guzman-563488209"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/PedroLopezITBA"
+            }
+        ],
+        "image": {
+            "src": "Pedro-Lopez.jpeg",
+            "alt": "Pedro Lopez"
+        }
+    },
+    {
+        "name": "Hernan Finucci",
+        "title": "team.roles.logistics",
+        "social": [
+            {
+                "logo": "github",
+                "href": "https://github.com/hfinucci"
+            }
+        ],
+        "image": {
+            "src": "Hernan-Finucci.jpeg",
+            "alt": "Hernan Finucci"
         }
     }
 ]
