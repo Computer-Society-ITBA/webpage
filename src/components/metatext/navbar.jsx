@@ -6,6 +6,7 @@ import { MenuToggle } from "./menu_toggle";
 import { motion } from "framer-motion";
 import NavItem from "./navitem";
 import header from "../../data/header.json";
+import { HashLink as Link } from "react-router-hash-link";
 
 function NavBar() {
   const [collapsed, setCollapsed] = useState(true);
@@ -41,13 +42,13 @@ function NavBar() {
       >
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <a href="/#">
+            <Link smooth to="/#">
               <img
                 src={logo}
                 alt="Computer Society Logo"
                 className="w-12 ml-5"
               />
-            </a>
+            </Link>
           </motion.div>
         </div>
         <motion.div
@@ -66,8 +67,8 @@ function NavBar() {
           <div className="font-highlight-semibold text-brand_primary text-lg lg:flex-grow lg:flex lg:justify-end">
             {header.links.map((link, index) => {
               return (
-                <NavItem key={index} href={link.href}>
-                  {i18n.t(link.text).toUpperCase()}
+                <NavItem key={index} href={link.href} toggle={() => setCollapsed(!collapsed)}>
+                  {i18n.t(link.text)}
                 </NavItem>
               );
             })}

@@ -12,6 +12,7 @@ import {
   Redirect
 } from "react-router-dom";
 
+const Credits = React.lazy(() => import('./components/pages/credits'));
 const Homepage = React.lazy(() => import('./components/pages/homepage'));
 const PastEvents = React.lazy(() => import('./components/pages/past_events'));
 
@@ -23,6 +24,9 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
+            <Route exact path="/credits">
+              <Credits/>
+            </Route>
             <Route exact path="/past-events">
               <PastEvents/>
             </Route>

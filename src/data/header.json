@@ -19,6 +19,10 @@
         {
             "text": "footer.nav.sponsors",
             "href": "/#our-sponsors"
+        },
+        {
+            "text": "footer.nav.contact",
+            "href": "/#contact-us"
         }
     ]
 

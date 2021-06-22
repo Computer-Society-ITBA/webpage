@@ -193,6 +193,10 @@ const i18n_es = {
             sponsors: "Sponsors",
             contact: "Contactanos"
         }
+    },
+    credits: {
+        title: 'Créditos',
+        description: 'El sitio completo fue posible gracias al fantástico esfuerzo de estos miembros del equipo ITBA de IEEE Computer Society. Todo, desde el diseño hasta la ejecución, fue hecho por ellos:'
     }
 }
 

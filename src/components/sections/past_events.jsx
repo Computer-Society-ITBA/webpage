@@ -39,7 +39,7 @@ function PastEvents () {
         }
       </div>
       <div className="flex flex-row w-full justify-center items-center mt-4">
-      <LinkButton href="/past-events" type="outlined-dark" text={i18n.t('past_events.button')}/>
+      <LinkButton href="/past-events/#" type="outlined-dark" text={i18n.t('past_events.button')}/>
       </div>
     </Section>)
 }

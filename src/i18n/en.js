@@ -186,13 +186,17 @@ const i18n_en = {
         love_2: 'by IEEE Computer Society ITBA',
         nav: {
             about: "About",
-            future_events: "Future Events",
+            future_events: "Upcoming Events",
             numbers: "Numbers", 
             past_events: "Past Events", 
             team: "Team",
             sponsors: "Sponsors",
             contact: "Contact Us"
         }
+    },
+    credits: {
+        title: 'Credits',
+        description: 'The complete site was made possible by the fantastic effort of these members from the IEEE Computer Society ITBA team. Everything, from design to execution, was done by them:'
     }
 }
 

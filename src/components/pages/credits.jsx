@@ -2,14 +2,14 @@ import React from 'react';
 
 const Footer = React.lazy(() => import('../sections/footer'));
 const NavBar = React.lazy(() => import('../metatext/navbar'));
-const PastEventsFull = React.lazy(() => import('../sections/past_events_full'));
+const CreditsContent = React.lazy(() => import('../sections/credits_content'));
 
-function PastEvents () {
+function Credits () {
   return (<React.Fragment>
       <NavBar/>
-      <PastEventsFull/>
+      <CreditsContent/>
       <Footer/>
   </React.Fragment>)
 }
 
-export default PastEvents;
+export default Credits;
