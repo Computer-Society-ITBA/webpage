@@ -1,6 +1,6 @@
 import React from 'react';
 import i18n from '../../i18n/index.js';
-import logoCompleto from '../../images/logo_completo.png';
+import logoCompleto from '../../images/logo_completo_dark.png';
 import { HashLink as Link } from "react-router-hash-link";
 
 // Icons
@@ -12,7 +12,7 @@ import footer from '../../data/footer'
 function Footer () {
     return <footer className='bg-brand_secondary w-full flex flex-col justify-between items-center overflow-hidden'>
         <div className="w-full h-4/12 sm:h-6/12 items-center justify-center flex flex-row">
-            <Link smooth to="/#" className="max-h-full sm:w-4/12 md:w-4/12 justify-center items-center">
+            <Link smooth to="/#" className="max-h-full sm:w-4/12 md:w-4/12 my-4 justify-center items-center">
                 <img 
                 src={logoCompleto} 
                 className='object-contain w-8/12 mx-auto' 
