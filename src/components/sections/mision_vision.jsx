@@ -9,7 +9,7 @@ import { InView } from 'react-intersection-observer';
 const Section = React.lazy(() => import('../section'));
 
 function MisionVision () {
-  return (<Section id="mision-vision" bgColor="bg-white" sizeMobile="full" size="almost" sizeLg="half" flex="only" padding="no">
+  return (<Section id="mision-vision" bgColor="bg-white" sizeMobile="full" size="almost" sizeLg="almost" flex="only" padding="no">
       <div className="flex flex-col w-full relative overflow-hidden">
         <div className="bg-white w-full h-3/6 sm:h-4/6 px-8 py-8 sm:px-12 sm:py-12 text-right">
           <h3 className="font-bold">{i18n.t('mision_vision.mision_text')}</h3>
