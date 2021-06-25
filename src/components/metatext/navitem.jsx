@@ -8,6 +8,7 @@ const NavItem = (props) => {
       <Link
         smooth
         to={props.href}
+        onClick={props.toggle}
         className="w-20 lg:inline-block hover:text-brand_secondary lg:mt-2 lg:mr-8 lg:w-auto"
       >
         {props.children}

@@ -1,10 +1,12 @@
 [
     {
         "src": "logo_sec.png",
-        "alt": "sponsors.logos.sec"
+        "alt": "sponsors.logos.sec",
+        "link": "https://siempreencasa.com.ar/"
     },
     {
         "src": "logo_zx.png",
-        "alt": "sponsors.logos.zx"
+        "alt": "sponsors.logos.zx",
+        "link": "https://zx-ventures.com/"
     }
 ]

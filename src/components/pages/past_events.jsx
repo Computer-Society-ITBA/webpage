@@ -1,15 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const Footer = React.lazy(() => import('../sections/footer'));
-const NavBar = React.lazy(() => import('../metatext/navbar'));
-const PastEventsFull = React.lazy(() => import('../sections/past_events_full'));
+const Footer = React.lazy(() => import("../sections/footer"));
+const NavBar = React.lazy(() => import("../metatext/navbar"));
+const PastEventsFull = React.lazy(() => import("../sections/past_events_full"));
 
-function Homepage () {
-  return (<React.Fragment>
-      <NavBar/>
-      <PastEventsFull/>
-      <Footer/>
-  </React.Fragment>)
+function PastEvents() {
+  window.scrollTo(0, 0);
+  return (
+    <React.Fragment>
+      <NavBar />
+      <PastEventsFull />
+      <Footer />
+    </React.Fragment>
+  );
 }
 
-export default Homepage;
+export default PastEvents;

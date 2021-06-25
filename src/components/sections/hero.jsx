@@ -20,7 +20,7 @@ function Hero () {
         loadAnimations()
     })
 
-    return <section className='bg-white h-screen w-full flex flex-col justify-center items-center overflow-hidden'>
+    return <section id="main" className='bg-white h-screen w-full flex flex-col justify-center items-center overflow-hidden'>
         <h4>
             <motion.div
                 initial={{ opacity: 1 }}
