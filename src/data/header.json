@@ -1,0 +1,29 @@
+{
+    "links": [
+        {
+            "text": "footer.nav.about",
+            "href": "/#about-us"
+        },
+        {
+            "text": "footer.nav.future_events",
+            "href": "/#upcoming-events"
+        },
+        {
+            "text": "footer.nav.past_events",
+            "href": "/#past-events"
+        },
+        {
+            "text": "footer.nav.team",
+            "href": "/#our-team"
+        },
+        {
+            "text": "footer.nav.sponsors",
+            "href": "/#our-sponsors"
+        },
+        {
+            "text": "footer.nav.contact",
+            "href": "/#contact-us"
+        }
+    ]
+
+}

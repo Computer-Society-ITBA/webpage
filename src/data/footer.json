@@ -1,0 +1,42 @@
+{
+    "nav": [
+        {
+            "text": "footer.nav.about",
+            "href": "/#about-us"
+        },
+        {
+            "text": "footer.nav.future_events",
+            "href": "/#upcoming-events"
+        },
+        {
+            "text": "footer.nav.past_events",
+            "href": "/#past-events"
+        },
+        {
+            "text": "footer.nav.team",
+            "href": "/#our-team"
+        },
+        {
+            "text": "footer.nav.sponsors",
+            "href": "/#our-sponsors"
+        },
+        {
+            "text": "footer.nav.contact",
+            "href": "/#contact-us"
+        }
+    ],
+    "social": [
+        {
+            "logo": "instagram",
+            "href": "https://www.instagram.com/computer.society.itba/?hl=en"
+        },
+        {
+            "logo": "youtube",
+            "href": "https://www.youtube.com/channel/UCGRu7ac5g1M5fuVYPYX8Ifg"
+        },
+        {
+            "logo": "linkedin",
+            "href": "https://www.linkedin.com/company/30092847/"
+        }
+    ]
+}

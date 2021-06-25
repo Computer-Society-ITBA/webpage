@@ -1,55 +1,40 @@
-import logo from './images/logo_completo.png';
-import './index.css';
-import './App.css';
-// Translations
-import i18n from "./i18n/index.js";
+import "./index.css";
+import "./App.css";
 
-import React, {Suspense} from 'react'
-import { SplitText } from './animations/SplitText'
-import { AnimatePresence, motion } from 'framer-motion'
+import React, { Suspense } from "react";
+import "./styles/loader.css";
 
 // Router
 import {
-  BrowserRouter as Router
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
 } from "react-router-dom";
+
+const Credits = React.lazy(() => import("./components/pages/credits"));
+const Homepage = React.lazy(() => import("./components/pages/homepage"));
+const PastEvents = React.lazy(() => import("./components/pages/past_events"));
 
 function App() {
   return (
-    <Suspense fallback="loading">
-      <Router>
-        <div className="App">
-          <header className="App-header bg-brand_primary">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <h1>
-            <AnimatePresence>
-              {(
-                <motion.div
-                  initial={{ opacity: 1 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  className="text-typography_primary"
-                >
-                  <SplitText
-                    initial={{ y: '100%' }}
-                    animate="visible"
-                    variants={{
-                      visible: i => ({
-                        y: 0,
-                        transition: {
-                          delay: i * 0.2
-                        }
-                      })
-                    }}
-                  >
-                    {i18n.t('welcome_wip')}
-                  </SplitText>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            </h1>
-          </header>
-        </div>
-      </Router>
+    <Suspense fallback={<div className="loader"/>}>
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/credits">
+              <Credits />
+            </Route>
+            <Route exact path="/past-events">
+              <PastEvents />
+            </Route>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+            <Redirect from="*" to="/" />
+          </Switch>
+        </Router>
+      </div>
     </Suspense>
   );
 }
