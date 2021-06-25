@@ -3,7 +3,6 @@ import "./App.css";
 
 import React, { Suspense } from "react";
 import "./styles/loader.css";
-import i18n from "./i18n/index.js";
 
 // Router
 import {
@@ -19,7 +18,7 @@ const PastEvents = React.lazy(() => import("./components/pages/past_events"));
 
 function App() {
   return (
-    <Suspense fallback={<div class="loader">{i18n.t("loading")}</div>}>
+    <Suspense fallback={<div className="loader"/>}>
       <div className="App">
         <Router>
           <Switch>

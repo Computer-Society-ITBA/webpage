@@ -1,5 +1,6 @@
 import React from "react";
 import usePaging from "../../hooks/usePaging";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { motion } from "framer-motion";
 // Translations
 import i18n from "../../i18n/index.js";
@@ -14,9 +15,15 @@ import { mdiChevronLeft, mdiChevronRight } from "@mdi/js";
 const Section = React.lazy(() => import("../section"));
 const LinkButton = React.lazy(() => import('../link_button'));
 
-const cardWidth = 335;
+// Below screen 800px, this is the width
+const baseCardWidth = 335;
 
 function UpcomingEvents() {
+  // As cards are dynamic in width, the width for the hook needs to adapt
+  // At 800px cards stop getting smaller, 335px is the limit
+  const { width } = useWindowDimensions();
+  // Define the limit using the padding
+  const cardWidth = width >= 800 ? ((width-100)/2) : baseCardWidth 
   const [page, handleLeftClick, handleRightClick, pageLimit, limitLeft] =
     usePaging(cardWidth, upcomingEvents.length, 1);
   return (
