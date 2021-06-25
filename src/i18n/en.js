@@ -44,12 +44,12 @@ const i18n_en = {
       serverless: {
         title: "Serverless APIs with Lambda",
         date: "August 2021",
-        description: "Pablo Giudice, tech lead at \"Siempre en Casa\", explains how to build serverless APIs using AWS services like Lambda. This event aims to provide tools for anyone trying to start their own business or even migrating their current work to the cloud."
+        description: "Pablo Giudice, tech lead at \"Siempre en Casa\", explains how to build serverless APIs using AWS services like Lambda. This event aims to provide tools for anyone trying to start their own business or even migrating their current work to the cloud. Registration opens at the end of July."
       },
       eth_intro: {
         title: "Introduction to Ethereum Development",
         date: "7/26/21 and 7/30/21",
-        description: "The idea of this course is to learn to program smart contracts in Solidity, the most widely used language in the Ethereum network. Along with Open Zeppelin, a leader in the business, we'll bring both theoretical and practical tools for their comprehension."
+        description: "The idea of this course is to learn to program smart contracts in Solidity, the most widely used language in the Ethereum network. Along with Open Zeppelin, a leader in the business, we'll bring both theoretical and practical tools for their comprehension. Registration opens mid-July."
       }
     }
   },
