@@ -2,7 +2,8 @@
      {
           "title": "upcoming_events.events.eth_intro.title",
           "date": "upcoming_events.events.eth_intro.date",
-          "description": "upcoming_events.events.eth_intro.description"
+          "description": "upcoming_events.events.eth_intro.description",
+          "link": "https://bit.ly/cs-eth-dev"
      },
      {
           "title": "upcoming_events.events.serverless.title",
