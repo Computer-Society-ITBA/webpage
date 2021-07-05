@@ -49,7 +49,7 @@ const i18n_en = {
       eth_intro: {
         title: "Introduction to Ethereum Development",
         date: "7/26/21 and 7/30/21",
-        description: "The idea of this course is to learn to program smart contracts in Solidity, the most widely used language in the Ethereum network. Along with Open Zeppelin, a leader in the business, we'll bring both theoretical and practical tools for their comprehension. Registration opens mid-July."
+        description: "The idea of this course is to learn to program smart contracts in Solidity, the most widely used language in the Ethereum network. Along with OpenZeppelin, a leader in the business, we'll bring both theoretical and practical tools for their comprehension. Registration opens mid-July."
       }
     }
   },
