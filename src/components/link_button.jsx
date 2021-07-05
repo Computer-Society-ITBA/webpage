@@ -24,7 +24,7 @@ function LinkButton (props) {
 
     if (props.external) {
         return (
-            <a href={props.href} className={classlist([
+            <a href={props.href} target="_blank" rel="noopener noreferrer" className={classlist([
                 className,
                 props.className
                 ])}>
