@@ -55,7 +55,7 @@ function UpcomingEvents() {
               </p>
               <p className="text-left mb-2">{i18n.t(event.description)}</p>
               {event.link && (
-                <LinkButton className="text-xl mt-3 self-end" href={event.link} type="full-primary" text={i18n.t('upcoming_events.sign_up')}/>
+                <LinkButton className="text-xl mt-3 self-end" href={event.link} type="full-primary" external={true} text={i18n.t('upcoming_events.sign_up')}/>
               )}
               {/* <button
                 className="bg-brand_primary py-3 px-6 text-xl rounded-lg text-white mt-3 
