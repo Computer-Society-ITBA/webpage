@@ -48,7 +48,7 @@ const i18n_en = {
       },
       eth_security:{
         title: "Introduction to Hacking and Security in Ethereum",
-        date: "17/8/21 y 20/8/21",
+        date: "17/8/21 and 20/8/21",
         description: "The objective of this course is to give attendees the audit tools to detect, test and fix common vulnerabilities in Smart Contracts written in Solidity."
       }
     }
