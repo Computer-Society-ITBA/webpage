@@ -1,13 +1,14 @@
 [
      {
-          "title": "upcoming_events.events.eth_intro.title",
-          "date": "upcoming_events.events.eth_intro.date",
-          "description": "upcoming_events.events.eth_intro.description",
-          "link": "https://bit.ly/cs-eth-dev"
+          "title": "upcoming_events.events.eth_security.title",
+          "date": "upcoming_events.events.eth_security.date",
+          "description": "upcoming_events.events.eth_security.description",
+          "link": "https://bit.ly/cs-eth-hacking"
      },
      {
-          "title": "upcoming_events.events.serverless.title",
-          "date": "upcoming_events.events.serverless.date",
-          "description": "upcoming_events.events.serverless.description"
+          "title": "upcoming_events.events.superfluid.title",
+          "date": "upcoming_events.events.superfluid.date",
+          "description": "upcoming_events.events.superfluid.description",
+          "link": "https://bit.ly/superfluid-csitba"
      }
 ]

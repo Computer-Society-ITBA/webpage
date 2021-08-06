@@ -42,15 +42,15 @@ const i18n_es = {
     title: "Próximos Eventos",
     sign_up: "Anotarse",
     events: {
-      serverless: {
-        title: "APIs serverless con Lambda",
-        date: "Agosto 2021",
-        description: "Pablo Giudice, líder tecnológico de \"Siempre en Casa\", explica cómo crear API sin servidores usando servicios de AWS como Lambda. Este evento tiene como objetivo proporcionar herramientas para cualquiera que intente iniciar su propio negocio o incluso migrar su stack actual a la nube. Las inscripciones abren a fines de Julio."
+      superfluid: {
+        title: "Revolucionando el Dinero: Superfluid Finance",
+        date: "11/8/21",
+        description: "¿Querés aprender sobre esta revolucionaria forma de realizar flujos de dinero en tiempo real, como suscripciones, salarios y recompensas, con transacciones únicas en la blockchain? No te podés perder esta charla sobre Superfluid Finance"
       },
-      eth_intro: {
-        title: "Introducción al desarrollo en Ethereum",
-        date: "26/7/21 y 30/7/21",
-        description: "La idea del curso es aprender a programar smart contracts en Solidity, el lenguaje que más se utiliza en la red de Ethereum. Junto a OpenZeppelin, empresa líder en el sector, vamos a brindar herramientas teóricas y prácticas para la comprensión de los mismos. Las inscripciones abren a mediados de Julio."
+      eth_security:{
+        title: "Curso Introducción a Hacking y Seguridad en Ethereum",
+        date: "17/8/21 y 20/8/21",
+        description: "El objetivo es que una vez terminado el curso, los participantes conozcan las técnicas utilizadas por auditores para detectar, probar y remediar las vulnerabilidades de seguridad más comunes en Smart Contracts."
       }
     }
   },
@@ -60,6 +60,16 @@ const i18n_es = {
     watch: "Ver en Youtube",
     button: "Ver Todos",
     events: {
+      eth_intro: {
+        title: "Introducción al desarrollo en Ethereum",
+        date: "26/7/21 y 30/7/21",
+        description: "La idea del curso es aprender a programar smart contracts en Solidity, el lenguaje que más se utiliza en la red de Ethereum. Junto a OpenZeppelin, empresa líder en el sector, vamos a brindar herramientas teóricas y prácticas para la comprensión de los mismos. Las inscripciones abren a mediados de Julio."
+      },
+      serverless: {
+        title: "APIs serverless con Lambda",
+        date: "Agosto 2021",
+        description: "Pablo Giudice, líder tecnológico de \"Siempre en Casa\", explica cómo crear API sin servidores usando servicios de AWS como Lambda. Este evento tiene como objetivo proporcionar herramientas para cualquiera que intente iniciar su propio negocio o incluso migrar su stack actual a la nube. Las inscripciones abren a fines de Julio."
+      },
       que_tool: {
         title: "¿Que Tool?",
         date: "Junio 2021 - Now",
