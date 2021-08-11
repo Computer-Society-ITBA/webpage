@@ -347,7 +347,7 @@
             }
         ],
         "image": {
-            "src": "Juan-Manuel-De-Luca.jpeg",
+            "src": "Juan-Manuel-De-Luca.jpg",
             "alt": "Juan Manuel De Luca"
         }
     },
@@ -487,6 +487,64 @@
         "image": {
             "src": "Hernan-Finucci.jpeg",
             "alt": "Hernan Finucci"
+        }
+    },
+    {
+        "name": "Gastón De Schant",
+        "title": "team.roles.fundraising",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/cabedeschant/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/gaston-de-schant-4847131b1/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/GastonDeS"
+            }
+        ],
+        "image": {
+            "src": "Gaston-de-schant.jpg",
+            "alt": "Gastón De Schant"
+        }
+    },
+    {
+        "name": "Sol Konfederak",
+        "title": "team.roles.fundraising",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/solkonfederak/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/sol-konfederak-221a02219/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/solkonfe"
+            }
+        ],
+        "image": {
+            "src": "solkonfe.jpg",
+            "alt": "Sol Konfederak"
+        }
+    },
+    {
+        "name": "Azul de los Ángeles Makk",
+        "title": "team.roles.fundraising",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://instagram.com/azumakk/"
+            }
+        ],
+        "image": {
+            "src": "Azu_M.jpg",
+            "alt": "Azul de los Ángeles Makk"
         }
     }
 ]
