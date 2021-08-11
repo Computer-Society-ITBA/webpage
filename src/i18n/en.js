@@ -212,6 +212,8 @@ const i18n_en = {
     logos: {
       sec: "Siempre en Casa logo",
       zx: "ZX Ventures logo",
+      tekal: "Tekal logo",
+      extrimian: "Extrimian logo"
     },
   },
   contact: {

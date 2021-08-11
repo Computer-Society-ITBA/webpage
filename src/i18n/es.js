@@ -213,6 +213,8 @@ const i18n_es = {
     logos: {
       sec: "Logo de Siempre en Casa",
       zx: "Logo de ZX Ventures",
+      tekal: "Logo de Tekal",
+      extrimian: "Logo de Extrimian"
     },
   },
   contact: {

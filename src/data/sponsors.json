@@ -8,5 +8,15 @@
         "src": "logo_zx.png",
         "alt": "sponsors.logos.zx",
         "link": "https://zx-ventures.com/"
+    },
+    {
+        "src": "logo_tekal.png",
+        "alt": "sponsors.logos.tekal",
+        "link": "https://www.tekal.ai"
+    },
+    {
+        "src": "logo_extrimian.png",
+        "alt": "sponsors.logos.extrimian",
+        "link": "https://extrimian.com"
     }
 ]
