@@ -26,32 +26,6 @@
         }
     },
     {
-        "name": "Gonzalo Hirsch",
-        "title": "team.roles.cofounder",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/gonzalohirsch/?hl=en"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/gonzalo-hirsch/"
-            },
-            {
-                "logo": "web",
-                "href": "https://gonzalohirsch.com/#/en"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/GonzaloHirsch"
-            }
-        ],
-        "image": {
-            "src": "Gonzalo-Hirsch.jpg",
-            "alt": "Gonzalo Hirsch"
-        }
-    },
-    {
         "name": "Julián Vuoso",
         "title": "team.roles.director_media",
         "social": [
@@ -111,28 +85,6 @@
         "image": {
             "src": "Cata-Lucena-M.jpg",
             "alt": "Catalina Lucena M."
-        }
-    },
-    {
-        "name": "Florencia Petrikovich",
-        "title": "team.roles.logistics",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/florpetrikovich/"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/florencia-petrikovich-a2b3aa1a6"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/fpetrikovich"
-            }
-        ],
-        "image": {
-            "src": "Florencia-Petrikovich.jpg",
-            "alt": "Florencia Petrikovich"
         }
     },
     {
@@ -309,24 +261,6 @@
         "image": {
             "src": "rodrigo_stampone.jpeg",
             "alt": "Rodrigo Stampone"
-        }
-    },
-    {
-        "name": "Enzo Uria",
-        "title": "team.roles.fundraising",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/enzouria/"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/enzo-javier-uria-53322818a/"
-            }
-        ],
-        "image": {
-            "src": "Enzo_Uria.jpg",
-            "alt": "Enzo Uria"
         }
     },
     {
