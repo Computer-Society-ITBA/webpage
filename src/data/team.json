@@ -128,28 +128,6 @@
         }
     },
     {
-        "name": "Agustin I. Vergniaud",
-        "title": "team.roles.director_fundraising",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/agusvergniaud"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/agustin-vergniaud-97a956190"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/agusver1"
-            }
-        ],
-        "image": {
-            "src": "agustin_vergniaud.jpeg",
-            "alt": "Agustin Ignacio Vergniaud"
-        }
-    },
-    {
         "name": "Tomás Soracco",
         "title": "team.roles.director_grads",
         "social": [
