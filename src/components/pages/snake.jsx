@@ -150,7 +150,7 @@ const Snake = () => {
     >
       <NavBar />
       <div className="flex-col mt-20 mb-6 focus:outline-none flex items-center w-screen justify-center">
-        <h2 className="mt-6 text-green-500">CSnake</h2>
+        <h2 className="mt-6 text-green-500 font-bold">CSnake</h2>
         <canvas
           onClick={startGame}
           className="border-8 border-green-500"
@@ -159,7 +159,7 @@ const Snake = () => {
           height={`${CANVAS_SIZE[1]}px`}
         />
         {gameStopped && (
-          <div className="absolute text-lg mt-2 text-green-600">
+          <div className="absolute text-lg mt-10 text-green-600">
             {i18n.t("snake.click_to_start")} {gameOver && i18n.t("snake.again")}
           </div>
         )}
