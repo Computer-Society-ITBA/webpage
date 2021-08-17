@@ -104,8 +104,10 @@ const Snake = () => {
     context.clearRect(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
 
     // Snake body
-    context.fillStyle = SNAKE_COLOR;
-    snake.forEach(([x, y], i) => i != 0 && context.fillRect(x, y, 1, 1));
+    snake.forEach(([x, y], i) => {
+      context.fillStyle = i % 2 == 0 ? SNAKE_HEAD_COLOR : SNAKE_COLOR;
+      i != 0 && context.fillRect(x, y, 1, 1);
+    });
 
     // Snake head
     context.fillStyle = SNAKE_HEAD_COLOR;
