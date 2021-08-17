@@ -102,12 +102,36 @@ const Snake = () => {
     const context = canvasRef.current.getContext("2d");
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
     context.clearRect(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
+
+    // Snake body
     context.fillStyle = SNAKE_COLOR;
-    snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
-    context.fillStyle = APPLE_COLOR;
-    context.fillRect(apple[0], apple[1], 1, 1);
+    snake.forEach(([x, y], i) => i != 0 && context.fillRect(x, y, 1, 1));
+
+    // Snake head
     context.fillStyle = SNAKE_HEAD_COLOR;
-    context.fillRect(snake[0][0], snake[0][1], 1, 1);
+    context.beginPath();
+    var startAngle = (dir[0] * Math.PI) / 2 + Math.PI;
+    if (dir[1] == 1) startAngle += Math.PI;
+    context.arc(
+      snake[0][0] + 0.5,
+      snake[0][1] + 0.5,
+      0.5,
+      startAngle,
+      startAngle + Math.PI
+    );
+    context.fill();
+    context.fillRect(
+      snake[0][0] + (dir[0] < 0 ? 0.5 : 0),
+      snake[0][1] + (dir[1] < 0 ? 0.5 : 0),
+      dir[0] !== 0 ? 0.6 : 1,
+      dir[1] !== 0 ? 0.6 : 1
+    );
+
+    //Apple
+    context.fillStyle = APPLE_COLOR;
+    context.beginPath();
+    context.arc(apple[0] + 0.5, apple[1] + 0.5, 0.5, 0, 2 * Math.PI);
+    context.fill();
   }, [snake, apple, gameOver]);
   return (
     <div
