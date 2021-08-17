@@ -154,13 +154,17 @@ const Snake = () => {
         />
         {gameStopped && (
           <div className="absolute text-lg mt-2 text-green-600">
-            Click anywhere on screen to start {gameOver && "again"}
+            {i18n.t("snake.click_to_start")} {gameOver && i18n.t("snake.again")}
           </div>
         )}
         {gameOver && (
-          <div className="absolute -mt-8 text-red text-3xl">GAME OVER!</div>
+          <div className="absolute -mt-8 text-red text-3xl">
+            {i18n.t("snake.game_over")}
+          </div>
         )}
-        <h3 className="mt-5">Score: {score}</h3>
+        <h3 className="mt-5">
+          {i18n.t("snake.score")}: {score}
+        </h3>
       </div>
       <Footer />
     </div>
