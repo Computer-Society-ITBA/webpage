@@ -16,7 +16,6 @@ import i18n from "../../i18n/index.js";
 
 const Footer = React.lazy(() => import("../sections/footer"));
 const NavBar = React.lazy(() => import("../metatext/navbar"));
-const Section = React.lazy(() => import("../section"));
 
 const Snake = () => {
   const canvasRef = useRef();
@@ -49,6 +48,9 @@ const Snake = () => {
         return;
       }
       setDir(newDir);
+    }
+    if (keyCode === 32 && gameStopped) {
+      startGame();
     }
   };
   const createApple = () => {
@@ -103,17 +105,19 @@ const Snake = () => {
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
     context.clearRect(0, 0, CANVAS_SIZE[0], CANVAS_SIZE[1]);
 
+    context.fillStyle = SNAKE_HEAD_COLOR;
+
     // Snake body
     snake.forEach(([x, y], i) => {
-      context.fillStyle = i % 2 == 0 ? SNAKE_HEAD_COLOR : SNAKE_COLOR;
-      i != 0 && context.fillRect(x, y, 1, 1);
+      context.fillStyle = i % 2 === 0 ? SNAKE_HEAD_COLOR : SNAKE_COLOR;
+      i !== 0 && context.fillRect(x, y, 1, 1);
     });
 
     // Snake head
     context.fillStyle = SNAKE_HEAD_COLOR;
     context.beginPath();
     var startAngle = (dir[0] * Math.PI) / 2 + Math.PI;
-    if (dir[1] == 1) startAngle += Math.PI;
+    if (dir[1] === 1) startAngle += Math.PI;
     context.arc(
       snake[0][0] + 0.5,
       snake[0][1] + 0.5,
@@ -134,7 +138,7 @@ const Snake = () => {
     context.beginPath();
     context.arc(apple[0] + 0.5, apple[1] + 0.5, 0.5, 0, 2 * Math.PI);
     context.fill();
-  }, [snake, apple, gameOver]);
+  }, [snake, apple, gameOver, dir]);
   return (
     <div
       className="focus:outline-none"
