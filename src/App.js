@@ -15,10 +15,11 @@ import {
 const Credits = React.lazy(() => import("./components/pages/credits"));
 const Homepage = React.lazy(() => import("./components/pages/homepage"));
 const PastEvents = React.lazy(() => import("./components/pages/past_events"));
+const Snake = React.lazy(() => import("./components/pages/snake"));
 
 function App() {
   return (
-    <Suspense fallback={<div className="loader"/>}>
+    <Suspense fallback={<div className="loader" />}>
       <div className="App">
         <Router>
           <Switch>
@@ -30,6 +31,9 @@ function App() {
             </Route>
             <Route exact path="/">
               <Homepage />
+            </Route>
+            <Route exact path="/snake">
+              <Snake />
             </Route>
             <Redirect from="*" to="/" />
           </Switch>
