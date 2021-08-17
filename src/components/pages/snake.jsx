@@ -9,6 +9,7 @@ import {
   DIRECTIONS,
   SNAKE_COLOR,
   APPLE_COLOR,
+  SNAKE_HEAD_COLOR,
 } from "../../js/snake_constants";
 
 import i18n from "../../i18n/index.js";
@@ -24,6 +25,8 @@ const Snake = () => {
   const [dir, setDir] = useState([0, -1]);
   const [speed, setSpeed] = useState(null);
   const [gameOver, setGameOver] = useState(false);
+  const [gameStopped, setGameStopped] = useState(true);
+  const [score, setScore] = useState(0);
 
   const startGame = () => {
     setSnake(SNAKE_START);
@@ -31,10 +34,13 @@ const Snake = () => {
     setDir([0, -1]);
     setSpeed(SPEED);
     setGameOver(false);
+    setGameStopped(false);
+    setScore(0);
   };
   const endGame = () => {
     setSpeed(null);
     setGameOver(true);
+    setGameStopped(true);
   };
   const moveSnake = ({ keyCode }) => {
     if (keyCode >= 37 && keyCode <= 40) {
@@ -60,13 +66,13 @@ const Snake = () => {
       return true;
 
     for (const segment of snk) {
-      if (head[0] == segment[0] && head[1] == segment[1]) return true;
+      if (head[0] === segment[0] && head[1] === segment[1]) return true;
     }
 
     return false;
   };
   const checkAppleCollision = (newSnake) => {
-    if (newSnake[0][0] == apple[0] && newSnake[0][1] == apple[1]) {
+    if (newSnake[0][0] === apple[0] && newSnake[0][1] === apple[1]) {
       let newApple = createApple();
       while (checkCollision(newApple, newSnake)) {
         newApple = createApple();
@@ -85,6 +91,7 @@ const Snake = () => {
       snakeCopy.pop();
     } else {
       setSpeed((oldSpeed) => oldSpeed * 0.95);
+      setScore((oldScore) => oldScore + 1);
     }
     setSnake(snakeCopy);
   };
@@ -99,6 +106,8 @@ const Snake = () => {
     snake.forEach(([x, y]) => context.fillRect(x, y, 1, 1));
     context.fillStyle = APPLE_COLOR;
     context.fillRect(apple[0], apple[1], 1, 1);
+    context.fillStyle = SNAKE_HEAD_COLOR;
+    context.fillRect(snake[0][0], snake[0][1], 1, 1);
   }, [snake, apple, gameOver]);
   return (
     <div
@@ -110,15 +119,24 @@ const Snake = () => {
       }}
     >
       <NavBar />
-      <div className="flex-col mt-20 mb-10 focus:outline-none flex items-center w-screen justify-center">
+      <div className="flex-col mt-20 mb-6 focus:outline-none flex items-center w-screen justify-center">
+        <h2 className="mt-6 text-green-500">CSnake</h2>
         <canvas
-          style={{ border: "1px solid black" }}
+          onClick={startGame}
+          className="border-8 border-green-500"
           ref={canvasRef}
           width={`${CANVAS_SIZE[0]}px`}
           height={`${CANVAS_SIZE[1]}px`}
         />
-        {gameOver && <div>GAME OVER!</div>}
-        <button onClick={startGame}>Start Game</button>
+        {gameStopped && (
+          <div className="absolute text-lg mt-2 text-green-600">
+            Click anywhere on screen to start {gameOver && "again"}
+          </div>
+        )}
+        {gameOver && (
+          <div className="absolute -mt-8 text-red text-3xl">GAME OVER!</div>
+        )}
+        <h3 className="mt-5">Score: {score}</h3>
       </div>
       <Footer />
     </div>
