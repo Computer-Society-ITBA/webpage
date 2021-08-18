@@ -26,6 +26,7 @@ const Snake = () => {
   const [gameOver, setGameOver] = useState(false);
   const [gameStopped, setGameStopped] = useState(true);
   const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
 
   const startGame = () => {
     setSnake(SNAKE_START);
@@ -40,6 +41,11 @@ const Snake = () => {
     setSpeed(null);
     setGameOver(true);
     setGameStopped(true);
+
+    if (score >= highScore) {
+      setHighScore(score);
+      localStorage.setItem("highscore", score);
+    }
   };
   const moveSnake = ({ keyCode }) => {
     if (keyCode >= 37 && keyCode <= 40) {
@@ -100,6 +106,14 @@ const Snake = () => {
 
   useInterval(() => gameLoop(), speed);
 
+  //Retrieving high score
+  useEffect(() => {
+    let lastHighScore = localStorage.getItem("highscore");
+    if (lastHighScore !== null && lastHighScore !== "")
+      setHighScore(lastHighScore);
+  }, []);
+
+  //Updating canvas state
   useEffect(() => {
     const context = canvasRef.current.getContext("2d");
     context.setTransform(SCALE, 0, 0, SCALE, 0, 0);
@@ -170,6 +184,9 @@ const Snake = () => {
         )}
         <h3 className="mt-5">
           {i18n.t("snake.score")}: {score}
+        </h3>
+        <h3>
+          {i18n.t("snake.highscore")}: {highScore}
         </h3>
       </div>
       <Footer />

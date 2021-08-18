@@ -256,6 +256,7 @@ const i18n_en = {
     click_to_start: "Click anywhere on the screen to start",
     again: "again",
     score: "Score",
+    highscore: "High Score",
   },
 };
 

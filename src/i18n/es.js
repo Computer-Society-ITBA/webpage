@@ -255,7 +255,8 @@ const i18n_es = {
     game_over: "¡PERDISTE!",
     click_to_start: "Clickea en la pantalla para comenzar",
     again: "de nuevo",
-    score: "Puntos",
+    score: "Puntuación",
+    highscore: "Puntuación mas alta",
   },
 };
 
