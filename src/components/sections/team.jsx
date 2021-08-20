@@ -87,10 +87,10 @@ function Team() {
       <motion.div
         className="grid grid-rows-2 grid-flow-col w-10"
         animate={{ x: -1 * page * cardWidth }}
-        drag="x"
-        dragConstraints={{ left: limitLeft, right: 0 }}
-        dragElastic={false}
-        dragMomentum={false}
+        // drag="x"
+        // dragConstraints={{ left: limitLeft, right: 0 }}
+        // dragElastic={false}
+        // dragMomentum={false}
       >
         {dynamicTeam.map((person, index) => {
           return (
