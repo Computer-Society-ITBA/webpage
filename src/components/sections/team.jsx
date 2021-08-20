@@ -23,13 +23,21 @@ const Section = React.lazy(() => import("../section"));
 
 const cardWidth = 225;
 const roles = [
-  ,
   "team.roles.all",
   "team.roles.directors",
   "team.roles.logistics",
   "team.roles.media",
   "team.roles.fundraising",
   "team.roles.grads",
+];
+
+const roles_director = [
+  "",
+  "",
+  "team.roles.director_logistics",
+  "team.roles.director_media",
+  "team.roles.director_fundraising",
+  "team.roles.director_grads",
 ];
 
 var dynamicTeam = team;
@@ -62,7 +70,11 @@ function Team() {
                     (member) => !roles.includes(member.title)
                   );
                 } else {
-                  dynamicTeam = team.filter((member) => member.title === role);
+                  dynamicTeam = team.filter(
+                    (member) =>
+                      member.title === role ||
+                      roles_director[roles.indexOf(role)] === member.title
+                  );
                 }
                 setState({});
               }}
