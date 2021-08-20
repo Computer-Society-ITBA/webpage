@@ -462,5 +462,28 @@
             "src": "Azu_M.jpg",
             "alt": "Azul de los Ángeles Makk"
         }
+    },
+    {
+        "name": "Magdalena Flores Levalle",
+        "title": "team.roles.media",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/magui.flowerss/?hl=es"
+            },
+            {
+                "logo": "linkedin",
+                "href": "http://linkedin.com/in/magdalena-flores-levalle-402163217"
+            },
+
+            {
+                "logo": "github",
+                "href": "https://github.com/magflores"
+            }
+        ],
+        "image": {
+            "src": "magui-flores.jpg",
+            "alt": "Magdalena Flores Levalle"
+        }
     }
 ]
