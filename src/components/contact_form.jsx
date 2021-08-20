@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import i18n from '../i18n/index.js';
 
-const inputClass = "p-2 my-1 rounded-md bg-white text-brand_primary border-2 border-brand_primary focus:outline-none focus:border-black focus:border-2"
+const inputClass = "p-2 my-1 rounded-md bg-brand_secondary text-black border-2 border-black focus:outline-none focus:border-gray-300 focus:border-2 placeholder-gray-600"
 
 function ContactForm () {
     const [subject, setSubject] = useState("");

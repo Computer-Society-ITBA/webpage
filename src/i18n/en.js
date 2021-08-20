@@ -31,7 +31,7 @@ const i18n_en = {
     },
   },
   mision_vision: {
-    mision: "Mision",
+    mision: "Mission",
     vision: "Vision",
     mision_text: '"Spark interest and spread knowledge about technology-related topics."',
     vision_text:
@@ -212,6 +212,8 @@ const i18n_en = {
     logos: {
       sec: "Siempre en Casa logo",
       zx: "ZX Ventures logo",
+      tekal: "Tekal logo",
+      extrimian: "Extrimian logo"
     },
   },
   contact: {

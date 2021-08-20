@@ -26,32 +26,6 @@
         }
     },
     {
-        "name": "Gonzalo Hirsch",
-        "title": "team.roles.cofounder",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/gonzalohirsch/?hl=en"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/gonzalo-hirsch/"
-            },
-            {
-                "logo": "web",
-                "href": "https://gonzalohirsch.com/#/en"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/GonzaloHirsch"
-            }
-        ],
-        "image": {
-            "src": "Gonzalo-Hirsch.jpg",
-            "alt": "Gonzalo Hirsch"
-        }
-    },
-    {
         "name": "Julián Vuoso",
         "title": "team.roles.director_media",
         "social": [
@@ -114,28 +88,6 @@
         }
     },
     {
-        "name": "Florencia Petrikovich",
-        "title": "team.roles.logistics",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/florpetrikovich/"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/florencia-petrikovich-a2b3aa1a6"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/fpetrikovich"
-            }
-        ],
-        "image": {
-            "src": "Florencia-Petrikovich.jpg",
-            "alt": "Florencia Petrikovich"
-        }
-    },
-    {
         "name": "Gian Luca Pecile",
         "title": "team.roles.media",
         "social": [
@@ -173,28 +125,6 @@
         "image": {
             "src": "Maxi-Lombardia.jpeg",
             "alt": "Maximiliano Lombardia"
-        }
-    },
-    {
-        "name": "Agustin I. Vergniaud",
-        "title": "team.roles.director_fundraising",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/agusvergniaud"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/agustin-vergniaud-97a956190"
-            },
-            {
-                "logo": "github",
-                "href": "https://github.com/agusver1"
-            }
-        ],
-        "image": {
-            "src": "agustin_vergniaud.jpeg",
-            "alt": "Agustin Ignacio Vergniaud"
         }
     },
     {
@@ -312,24 +242,6 @@
         }
     },
     {
-        "name": "Enzo Uria",
-        "title": "team.roles.fundraising",
-        "social": [
-            {
-                "logo": "instagram",
-                "href": "https://www.instagram.com/enzouria/"
-            },
-            {
-                "logo": "linkedin",
-                "href": "https://www.linkedin.com/in/enzo-javier-uria-53322818a/"
-            }
-        ],
-        "image": {
-            "src": "Enzo_Uria.jpg",
-            "alt": "Enzo Uria"
-        }
-    },
-    {
         "name": "Juan Manuel De Luca",
         "title": "team.roles.logistics",
         "social": [
@@ -347,7 +259,7 @@
             }
         ],
         "image": {
-            "src": "Juan-Manuel-De-Luca.jpeg",
+            "src": "Juan-Manuel-De-Luca.jpg",
             "alt": "Juan Manuel De Luca"
         }
     },
@@ -487,6 +399,91 @@
         "image": {
             "src": "Hernan-Finucci.jpeg",
             "alt": "Hernan Finucci"
+        }
+    },
+    {
+        "name": "Gastón De Schant",
+        "title": "team.roles.fundraising",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/cabedeschant/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/gaston-de-schant-4847131b1/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/GastonDeS"
+            }
+        ],
+        "image": {
+            "src": "Gaston-de-schant.jpg",
+            "alt": "Gastón De Schant"
+        }
+    },
+    {
+        "name": "Sol Konfederak",
+        "title": "team.roles.fundraising",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/solkonfederak/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/sol-konfederak-221a02219/"
+            },
+            {
+                "logo": "github",
+                "href": "https://github.com/solkonfe"
+            }
+        ],
+        "image": {
+            "src": "solkonfe.jpg",
+            "alt": "Sol Konfederak"
+        }
+    },
+    {
+        "name": "Azul de los Ángeles Makk",
+        "title": "team.roles.fundraising",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://instagram.com/azumakk/"
+            },
+            {
+                "logo": "linkedin",
+                "href": "https://www.linkedin.com/in/azul-de-los-%C3%A1ngeles-makk-765980219/"
+            }
+        ],
+        "image": {
+            "src": "Azu_M.jpg",
+            "alt": "Azul de los Ángeles Makk"
+        }
+    },
+    {
+        "name": "Magdalena Flores Levalle",
+        "title": "team.roles.media",
+        "social": [
+            {
+                "logo": "instagram",
+                "href": "https://www.instagram.com/magui.flowerss/?hl=es"
+            },
+            {
+                "logo": "linkedin",
+                "href": "http://linkedin.com/in/magdalena-flores-levalle-402163217"
+            },
+
+            {
+                "logo": "github",
+                "href": "https://github.com/magflores"
+            }
+        ],
+        "image": {
+            "src": "magui-flores.jpg",
+            "alt": "Magdalena Flores Levalle"
         }
     }
 ]
