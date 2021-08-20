@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import usePaging from "../../hooks/usePaging";
 import { motion } from "framer-motion";
 // Translations
@@ -22,13 +22,22 @@ const teamImages = require.context("../../images/team/", true, /^.*$/);
 const Section = React.lazy(() => import("../section"));
 
 const cardWidth = 225;
+const roles = [
+  ,
+  "team.roles.all",
+  "team.roles.directors",
+  "team.roles.logistics",
+  "team.roles.media",
+  "team.roles.fundraising",
+  "team.roles.grads",
+];
+
+var dynamicTeam = team;
 
 function Team() {
-  const [page, handleLeftClick, handleRightClick, pageLimit, limitLeft] = usePaging(
-    cardWidth,
-    team.length,
-    2
-  );
+  const [page, handleLeftClick, handleRightClick, pageLimit, limitLeft] =
+    usePaging(cardWidth, dynamicTeam, 2);
+  let [, setState] = useState();
 
   return (
     <Section
@@ -38,15 +47,40 @@ function Team() {
       className="h-full overflow-hidden"
     >
       <h2>{i18n.t("team.title")}</h2>
+      <div className="flex items-center justify-around mt-2 mb-2">
+        {roles.map((role, i) => (
+          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+            <h5
+              key={i}
+              className="bg-brand_primary p-3 rounded-xl cursor-pointer text-white"
+              onClick={() => {
+                console.log(team);
+                if (role === "team.roles.all") {
+                  dynamicTeam = team;
+                } else if (role === "team.roles.directors") {
+                  dynamicTeam = team.filter(
+                    (member) => !roles.includes(member.title)
+                  );
+                } else {
+                  dynamicTeam = team.filter((member) => member.title === role);
+                }
+                setState({});
+              }}
+            >
+              {i18n.t(role)}
+            </h5>
+          </motion.div>
+        ))}
+      </div>
       <motion.div
-        className="grid grid-rows-2 grid-flow-col w-full"
+        className="grid grid-rows-2 grid-flow-col w-10"
         animate={{ x: -1 * page * cardWidth }}
         drag="x"
-        dragConstraints={{left: limitLeft, right: 0}}
+        dragConstraints={{ left: limitLeft, right: 0 }}
         dragElastic={false}
         dragMomentum={false}
       >
-        {team.map((person, index) => {
+        {dynamicTeam.map((person, index) => {
           return (
             <div key={index} className="flex flex-col h-auto team-card">
               <div className="flex flex-col rounded-xl items-center shadow-xl p-2 m-4 mb-6 h-full">

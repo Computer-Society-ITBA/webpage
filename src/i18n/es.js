@@ -45,14 +45,16 @@ const i18n_es = {
       superfluid: {
         title: "Revolucionando el Dinero: Superfluid Finance",
         date: "11/8/21",
-        description: "¿Querés aprender sobre esta revolucionaria forma de realizar flujos de dinero en tiempo real, como suscripciones, salarios y recompensas, con transacciones únicas en la blockchain? No te podés perder esta charla sobre Superfluid Finance"
+        description:
+          "¿Querés aprender sobre esta revolucionaria forma de realizar flujos de dinero en tiempo real, como suscripciones, salarios y recompensas, con transacciones únicas en la blockchain? No te podés perder esta charla sobre Superfluid Finance",
       },
-      eth_security:{
+      eth_security: {
         title: "Curso Introducción a Hacking y Seguridad en Ethereum",
         date: "17/8/21 y 20/8/21",
-        description: "El objetivo es que una vez terminado el curso, los participantes conozcan las técnicas utilizadas por auditores para detectar, probar y remediar las vulnerabilidades de seguridad más comunes en Smart Contracts."
-      }
-    }
+        description:
+          "El objetivo es que una vez terminado el curso, los participantes conozcan las técnicas utilizadas por auditores para detectar, probar y remediar las vulnerabilidades de seguridad más comunes en Smart Contracts.",
+      },
+    },
   },
   past_events: {
     title: "Eventos Pasados",
@@ -63,12 +65,14 @@ const i18n_es = {
       eth_intro: {
         title: "Introducción al desarrollo en Ethereum",
         date: "26/7/21 y 30/7/21",
-        description: "La idea del curso es aprender a programar smart contracts en Solidity, el lenguaje que más se utiliza en la red de Ethereum. Junto a OpenZeppelin, empresa líder en el sector, vamos a brindar herramientas teóricas y prácticas para la comprensión de los mismos. Las inscripciones abren a mediados de Julio."
+        description:
+          "La idea del curso es aprender a programar smart contracts en Solidity, el lenguaje que más se utiliza en la red de Ethereum. Junto a OpenZeppelin, empresa líder en el sector, vamos a brindar herramientas teóricas y prácticas para la comprensión de los mismos. Las inscripciones abren a mediados de Julio.",
       },
       serverless: {
         title: "APIs serverless con Lambda",
         date: "Agosto 2021",
-        description: "Pablo Giudice, líder tecnológico de \"Siempre en Casa\", explica cómo crear API sin servidores usando servicios de AWS como Lambda. Este evento tiene como objetivo proporcionar herramientas para cualquiera que intente iniciar su propio negocio o incluso migrar su stack actual a la nube. Las inscripciones abren a fines de Julio."
+        description:
+          'Pablo Giudice, líder tecnológico de "Siempre en Casa", explica cómo crear API sin servidores usando servicios de AWS como Lambda. Este evento tiene como objetivo proporcionar herramientas para cualquiera que intente iniciar su propio negocio o incluso migrar su stack actual a la nube. Las inscripciones abren a fines de Julio.',
       },
       que_tool: {
         title: "¿Que Tool?",
@@ -195,6 +199,7 @@ const i18n_es = {
   team: {
     title: "Nuestro Equipo",
     roles: {
+      all: "Todos",
       cofounder: "Cofundador",
       president: "Presidente",
       vicepresident: "Vicepresidente",
@@ -206,6 +211,7 @@ const i18n_es = {
       director_logistics: "Director de Logística",
       director_fundraising: "Director de Fundraising",
       director_grads: "Director de Grads",
+      directors: "Directores",
     },
   },
   sponsors: {
@@ -214,7 +220,7 @@ const i18n_es = {
       sec: "Logo de Siempre en Casa",
       zx: "Logo de ZX Ventures",
       tekal: "Logo de Tekal",
-      extrimian: "Logo de Extrimian"
+      extrimian: "Logo de Extrimian",
     },
   },
   contact: {
