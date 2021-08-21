@@ -43,8 +43,11 @@ const roles_director = [
 
 function Team() {
   const [dynamicTeam, setDynamicTeam] = useState(team);
-  const [page, handleLeftClick, handleRightClick, pageLimit, limitLeft] =
-    usePaging(cardWidth, dynamicTeam, 2);
+  const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(
+    cardWidth,
+    dynamicTeam,
+    2
+  );
   const { width } = useWindowDimensions();
   const [currentRole, setCurrentRole] = useState(0);
 
