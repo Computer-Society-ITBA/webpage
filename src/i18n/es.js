@@ -42,19 +42,6 @@ const i18n_es = {
     title: "Próximos Eventos",
     sign_up: "Anotarse",
     events: {
-      forte: {
-        title: "Economías en Crypto Gaming",
-        date: "27/08/21",
-        description: "Vení a aprender sobre el stack tecnológico que permite a los desarrolladores de videojuegos crear economías in-game que abren un nuevo habanico de posibilidades para la industria. "
-      }
-    }
-  },
-  past_events: {
-    title: "Eventos Pasados",
-    inscriptions: "+{{n}} inscriptos",
-    watch: "Ver en Youtube",
-    button: "Ver Todos",
-    events: {
       superfluid: {
         title: "Revolucionando el Dinero: Superfluid Finance",
         date: "11/8/21",
@@ -64,7 +51,15 @@ const i18n_es = {
         title: "Curso Introducción a Hacking y Seguridad en Ethereum",
         date: "17/8/21 y 20/8/21",
         description: "El objetivo es que una vez terminado el curso, los participantes conozcan las técnicas utilizadas por auditores para detectar, probar y remediar las vulnerabilidades de seguridad más comunes en Smart Contracts."
-      },
+      }
+    }
+  },
+  past_events: {
+    title: "Eventos Pasados",
+    inscriptions: "+{{n}} inscriptos",
+    watch: "Ver en Youtube",
+    button: "Ver Todos",
+    events: {
       eth_intro: {
         title: "Introducción al desarrollo en Ethereum",
         date: "26/7/21 y 30/7/21",
