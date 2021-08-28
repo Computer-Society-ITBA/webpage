@@ -41,6 +41,20 @@ const i18n_en = {
     title: "Upcoming Events",
     sign_up: "Sign Up",
     events: {
+      forte: {
+        title: "Economies in Crypto Gaming",
+        date: "27/08/21",
+        description: "Learn more about the Tech stack that allows developers to create in-game economies, opening the doors to a broad set of opportunities in this industry. "
+      }
+
+    }
+  },
+  past_events: {
+    title: "Past Events",
+    inscriptions: "+{{n}} enrolled",
+    watch: "Watch on Youtube",
+    button: "View All",
+    events: {
       superfluid: {
         title: "Revolutionizing money with Superfluid Finance",
         date: "11/8/21",
@@ -50,15 +64,7 @@ const i18n_en = {
         title: "Introduction to Hacking and Security in Ethereum",
         date: "17/8/21 and 20/8/21",
         description: "The objective of this course is to give attendees the audit tools to detect, test and fix common vulnerabilities in Smart Contracts written in Solidity."
-      }
-    }
-  },
-  past_events: {
-    title: "Past Events",
-    inscriptions: "+{{n}} enrolled",
-    watch: "Watch on Youtube",
-    button: "View All",
-    events: {
+      },
       serverless: {
         title: "Serverless APIs with Lambda",
         date: "August 2021",

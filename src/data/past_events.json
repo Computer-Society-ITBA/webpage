@@ -1,5 +1,25 @@
 [
     {
+        "title": "past_events.events.superfluid.title",
+        "date": "past_events.events.superfluid.date",
+        "attendants": 60,
+        "description": "past_events.events.superfluid.description",
+        "link": {
+            "href": "https://youtu.be/A2Ri0fZSR7E",
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.eth_security.title",
+        "date": "past_events.events.eth_security.date",
+        "attendants": 360,
+        "description": "past_events.events.eth_security.description",
+        "link":{
+         "href":"https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci",
+         "logo": "youtube"
+        }
+    },
+    {
         "title": "past_events.events.serverless.title",
         "date": "past_events.events.serverless.date",
         "attendants": 50,
