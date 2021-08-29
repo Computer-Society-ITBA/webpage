@@ -42,15 +42,10 @@ const i18n_es = {
     title: "Próximos Eventos",
     sign_up: "Anotarse",
     events: {
-      superfluid: {
-        title: "Revolucionando el Dinero: Superfluid Finance",
-        date: "11/8/21",
-        description: "¿Querés aprender sobre esta revolucionaria forma de realizar flujos de dinero en tiempo real, como suscripciones, salarios y recompensas, con transacciones únicas en la blockchain? No te podés perder esta charla sobre Superfluid Finance"
-      },
-      eth_security:{
-        title: "Curso Introducción a Hacking y Seguridad en Ethereum",
-        date: "17/8/21 y 20/8/21",
-        description: "El objetivo es que una vez terminado el curso, los participantes conozcan las técnicas utilizadas por auditores para detectar, probar y remediar las vulnerabilidades de seguridad más comunes en Smart Contracts."
+      forte: {
+        title: "Economías en Crypto Gaming",
+        date: "27/08/21",
+        description: "Vení a aprender sobre el stack tecnológico que permite a los desarrolladores de videojuegos crear economías in-game que abren un nuevo habanico de posibilidades para la industria. "
       }
     }
   },
@@ -60,6 +55,16 @@ const i18n_es = {
     watch: "Ver en Youtube",
     button: "Ver Todos",
     events: {
+      superfluid: {
+        title: "Revolucionando el Dinero: Superfluid Finance",
+        date: "11/8/21",
+        description: "¿Querés aprender sobre esta revolucionaria forma de realizar flujos de dinero en tiempo real, como suscripciones, salarios y recompensas, con transacciones únicas en la blockchain? No te podés perder esta charla sobre Superfluid Finance"
+      },
+      eth_security:{
+        title: "Curso Introducción a Hacking y Seguridad en Ethereum",
+        date: "17/8/21 y 20/8/21",
+        description: "El objetivo es que una vez terminado el curso, los participantes conozcan las técnicas utilizadas por auditores para detectar, probar y remediar las vulnerabilidades de seguridad más comunes en Smart Contracts."
+      },
       eth_intro: {
         title: "Introducción al desarrollo en Ethereum",
         date: "26/7/21 y 30/7/21",
