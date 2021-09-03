@@ -1,22 +1,27 @@
 [
-    {
-        "src": "logo_sec.png",
-        "alt": "sponsors.logos.sec",
-        "link": "https://siempreencasa.com.ar/"
-    },
-    {
-        "src": "logo_zx.png",
-        "alt": "sponsors.logos.zx",
-        "link": "https://zx-ventures.com/"
-    },
-    {
-        "src": "logo_tekal.png",
-        "alt": "sponsors.logos.tekal",
-        "link": "https://www.tekal.ai"
-    },
-    {
-        "src": "logo_extrimian.png",
-        "alt": "sponsors.logos.extrimian",
-        "link": "https://extrimian.com"
-    }
+  {
+    "src": "logo_sec.png",
+    "alt": "sponsors.logos.sec",
+    "link": "https://siempreencasa.com.ar/"
+  },
+  {
+    "src": "logo_zx.png",
+    "alt": "sponsors.logos.zx",
+    "link": "https://zx-ventures.com/"
+  },
+  {
+    "src": "logo_tekal.png",
+    "alt": "sponsors.logos.tekal",
+    "link": "https://www.tekal.ai"
+  },
+  {
+    "src": "logo_extrimian.png",
+    "alt": "sponsors.logos.extrimian",
+    "link": "https://extrimian.com"
+  },
+  {
+    "src": "logo_avature.png",
+    "alt": "sponsors.logos.avature",
+    "link": "https://avature.net"
+  }
 ]
