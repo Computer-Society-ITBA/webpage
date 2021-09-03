@@ -33,7 +33,8 @@ const i18n_en = {
   mision_vision: {
     mision: "Mission",
     vision: "Vision",
-    mision_text: '"Spark interest and spread knowledge about technology-related topics."',
+    mision_text:
+      '"Spark interest and spread knowledge about technology-related topics."',
     vision_text:
       '"Complement academic training with the use of current tools and technologies as the way to train better professionals."',
   },
@@ -44,10 +45,10 @@ const i18n_en = {
       forte: {
         title: "Economies in Crypto Gaming",
         date: "27/08/21",
-        description: "Learn more about the Tech stack that allows developers to create in-game economies, opening the doors to a broad set of opportunities in this industry. "
-      }
-
-    }
+        description:
+          "Learn more about the Tech stack that allows developers to create in-game economies, opening the doors to a broad set of opportunities in this industry. ",
+      },
+    },
   },
   past_events: {
     title: "Past Events",
@@ -58,22 +59,26 @@ const i18n_en = {
       superfluid: {
         title: "Revolutionizing money with Superfluid Finance",
         date: "11/8/21",
-        description: "If you are interested in learning how to build real-time programmable cashflows such as  subscriptions, wages and rewards, you can't miss this oportunity. Enroll now!"
+        description:
+          "If you are interested in learning how to build real-time programmable cashflows such as  subscriptions, wages and rewards, you can't miss this oportunity. Enroll now!",
       },
-      eth_security:{
+      eth_security: {
         title: "Introduction to Hacking and Security in Ethereum",
         date: "17/8/21 and 20/8/21",
-        description: "The objective of this course is to give attendees the audit tools to detect, test and fix common vulnerabilities in Smart Contracts written in Solidity."
+        description:
+          "The objective of this course is to give attendees the audit tools to detect, test and fix common vulnerabilities in Smart Contracts written in Solidity.",
       },
       serverless: {
         title: "Serverless APIs with Lambda",
         date: "August 2021",
-        description: "Pablo Giudice, tech lead at \"Siempre en Casa\", explains how to build serverless APIs using AWS services like Lambda. This event aims to provide tools for anyone trying to start their own business or even migrating their current work to the cloud. Registration opens at the end of July."
+        description:
+          'Pablo Giudice, tech lead at "Siempre en Casa", explains how to build serverless APIs using AWS services like Lambda. This event aims to provide tools for anyone trying to start their own business or even migrating their current work to the cloud. Registration opens at the end of July.',
       },
       eth_intro: {
         title: "Introduction to Ethereum Development Course",
         date: "7/26/21 and 7/30/21",
-        description: "The idea of this course is to learn to program smart contracts in Solidity, the most widely used language in the Ethereum network. Along with OpenZeppelin, a leader in the business, we'll bring both theoretical and practical tools for their comprehension. Registration opens mid-July."
+        description:
+          "The idea of this course is to learn to program smart contracts in Solidity, the most widely used language in the Ethereum network. Along with OpenZeppelin, a leader in the business, we'll bring both theoretical and practical tools for their comprehension. Registration opens mid-July.",
       },
       que_tool: {
         title: "Que Tool?",
@@ -219,7 +224,8 @@ const i18n_en = {
       sec: "Siempre en Casa logo",
       zx: "ZX Ventures logo",
       tekal: "Tekal logo",
-      extrimian: "Extrimian logo"
+      extrimian: "Extrimian logo",
+      avature: "Avature logo",
     },
   },
   contact: {
