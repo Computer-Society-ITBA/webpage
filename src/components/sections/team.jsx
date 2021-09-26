@@ -103,7 +103,7 @@ function Team() {
             ))}
           {width <= 810 && (
             <select
-              className="bg-brand_primary text-white py-3 px-6 text-xl focus:border-0 rounded-lg"
+              className="bg-brand_primary text-white py-3 px-6 text-xl focus:border-0"
               name="roles"
               id="roles"
               value={roles[currentRole]}

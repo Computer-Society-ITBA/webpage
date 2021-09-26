@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import useWindowDimensions from "./useWindowDimensions";
 
 export default function usePaging(elemWidth, elems, rows) {
+
   const { width } = useWindowDimensions();
   const [page, setPage] = useState(0);
   const [pageLimit, setPageLimit] = useState(0);

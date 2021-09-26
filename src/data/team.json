@@ -220,6 +220,28 @@
     }
   },
   {
+    "name": "Juan Pablo Oriana",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/juanoriana"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/juan-pablo-oriana-357b36210/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/JuanOriana"
+      }
+    ],
+    "image": {
+      "src": "juan_pablo_oriana.jpeg",
+      "alt": "Juan Pablo Oriana"
+    }
+  },
+  {
     "name": "Rodrigo Stampone",
     "title": "team.roles.media",
     "social": [
@@ -279,28 +301,6 @@
     "image": {
       "src": "Francisco-Lucioni.jpg",
       "alt": "Francisco Lucioni"
-    }
-  },
-  {
-    "name": "Juan Pablo Oriana",
-    "title": "team.roles.logistics",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/juanoriana"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/juan-pablo-oriana-357b36210/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/JuanOriana"
-      }
-    ],
-    "image": {
-      "src": "juan_pablo_oriana.jpeg",
-      "alt": "Juan Pablo Oriana"
     }
   },
   {

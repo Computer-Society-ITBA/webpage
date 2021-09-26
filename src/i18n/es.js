@@ -218,6 +218,7 @@ const i18n_es = {
       director_logistics: "Director de Logística",
       director_fundraising: "Director de Fundraising",
       director_grads: "Director de Grads",
+      directors: "Directores",
     },
   },
   sponsors: {
