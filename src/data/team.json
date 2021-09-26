@@ -1,5 +1,45 @@
 [
   {
+    "name": "Catalina Lucena M.",
+    "title": "team.roles.president",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/catalucenam/?hl=en"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/catalina-lucena-maguire-322033169/"
+      }
+    ],
+    "image": {
+      "src": "Cata-Lucena-M.jpg",
+      "alt": "Catalina Lucena M."
+    }
+  },
+  {
+    "name": "Maximiliano Lombardia",
+    "title": "team.roles.vicepresident",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/cd_maxilombardia/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/maximiliano-lombard%C3%ADa-42423789/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/mlombardia"
+      }
+    ],
+    "image": {
+      "src": "Maxi-Lombardia.jpeg",
+      "alt": "Maximiliano Lombardia"
+    }
+  },
+  {
     "name": "Nacho Villanueva",
     "title": "team.roles.cofounder",
     "social": [
@@ -48,83 +88,25 @@
     }
   },
   {
-    "name": "Julián Tallar",
+    "name": "Marcos Dedeu",
     "title": "team.roles.director_logistics",
     "social": [
       {
         "logo": "instagram",
-        "href": "https://www.instagram.com/juliantallar/"
+        "href": "https://www.instagram.com/marcosdedeu"
       },
       {
         "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/julian-tallar/"
+        "href": "https://www.linkedin.com/in/marcosdedeu/"
       },
       {
         "logo": "github",
-        "href": "https://github.com/jtallar"
+        "href": "https://github.com/mdedeu"
       }
     ],
     "image": {
-      "src": "Julian-Tallar.jpg",
-      "alt": "Julián Tallar"
-    }
-  },
-  {
-    "name": "Catalina Lucena M.",
-    "title": "team.roles.president",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/catalucenam/?hl=en"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/catalina-lucena-maguire-322033169/"
-      }
-    ],
-    "image": {
-      "src": "Cata-Lucena-M.jpg",
-      "alt": "Catalina Lucena M."
-    }
-  },
-  {
-    "name": "Gian Luca Pecile",
-    "title": "team.roles.media",
-    "social": [
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/gian-luca-pecile-61094620a/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/glpecile"
-      }
-    ],
-    "image": {
-      "src": "Gian-Luca-Pecile.jpg",
-      "alt": "Gian Luca Pecile"
-    }
-  },
-  {
-    "name": "Maximiliano Lombardia",
-    "title": "team.roles.vicepresident",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/cd_maxilombardia/"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/maximiliano-lombard%C3%ADa-42423789/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/mlombardia"
-      }
-    ],
-    "image": {
-      "src": "Maxi-Lombardia.jpeg",
-      "alt": "Maximiliano Lombardia"
+      "src": "Marcos-Dedeu.jpg",
+      "alt": "Marcos Dedeu"
     }
   },
   {
@@ -147,6 +129,46 @@
     "image": {
       "src": "tomas_soracco.jpeg",
       "alt": "Tomás Soracco"
+    }
+  },
+  {
+    "name": "Gian Luca Pecile",
+    "title": "team.roles.media",
+    "social": [
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/gian-luca-pecile-61094620a/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/glpecile"
+      }
+    ],
+    "image": {
+      "src": "Gian-Luca-Pecile.jpg",
+      "alt": "Gian Luca Pecile"
+    }
+  },
+  {
+    "name": "Julián Tallar",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/juliantallar/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/julian-tallar/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/jtallar"
+      }
+    ],
+    "image": {
+      "src": "Julian-Tallar.jpg",
+      "alt": "Julián Tallar"
     }
   },
   {
@@ -173,28 +195,6 @@
     "image": {
       "src": "Rodrigo_navarro.jpg",
       "alt": "Rodrigo Manuel Navarro Lajous"
-    }
-  },
-  {
-    "name": "Marcos Dedeu",
-    "title": "team.roles.logistics",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/marcosdedeu"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/marcosdedeu/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/mdedeu"
-      }
-    ],
-    "image": {
-      "src": "Marcos-Dedeu.jpg",
-      "alt": "Marcos Dedeu"
     }
   },
   {
