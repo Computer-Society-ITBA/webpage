@@ -1,19 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useWindowDimensions from "./useWindowDimensions";
 
-export default function usePaging(elemWidth, elemsLength, rows) {
+export default function usePaging(elemWidth, elems, rows) {
   // Window width
   const { width } = useWindowDimensions();
-  // Number of visible columns of elems
-  let visiblePages = Math.floor(width / elemWidth);
-  // Total number of card columns
-  let totalPages = Math.ceil(elemsLength / rows);
-  // Limit to pages
-  const pageLimit = totalPages - visiblePages;
-  // Slider Page
   const [page, setPage] = useState(0);
-  // Scrollable left limit
-  const limitLeft = -1 * pageLimit * elemWidth;
+  const [pageLimit, setPageLimit] = useState(0);
+  const [limitLeft, setLimitLeft] = useState(0);
+
+  useEffect(() => {
+    // Number of visible columns of elems
+    const visibAux = Math.floor(width / elemWidth);
+    // Total number of card columns
+    const totalAux = Math.ceil(elems.length / rows);
+    // Limit to pages
+    const limitAux = totalAux - visibAux;
+    setPageLimit(limitAux);
+    // Slider Page
+    setPage(0);
+    // Scrollable left limit
+    setLimitLeft(-1 * limitAux * elemWidth);
+  }, [elems, elemWidth, rows, width]);
 
   const pageLeft = () => {
     if (page > 0) {
