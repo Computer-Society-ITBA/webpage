@@ -88,28 +88,6 @@
     }
   },
   {
-    "name": "Julián Tallar",
-    "title": "team.roles.director_logistics",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/juliantallar/"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/julian-tallar/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/jtallar"
-      }
-    ],
-    "image": {
-      "src": "Julian-Tallar.jpg",
-      "alt": "Julián Tallar"
-    }
-  },
-  {
     "name": "Tomás Soracco",
     "title": "team.roles.director_grads",
     "social": [
@@ -132,6 +110,28 @@
     }
   },
   {
+    "name": "Julián Tallar",
+    "title": "team.roles.director_logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/juliantallar/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/julian-tallar/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/jtallar"
+      }
+    ],
+    "image": {
+      "src": "Julian-Tallar.jpg",
+      "alt": "Julián Tallar"
+    }
+  },
+  {
     "name": "Gian Luca Pecile",
     "title": "team.roles.media",
     "social": [
@@ -149,7 +149,28 @@
       "alt": "Gian Luca Pecile"
     }
   },
-
+  {
+    "name": "Marcos Dedeu",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/marcosdedeu"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/marcosdedeu/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/mdedeu"
+      }
+    ],
+    "image": {
+      "src": "Marcos-Dedeu.jpg",
+      "alt": "Marcos Dedeu"
+    }
+  },
   {
     "name": "Rodrigo M. Navarro L.",
     "title": "team.roles.logistics",
@@ -174,28 +195,6 @@
     "image": {
       "src": "Rodrigo_navarro.jpg",
       "alt": "Rodrigo Manuel Navarro Lajous"
-    }
-  },
-  {
-    "name": "Marcos Dedeu",
-    "title": "team.roles.logistics",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/marcosdedeu"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/marcosdedeu/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/mdedeu"
-      }
-    ],
-    "image": {
-      "src": "Marcos-Dedeu.jpg",
-      "alt": "Marcos Dedeu"
     }
   },
   {
@@ -485,6 +484,69 @@
     "image": {
       "src": "magui-flores.jpg",
       "alt": "Magdalena Flores Levalle"
+    }
+  },
+  {
+    "name": "Milagros Cornídez",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/milucornidez/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/milagroscornidez/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/mcornidez"
+      }
+    ],
+    "image": {
+      "src": "mili-cornidez.jpeg",
+      "alt": "Milagros Cornídez"
+    }
+  },
+  {
+    "name": "Eduardo R. Spagnol",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/edu_rodriguez1/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/eduardo-felipe-rodriguez-spagnol-6128811b5"
+      }
+    ],
+    "image": {
+      "src": "edu_rodriguez.jpeg",
+      "alt": "Eduardo Rodriguez Spagnol"
+    }
+  },
+  {
+    "name": "Valentino Riera Torraca",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/valcharriera/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/valentino-riera-torraca-2b6578206/"
+      },
+
+      {
+        "logo": "github",
+        "href": "https://github.com/vriera"
+      }
+    ],
+    "image": {
+      "src": "valchar.jpeg",
+      "alt": "Valentino Riera Torraca"
     }
   }
 ]

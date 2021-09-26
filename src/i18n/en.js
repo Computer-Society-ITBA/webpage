@@ -206,6 +206,7 @@ const i18n_en = {
     title: "Our Team",
     roles: {
       all: "All",
+      directors: "Directors",
       cofounder: "Co-Founder",
       president: "President",
       vicepresident: "Vice President",
@@ -217,7 +218,6 @@ const i18n_en = {
       director_logistics: "Director of Logistics",
       director_fundraising: "Director of Fundraising",
       director_grads: "Director of Grads",
-      directors: "Directors",
     },
   },
   sponsors: {
