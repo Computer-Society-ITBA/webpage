@@ -88,28 +88,6 @@
     }
   },
   {
-    "name": "Marcos Dedeu",
-    "title": "team.roles.director_logistics",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/marcosdedeu"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/marcosdedeu/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/mdedeu"
-      }
-    ],
-    "image": {
-      "src": "Marcos-Dedeu.jpg",
-      "alt": "Marcos Dedeu"
-    }
-  },
-  {
     "name": "Tomás Soracco",
     "title": "team.roles.director_grads",
     "social": [
@@ -132,6 +110,28 @@
     }
   },
   {
+    "name": "Julián Tallar",
+    "title": "team.roles.director_logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/juliantallar/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/julian-tallar/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/jtallar"
+      }
+    ],
+    "image": {
+      "src": "Julian-Tallar.jpg",
+      "alt": "Julián Tallar"
+    }
+  },
+  {
     "name": "Gian Luca Pecile",
     "title": "team.roles.media",
     "social": [
@@ -150,25 +150,25 @@
     }
   },
   {
-    "name": "Julián Tallar",
+    "name": "Marcos Dedeu",
     "title": "team.roles.logistics",
     "social": [
       {
         "logo": "instagram",
-        "href": "https://www.instagram.com/juliantallar/"
+        "href": "https://www.instagram.com/marcosdedeu"
       },
       {
         "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/julian-tallar/"
+        "href": "https://www.linkedin.com/in/marcosdedeu/"
       },
       {
         "logo": "github",
-        "href": "https://github.com/jtallar"
+        "href": "https://github.com/mdedeu"
       }
     ],
     "image": {
-      "src": "Julian-Tallar.jpg",
-      "alt": "Julián Tallar"
+      "src": "Marcos-Dedeu.jpg",
+      "alt": "Marcos Dedeu"
     }
   },
   {
