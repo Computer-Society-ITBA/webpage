@@ -1,13 +1,13 @@
 import { useState } from "react";
 import useWindowDimensions from "./useWindowDimensions";
 
-export default function usePaging(elemWidth, elemsLength, rows) {
+export default function usePaging(elemWidth, elems, rows) {
   // Window width
   const { width } = useWindowDimensions();
   // Number of visible columns of elems
   let visiblePages = Math.floor(width / elemWidth);
   // Total number of card columns
-  let totalPages = Math.ceil(elemsLength / rows);
+  let totalPages = Math.ceil(elems.length / rows);
   // Limit to pages
   const pageLimit = totalPages - visiblePages;
   // Slider Page
