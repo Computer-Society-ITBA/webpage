@@ -205,6 +205,8 @@ const i18n_en = {
   team: {
     title: "Our Team",
     roles: {
+      all: "All",
+      directors: "Directors",
       cofounder: "Co-Founder",
       president: "President",
       vicepresident: "Vice President",
