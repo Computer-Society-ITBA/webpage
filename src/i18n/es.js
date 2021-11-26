@@ -22,7 +22,7 @@ const i18n_es = {
       title: "Eventos realizados",
     },
     stat_participants: {
-      stat: "+2.500",
+      stat: "+4000",
       title: "Participantes en eventos",
     },
     stat_countries: {
@@ -42,10 +42,11 @@ const i18n_es = {
     title: "Próximos Eventos",
     sign_up: "Anotarse",
     events: {
-      forte: {
-        title: "Economías en Crypto Gaming",
-        date: "27/08/21",
-        description: "Vení a aprender sobre el stack tecnológico que permite a los desarrolladores de videojuegos crear economías in-game que abren un nuevo habanico de posibilidades para la industria. "
+      defi:{
+        title: "Introducción a DeFi",
+        date: "29/11/21",
+        description: "Crash Course para aprender del mundo DeFi, protocolos y cómo crear tu propio AMM",
+        link: "https://bit.ly/cs-eth-defi"
       }
     }
   },
@@ -55,6 +56,36 @@ const i18n_es = {
     watch: "Ver en Youtube",
     button: "Ver Todos",
     events: {
+      cosmos: {
+        title: "Creá tu propia blockchain",
+        date: "4/11/21",
+        description: "Aprendé a crear tu propia blockchain usando el Cosmos SDK."
+      },
+      tdd: {
+        title: "Test Driven Development en Sistemas Legacy",
+        date: "02/11/21",
+        description: "El testing es clave a la hora de desarrollar. En especial, en sistemas heredados. Aprendé de primera mano con un experto en el área, Maxi Contieri de Avature."
+      },
+      sql: {
+        title: "Curso de T-SQL",
+        date: "19/10/21",
+        description: "Un nuevo curso gratuito y abierto para todos! Este curso fue una introducción a consultas en SQL, algo ampliamente necesitado en el mercado."
+      },
+      roadmap: {
+        title: "Cómo armar el Roadmap de tu carrera con Matías Woloski",
+        date: "13/10/21",
+        description: "Matías Woloski es uno de los co-founders de Auth0, uno de los trece unicornios argentinos. En esta charla Matías brindó herramientas prácticas para armar tu carrera."
+      },
+      entrevista: {
+        title: "Cómo romperla en una entrevista técnica",
+        date: "06/10/21",
+        description: "Junto a Julieta García Morato y Horacio Goméz analizamos estrategias y condiciones necesarias para romperla en una entrevista técnica. "
+      },
+      forte: {
+        title: "Economías en Crypto Gaming",
+        date: "27/08/21",
+        description: "Vení a aprender sobre el stack tecnológico que permite a los desarrolladores de videojuegos crear economías in-game que abren un nuevo habanico de posibilidades para la industria. "
+      },
       superfluid: {
         title: "Revolucionando el Dinero: Superfluid Finance",
         date: "11/8/21",

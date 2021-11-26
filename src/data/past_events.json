@@ -1,5 +1,58 @@
 [
     {
+        "title": "past_events.events.cosmos.title",
+        "date": "past_events.events.cosmos.date",
+        "attendants": 80,
+        "description": "past_events.events.cosmos.description"
+    },
+    {
+        "title": "past_events.events.tdd.title",
+        "date": "past_events.events.tdd.date",
+        "attendants": 60,
+        "description": "past_events.events.tdd.description",
+        "link": {
+            "href": "https://youtu.be/7SAkMKZCh38",
+            "logo": "youtube"
+        }
+    },
+
+    {
+        "title": "past_events.events.sql.title",
+        "date": "past_events.events.sql.date",
+        "attendants": 400,
+        "description": "past_events.events.sql.description",
+        "link": {
+            "href": "https://youtube.com/playlist?list=PLTqiwJDd_R8w5AO-qOoD0q4_5rfVOB1Zl",
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.roadmap.title",
+        "date": "past_events.events.roadmap.date",
+        "attendants": 250,
+        "description": "past_events.events.roadmap.description",
+        "link": {
+            "href": "https://youtu.be/Cy2kE7mfuGQ",
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.entrevista.title",
+        "date": "past_events.events.entrevista.date",
+        "attendants": 60,
+        "description": "past_events.events.entrevista.description",
+        "link": {
+            "href": "https://youtu.be/ydULw-2ZNEE",
+            "logo": "youtube"
+        }
+    },
+    {
+        "title": "past_events.events.forte.title",
+        "date": "past_events.events.forte.date",
+        "attendants": 80,
+        "description": "past_events.events.forte.description"
+    },
+    {
         "title": "past_events.events.superfluid.title",
         "date": "past_events.events.superfluid.date",
         "attendants": 60,
@@ -9,6 +62,7 @@
             "logo": "youtube"
         }
     },
+
     {
         "title": "past_events.events.eth_security.title",
         "date": "past_events.events.eth_security.date",

@@ -41,12 +41,12 @@ const i18n_en = {
     title: "Upcoming Events",
     sign_up: "Sign Up",
     events: {
-      forte: {
-        title: "Economies in Crypto Gaming",
-        date: "27/08/21",
-        description: "Learn more about the Tech stack that allows developers to create in-game economies, opening the doors to a broad set of opportunities in this industry. "
+      defi:{
+        title: "Introduction to DeFi",
+        date: "29/11/21",
+        description: "Crash Course on DeFi, protocols available, common terminology and development of an Automated Market Maker",
+        link: "https://bit.ly/cs-eth-defi"
       }
-
     }
   },
   past_events: {
@@ -55,6 +55,31 @@ const i18n_en = {
     watch: "Watch on Youtube",
     button: "View All",
     events: {
+      cosmos: {
+        title: "Create your own blockchain",
+        date: "4/11/21",
+        description: "Practical approach on how to create your own blockchain using Cosmos SDK."
+      },
+      tdd: {
+        title: "Test Driven Development on Legacy Systems",
+        date: "02/11/21",
+        description: "Test Driven Development is a coding methodology that excels if applied to legacy systems. We brought an expert in the area, Maxi Contieri from Avature."
+      },
+      sql: {
+        title: "Course T-SQL",
+        date: "19/10/21",
+        description: "From the basics, in this course you'll learn to execute queries and understand SQL syntax. Open to everyone and beginner friendly."
+      },
+      roadmap: {
+        title: "How to build a roadmap of your career , with Matías Woloski",
+        date: "13/10/21",
+        description: "Matías Woloski is one of the co-founders of Auth0, one of the thirteen argentinian unicorns. In this talk, Matías gave amazing advice and practical tools to excel in your professional carrer."
+      },
+      entrevista: {
+        title: "How to excel in a coding interview",
+        date: "06/10/21",
+        description: "We analized strategies and conditions to excel in a coding interview, with Horacio Gomez and Julieta García Morato from Avature."
+      },
       superfluid: {
         title: "Revolutionizing money with Superfluid Finance",
         date: "11/8/21",
