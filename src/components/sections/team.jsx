@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import usePaging from "../../hooks/usePaging";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import { motion } from "framer-motion";
 // Translations
 import i18n from "../../i18n/index.js";
@@ -22,14 +23,51 @@ const teamImages = require.context("../../images/team/", true, /^.*$/);
 const Section = React.lazy(() => import("../section"));
 
 const cardWidth = 225;
+const roles = [
+  "team.roles.all",
+  "team.roles.directors",
+  "team.roles.logistics",
+  "team.roles.media",
+  "team.roles.fundraising",
+  "team.roles.grads",
+];
+
+const roles_director = [
+  "",
+  "",
+  "team.roles.director_logistics",
+  "team.roles.director_media",
+  "team.roles.director_fundraising",
+  "team.roles.director_grads",
+];
 
 function Team() {
-  const [page, handleLeftClick, handleRightClick, pageLimit, limitLeft] = usePaging(
+  const [dynamicTeam, setDynamicTeam] = useState(team);
+  const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(
     cardWidth,
-    team.length,
+    dynamicTeam,
     2
   );
+  const { width } = useWindowDimensions();
+  const [currentRole, setCurrentRole] = useState(0);
 
+  function setTeamByRole(role) {
+    const indexOfRole = roles.indexOf(role);
+    if (role === "team.roles.all") {
+      setDynamicTeam(team);
+    } else if (role === "team.roles.directors") {
+      setDynamicTeam(team.filter((member) => !roles.includes(member.title)));
+    } else {
+      setDynamicTeam(
+        team.filter(
+          (member) =>
+            member.title === role ||
+            roles_director[indexOfRole] === member.title
+        )
+      );
+    }
+    setCurrentRole(indexOfRole);
+  }
   return (
     <Section
       id="our-team"
@@ -38,15 +76,55 @@ function Team() {
       className="h-full overflow-hidden"
     >
       <h2>{i18n.t("team.title")}</h2>
+      <div className="flex justify-center w-100 mt-2 mb-2">
+        <div
+          className={`flex items-center justify-between ${
+            width > 810 ? "flex-1" : ""
+          } max-w-screen-lg `}
+        >
+          {width > 810 &&
+            roles.map((role, i) => (
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <h5
+                  key={i}
+                  className={`${
+                    i === currentRole
+                      ? "bg-brand_secondary"
+                      : "bg-brand_primary"
+                  } p-3 rounded-xl cursor-pointer text-white`}
+                  onClick={() => setTeamByRole(role)}
+                >
+                  {i18n.t(role)}
+                </h5>
+              </motion.div>
+            ))}
+          {width <= 810 && (
+            <select
+              className="bg-brand_primary text-white py-3 px-6 text-xl focus:border-0"
+              name="roles"
+              id="roles"
+              value={roles[currentRole]}
+              onChange={(event) => setTeamByRole(event.target.value)}
+            >
+              {roles.map((role, i) => (
+                <option value={role}>{i18n.t(role)}</option>
+              ))}
+            </select>
+          )}
+        </div>
+      </div>
       <motion.div
-        className="grid grid-rows-2 grid-flow-col w-full"
+        className="grid grid-rows-2 grid-flow-col w-10"
         animate={{ x: -1 * page * cardWidth }}
-        drag="x"
-        dragConstraints={{left: limitLeft, right: 0}}
-        dragElastic={false}
-        dragMomentum={false}
+        // drag="x"
+        // dragConstraints={{ left: limitLeft, right: 0 }}
+        // dragElastic={false}
+        // dragMomentum={false}
       >
-        {team.map((person, index) => {
+        {dynamicTeam.map((person, index) => {
           return (
             <div key={index} className="flex flex-col h-auto team-card">
               <div className="flex flex-col rounded-xl items-center shadow-xl p-2 m-4 mb-6 h-full">
