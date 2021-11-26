@@ -1,9 +1,8 @@
 [
-
      {
-          "title": "upcoming_events.events.forte.title",
-          "date": "upcoming_events.events.forte.date",
-          "description": "upcoming_events.events.forte.description",
-          "link": "https://bit.ly/cs-forte"
+          "title": "upcoming_events.events.defi.title",
+          "date": "upcoming_events.events.defi.date",
+          "description": "upcoming_events.events.defi.description",
+          "link": "https://bit.ly/cs-eth-defi"
      }
 ]
