@@ -33,7 +33,8 @@ const i18n_en = {
   mision_vision: {
     mision: "Mission",
     vision: "Vision",
-    mision_text: '"Spark interest and spread knowledge about technology-related topics."',
+    mision_text:
+      '"Spark interest and spread knowledge about technology-related topics."',
     vision_text:
       '"Complement academic training with the use of current tools and technologies as the way to train better professionals."',
   },
@@ -41,13 +42,14 @@ const i18n_en = {
     title: "Upcoming Events",
     sign_up: "Sign Up",
     events: {
-      defi:{
+      defi: {
         title: "Introduction to DeFi",
         date: "29/11/21",
-        description: "Crash Course on DeFi, protocols available, common terminology and development of an Automated Market Maker",
-        link: "https://bit.ly/cs-eth-defi"
-      }
-    }
+        description:
+          "Crash Course on DeFi, protocols available, common terminology and development of an Automated Market Maker",
+        link: "https://bit.ly/cs-eth-defi",
+      },
+    },
   },
   past_events: {
     title: "Past Events",
@@ -58,47 +60,56 @@ const i18n_en = {
       cosmos: {
         title: "Create your own blockchain",
         date: "4/11/21",
-        description: "Practical approach on how to create your own blockchain using Cosmos SDK."
+        description:
+          "Practical approach on how to create your own blockchain using Cosmos SDK.",
       },
       tdd: {
         title: "Test Driven Development on Legacy Systems",
         date: "02/11/21",
-        description: "Test Driven Development is a coding methodology that excels if applied to legacy systems. We brought an expert in the area, Maxi Contieri from Avature."
+        description:
+          "Test Driven Development is a coding methodology that excels if applied to legacy systems. We brought an expert in the area, Maxi Contieri from Avature.",
       },
       sql: {
         title: "Course T-SQL",
         date: "19/10/21",
-        description: "From the basics, in this course you'll learn to execute queries and understand SQL syntax. Open to everyone and beginner friendly."
+        description:
+          "From the basics, in this course you'll learn to execute queries and understand SQL syntax. Open to everyone and beginner friendly.",
       },
       roadmap: {
         title: "How to build a roadmap of your career , with Matías Woloski",
         date: "13/10/21",
-        description: "Matías Woloski is one of the co-founders of Auth0, one of the thirteen argentinian unicorns. In this talk, Matías gave amazing advice and practical tools to excel in your professional carrer."
+        description:
+          "Matías Woloski is one of the co-founders of Auth0, one of the thirteen argentinian unicorns. In this talk, Matías gave amazing advice and practical tools to excel in your professional carrer.",
       },
       entrevista: {
         title: "How to excel in a coding interview",
         date: "06/10/21",
-        description: "We analized strategies and conditions to excel in a coding interview, with Horacio Gomez and Julieta García Morato from Avature."
+        description:
+          "We analized strategies and conditions to excel in a coding interview, with Horacio Gomez and Julieta García Morato from Avature.",
       },
       superfluid: {
         title: "Revolutionizing money with Superfluid Finance",
         date: "11/8/21",
-        description: "If you are interested in learning how to build real-time programmable cashflows such as  subscriptions, wages and rewards, you can't miss this oportunity. Enroll now!"
+        description:
+          "If you are interested in learning how to build real-time programmable cashflows such as  subscriptions, wages and rewards, you can't miss this oportunity. Enroll now!",
       },
-      eth_security:{
+      eth_security: {
         title: "Introduction to Hacking and Security in Ethereum",
         date: "17/8/21 and 20/8/21",
-        description: "The objective of this course is to give attendees the audit tools to detect, test and fix common vulnerabilities in Smart Contracts written in Solidity."
+        description:
+          "The objective of this course is to give attendees the audit tools to detect, test and fix common vulnerabilities in Smart Contracts written in Solidity.",
       },
       serverless: {
         title: "Serverless APIs with Lambda",
         date: "August 2021",
-        description: "Pablo Giudice, tech lead at \"Siempre en Casa\", explains how to build serverless APIs using AWS services like Lambda. This event aims to provide tools for anyone trying to start their own business or even migrating their current work to the cloud. Registration opens at the end of July."
+        description:
+          'Pablo Giudice, tech lead at "Siempre en Casa", explains how to build serverless APIs using AWS services like Lambda. This event aims to provide tools for anyone trying to start their own business or even migrating their current work to the cloud. Registration opens at the end of July.',
       },
       eth_intro: {
         title: "Introduction to Ethereum Development Course",
         date: "7/26/21 and 7/30/21",
-        description: "The idea of this course is to learn to program smart contracts in Solidity, the most widely used language in the Ethereum network. Along with OpenZeppelin, a leader in the business, we'll bring both theoretical and practical tools for their comprehension. Registration opens mid-July."
+        description:
+          "The idea of this course is to learn to program smart contracts in Solidity, the most widely used language in the Ethereum network. Along with OpenZeppelin, a leader in the business, we'll bring both theoretical and practical tools for their comprehension. Registration opens mid-July.",
       },
       que_tool: {
         title: "Que Tool?",
@@ -225,6 +236,8 @@ const i18n_en = {
   team: {
     title: "Our Team",
     roles: {
+      all: "All",
+      directors: "Directors",
       cofounder: "Co-Founder",
       president: "President",
       vicepresident: "Vice President",
@@ -244,7 +257,7 @@ const i18n_en = {
       sec: "Siempre en Casa logo",
       zx: "ZX Ventures logo",
       tekal: "Tekal logo",
-      extrimian: "Extrimian logo"
+      extrimian: "Extrimian logo",
     },
   },
   contact: {
