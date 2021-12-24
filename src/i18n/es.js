@@ -42,13 +42,14 @@ const i18n_es = {
     title: "Próximos Eventos",
     sign_up: "Anotarse",
     events: {
-      defi:{
+      defi: {
         title: "Introducción a DeFi",
         date: "29/11/21",
-        description: "Crash Course para aprender del mundo DeFi, protocolos y cómo crear tu propio AMM",
-        link: "https://bit.ly/cs-eth-defi"
-      }
-    }
+        description:
+          "Crash Course para aprender del mundo DeFi, protocolos y cómo crear tu propio AMM",
+        link: "https://bit.ly/cs-eth-defi",
+      },
+    },
   },
   past_events: {
     title: "Eventos Pasados",
@@ -59,52 +60,62 @@ const i18n_es = {
       cosmos: {
         title: "Creá tu propia blockchain",
         date: "4/11/21",
-        description: "Aprendé a crear tu propia blockchain usando el Cosmos SDK."
+        description:
+          "Aprendé a crear tu propia blockchain usando el Cosmos SDK.",
       },
       tdd: {
         title: "Test Driven Development en Sistemas Legacy",
         date: "02/11/21",
-        description: "El testing es clave a la hora de desarrollar. En especial, en sistemas heredados. Aprendé de primera mano con un experto en el área, Maxi Contieri de Avature."
+        description:
+          "El testing es clave a la hora de desarrollar. En especial, en sistemas heredados. Aprendé de primera mano con un experto en el área, Maxi Contieri de Avature.",
       },
       sql: {
         title: "Curso de T-SQL",
         date: "19/10/21",
-        description: "Un nuevo curso gratuito y abierto para todos! Este curso fue una introducción a consultas en SQL, algo ampliamente necesitado en el mercado."
+        description:
+          "Un nuevo curso gratuito y abierto para todos! Este curso fue una introducción a consultas en SQL, algo ampliamente necesitado en el mercado.",
       },
       roadmap: {
         title: "Cómo armar el Roadmap de tu carrera con Matías Woloski",
         date: "13/10/21",
-        description: "Matías Woloski es uno de los co-founders de Auth0, uno de los trece unicornios argentinos. En esta charla Matías brindó herramientas prácticas para armar tu carrera."
+        description:
+          "Matías Woloski es uno de los co-founders de Auth0, uno de los trece unicornios argentinos. En esta charla Matías brindó herramientas prácticas para armar tu carrera.",
       },
       entrevista: {
         title: "Cómo romperla en una entrevista técnica",
         date: "06/10/21",
-        description: "Junto a Julieta García Morato y Horacio Goméz analizamos estrategias y condiciones necesarias para romperla en una entrevista técnica. "
+        description:
+          "Junto a Julieta García Morato y Horacio Goméz analizamos estrategias y condiciones necesarias para romperla en una entrevista técnica. ",
       },
       forte: {
         title: "Economías en Crypto Gaming",
         date: "27/08/21",
-        description: "Vení a aprender sobre el stack tecnológico que permite a los desarrolladores de videojuegos crear economías in-game que abren un nuevo habanico de posibilidades para la industria. "
+        description:
+          "Vení a aprender sobre el stack tecnológico que permite a los desarrolladores de videojuegos crear economías in-game que abren un nuevo habanico de posibilidades para la industria. ",
       },
       superfluid: {
         title: "Revolucionando el Dinero: Superfluid Finance",
         date: "11/8/21",
-        description: "¿Querés aprender sobre esta revolucionaria forma de realizar flujos de dinero en tiempo real, como suscripciones, salarios y recompensas, con transacciones únicas en la blockchain? No te podés perder esta charla sobre Superfluid Finance"
+        description:
+          "¿Querés aprender sobre esta revolucionaria forma de realizar flujos de dinero en tiempo real, como suscripciones, salarios y recompensas, con transacciones únicas en la blockchain? No te podés perder esta charla sobre Superfluid Finance",
       },
-      eth_security:{
+      eth_security: {
         title: "Curso Introducción a Hacking y Seguridad en Ethereum",
         date: "17/8/21 y 20/8/21",
-        description: "El objetivo es que una vez terminado el curso, los participantes conozcan las técnicas utilizadas por auditores para detectar, probar y remediar las vulnerabilidades de seguridad más comunes en Smart Contracts."
+        description:
+          "El objetivo es que una vez terminado el curso, los participantes conozcan las técnicas utilizadas por auditores para detectar, probar y remediar las vulnerabilidades de seguridad más comunes en Smart Contracts.",
       },
       eth_intro: {
         title: "Introducción al desarrollo en Ethereum",
         date: "26/7/21 y 30/7/21",
-        description: "La idea del curso es aprender a programar smart contracts en Solidity, el lenguaje que más se utiliza en la red de Ethereum. Junto a OpenZeppelin, empresa líder en el sector, vamos a brindar herramientas teóricas y prácticas para la comprensión de los mismos. Las inscripciones abren a mediados de Julio."
+        description:
+          "La idea del curso es aprender a programar smart contracts en Solidity, el lenguaje que más se utiliza en la red de Ethereum. Junto a OpenZeppelin, empresa líder en el sector, vamos a brindar herramientas teóricas y prácticas para la comprensión de los mismos. Las inscripciones abren a mediados de Julio.",
       },
       serverless: {
         title: "APIs serverless con Lambda",
         date: "Agosto 2021",
-        description: "Pablo Giudice, líder tecnológico de \"Siempre en Casa\", explica cómo crear API sin servidores usando servicios de AWS como Lambda. Este evento tiene como objetivo proporcionar herramientas para cualquiera que intente iniciar su propio negocio o incluso migrar su stack actual a la nube. Las inscripciones abren a fines de Julio."
+        description:
+          'Pablo Giudice, líder tecnológico de "Siempre en Casa", explica cómo crear API sin servidores usando servicios de AWS como Lambda. Este evento tiene como objetivo proporcionar herramientas para cualquiera que intente iniciar su propio negocio o incluso migrar su stack actual a la nube. Las inscripciones abren a fines de Julio.',
       },
       que_tool: {
         title: "¿Que Tool?",
@@ -231,6 +242,8 @@ const i18n_es = {
   team: {
     title: "Nuestro Equipo",
     roles: {
+      all: "Todos",
+      directors: "Directivos",
       cofounder: "Cofundador",
       president: "Presidente",
       vicepresident: "Vicepresidente",
@@ -250,7 +263,7 @@ const i18n_es = {
       sec: "Logo de Siempre en Casa",
       zx: "Logo de ZX Ventures",
       tekal: "Logo de Tekal",
-      extrimian: "Logo de Extrimian"
+      extrimian: "Logo de Extrimian",
     },
   },
   contact: {
