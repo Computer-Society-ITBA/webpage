@@ -80,6 +80,11 @@ const i18n_en = {
         date: "06/10/21",
         description: "We analized strategies and conditions to excel in a coding interview, with Horacio Gomez and Julieta García Morato from Avature."
       },
+      forte: {
+        title: "Crypto Gaming Economies",
+        date: "27/08/21",
+        description: "Talk about the technological stack for videogames devs, allowing them to create in-game economies "
+      },
       superfluid: {
         title: "Revolutionizing money with Superfluid Finance",
         date: "11/8/21",
