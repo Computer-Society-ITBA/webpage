@@ -1,25 +1,7 @@
 [
   {
-    "name": "Catalina Lucena M.",
-    "title": "team.roles.president",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/catalucenam/?hl=en"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/catalina-lucena-maguire-322033169/"
-      }
-    ],
-    "image": {
-      "src": "Cata-Lucena-M.jpg",
-      "alt": "Catalina Lucena M."
-    }
-  },
-  {
     "name": "Maximiliano Lombardia",
-    "title": "team.roles.vicepresident",
+    "title": "team.roles.council",
     "social": [
       {
         "logo": "instagram",
@@ -41,7 +23,7 @@
   },
   {
     "name": "Nacho Villanueva",
-    "title": "team.roles.cofounder",
+    "title": "team.roles.council",
     "social": [
       {
         "logo": "instagram",
@@ -67,7 +49,7 @@
   },
   {
     "name": "Julián Vuoso",
-    "title": "team.roles.director_media",
+    "title": "team.roles.council",
     "social": [
       {
         "logo": "instagram",
@@ -88,30 +70,8 @@
     }
   },
   {
-    "name": "Tomás Soracco",
-    "title": "team.roles.director_grads",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/tomsoracco/"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/tom%C3%A1s-soracco-192604128/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/tomso11"
-      }
-    ],
-    "image": {
-      "src": "tomas_soracco.jpeg",
-      "alt": "Tomás Soracco"
-    }
-  },
-  {
     "name": "Julián Tallar",
-    "title": "team.roles.director_logistics",
+    "title": "team.roles.council",
     "social": [
       {
         "logo": "instagram",
@@ -132,26 +92,8 @@
     }
   },
   {
-    "name": "Gian Luca Pecile",
-    "title": "team.roles.media",
-    "social": [
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/gian-luca-pecile-61094620a/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/glpecile"
-      }
-    ],
-    "image": {
-      "src": "Gian-Luca-Pecile.jpg",
-      "alt": "Gian Luca Pecile"
-    }
-  },
-  {
     "name": "Marcos Dedeu",
-    "title": "team.roles.logistics",
+    "title": "team.roles.president",
     "social": [
       {
         "logo": "instagram",
@@ -220,28 +162,6 @@
     }
   },
   {
-    "name": "Juan Pablo Oriana",
-    "title": "team.roles.logistics",
-    "social": [
-      {
-        "logo": "instagram",
-        "href": "https://www.instagram.com/juanoriana"
-      },
-      {
-        "logo": "linkedin",
-        "href": "https://www.linkedin.com/in/juan-pablo-oriana-357b36210/"
-      },
-      {
-        "logo": "github",
-        "href": "https://github.com/JuanOriana"
-      }
-    ],
-    "image": {
-      "src": "juan_pablo_oriana.jpeg",
-      "alt": "Juan Pablo Oriana"
-    }
-  },
-  {
     "name": "Rodrigo Stampone",
     "title": "team.roles.media",
     "social": [
@@ -265,7 +185,7 @@
   },
   {
     "name": "Juan Manuel De Luca",
-    "title": "team.roles.logistics",
+    "title": "team.roles.co_director_logistics",
     "social": [
       {
         "logo": "instagram",
@@ -286,8 +206,30 @@
     }
   },
   {
+    "name": "Juan Pablo Oriana",
+    "title": "team.roles.vicepresident",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/juanoriana"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/juan-pablo-oriana-357b36210/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/JuanOriana"
+      }
+    ],
+    "image": {
+      "src": "juan_pablo_oriana.jpeg",
+      "alt": "Juan Pablo Oriana"
+    }
+  },
+  {
     "name": "Francisco Lucioni",
-    "title": "team.roles.logistics",
+    "title": "team.roles.co_director_logistics",
     "social": [
       {
         "logo": "instagram",
@@ -447,7 +389,7 @@
   },
   {
     "name": "Azul de los Ángeles Makk",
-    "title": "team.roles.fundraising",
+    "title": "team.roles.director_fundraising",
     "social": [
       {
         "logo": "instagram",
@@ -461,6 +403,24 @@
     "image": {
       "src": "Azu_M.jpg",
       "alt": "Azul de los Ángeles Makk"
+    }
+  },
+  {
+    "name": "Catalina Lucena M.",
+    "title": "team.roles.director_media",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/catalucenam/?hl=en"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/catalina-lucena-maguire-322033169/"
+      }
+    ],
+    "image": {
+      "src": "Cata-Lucena-M.jpg",
+      "alt": "Catalina Lucena M."
     }
   },
   {
@@ -510,7 +470,7 @@
   },
   {
     "name": "Eduardo R. Spagnol",
-    "title": "team.roles.logistics",
+    "title": "team.roles.fundraising",
     "social": [
       {
         "logo": "instagram",
@@ -548,5 +508,26 @@
       "src": "valchar.jpeg",
       "alt": "Valentino Riera Torraca"
     }
+  },{
+  "name": "Tomás Soracco",
+  "title": "team.roles.director_grads",
+  "social": [
+    {
+      "logo": "instagram",
+      "href": "https://www.instagram.com/tomsoracco/"
+    },
+    {
+      "logo": "linkedin",
+      "href": "https://www.linkedin.com/in/tom%C3%A1s-soracco-192604128/"
+    },
+    {
+      "logo": "github",
+      "href": "https://github.com/tomso11"
+    }
+  ],
+  "image": {
+    "src": "tomas_soracco.jpeg",
+    "alt": "Tomás Soracco"
   }
+}
 ]

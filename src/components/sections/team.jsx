@@ -30,12 +30,13 @@ const roles = [
   "team.roles.media",
   "team.roles.fundraising",
   "team.roles.grads",
+  "team.roles.council"
 ];
 
 const roles_director = [
   "",
   "",
-  "team.roles.director_logistics",
+  "team.roles.co_director_logistics",
   "team.roles.director_media",
   "team.roles.director_fundraising",
   "team.roles.director_grads",
