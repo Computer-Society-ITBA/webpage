@@ -42,13 +42,13 @@ const i18n_en = {
     title: "Upcoming Events",
     sign_up: "Sign Up",
     events: {
-      defi: {
-        title: "Introduction to DeFi",
-        date: "29/11/21",
-        description:
-          "Crash Course on DeFi, protocols available, common terminology and development of an Automated Market Maker",
-        link: "https://bit.ly/cs-eth-defi",
-      },
+     hackit: {
+       title: "HackIT-BA CS!",
+       date: "01/04/21",
+       description:
+           "HackIT-BA CS is an annual event held at ITBA, in which 15-25 teams of 3 people live 36 hours together, programming a practical project that can improve the quality of life of their peers in Argentina and the world, with innovative and unique ideas.",
+       link: "https://bit.ly/hackit-ba",
+     }
     },
   },
   past_events: {
@@ -57,6 +57,12 @@ const i18n_en = {
     watch: "Watch on Youtube",
     button: "View All",
     events: {
+      defi: {
+        title: "Introduction to DeFi",
+        date: "29/11/21",
+        description:
+            "Crash Course on DeFi, protocols available, common terminology and development of an Automated Market Maker",
+      },
       cosmos: {
         title: "Create your own blockchain",
         date: "4/11/21",
