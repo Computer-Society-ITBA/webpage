@@ -508,26 +508,49 @@
       "src": "valchar.jpeg",
       "alt": "Valentino Riera Torraca"
     }
-  },{
-  "name": "Tomás Soracco",
-  "title": "team.roles.director_grads",
-  "social": [
-    {
-      "logo": "instagram",
-      "href": "https://www.instagram.com/tomsoracco/"
-    },
-    {
-      "logo": "linkedin",
-      "href": "https://www.linkedin.com/in/tom%C3%A1s-soracco-192604128/"
-    },
-    {
-      "logo": "github",
-      "href": "https://github.com/tomso11"
+  },
+  {
+    "name": "Tomás Soracco",
+    "title": "team.roles.director_grads",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/tomsoracco/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/tom%C3%A1s-soracco-192604128/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/tomso11"
+      }
+    ],
+    "image": {
+      "src": "tomas_soracco.jpeg",
+      "alt": "Tomás Soracco"
     }
-  ],
-  "image": {
-    "src": "tomas_soracco.jpeg",
-    "alt": "Tomás Soracco"
+  },
+  {
+    "name": "Santos Rosati",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/taturosati/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/santos-rosati/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/srosati"
+      }
+    ],
+    "image": {
+      "src": "srosati.jpg",
+      "alt": "Santos Rosati"
+    }
   }
-}
 ]
