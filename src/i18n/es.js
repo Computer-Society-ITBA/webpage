@@ -42,12 +42,12 @@ const i18n_es = {
     title: "Próximos Eventos",
     sign_up: "Anotarse",
     events: {
-      defi: {
-        title: "Introducción a DeFi",
-        date: "29/11/21",
+      hackit: {
+        title: "HackIT-BA CS!",
+        date: "01/04/21",
         description:
-          "Crash Course para aprender del mundo DeFi, protocolos y cómo crear tu propio AMM",
-        link: "https://bit.ly/cs-eth-defi",
+          "HackIT-BA CS es un hackathon anual que se realiza en el ITBA, en el que 15-25 equipos de 3 personas viven 36 horas de pura intensidad, programando un proyecto práctico  que pueda mejorar la calidad de vida de sus pares en la Argentina y en el mundo, con ideas innovadoras y únicas.",
+        link: "https://bit.ly/hackit-ba",
       },
     },
   },
@@ -57,6 +57,12 @@ const i18n_es = {
     watch: "Ver en Youtube",
     button: "Ver Todos",
     events: {
+      defi: {
+        title: "Introducción a DeFi",
+        date: "29/11/21",
+        description:
+            "Crash Course para aprender del mundo DeFi, protocolos y cómo crear tu propio AMM",
+      },
       cosmos: {
         title: "Creá tu propia blockchain",
         date: "4/11/21",
@@ -246,13 +252,14 @@ const i18n_es = {
       directors: "Directivos",
       cofounder: "Cofundador",
       president: "Presidente",
+      council: "Consejo",
       vicepresident: "Vicepresidente",
       logistics: "Logística",
       media: "Media",
       fundraising: "Fundraising",
       grads: "Grads",
       director_media: "Director de Media",
-      director_logistics: "Director de Logística",
+      co_director_logistics: "Co-Director de Logística",
       director_fundraising: "Director de Fundraising",
       director_grads: "Director de Grads",
     },
