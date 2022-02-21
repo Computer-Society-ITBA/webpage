@@ -254,6 +254,7 @@ const i18n_en = {
       council: "Council",
       vicepresident: "Vice President",
       logistics: "Logistics",
+      pc: "Competitive Programming",
       media: "Media",
       fundraising: "Fundraising",
       grads: "Grads",

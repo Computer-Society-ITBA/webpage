@@ -257,6 +257,7 @@ const i18n_es = {
       logistics: "Logística",
       media: "Media",
       fundraising: "Fundraising",
+      pc: "Programación Competitiva",
       grads: "Grads",
       director_media: "Director de Media",
       co_director_logistics: "Co-Director de Logística",

@@ -552,5 +552,142 @@
       "src": "srosati.jpg",
       "alt": "Santos Rosati"
     }
+  },
+  {
+    "name": "Camila Di Toro",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/camiditoro/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/cditoro/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/camilaDiToro"
+      }
+    ],
+    "image": {
+      "src": "Maxi-Lombardia.jpeg",
+      "alt": "Camila Di Toro"
+    }
+  },
+  {
+    "name": "Manuel Dizenhaus",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/manu.dizen/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/ManuelDizen"
+      }
+    ],
+    "image": {
+      "src": "Maxi-Lombardia.jpeg",
+      "alt": "Manuel Dizenhaus"
+    }
+  },
+  {
+    "name": "Gonzalo Beade",
+    "title": "team.roles.logistics",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/gonzabeade/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "linkedin.com/in/gonzalo-beade"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/gbeade"
+      }
+    ],
+    "image": {
+      "src": "Maxi-Lombardia.jpeg",
+      "alt": "Gonzalo Beade"
+    }
+  },
+  {
+    "name": "Bruno Di Sanzo",
+    "title": "team.roles.pc",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/bruno_disanzo/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/bruno-di-sanzo/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/BrunoDS01"
+      }
+    ],
+    "image": {
+      "src": "Maxi-Lombardia.jpeg",
+      "alt": "Bruno Di Sanzo"
+    }
+  },
+  {
+    "name": "Martín Zahnd",
+    "title": "team.roles.pc",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/martinzahnd/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "https://www.linkedin.com/in/martin-e-zahnd/"
+      },
+      {
+        "logo": "web",
+        "href": "https://mzahnd.github.io/"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/mzahnd/"
+      }
+    ],
+    "image": {
+      "src": "Maxi-Lombardia.jpeg",
+      "alt": "Martín Zahnd"
+    }
+  },
+  {
+    "name": "Sergio Peralta",
+    "title": "team.roles.pc",
+    "social": [
+      {
+        "logo": "instagram",
+        "href": "https://www.instagram.com/sergioap2001/"
+      },
+      {
+        "logo": "linkedin",
+        "href": "www.linkedin.com/in/sergioandyp"
+      },
+      {
+        "logo": "github",
+        "href": "https://github.com/sergioandyp"
+      }
+    ],
+    "image": {
+      "src": "Maxi-Lombardia.jpeg",
+      "alt": "Martín Zahnd"
+    }
   }
+
+
+
+
+
 ]
