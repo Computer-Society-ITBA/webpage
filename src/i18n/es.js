@@ -257,6 +257,7 @@ const i18n_es = {
       logistics: "Logística",
       media: "Media",
       fundraising: "Fundraising",
+      pc: "Programación Competitiva",
       grads: "Grads",
       director_media: "Director de Media",
       co_director_logistics: "Co-Director de Logística",
@@ -267,10 +268,16 @@ const i18n_es = {
   sponsors: {
     title: "Nuestros Sponsors",
     logos: {
-      sec: "Logo de Siempre en Casa",
-      zx: "Logo de ZX Ventures",
-      tekal: "Logo de Tekal",
       extrimian: "Logo de Extrimian",
+      auth0: "Logo de auth0",
+      pi:"Logo de 2PI",
+      vercel:"Logo de Vercel",
+      ef:"Logo de Ethereum Foundation",
+      oz:"Logo de OpenZeppelin",
+      exactly:"Logo de Exactly Finance",
+      poap:"Logo de Poap",
+      flowics: "Logo de Flowics",
+      daffy:"Logo de Daffy"
     },
   },
   contact: {

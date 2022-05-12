@@ -1,27 +1,52 @@
 [
   {
-    "src": "logo_sec.png",
-    "alt": "sponsors.logos.sec",
-    "link": "https://siempreencasa.com.ar/"
-  },
-  {
-    "src": "logo_zx.png",
-    "alt": "sponsors.logos.zx",
-    "link": "https://zx-ventures.com/"
-  },
-  {
-    "src": "logo_tekal.png",
-    "alt": "sponsors.logos.tekal",
-    "link": "https://www.tekal.ai"
-  },
-  {
-    "src": "logo_extrimian.png",
+    "src": "extrimian.png",
     "alt": "sponsors.logos.extrimian",
     "link": "https://extrimian.com"
   },
   {
-    "src": "logo_avature.png",
-    "alt": "sponsors.logos.avature",
-    "link": "https://avature.net"
+    "src": "auth0.png",
+    "alt": "sponsors.logos.auth0",
+    "link": "https://auth0.com/"
+  },
+  {
+    "src": "vercel.png",
+    "alt": "sponsors.logos.vercel",
+    "link": "https://vercel.com/"
+  },
+  {
+    "src": "ef.png",
+    "alt": "sponsors.logos.ef",
+    "link": "https://ethereum.org/"
+  },
+  {
+    "src": "2pi.png",
+    "alt": "sponsors.logos.pi",
+    "link": "https://2pi.network/"
+  },
+  {
+    "src": "oz.png",
+    "alt": "sponsors.logos.oz",
+    "link": "https://openzeppelin.com/"
+  },
+  {
+    "src": "exactly.svg",
+    "alt": "sponsors.logos.exactly",
+    "link": "https://https://exactly.finance/"
+  },
+  {
+    "src": "poap.png",
+    "alt": "sponsors.logos.poap",
+    "link": "https://poap.xyz/"
+  },
+  {
+    "src": "flowics.svg",
+    "alt": "sponsors.logos.flowics",
+    "link": "https://www.flowics.com/"
+  },
+  {
+    "src": "daffy.svg",
+    "alt": "sponsors.logos.daffy",
+    "link": "https://daffy.org/"
   }
 ]
