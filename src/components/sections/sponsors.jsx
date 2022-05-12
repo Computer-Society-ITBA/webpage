@@ -20,7 +20,7 @@ function Sponsors () {
             return (
               <div key={index} className="w-full md:w-4/12 lg:w-3/12 h-2/6 sm:h-3/6 p-2 flex flex-col justify-center items-center">
                 <a href={sponsor.link} rel="noreferrer" target="_blank">
-                  <img className="max-h-full max-w-full object-contain" src={sponsorImages(`./${sponsor.src}`).default} alt={i18n.t(sponsor.alt)} />
+                  <img className="h-32  w-36 object-contain" src={sponsorImages(`./${sponsor.src}`).default} alt={i18n.t(sponsor.alt)} />
                 </a>
               </div>
             )

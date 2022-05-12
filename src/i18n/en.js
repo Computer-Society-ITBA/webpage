@@ -267,10 +267,16 @@ const i18n_en = {
   sponsors: {
     title: "Our Sponsors",
     logos: {
-      sec: "Siempre en Casa logo",
-      zx: "ZX Ventures logo",
-      tekal: "Tekal logo",
       extrimian: "Extrimian logo",
+      auth0: "auth0 logo",
+      pi:"2PI logo",
+      vercel:"Vercel logo",
+      ef:"Ethereum Foundation logo",
+      oz:"OpenZeppelin logo",
+      exactly:"Exactly Finance logo",
+      poap:"Poap logo",
+      flowics: "Flowics logo",
+      daffy:"Daffy logo"
     },
   },
   contact: {
