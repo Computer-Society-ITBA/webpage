@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import usePaging from '../../hooks/usePaging';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { motion } from 'framer-motion';
 // Translations
 import i18n from '../../i18n/index.js';
-
+//Imports from firebase
+import {db} from '../../firebase'
+import {collection, getDocs} from "firebase/firestore"
 // Icons
 import Icon from '@mdi/react';
 import { mdiInstagram, mdiLinkedin, mdiWeb, mdiGithub, mdiChevronLeft, mdiChevronRight } from '@mdi/js';
@@ -34,9 +36,20 @@ const roles_director = [
 	'team.roles.director_fundraising',
 	'team.roles.director_grads'
 ];
-
 function Team() {
 	const [dynamicTeam, setDynamicTeam] = useState(team);
+	//team2 is used to test Firebase, it is not used in the component
+	const [team2, setTeam2] = useState(async ()=>{
+		const query = await getDocs(collection(db,'team'))
+		return query.docs.map((doc)=>doc.data())
+	})
+	// useEffect(async () => {
+	// 	const query = await getDocs(collection(db,'team'))
+	// 	setTeam2(query.docs.map((doc)=>doc.data()))
+	// 	console.log(team2)
+	// })
+	console.log(team2)
+	//...
 	const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(cardWidth, dynamicTeam, 2);
 	const { width } = useWindowDimensions();
 	const [currentRole, setCurrentRole] = useState(0);
