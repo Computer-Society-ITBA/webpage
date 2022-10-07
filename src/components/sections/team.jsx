@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import usePaging from '../../hooks/usePaging';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 import { motion } from 'framer-motion';
 // Translations
 import i18n from '../../i18n/index.js';
 //Imports from firebase
-import {db} from '../../firebase'
-import {collection, getDocs} from "firebase/firestore"
+import { db } from '../../firebase';
+import { collection, getDocs } from 'firebase/firestore';
 // Icons
 import Icon from '@mdi/react';
 import { mdiInstagram, mdiLinkedin, mdiWeb, mdiGithub, mdiChevronLeft, mdiChevronRight } from '@mdi/js';
@@ -21,35 +21,48 @@ const cardWidth = 225;
 const roles = [
 	'team.roles.all',
 	'team.roles.directors',
-	'team.roles.logistics',
+	'team.roles.it',
 	'team.roles.media',
-	'team.roles.fundraising',
-	'team.roles.grads',
-	'team.roles.council'
+	'team.roles.fr',
+	'team.roles.mentors',
+	'team.roles.pr'
 ];
 
 const roles_director = [
 	'',
 	'',
-	'team.roles.co_director_logistics',
-	'team.roles.director_media',
-	'team.roles.director_fundraising',
-	'team.roles.director_grads'
+	'team.roles.head_it',
+	'team.roles.head_media',
+	'team.roles.head_fundraising',
+	'team.roles.head_mentors',
+	'team.roles.head_pr',
+	'team.roles.codirector',
+	'team.roles.codirectora'
 ];
 function Team() {
-	const [dynamicTeam, setDynamicTeam] = useState(team);
-	//team2 is used to test Firebase, it is not used in the component
-	const [team2, setTeam2] = useState(async ()=>{
-		const query = await getDocs(collection(db,'team'))
-		return query.docs.map((doc)=>doc.data())
-	})
-	// useEffect(async () => {
-	// 	const query = await getDocs(collection(db,'team'))
-	// 	setTeam2(query.docs.map((doc)=>doc.data()))
-	// 	console.log(team2)
-	// })
-	console.log(team2)
-	//...
+	const [dynamicTeam, setDynamicTeam] = useState([]);
+
+	useEffect(() => {
+		async function getTeam() {
+			const query = await getDocs(collection(db, 'team'));
+			const data = query.docs
+				.map((doc) => doc.data())
+				.sort((a, b) => {
+					let idxA = roles_director.indexOf(a.title);
+					let idxB = roles_director.indexOf(b.title);
+					console.log(idxA, idxB);
+					if (idxA === -1 && idxB === -1) return 0;
+					if (idxA === -1) return 1;
+					if (idxB === -1) return -1;
+					return idxB - idxA;
+				});
+
+			setDynamicTeam(data);
+		}
+
+		getTeam();
+	}, []);
+
 	const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(cardWidth, dynamicTeam, 2);
 	const { width } = useWindowDimensions();
 	const [currentRole, setCurrentRole] = useState(0);
@@ -67,6 +80,7 @@ function Team() {
 		}
 		setCurrentRole(indexOfRole);
 	}
+
 	return (
 		<Section id='our-team' bgColor='bg-white' textAlignment='center' className='h-full overflow-hidden'>
 			<h2>{i18n.t('team.title')}</h2>
@@ -109,15 +123,10 @@ function Team() {
 				// dragMomentum={false}
 			>
 				{dynamicTeam.map((person, index) => {
-					console.log(teamImages(`./${person.image.src}`));
 					return (
 						<div key={index} className='flex flex-col h-auto team-card'>
 							<div className='flex flex-col rounded-xl items-center shadow-xl p-2 m-4 mb-6 h-full'>
-								<img
-									className='rounded-full w-9/12'
-									src={teamImages(`./${person.image.src}`)}
-									alt={person.image.alt}
-								/>
+								<img className='rounded-full w-9/12' src={person.image.src} alt={person.image.alt} />
 								<h4>{person.name}</h4>
 								<p className='font-light uppercase opacity-75 mb-2'>{i18n.t(person.title)}</p>
 								<div className='flex flex-row justify-center items-center w-full mt-auto'>
