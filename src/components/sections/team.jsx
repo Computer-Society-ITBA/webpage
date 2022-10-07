@@ -39,47 +39,88 @@ const roles_director = [
 	'team.roles.codirector',
 	'team.roles.codirectora'
 ];
+const LOCAL_STORAGE_TEAM_KEY = 'csitba.team'
 function Team() {
 	const [dynamicTeam, setDynamicTeam] = useState([]);
-
+	const [teamRole, setTeamRole] = useState('team.roles.all')
+	// useEffect(() => {
+	// 	//TODO: verificar si esto me garantiza que se ejecute antes de lo de abajo
+	// 	//Si no hay que verificar abajo tambien
+	// 	//Si me garantizo eso, aca solo lo traigo y abajo solo uso al localStorage (desde linea 86)
+	// 	async function getTeam() {
+	// 		const query = await getDocs(collection(db, 'team'));
+	// 		const data = query.docs
+	// 			.map((doc) => doc.data())
+	// 			.sort((a, b) => {
+	// 				let idxA = roles_director.indexOf(a.title);
+	// 				let idxB = roles_director.indexOf(b.title);
+	// 				console.log(idxA, idxB);
+	// 				if (idxA === -1 && idxB === -1) return 0;
+	// 				if (idxA === -1) return 1;
+	// 				if (idxB === -1) return -1;
+	// 				return idxB - idxA;
+	// 			});
+	// 		//Guardamos los datos localmente para no buscarlos siempre que se presiona un filtro
+	// 		localStorage.setItem(LOCAL_STORAGE_TEAM_KEY,JSON.stringify(data))
+	// 	}
+	// 	getTeam();
+	// }, []); //esto hace que se llame solo una vez, al principio
 	useEffect(() => {
-		async function getTeam() {
-			const query = await getDocs(collection(db, 'team'));
-			const data = query.docs
-				.map((doc) => doc.data())
-				.sort((a, b) => {
-					let idxA = roles_director.indexOf(a.title);
-					let idxB = roles_director.indexOf(b.title);
-					console.log(idxA, idxB);
-					if (idxA === -1 && idxB === -1) return 0;
-					if (idxA === -1) return 1;
-					if (idxB === -1) return -1;
-					return idxB - idxA;
-				});
-
-			setDynamicTeam(data);
+		//Si no estaba, lo guardamos
+		if(localStorage.getItem(LOCAL_STORAGE_TEAM_KEY)===null){
+			async function getTeam() {
+				const query = await getDocs(collection(db, 'team'));
+				const data = query.docs
+					.map((doc) => doc.data())
+					.sort((a, b) => {
+						let idxA = roles_director.indexOf(a.title);
+						let idxB = roles_director.indexOf(b.title);
+						console.log(idxA, idxB);
+						if (idxA === -1 && idxB === -1) return 0;
+						if (idxA === -1) return 1;
+						if (idxB === -1) return -1;
+						return idxB - idxA;
+					});
+				//Guardamos los datos localmente para no buscarlos siempre que se presiona un filtro
+				localStorage.setItem(LOCAL_STORAGE_TEAM_KEY,JSON.stringify(data))
+			}
+			getTeam();
 		}
-
-		getTeam();
-	}, []);
-
+		const team = JSON.parse(localStorage.getItem(LOCAL_STORAGE_TEAM_KEY))
+		if (team){
+			if (teamRole==='team.roles.directors'){
+				setDynamicTeam(team.filter((member)=>!roles.includes(member.title)))
+			}else if(teamRole!=='team.roles.all') {
+				const indexOfRole = roles.indexOf(teamRole)
+				setDynamicTeam(team.filter((member) => member.title === teamRole || member.title === roles_director[indexOfRole]))
+				//Queremos a todos los de ese departamento, incluyendo a los head
+				//Se que no es lo mas eficiente, pero sirve por si queremos traer los roles de firebase
+				//No creo que funcione, tendriamos que hacer otra cosa por los roles de directores o el de all
+				// setDynamicTeam(team.filter((member) => member.title.replace('head_','') === teamRole))
+			}else{
+				setDynamicTeam(team);
+			}
+		}
+		setCurrentRole(roles.indexOf(teamRole));
+	}, [teamRole])
 	const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(cardWidth, dynamicTeam, 2);
 	const { width } = useWindowDimensions();
 	const [currentRole, setCurrentRole] = useState(0);
 
-	function setTeamByRole(role) {
-		const indexOfRole = roles.indexOf(role);
-		if (role === 'team.roles.all') {
-			setDynamicTeam(team);
-		} else if (role === 'team.roles.directors') {
-			setDynamicTeam(team.filter((member) => !roles.includes(member.title)));
-		} else {
-			setDynamicTeam(
-				team.filter((member) => member.title === role || roles_director[indexOfRole] === member.title)
-			);
-		}
-		setCurrentRole(indexOfRole);
-	}
+	// function setTeamByRole(role) {
+	// 	const indexOfRole = roles.indexOf(role);
+	// 	// if (role === 'team.roles.all') {
+	// 	// 	setDynamicTeam(team);
+	// 	// } else if (role === 'team.roles.directors') {
+	// 	// 	setDynamicTeam(team.filter((member) => !roles.includes(member.title)));
+	// 	// } else {
+	// 	// 	setDynamicTeam(
+	// 	// 		team.filter((member) => member.title === role || roles_director[indexOfRole] === member.title)
+	// 	// 	);
+	// 	// }
+	// 	// setCurrentRole(indexOfRole)
+	// 	// setTeamRole(role)
+	// }
 
 	return (
 		<Section id='our-team' bgColor='bg-white' textAlignment='center' className='h-full overflow-hidden'>
@@ -93,7 +134,7 @@ function Team() {
 									className={`${
 										i === currentRole ? 'bg-brand_secondary' : 'bg-brand_primary'
 									} p-3 rounded-xl cursor-pointer text-white`}
-									onClick={() => setTeamByRole(role)}
+									onClick={() => setTeamRole(role)}
 								>
 									{i18n.t(role)}
 								</h5>
@@ -104,8 +145,8 @@ function Team() {
 							className='bg-brand_primary text-white py-3 px-6 text-xl focus:border-0'
 							name='roles'
 							id='roles'
-							value={roles[currentRole]}
-							onChange={(event) => setTeamByRole(event.target.value)}
+							value={teamRole}
+							onChange={(event) => setTeamRole(event.target.value)}
 						>
 							{roles.map((role, i) => (
 								<option value={role}>{i18n.t(role)}</option>
