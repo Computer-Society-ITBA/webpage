@@ -36,21 +36,25 @@ const roles_director = [
 	'team.roles.codirector',
 	'team.roles.codirectora'
 ];
+
+async function getImage(member) {
+	try {
+		const response = await fetch(member.image.src);
+		const blob = await response.blob();
+		const reader = new FileReader();
+		reader.onload = (read) => {
+			member.image.src = read.target.result;
+		};
+		reader.readAsDataURL(blob);
+	} catch (err) {
+		console.error(err);
+	}
+}
+
 function Team() {
 	const [dynamicTeam, setDynamicTeam] = useState([]);
 	const [team, setTeam] = useState([]);
 	useEffect(() => {
-		async function getImage(member){
-			await fetch(member.image.src)
-				.then(res => res.blob())
-				.then(blob => {
-					const reader = new FileReader()
-					reader.onload= (read)=>{
-						member.image.src = read.target.result
-					}
-					reader.readAsDataURL(blob)
-				})
-		}
 		async function getTeam() {
 			const query = await getDocs(collection(db, 'team'));
 			const data = query.docs
@@ -63,13 +67,14 @@ function Team() {
 					if (idxB === -1) return -1;
 					return idxB - idxA;
 				});
-			data.forEach((member) => getImage(member))
+
+			data.forEach((member) => getImage(member));
 
 			setTeam(data);
 		}
 		getTeam();
 	}, []);
-	useEffect(()=>setDynamicTeam(team),[team])
+	useEffect(() => setDynamicTeam(team), [team]);
 	const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(cardWidth, dynamicTeam, 2);
 	const { width } = useWindowDimensions();
 	const [currentRole, setCurrentRole] = useState(0);
@@ -85,14 +90,14 @@ function Team() {
 				team.filter((member) => member.title === role || roles_director[indexOfRole] === member.title)
 			);
 		}
-		setCurrentRole(indexOfRole)
+		setCurrentRole(indexOfRole);
 	}
 	return (
 		<Section id='our-team' bgColor='bg-white' textAlignment='center' className='h-full overflow-hidden'>
 			<h2>{i18n.t('team.title')}</h2>
 			<div className='flex justify-center w-100 mt-2 mb-2'>
 				<div className={`flex items-center justify-between ${width > 810 ? 'flex-1' : ''} max-w-screen-lg `}>
-					{width > 810 &&
+					{width > 1050 &&
 						roles.map((role, i) => (
 							<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} key={i}>
 								<h5
@@ -105,7 +110,7 @@ function Team() {
 								</h5>
 							</motion.div>
 						))}
-					{width <= 810 && (
+					{width <= 1050 && (
 						<select
 							className='bg-brand_primary text-white py-3 px-6 text-xl focus:border-0'
 							name='roles'
@@ -132,7 +137,11 @@ function Team() {
 					return (
 						<div key={index} className='flex flex-col h-auto team-card'>
 							<div className='flex flex-col rounded-xl items-center shadow-xl p-2 m-4 mb-6 h-full'>
-								<img className='rounded-full w-9/12' src={person.image.src} alt={person.image.alt} />
+								<img
+									className='rounded-full object-cover'
+									src={person.image.src}
+									alt={person.image.alt}
+								/>
 								<h4>{person.name}</h4>
 								<p className='font-light uppercase opacity-75 mb-2'>{i18n.t(person.title)}</p>
 								<div className='flex flex-row justify-center items-center w-full mt-auto'>
