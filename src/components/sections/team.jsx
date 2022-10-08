@@ -84,7 +84,7 @@ function Team() {
 		if (role === 'team.roles.all') {
 			setDynamicTeam(team);
 		} else if (role === 'team.roles.directors') {
-			setDynamicTeam(team.filter((member) => !roles.includes(member.title)));
+			setDynamicTeam(team.filter((member) => roles_director.includes(member.title)));
 		} else {
 			setDynamicTeam(
 				team.filter((member) => member.title === role || roles_director[indexOfRole] === member.title)
