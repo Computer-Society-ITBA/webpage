@@ -35,10 +35,11 @@ function Hero () {
                     visible: i => ({
                         y: 0,
                         transition: {
-                            delay: i * 0.1
+                            delay: i * 0.4
                         }
                     })
                 }}
+                className='text-3xl font-medium tracking-wideer'
                 >
                 {i18n.t('welcome.greet')}
                 </SplitText>
@@ -51,7 +52,7 @@ function Hero () {
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className='text-brand_primary font-bold mt-12'
+                    className='text-brand_primary font-bold'
                 >
                     <SplitText
                     initial={{ y: '100%' }}
@@ -105,7 +106,7 @@ function Hero () {
         initial={{ y: '100%' }}
         animate={controlsLogo}
         variants={{
-            visible: i => ({
+            visible: () => ({
                 y: 0,
                 transition: {
                     delay: 1,

@@ -21,7 +21,7 @@ function Nosotros () {
             transition={{duration: 0.5}}
             >
               <h2>{i18n.t('about_us.we_are')}</h2>
-              <p>{i18n.t('about_us.we_are_text')}</p>
+              <p className='font-medium leading-6'>{i18n.t('about_us.we_are_text')}</p>
             </motion.div>
           )}
         </InView>
@@ -46,7 +46,7 @@ function Nosotros () {
             transition={{duration: 0.5}}
             >
               <h2>{i18n.t('about_us.we_do')}</h2>
-              <p>{i18n.t('about_us.we_do_text')}</p>
+              <p className='font-medium leading-6'>{i18n.t('about_us.we_do_text')}</p>
             </motion.div>
           )}
         </InView>

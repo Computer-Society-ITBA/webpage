@@ -99,7 +99,7 @@ function Team() {
 				<div className={`flex items-center justify-between ${width > 810 ? 'flex-1' : ''} max-w-screen-lg `}>
 					{width > 1050 &&
 						roles.map((role, i) => (
-							<motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} key={i}>
+							<motion.div whileHover={{ scale: 1.07 }} whileTap={{ scale: 0.95 }} key={i}>
 								<h5
 									className={`${
 										i === currentRole ? 'bg-brand_secondary' : 'bg-brand_primary'
@@ -118,7 +118,7 @@ function Team() {
 							value={roles[currentRole]}
 							onChange={(event) => setTeamByRole(event.target.value)}
 						>
-							{roles.map((role, i) => (
+							{roles.map((role) => (
 								<option value={role}>{i18n.t(role)}</option>
 							))}
 						</select>
@@ -126,7 +126,7 @@ function Team() {
 				</div>
 			</div>
 			<motion.div
-				className='grid grid-rows-2 grid-flow-col w-10'
+				className='grid grid-rows-2 grid-flow-col justify-center'
 				animate={{ x: -1 * page * cardWidth }}
 				// drag="x"
 				// dragConstraints={{ left: limitLeft, right: 0 }}
@@ -146,7 +146,7 @@ function Team() {
 								<p className='font-light uppercase opacity-75 mb-2'>{i18n.t(person.title)}</p>
 								<div className='flex flex-row justify-center items-center w-full mt-auto'>
 									{person.social.map((item, index) => {
-										let icon = undefined;
+										let icon;
 										let className = 'px-2 text-typography_primary transform duration-100 ';
 
 										switch (item.logo) {
