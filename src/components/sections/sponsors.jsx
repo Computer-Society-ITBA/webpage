@@ -6,7 +6,7 @@ import i18n from '../../i18n/index.js';
 import sponsors from '../../data/sponsors';
 
 // Images
-const sponsorImages = require.context('../../images/sponsors/', true, /^.*$/);
+const sponsorImages = import.meta.glob("../../images/sponsors/*", { eager: true, as: "url" });
 
 // Components
 const Section = React.lazy(() => import('../section'));
@@ -25,7 +25,7 @@ function Sponsors() {
 							<a href={sponsor.link} rel='noreferrer' target='_blank'>
 								<img
 									className='h-32  w-36 object-contain'
-									src={sponsorImages(`./${sponsor.src}`)}
+									src={sponsorImages[`../../images/sponsors/${sponsor.src}`]}
 									alt={i18n.t(sponsor.alt)}
 								/>
 							</a>
