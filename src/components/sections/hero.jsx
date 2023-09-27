@@ -6,13 +6,11 @@ import logo from '../../images/logo_icon.png';
 
 function Hero () {
     // UseEffect + controls to trigger animations
-    const controlsGreet = useAnimation()
     const controlsCs = useAnimation()
     const controlsItba = useAnimation()
     const controlsLogo = useAnimation()
     useEffect(() => {
         async function loadAnimations() {
-            await controlsGreet.start('visible')
             await controlsCs.start('visible')
             await controlsItba.start('visible')
             controlsLogo.start('visible')
@@ -21,29 +19,6 @@ function Hero () {
     })
 
     return <section id="main" className='bg-white h-screen w-full flex flex-col justify-center items-center overflow-hidden'>
-        <h4>
-            <motion.div
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                className='text-typography_primary'
-            >
-                <SplitText
-                initial={{ y: '100%' }}
-                animate={controlsGreet}
-                variants={{
-                    visible: i => ({
-                        y: 0,
-                        transition: {
-                            delay: i * 0.1
-                        }
-                    })
-                }}
-                >
-                {i18n.t('welcome.greet')}
-                </SplitText>
-            </motion.div>
-        </h4>
         <h1 className="mb-2 sm:mb-0">
             <AnimatePresence>
                 {(
@@ -51,7 +26,7 @@ function Hero () {
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className='text-brand_primary font-bold mt-12'
+                    className='text-brand_primary font-bold mt-7'
                 >
                     <SplitText
                     initial={{ y: '100%' }}
