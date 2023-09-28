@@ -20,7 +20,7 @@ function Footer () {
                 />
             </Link>
         </div>
-        <nav className="w-full items-center justify-center mb-4">
+        {/* <nav className="w-full items-center justify-center mb-4">
             <ul className="list-none flex flex-col flex-wrap sm:flex-row sm:flex-nowrap w-full h-full items-baseline justify-center">
                 {
                     footer.nav.map((item, index) => {
@@ -32,19 +32,8 @@ function Footer () {
                     })
                 }
             </ul>
-        </nav>
-        <div className="w-full h-3/12 sm:h-2/12 flex flex-col-reverse sm:flex-row justify-start sm:justify-between px-16 mb-2 sm:mb-4 items-center">
-            <div>
-                {i18n.t('footer.love_1')}
-                <Link smooth to="/credits">
-                    <Icon path={mdiHeart}
-                    size={1}
-                    className="inline mx-1 transform duration-100 hover:text-red-700 hover:animate-pulse"
-                    />
-                </Link>
-                {i18n.t('footer.love_2')}
-            </div>
-            <div className="flex flex-row justify-center items-center mb-2 sm:mb-0">
+        </nav> */}
+        <div className="flex flex-row justify-center items-center mb-2 sm:mb-0">
                 {footer.social.map((item, index) => {
                     let icon = undefined
                     let className = "px-2 text-typography_primary transform duration-100 "
@@ -66,13 +55,27 @@ function Footer () {
                     return (
                         <a key={index} href={item.href} target="_blank" rel="noreferrer" className={className}>
                             <Icon path={icon}
-                            size={1}
+                            size={2}
                             className="focus:outline-none"
                             />
                         </a>
                     )
                 })}
             </div>
+
+
+        <div className="w-full h-3/12 sm:h-2/12 flex flex-col-reverse sm:flex-row justify-start sm:justify-between px-16 mb-2 sm:mb-4 items-center">
+            <div>
+                {i18n.t('footer.love_1')}
+                <Link smooth to="/credits">
+                    <Icon path={mdiHeart}
+                    size={1}
+                    className="inline mx-1 transform duration-100 hover:text-red-700 hover:animate-pulse"
+                    />
+                </Link>
+                {i18n.t('footer.love_2')}
+            </div>
+            
         </div>
     </footer>
 }

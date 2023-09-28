@@ -298,8 +298,8 @@ const i18n_en = {
 		email: 'Send us an email',
 		networks: 'Our social profiles',
 		form: {
-			subject: 'Subject of Email',
-			body: 'Body of Email',
+			subject: 'Subject',
+			body: 'Body',
 			send: 'Send'
 		}
 	},

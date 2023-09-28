@@ -297,8 +297,8 @@ const i18n_es = {
 		email: 'Mandanos un email',
 		networks: 'Nuestros perfiles sociales',
 		form: {
-			subject: 'Asunto del Email',
-			body: 'Cuerpo del Email',
+			subject: 'Asunto',
+			body: 'Cuerpo',
 			send: 'Enviar'
 		}
 	},
