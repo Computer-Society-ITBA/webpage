@@ -1,6 +1,6 @@
 import React from 'react';
 import i18n from '../../i18n/index.js';
-import logoCompleto from '../../images/logo_completo_dark.png';
+import logoCompleto from '../../images/logo_completo_dark_transparente.png';
 import { HashLink as Link } from "react-router-hash-link";
 
 // Icons
