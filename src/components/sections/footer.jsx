@@ -15,7 +15,7 @@ function Footer () {
             <Link smooth to="/#" className="max-h-full sm:w-4/12 md:w-4/12 my-4 justify-center items-center">
                 <img 
                 src={logoCompleto} 
-                className='object-contain w-8/12 mx-auto' 
+                className='object-contain w-8/12 mx-auto rounded-lg' 
                 alt='Computer Society Logo'
                 />
             </Link>
