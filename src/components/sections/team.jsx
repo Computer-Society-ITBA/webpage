@@ -37,7 +37,7 @@ const roles_director = [
   "",
   "team.roles.head_it",
   "team.roles.head_media",
-  "team.roles.head_fundraising",
+  "team.roles.head_fr",
   "team.roles.head_mentors",
   "team.roles.head_pr",
   "team.roles.codirector",
@@ -136,8 +136,8 @@ function Team() {
               >
                 <h5
                   className={`${i === currentRole
-                      ? "bg-brand_secondary"
-                      : "bg-brand_primary"
+                    ? "bg-brand_secondary"
+                    : "bg-brand_primary"
                     } p-3 rounded-xl cursor-pointer text-white`}
                   onClick={() => setTeamByRole(role)}
                 >
