@@ -29,6 +29,7 @@ export default function usePastEvents({ orderBy, direction, limit }) {
                 const data = doc.data();
                 return {
                     "attendants": data.attendants,
+                    "link": data.link,
                     ...data[language],
                 };
             });
