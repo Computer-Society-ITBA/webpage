@@ -1,9 +1,11 @@
 import { collection, getDocs, limit as fLimit, orderBy as fOrderBy, query as fQuery } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import i18n from "../i18n";
 import { db } from "../firebase";
 
-export default function usePastEvents({ orderBy, direction, limit }) {
+const PastEventCard = React.lazy(() => import("./past_event_card"));
+
+export default function PastEventsList({ orderBy, direction, limit }) {
     if (direction !== "asc" && direction !== "desc") direction = "asc";
 
     const [pastEvents, setPastEvents] = useState([]);
@@ -36,5 +38,11 @@ export default function usePastEvents({ orderBy, direction, limit }) {
         getPastEvents();
     }, []);
 
-    return pastEvents;
+    return (
+        pastEvents.length == 0 ?
+            <div className="loader" /> :
+            pastEvents.map((event, index) => {
+                return <PastEventCard key={index} event={event} index={index} />
+            })
+    );
 }
