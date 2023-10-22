@@ -12,8 +12,6 @@ export default function usePastEvents({ orderBy, direction, limit }) {
         async function getPastEvents() {
             const pastEventsRef = collection(db, "past_events");
 
-            console.log(direction)
-
             let query;
             if (limit > 0)
                 query = fQuery(pastEventsRef, fOrderBy(orderBy, direction), fLimit(limit))

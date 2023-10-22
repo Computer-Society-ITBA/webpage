@@ -20,7 +20,7 @@ function PastEvents() {
           pastEvents.length == 0 ?
             <div className="loader" /> :
             pastEvents.map((event, index) => {
-              return <PastEventCard event={event} index={index} />;
+              return <PastEventCard key={index} event={event} index={index} />;
             })
         }
       </div>
