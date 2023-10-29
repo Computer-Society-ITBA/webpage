@@ -16,18 +16,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Sponsors() {
 	const settings = {
-		className: "slider variable-width",
-		dots: true,
 		infinite: true,
-		centerMode: true,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		variableWidth: true,
-		autoplay: false,
-		speed: 2000,
-		autoplaySpeed: 2000,
-		cssEase: "linear"
-
+		slidesToShow: 4,
+      	slidesToScroll: 1,
+		adaptiveHeight: true,
+		autoplay: true,
+		speed: 4100,
+		autoplaySpeed: 0,
+		cssEase: "linear",
 	}
 	return (
 		<Section id='our-sponsors' bgColor='bg-white' textAlignment='center'>

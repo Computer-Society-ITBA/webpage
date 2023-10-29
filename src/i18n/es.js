@@ -286,7 +286,16 @@ const i18n_es = {
 			exactly: 'Logo de Exactly Finance',
 			poap: 'Logo de Poap',
 			flowics: 'Logo de Flowics',
-			daffy: 'Logo de Daffy'
+			daffy: 'Logo de Daffy',
+			Accenture: 'Logo de Accenture',
+			BBVA: 'Logo de BBVA',
+			BuenosAiresCiudad: 'Logo de Buenos Aires Ciudad',
+			Defy: 'Logo de Defy',
+			Emi: 'Logo de Emi',
+			MetLife: 'Logo de MetLife',
+			modo: 'Logo de Modo',
+			Nestle: 'Logo de Nestle',
+			PAE: 'Logo de Pan American Energy',
 		}
 	},
 	contact: {
