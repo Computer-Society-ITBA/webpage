@@ -37,7 +37,7 @@ const i18n_es = {
 			'"Complementar la formación académica con el uso de herramientas y tecnologías actuales como el camino para formar mejores profesionales"'
 	},
 	upcoming_events: {
-		title: 'Próximos Eventos',
+		title: 'Próximo Evento',
 		sign_up: 'Anotarse',
 		events: {
 			hackit: {

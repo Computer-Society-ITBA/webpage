@@ -35,23 +35,24 @@ function UpcomingEvents() {
     >
       <h2>{i18n.t("upcoming_events.title")}</h2>
 
-      <motion.div
-        className="flex flex-row flex-none"
-        animate={{ x: -1 * page * cardWidth }}
-        drag="x"
-        dragConstraints={{ left: limitLeft, right: 0 }}
-        dragElastic={false}
-        dragMomentum={false}
+      <div className="upcoming-event-frame"
       >
         {upcomingEvents.map((event, index) => {
           return (
             <div
               key={index}
-              className="bg-tan flex flex-col h-auto rounded-xl shadow-xl p-8 mr-2 lg:mr-4 mb-6 upcoming-card items-start"
+              className="bg-tan flex flex-col h-auto rounded-xl shadow-xl p-8 mr-2 lg:mr-4 mb-6 upcoming-card items-center"
             >
               <h3 className="text-left mt-5 mb-2 font-bold">
                 {i18n.t(event.title)}
               </h3>
+
+              <img
+									className='h-52  w-46 object-contain'
+									src="https://www.protocoloimep.com/app/uploads/2018/11/que-es-un-evento.jpg"								
+              />
+             
+
               <p className="font-light mb-4">{i18n.t(event.date)}</p>
               <p className="text-left mb-2">{i18n.t(event.description)}</p>
               {event.link && (
@@ -63,18 +64,12 @@ function UpcomingEvents() {
                   text={i18n.t("upcoming_events.sign_up")}
                 />
               )}
-              {/* <button
-                className="bg-brand_primary py-3 px-6 text-xl rounded-lg text-white mt-3 
-              self-end hover:bg-brand_secondary duration-200 focus:outline-none"
-              >
-                {i18n.t("upcoming_events.sign_up")}
-              </button> */}
             </div>
           );
         })}
-      </motion.div>
+      </div>
 
-      <div className="flex flex-row w-full items-center justify-center">
+      {/* <div className="flex flex-row w-full items-center justify-center">
         <button
           disabled={page === 0}
           onClick={handleLeftClick}
@@ -99,7 +94,7 @@ function UpcomingEvents() {
         >
           <Icon path={mdiChevronRight} size={3} />
         </button>
-      </div>
+      </div> */}
     </Section>
   );
 }

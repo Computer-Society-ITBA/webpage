@@ -37,7 +37,7 @@ const i18n_en = {
 			'"Complement academic training with the use of current tools and technologies as the way to train better professionals."'
 	},
 	upcoming_events: {
-		title: 'Upcoming Events',
+		title: 'Upcoming Event',
 		sign_up: 'Sign Up',
 		events: {
 			hackit: {
