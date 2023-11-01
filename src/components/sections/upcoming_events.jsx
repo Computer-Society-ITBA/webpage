@@ -48,7 +48,7 @@ function UpcomingEvents() {
               </h3>
 
               <img
-									className='h-52  w-46 object-contain'
+									className='h-62  w-46 object-contain'
 									src="https://www.protocoloimep.com/app/uploads/2018/11/que-es-un-evento.jpg"								
               />
              
