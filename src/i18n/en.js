@@ -17,15 +17,12 @@ const i18n_en = {
 	},
 	stats: {
 		stat_events: {
-			stat: '+20',
 			title: 'Events held'
 		},
 		stat_participants: {
-			stat: '+3,500',
 			title: 'Participants in events'
 		},
 		stat_countries: {
-			stat: '+10',
 			title: 'Countries reached'
 		}
 	},
