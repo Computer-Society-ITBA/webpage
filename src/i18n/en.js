@@ -34,7 +34,7 @@ const i18n_en = {
 			'"Complement academic training with the use of current tools and technologies as the way to train better professionals."'
 	},
 	upcoming_events: {
-		title: 'Upcoming Events',
+		title: 'Upcoming Event',
 		sign_up: 'Sign Up',
 		events: {
 			hackit: {
@@ -97,7 +97,16 @@ const i18n_en = {
 			exactly: 'Exactly Finance logo',
 			poap: 'Poap logo',
 			flowics: 'Flowics logo',
-			daffy: 'Daffy logo'
+			daffy: 'Daffy logo',
+			Accenture: 'Accenture logo',
+			BBVA: 'BBVA logo',
+			BuenosAiresCiudad: 'Buenos Aires Ciudad logo',
+			Defy: 'Defy logo',
+			Emi: 'Emi logo',
+			MetLife: 'MetLife logo',
+			modo: 'MODO logo',
+			Nestle: 'Nestle logo',
+			PAE: 'Pan American Energy logo',
 		}
 	},
 	contact: {

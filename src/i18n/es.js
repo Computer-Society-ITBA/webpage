@@ -34,7 +34,7 @@ const i18n_es = {
 			'"Complementar la formación académica con el uso de herramientas y tecnologías actuales como el camino para formar mejores profesionales"'
 	},
 	upcoming_events: {
-		title: 'Próximos Eventos',
+		title: 'Próximo Evento',
 		sign_up: 'Anotarse',
 		events: {
 			hackit: {
@@ -97,7 +97,16 @@ const i18n_es = {
 			exactly: 'Logo de Exactly Finance',
 			poap: 'Logo de Poap',
 			flowics: 'Logo de Flowics',
-			daffy: 'Logo de Daffy'
+			daffy: 'Logo de Daffy',
+			Accenture: 'Logo de Accenture',
+			BBVA: 'Logo de BBVA',
+			BuenosAiresCiudad: 'Logo de Buenos Aires Ciudad',
+			Defy: 'Logo de Defy',
+			Emi: 'Logo de Emi',
+			MetLife: 'Logo de MetLife',
+			modo: 'Logo de Modo',
+			Nestle: 'Logo de Nestle',
+			PAE: 'Logo de Pan American Energy',
 		}
 	},
 	contact: {
