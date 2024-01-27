@@ -92,7 +92,6 @@ function Team() {
   const { width } = useWindowDimensions();
   const [currentRole, setCurrentRole] = useState(0);
 
-
   function setTeamByRole(role) {
     indexOfRole = roles.indexOf(role);
     // const indexOfRole = roles.indexOf(role);
@@ -123,42 +122,45 @@ function Team() {
     >
       <h2>{i18n.t("team.title")}</h2>
       <div className="flex justify-center w-100 mt-2 mb-2">
-        <div
-          className={`flex items-center justify-between ${width > 810 ? "flex-1" : ""
-            } max-w-screen-lg `}
-        >
-          {width > 1050 &&
-            roles.map((role, i) => (
+        {width > 1300 && (
+          <div
+            className={`flex items-center justify-between ${
+              width > 810 ? "flex-1" : ""
+            } max-w-screen-xl `}
+          >
+            {roles.map((role, i) => (
               <motion.div
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 key={i}
               >
                 <h5
-                  className={`${i === currentRole
-                    ? "bg-brand_secondary"
-                    : "bg-brand_primary"
-                    } p-3 rounded-xl cursor-pointer text-white`}
+                  className={`${
+                    i === currentRole
+                      ? "bg-brand_secondary"
+                      : "bg-brand_primary"
+                  } p-3 rounded-xl cursor-pointer text-white`}
                   onClick={() => setTeamByRole(role)}
                 >
                   {i18n.t(role)}
                 </h5>
               </motion.div>
             ))}
-          {width <= 1050 && (
-            <select
-              className="bg-brand_primary text-white py-3 px-6 text-xl focus:border-0"
-              name="roles"
-              id="roles"
-              value={roles[currentRole]}
-              onChange={(event) => setTeamByRole(event.target.value)}
-            >
-              {roles.map((role, i) => (
-                <option value={role}>{i18n.t(role)}</option>
-              ))}
-            </select>
-          )}
-        </div>
+          </div>
+        )}
+        {width <= 1300 && (
+          <select
+            className="bg-brand_primary text-white py-3 px-6 text-xl focus:border-0"
+            name="roles"
+            id="roles"
+            value={roles[currentRole]}
+            onChange={(event) => setTeamByRole(event.target.value)}
+          >
+            {roles.map((role, i) => (
+              <option value={role}>{i18n.t(role)}</option>
+            ))}
+          </select>
+        )}
       </div>
 
       <div
@@ -169,11 +171,11 @@ function Team() {
           //   className="flex grid grid-rows-2 grid-flow-col w-10"
           className="flex grid grid-rows-2 grid-flow-col"
           animate={{ x: -1 * page * cardWidth }}
-        //   style={{flexDirection: 'column',}}
-        // drag="x"
-        // dragConstraints={{ left: limitLeft, right: 0 }}
-        // dragElastic={false}
-        // dragMomentum={false}
+          //   style={{flexDirection: 'column',}}
+          // drag="x"
+          // dragConstraints={{ left: limitLeft, right: 0 }}
+          // dragElastic={false}
+          // dragMomentum={false}
         >
           {dynamicTeam.map((person, index) => {
             return (
