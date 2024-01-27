@@ -37,7 +37,7 @@ const roles_director = [
   "",
   "team.roles.head_it",
   "team.roles.head_media",
-  "team.roles.head_fundraising",
+  "team.roles.head_fr",
   "team.roles.head_mentors",
   "team.roles.head_pr",
   "team.roles.codirector",
@@ -65,7 +65,7 @@ function Team() {
   const [team, setTeam] = useState([]);
   useEffect(() => {
     async function getTeam() {
-      const query = await getDocs(collection(db, "team"));
+      const query = await getDocs(collection(db, "team_23_24"));
       const data = query.docs
         .map((doc) => doc.data())
         .sort((a, b) => {
@@ -124,9 +124,8 @@ function Team() {
       <h2>{i18n.t("team.title")}</h2>
       <div className="flex justify-center w-100 mt-2 mb-2">
         <div
-          className={`flex items-center justify-between ${
-            width > 810 ? "flex-1" : ""
-          } max-w-screen-lg `}
+          className={`flex items-center justify-between ${width > 810 ? "flex-1" : ""
+            } max-w-screen-lg `}
         >
           {width > 1050 &&
             roles.map((role, i) => (
@@ -136,11 +135,10 @@ function Team() {
                 key={i}
               >
                 <h5
-                  className={`${
-                    i === currentRole
-                      ? "bg-brand_secondary"
-                      : "bg-brand_primary"
-                  } p-3 rounded-xl cursor-pointer text-white`}
+                  className={`${i === currentRole
+                    ? "bg-brand_secondary"
+                    : "bg-brand_primary"
+                    } p-3 rounded-xl cursor-pointer text-white`}
                   onClick={() => setTeamByRole(role)}
                 >
                   {i18n.t(role)}
@@ -171,11 +169,11 @@ function Team() {
           //   className="flex grid grid-rows-2 grid-flow-col w-10"
           className="flex grid grid-rows-2 grid-flow-col"
           animate={{ x: -1 * page * cardWidth }}
-          //   style={{flexDirection: 'column',}}
-          // drag="x"
-          // dragConstraints={{ left: limitLeft, right: 0 }}
-          // dragElastic={false}
-          // dragMomentum={false}
+        //   style={{flexDirection: 'column',}}
+        // drag="x"
+        // dragConstraints={{ left: limitLeft, right: 0 }}
+        // dragElastic={false}
+        // dragMomentum={false}
         >
           {dynamicTeam.map((person, index) => {
             return (

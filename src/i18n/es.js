@@ -255,7 +255,7 @@ const i18n_es = {
 			codirectora: 'Co-directora',
 			head_it: 'Head de Tecnología de la Información',
 			head_media: 'Head de medios',
-			head_fundraising: 'Head de Recaudación de Fondos',
+			head_fr: 'Head de Recaudación de Fondos',
 			head_mentors: 'Head de Mentores',
 			head_pr: 'Head de Relaciones Públicas',
 			asesor_mentors: 'Asesor de Mentores',
