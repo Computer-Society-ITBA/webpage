@@ -40,7 +40,7 @@ function Stats () {
               "flex flex-col items-center w-full sm:w-6/12 md:w-4/12 sm:mb-0",
               index < stats.length - 1 ? 'mb-16' : ''
               ])}>
-              <h2 className="text-highlight leading-highlight font-bold">{i18n.t(stat.stat)}</h2>
+              <h2 className="text-highlight leading-highlight font-bold">{stat.stat}</h2>
               <p className="text-h3 leading-h3">{i18n.t(stat.title)}</p>
             </div>
           )
