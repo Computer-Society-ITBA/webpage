@@ -35,16 +35,15 @@ const i18n_es = {
 	},
 	upcoming_events: {
 		title: 'Próximo Evento',
-		sign_up: 'Anotarse',
-		events: {
-			hackit: {
-				title: 'HackIT-BA CS!',
-				date: '01/04/21',
-				description:
-					'HackIT-BA CS es un hackathon anual que se realiza en el ITBA, en el que 15-25 equipos de 3 personas viven 36 horas de pura intensidad, programando un proyecto práctico  que pueda mejorar la calidad de vida de sus pares en la Argentina y en el mundo, con ideas innovadoras y únicas.',
-				link: 'https://bit.ly/hackit-ba'
-			}
-		}
+    sign_up: 'Descubre Más!',
+    events: {
+      hackit: {
+        title: 'HackIT-BA CS!',
+        date: '05/04/24',
+        description:
+          'HackIT-BA CS es un hackathon anual que se realiza en el ITBA, en el que 15-25 equipos de 4 personas viven 36 horas de pura intensidad, programando un proyecto práctico  que pueda mejorar la calidad de vida de sus pares en la Argentina y en el mundo, con ideas innovadoras y únicas.',
+      },
+    },
 	},
 	past_events: {
 		title: 'Eventos Pasados',

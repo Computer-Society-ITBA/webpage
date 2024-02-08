@@ -35,14 +35,13 @@ const i18n_en = {
 	},
 	upcoming_events: {
 		title: 'Upcoming Event',
-		sign_up: 'Sign Up',
+		sign_up: 'Learn More!',
 		events: {
 			hackit: {
 				title: 'HackIT-BA CS!',
-				date: '01/04/21',
+				date: '05/04/24',
 				description:
-					'HackIT-BA CS is an annual event held at ITBA, in which 15-25 teams of 3 people live 36 hours together, programming a practical project that can improve the quality of life of their peers in Argentina and the world, with innovative and unique ideas.',
-				link: 'https://bit.ly/hackit-ba'
+					'HackIT-BA CS is an annual event held at ITBA, in which 15-25 teams of 4 people live 36 hours together, programming a practical project that can improve the quality of life of their peers in Argentina and the world, with innovative and unique ideas.',
 			}
 		}
 	},

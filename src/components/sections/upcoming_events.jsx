@@ -5,13 +5,13 @@ import i18n from "../../i18n/index.js";
 
 import upcomingEvents from "../../data/upcoming_events.json";
 
+import hackitba from "../../images/Hackitba.png";
 
 // Components
 const Section = React.lazy(() => import("../section"));
 const LinkButton = React.lazy(() => import("../link_button"));
 
 function UpcomingEvents() {
-
   return (
     <Section
       id="upcoming-events"
@@ -21,8 +21,7 @@ function UpcomingEvents() {
     >
       <h2>{i18n.t("upcoming_events.title")}</h2>
 
-      <div className="upcoming-event-frame"
-      >
+      <div className="upcoming-event-frame">
         {upcomingEvents.map((event, index) => {
           return (
             <div
@@ -34,11 +33,10 @@ function UpcomingEvents() {
               </h3>
 
               <img
-									className='h-62  w-46 object-contain'
-									src="https://www.protocoloimep.com/app/uploads/2018/11/que-es-un-evento.jpg"
-                  alt="event"								
+                className="h-62  w-46 object-contain"
+                src={hackitba}
+                alt="hackitba"
               />
-             
 
               <p className="font-light mb-4">{i18n.t(event.date)}</p>
               <p className="text-left mb-2">{i18n.t(event.description)}</p>
