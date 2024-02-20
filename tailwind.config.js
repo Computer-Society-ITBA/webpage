@@ -1,16 +1,12 @@
 module.exports = {
-	purge: {
-		content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-		options: {
-			safelist: [/^bg-/]
-		}
-	},
-	darkMode: false, // or 'media' or 'class'
+	content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+	safelist: [{ pattern: /^bg-/ }],
 	theme: {
 		extend: {
+			
 			colors: {
-				brand_primary: '#F67C01',
-				brand_secondary: '#FFB200',
+				brand_primary: '#FFAD00',
+				brand_secondary: '#F98A04',
 				brand_tertiary: '#75787B',
 				typography_primary: '#212121',
 				light: '#F7F7F7'

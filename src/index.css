@@ -79,6 +79,11 @@ p {
 	max-width: 55%;
 }
 
+.upcoming-event-frame {
+	display: flex;
+	justify-content: center;
+}
+
 .anchor-target {
 	display: block;
 	position: relative;

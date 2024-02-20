@@ -6,33 +6,37 @@ import i18n from '../../i18n/index.js';
 import sponsors from '../../data/sponsors';
 
 // Images
-const sponsorImages = require.context('../../images/sponsors/', true, /^.*$/);
+const sponsorImages = import.meta.glob("../../images/sponsors/*", { eager: true, as: "url" });
 
 // Components
 const Section = React.lazy(() => import('../section'));
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function Sponsors() {
+	const settings = {
+		infinite: true,
+		slidesToShow: 4,
+      	slidesToScroll: 1,
+		adaptiveHeight: true,
+		autoplay: true,
+		speed: 4100,
+		autoplaySpeed: 0,
+		cssEase: "linear",
+	}
 	return (
 		<Section id='our-sponsors' bgColor='bg-white' textAlignment='center'>
 			<h2>{i18n.t('sponsors.title')}</h2>
-			<div className='flex flex-col sm:flex-row flex-wrap justify-center items-center w-full h-full'>
-				{sponsors.map((sponsor, index) => {
-					return (
-						<div
-							key={index}
-							className='w-full md:w-4/12 lg:w-3/12 h-2/6 sm:h-3/6 p-2 flex flex-col justify-center items-center'
-						>
-							<a href={sponsor.link} rel='noreferrer' target='_blank'>
-								<img
-									className='h-32  w-36 object-contain'
-									src={sponsorImages(`./${sponsor.src}`)}
-									alt={i18n.t(sponsor.alt)}
-								/>
-							</a>
-						</div>
-					);
-				})}
-			</div>
+			<Slider {...settings}>
+				{sponsors.map((sponsor, index) => (
+					<div key={index} className="py-10 px-5 mx-10" >	
+					<a href={sponsor.link} rel='noreferrer' target='_blank'>
+						<img src={sponsorImages[`../../images/sponsors/${sponsor.src}`]} alt={i18n.t(sponsor.alt)} className=" h-24 my-0 mx-auto"/>
+					</a>	
+					</div>
+				))}
+			</Slider>
 		</Section>
 	);
 }

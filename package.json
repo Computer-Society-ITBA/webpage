@@ -2,31 +2,28 @@
 	"name": "webpage",
 	"version": "0.1.0",
 	"private": true,
+	"type": "module",
 	"dependencies": {
-		"@craco/craco": "^7.0.0-alpha.8",
-		"@mdi/js": "^5.9.55",
-		"@mdi/react": "^1.5.0",
-		"@testing-library/jest-dom": "^5.11.4",
-		"@testing-library/react": "^11.1.0",
-		"@testing-library/user-event": "^12.1.10",
-		"firebase": "^9.10.0",
-		"framer-motion": "^4.1.11",
-		"i18next": "^20.2.4",
-		"i18next-browser-languagedetector": "^6.1.1",
-		"i18next-http-backend": "^1.2.4",
-		"react": "^17.0.2",
-		"react-dom": "^17.0.2",
-		"react-i18next": "^11.8.15",
-		"react-intersection-observer": "^8.32.0",
-		"react-router-dom": "^5.2.0",
+		"@mdi/js": "^7.4.47",
+		"@mdi/react": "^1.6.1",
+		"firebase": "^10.8.0",
+		"framer-motion": "^11.0.3",
+		"i18next": "^23.8.2",
+		"i18next-browser-languagedetector": "^7.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-i18next": "^14.0.1",
+		"react-intersection-observer": "^9.6.0",
+		"react-router-dom": "^6.22.0",
 		"react-router-hash-link": "^2.4.3",
-		"web-vitals": "^1.0.1"
+		"react-slick": "^0.30.1",
+		"slick-carousel": "^1.8.1",
+		"web-vitals": "^3.5.2"
 	},
 	"scripts": {
-		"start": "craco start",
-		"build": "set GENERATE_SOURCEMAP=false && craco build",
-		"test": "craco test",
-		"eject": "react-scripts eject"
+		"start": "vite",
+		"build": "vite build",
+		"serve": "vite preview"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -47,10 +44,10 @@
 		]
 	},
 	"devDependencies": {
-		"autoprefixer": "^10.4.12",
-		"postcss": "^8.4.17",
-		"react-scripts": "^5.0.1",
-		"tailwindcss": "^3.1.8",
-		"terser-webpack-plugin": "^5.3.6"
+		"@vitejs/plugin-react": "^4.2.1",
+		"autoprefixer": "^10.4.17",
+		"postcss": "^8.4.33",
+		"tailwindcss": "^3.4.1",
+		"vite": "^5.0.12"
 	}
 }

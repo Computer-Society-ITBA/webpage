@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import i18n from '../i18n/index.js';
 
-const inputClass = "p-2 my-1 rounded-md bg-brand_secondary text-black border-2 border-black focus:outline-none focus:border-gray-300 focus:border-2 placeholder-gray-600"
+const inputClass = "font-semibold px-4 py-3 my-1 rounded-lg text-black placeholder-orange-500 w-full"
 
 function ContactForm () {
     const [subject, setSubject] = useState("");
@@ -15,7 +15,7 @@ function ContactForm () {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col">
+        <form onSubmit={handleSubmit} className="flex flex-col items-center">
             <input
                 id="subject"
                 name="subject"
@@ -40,7 +40,7 @@ function ContactForm () {
             />
             <button 
                 type="submit" 
-                className="rounded-md mt-1 p-2 cursor-pointer bg-brand_primary text-typography_primary border-2 border-typography_primary transition duration-300 hover:text-white hover:bg-typography_primary focus:text-white focus:bg-typography_primary focus:outline-none"
+                className="font-semibold rounded-lg mt-5 p-2 cursor-pointer bg-brand_primary text-white border-2 border-white w-full transition duration-300 hover:text-white hover:bg-brand_tertiary focus:text-white focus:bg-brand_tertiary focus:outline-none"
                 >
                     {i18n.t('contact_us.form.send')}
             </button>

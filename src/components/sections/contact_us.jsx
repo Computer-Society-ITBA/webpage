@@ -17,13 +17,13 @@ const ContactForm = React.lazy(() => import('../contact_form'));
 
 function ContactUs () {
   return (<Section id="contact-us" bgColor="bg-brand_primary" textAlignment="center">
-      <h2>{i18n.t('contact_us.title')}</h2>
-      <div className="flex flex-col sm:flex-row w-full h-full">
-        <div className="flex flex-col w-full sm:w-6/12 h-full">
-          <h3>{i18n.t('contact_us.email')}</h3>
+      <h2 className='text-white font-semibold'>{i18n.t('contact_us.title')}</h2>
+      <div className="flex flex-col sm:flex-row w-full h-full items-center justify-center">
+        <div className="sm:w-1/2 h-full">
+          {/* <h3 className='text-white font-semibold'>{i18n.t('contact_us.email')}</h3> */}
           <ContactForm/>
         </div>
-        <div className="flex flex-col w-full sm:w-6/12 mt-4 sm:mt-0 h-full items-center">
+        {/* <div className="flex flex-col w-full sm:w-6/12 mt-4 sm:mt-0 h-full items-center">
           <h3>{i18n.t('contact_us.networks')}</h3>
           <div className="flex flex-col w-auto items-start">
             {social.map((item, index) => {
@@ -58,7 +58,7 @@ function ContactUs () {
               )
             })}
           </div>
-        </div>
+        </div> */}
       </div>
     </Section>)
 }
