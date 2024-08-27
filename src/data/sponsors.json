@@ -1,97 +1,62 @@
 [
-  {
-    "src": "2pi.png",
-    "alt": "sponsors.logos.pi",
-    "link": "https://2pi.network/"
-  },
-  {
-    "src": "extrimian.png",
-    "alt": "sponsors.logos.extrimian",
-    "link": "https://extrimian.com"
-  },
-  {
-    "src": "auth0.png",
-    "alt": "sponsors.logos.auth0",
-    "link": "https://auth0.com/"
-  },
-  {
-    "src": "poap.png",
-    "alt": "sponsors.logos.poap",
-    "link": "https://poap.xyz/"
-  },
-  {
-    "src": "vercel.png",
-    "alt": "sponsors.logos.vercel",
-    "link": "https://vercel.com/"
-  },
-  {
-    "src": "flowics.svg",
-    "alt": "sponsors.logos.flowics",
-    "link": "https://www.flowics.com/"
-  }, 
-  {
-    "src": "ef.png",
-    "alt": "sponsors.logos.ef",
-    "link": "https://ethereum.org/"
-  },
-  {
-    "src":"modo.png",
-    "alt": "sponsors.logos.modo",
-    "link": "https://www.modo.com.ar/"
-  },
-  {
-    "src":"PAE.png",
-    "alt":"sponsors.logos.PAE",
-    "link":"https://www.pan-energy.com/"
-  },
-  {
-    "src": "daffy.svg",
-    "alt": "sponsors.logos.daffy",
-    "link": "https://daffy.org/"
-  },
-  {
-    "src":"Emi.png",
-    "alt":"sponsors.logos.Emi",
-    "link":"https://www.emilabs.ai/"
-  },
-  {
-    "src":"Accenture.png",
-    "alt":"sponsors.logos.Accenture",
-    "link":"https://www.accenture.com/"
-  },
-  {
-    "src":"Nestle.png",
-    "alt": "sponsors.logos.Nestle",
-    "link": "https://www.nestle.com.ar/"
-  },
-  {
-    "src":"BuenosAiresCiudad.png",
-    "alt":"sponsors.logos.BuenosAiresCiudad",
-    "link":"https://www.buenosaires.gob.ar/"
-  },
-  {
-    "src":"MetLife.png",
-    "alt":"sponsors.logos.MetLife",
-    "link":"https://www.metlife.com.ar/"
-  },
-  {
-    "src": "oz.png",
-    "alt": "sponsors.logos.oz",
-    "link": "https://openzeppelin.com/"
-  },
-  {
-    "src":"BBVA.png",
-    "alt":"sponsors.logos.BBVA",
-    "link":"https://www.bbva.com.ar/"
-  },
-  {
-    "src":"Defy.png",
-    "alt":"sponsors.logos.Defy",
-    "link":"https://www.defyeducation.com"
-  },
-  {
-    "src": "exactly.svg",
-    "alt": "sponsors.logos.exactly",
-    "link": "https://https://exactly.finance/"
-  }  
+    {
+        "src": "baciudad.png",
+        "alt": "sponsors.logos.BuenosAiresCiudad",
+        "link": "https://www.buenosaires.gob.ar/"
+    },
+    {
+        "src": "BBVA.png",
+        "alt": "sponsors.logos.BBVA",
+        "link": "https://www.bbva.com.ar/"
+    },
+    {
+        "src": "chevron.png",
+        "alt": "sponsors.logos.Chevron",
+        "link": "https://www.chevron.com/"
+    },
+    {
+        "src": "extrimian.png",
+        "alt": "sponsors.logos.extrimian",
+        "link": "https://extrimian.com"
+    },
+    {
+        "src": "Emi.png",
+        "alt": "sponsors.logos.Emi",
+        "link": "https://www.emilabs.ai/"
+    },
+    {
+        "src": "emprelatam.png",
+        "alt": "sponsors.logos.EmpreLatam",
+        "link": "https://www.emprelatam.com/"
+    },
+    {
+        "src": "iadt.png",
+        "alt": "sponsors.logos.IADT",
+        "link": "https://www.iadt.com/"
+    },
+    {
+        "src": "lewagon.png",
+        "alt": "sponsors.logos.LeWagon",
+        "link": "https://www.lewagon.com/"
+    },
+    {
+        "src": "proios.png",
+        "alt": "sponsors.logos.Proios",
+        "link": "https://www.proios.com/"
+    },
+    {
+        "src": "tangoid.png",
+        "alt": "sponsors.logos.Tangoid",
+        "link": "https://www.tangoid.com.ar/"
+    },
+    {
+        "src": "wuru.png",
+        "alt": "sponsors.logos.Wuru",
+        "link": "https://www.wuru.ai/"
+    },
+    {
+        "src": "zennon.png",
+        "alt": "sponsors.logos.Zennon",
+        "link": "https://www.zennonbi.com/"
+    }
 ]
