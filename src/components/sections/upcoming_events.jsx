@@ -5,7 +5,7 @@ import i18n from "../../i18n/index.js";
 
 import upcomingEvents from "../../data/upcoming_events.json";
 
-import hackitba from "../../images/Hackitba.png";
+import gamejam from "../../images/GameJam.png";
 
 // Components
 const Section = React.lazy(() => import("../section"));
@@ -33,14 +33,14 @@ function UpcomingEvents() {
               </h3>
 
               <img
-                className="h-62  w-46 object-contain"
-                src={hackitba}
-                alt="hackitba"
+                className="h-62 mb-6 w-46 object-contain"
+                src={gamejam}
+                alt="gamejam-logo-banner"
               />
 
               <p className="font-light mb-4">{i18n.t(event.date)}</p>
               <p className="text-left mb-2">{i18n.t(event.description)}</p>
-              {event.link && (
+              {/* {event.link && (
                 <LinkButton
                   className="text-xl mt-3 self-end"
                   href={event.link}
@@ -48,7 +48,7 @@ function UpcomingEvents() {
                   external={true}
                   text={i18n.t("upcoming_events.sign_up")}
                 />
-              )}
+              )} */}
             </div>
           );
         })}

@@ -38,10 +38,10 @@ const i18n_en = {
 		sign_up: 'Learn More!',
 		events: {
 			hackit: {
-				title: 'HackIT-BA CS!',
-				date: '05/04/24',
+				title: 'CS Game Jam Society!',
+				date: 'TBA (2024)',
 				description:
-					'HackIT-BA CS is an annual event held at ITBA, in which 15-25 teams of 4 people live 36 hours together, programming a practical project that can improve the quality of life of their peers in Argentina and the world, with innovative and unique ideas.',
+					'"Game Jam Society" is a virtual programming competition, consisting of 48 hours of pure creativity and adrenaline. Participants will work in teams to design, code, create graphics and sounds for, and ultimately, produce, a fully working game.',
 			}
 		}
 	},
