@@ -29,7 +29,6 @@ const roles = [
   "team.roles.media",
   "team.roles.fr",
   "team.roles.mentors",
-  "team.roles.pr",
 ];
 
 const roles_director = [
@@ -39,7 +38,6 @@ const roles_director = [
   "team.roles.head_media",
   "team.roles.head_fr",
   "team.roles.head_mentors",
-  "team.roles.head_pr",
   "team.roles.codirector",
   "team.roles.codirectora",
 ];
@@ -65,7 +63,7 @@ function Team() {
   const [team, setTeam] = useState([]);
   useEffect(() => {
     async function getTeam() {
-      const query = await getDocs(collection(db, "team_23_24"));
+      const query = await getDocs(collection(db, "team_24_25"));
       const data = query.docs
         .map((doc) => doc.data())
         .sort((a, b) => {
