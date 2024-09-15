@@ -7,10 +7,6 @@ import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 
-
-// Images
-const sponsorImages = import.meta.glob("../../images/sponsors/*", { eager: true, as: "url" });
-
 // Components
 const Section = React.lazy(() => import('../section'));
 import Marquee from "react-fast-marquee";
