@@ -47,7 +47,7 @@ function Sponsors() {
         {mainSponsors.map((sponsor, index) => (
           <div key={index} className="px-5 mx-5" >
             <a href={sponsor.url} rel='noreferrer' target='_blank'>
-              <img src={sponsor.src} alt={i18n.t('sponsors.generic').replace('{name}', sponsor.name)} className=" h-32 my-5 pr-10 mx-auto" />
+              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=" h-32 my-5 pr-10 mx-auto" />
             </a>
           </div>
         ))}
@@ -56,7 +56,7 @@ function Sponsors() {
         {sponsors.map((sponsor, index) => (
           <div key={index} className="py-10 px-5 mx-10" >
             <a href={sponsor.link} rel='noreferrer' target='_blank'>
-              <img src={sponsor.src} alt={i18n.t(sponsor.alt)} className=" h-16 my-0 mx-auto" />
+              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=" h-16 my-0 mx-auto" />
             </a>
           </div>
         ))}

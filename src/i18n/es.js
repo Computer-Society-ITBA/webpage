@@ -87,21 +87,7 @@ const i18n_es = {
 	sponsors: {
 		title: 'Nuestro Sponsor',
 		subtitle: 'Empresas que colaboran con nosotros',
-		logos: {
-            generic: 'Logo de {name}',
-			extrimian: 'Logo de Extrimian',
-			BBVA: 'Logo de BBVA',
-			BuenosAiresCiudad: 'Logo de Buenos Aires Ciudad',
-			Emi: 'Logo de Emi',
-            Chevron: 'Logo de Chevron',
-            EmpreLatam: 'Logo de Emprelatam',
-            IADT: 'Logo de IADT',
-            LeWagon: 'Logo de Le Wagon',
-            Proios: 'Logo de Proios',
-            Tangoid: 'Logo de Tangoid',
-            Wuru: 'Logo de Wuru',
-            Zennon: 'Logo de Zennon'
-		}
+		logo: 'Logo de {name}'
 	},
 	contact: {
 		title: 'Contacto'
