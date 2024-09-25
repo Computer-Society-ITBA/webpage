@@ -36,6 +36,8 @@ const i18n_en = {
 	upcoming_events: {
 		title: 'Upcoming Event',
 		sign_up: 'Learn More!',
+        timer: '{days} days, {timer} left',
+        timeOut: 'The event has ended',
 		events: {
 			hackit: {
 				title: 'CS Game Jam Society!',
