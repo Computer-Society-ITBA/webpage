@@ -85,8 +85,10 @@ const i18n_en = {
 		}
 	},
 	sponsors: {
-		title: 'Our Sponsors',
+		title: 'Our Sponsor',
+		subtitle: 'Companies that work with us',
 		logos: {
+            generic: '{name} logo',
 			extrimian: 'Extrimian logo',
 			BBVA: 'BBVA logo',
 			BuenosAiresCiudad: 'Buenos Aires City logo',

@@ -85,8 +85,10 @@ const i18n_es = {
 		}
 	},
 	sponsors: {
-		title: 'Nuestros Sponsors',
+		title: 'Nuestro Sponsor',
+		subtitle: 'Empresas que colaboran con nosotros',
 		logos: {
+            generic: 'Logo de {name}',
 			extrimian: 'Logo de Extrimian',
 			BBVA: 'Logo de BBVA',
 			BuenosAiresCiudad: 'Logo de Buenos Aires Ciudad',
