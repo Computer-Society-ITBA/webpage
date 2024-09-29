@@ -3,7 +3,7 @@ module.exports = {
 	safelist: [{ pattern: /^bg-/ }],
 	theme: {
 		extend: {
-			
+
 			colors: {
 				brand_primary: '#FFAD00',
 				brand_secondary: '#F98A04',
@@ -13,7 +13,8 @@ module.exports = {
 			},
 			fontFamily: {
 				text: ['Roboto', 'sans-serif'],
-				highlight: ['Montserrat', 'sans-serif']
+				highlight: ['Montserrat', 'sans-serif'],
+                gamejam: ['NineByFive', 'sans-serif']
 			},
 			fontSize: {
 				sm: '0.75rem',

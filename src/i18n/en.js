@@ -26,6 +26,32 @@ const i18n_en = {
 			title: 'Countries reached'
 		}
 	},
+    our_events: {
+        title: 'Our main events',
+        events: {
+            hackit: {
+                date_prompt: 'Date:',
+                date: 'TBA (April 2025)',
+                location_prompt:'Location:',
+                location:'Parque Patricios, CABA',
+                participants_prompt:'Open to:',
+                participants:'Any university student',
+                cta_prompt:'Learn more',
+                logo_alt:'Hackitba logo',
+            },
+            gamejam: {
+                date_prompt: 'Date:',
+                date: 'October 18th, 2024',
+                location_prompt:'Location:',
+                location:'Virtual, with an in-person closing ceremony',
+                participants_prompt:'Open to:',
+                participants:'Any university student',
+                cta_prompt:'Sign up now!',
+                logo_alt:'Gamejam Society logo',
+            }
+        }
+    }
+    ,
 	mision_vision: {
 		mision: 'Mission',
 		vision: 'Vision',
@@ -38,10 +64,13 @@ const i18n_en = {
 		sign_up: 'Learn More!',
         timer: '{days} days, {timer} left',
         timeOut: 'The event has ended',
+
+        timer: '{days} days, {timer} left',
+        timeOut: 'The event has ended',
 		events: {
 			hackit: {
 				title: 'CS Game Jam Society!',
-				date: 'TBA (2024)',
+				date: '18/10/24',
 				description:
 					'"Game Jam Society" is a virtual programming competition, consisting of 48 hours of pure creativity and adrenaline. Participants will work in teams to design, code, create graphics and sounds for, and ultimately, produce, a fully working game.',
 			}
@@ -134,7 +163,56 @@ const i18n_en = {
 		description:
 			'The complete site was made possible by the fantastic effort of these members from the IEEE Computer Society ITBA team. Everything, from design to execution, was done by them:'
 	},
-	loading: 'Loading...'
+	loading: 'Loading...',
+    gamejam: {
+        slogan: 'Craft, Compete, Conquer.',
+        description: 'Join your peers in a race against the clock, to design and develop a game in 48 hours!',
+        info: 'The event is 100% free, with the opportunity to meet and interact with amazing speakers who are leaders in the game-dev sector in Argentina, as well as the chance to win incredible prizes from our sponsors. You don’t need to be a programming genius to sign-up, though we do recommend at least one person per group know how to code.',
+        more_info: 'Game Jam Society gives you the chance to collaborate with peers who share your passion, develop amazing games under tight deadlines, and gain hands-on experience in game design.',
+        location: 'Virtual, with an in-person closing ceremony',
+        participants: 'Groups of 4 participants, aged 18-25',
+        roadmap: {
+            title: 'Roadmap',
+            signups_open: {
+                date: '09/12',
+                description: 'Sign-ups open'
+            },
+            signups_close: {
+                date: '10/09',
+                description: 'Sign-ups close'
+            },
+            competition_starts: {
+                date: '10/18',
+                description: 'Competition starts'
+            },
+            competition_ends: {
+                date: '10/20',
+                description: 'Competition is over, voting starts'
+            },
+            closing_ceremony: {
+                date: '10/21',
+                description: 'In-person closing ceremony and winners announcement'
+            }
+        },
+        cta: 'Sign up now!',
+        images: {
+            gamejam1:'Participants looking at screen',
+            gamejam2:'Participants laughing',
+            gamejam3:'Participants group picture',
+            gamejam4:'Participants group picture',
+            gamejam5:'Winners picture',
+            gamejam6:'Participants chatting',
+            gamejam7:'Winner showing his project',
+            gamejam8:'Winner showing her project',
+            gamejam9:'Winners showing their project',
+            gamejam10:'Participants clapping',
+            gamejam11:'Winners showing their project',
+            gamejam12:'Winners showing their prizes',
+            gamejam13:'Participants group picture',
+            gamejam14:'Organizers chatting',
+            gamejam15:'Participants chatting',
+        }
+    }
 };
 
 export default i18n_en;

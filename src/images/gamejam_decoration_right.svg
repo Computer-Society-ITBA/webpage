@@ -1,0 +1,23 @@
+<svg id="R" xmlns="http://www.w3.org/2000/svg" width="172" height="1000" viewBox="0 0 172 1000">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-width: 12px;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        stroke: #8e008b;
+      }
+
+      .cls-2 {
+        stroke: #ff6200;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M27.6,995.986L89.71,933.877V68.592l-60.7-60.7"/>
+  <path class="cls-2" d="M31.836,160.343V652.977L125,746.14V839.3"/>
+  <path class="cls-2" d="M126.411,698.147V603.573l38.112-38.113V429.951l-38.112-38.112V302.911"/>
+  <path class="cls-1" d="M88.3,449.713L110.884,472.3V533L89.71,554.168"/>
+</svg>

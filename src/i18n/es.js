@@ -26,6 +26,32 @@ const i18n_es = {
 			title: 'Países alcanzados'
 		}
 	},
+    our_events: {
+        title: 'Nuestros eventos principales',
+        events: {
+            hackit: {
+                date_prompt: 'Fecha:',
+                date: 'TBA (Abril 2025)',
+                location_prompt:'Ubicación:',
+                location:'Parque Patricios, CABA',
+                participants_prompt:'Abierto a:',
+                participants:'Estudiantes universitarios',
+                cta_prompt:'Leer más',
+                logo_alt:'Logo de Hackitba',
+            },
+            gamejam: {
+                date_prompt: 'Fecha:',
+                date: '18 de octubre de 2024',
+                location_prompt:'Ubicación:',
+                location:'Virtual, con una ceremonia de cierre presencial',
+                participants_prompt:'Abierto a:',
+                participants:'Estudiantes universitarios',
+                cta_prompt:'Inscribite hoy!',
+                logo_alt:'Logo de GameJam Society',
+            }
+        }
+    }
+    ,
 	mision_vision: {
 		mision: 'Misión',
 		vision: 'Visión',
@@ -35,17 +61,17 @@ const i18n_es = {
 	},
 	upcoming_events: {
 		title: 'Próximo Evento',
-    sign_up: 'Descubre Más!',
-    timer: 'Quedan {days} días, {timer}',
-    timeOut: 'El evento ha finalizado',
-    events: {
-      hackit: {
-        title: 'CS Game Jam Society!',
-        date: 'TBA (2024)',
-        description:
-          '"Game Jam Society" es una competencia de programación virtual, que consiste en 48 hs de creatividad y adrenalina. Los participantes trabajarán en equipos para diseñar, programar, crear gráficos y sonido, y finalmente producir un juego funcional.',
-      },
-    },
+        sign_up: 'Descubre Más!',
+        timer: 'Quedan {days} días, {timer}',
+        timeOut: 'El evento ha finalizado',
+        events: {
+            hackit: {
+                title: 'CS Game Jam Society!',
+                date: 'TBA (2024)',
+                description:
+                '"Game Jam Society" es una competencia de programación virtual, que consiste en 48 hs de creatividad y adrenalina. Los participantes trabajarán en equipos para diseñar, programar, crear gráficos y sonido, y finalmente producir un juego funcional.',
+            },
+        },
 	},
 	past_events: {
 		title: 'Eventos Pasados',
@@ -134,7 +160,56 @@ const i18n_es = {
 		description:
 			'El sitio completo fue posible gracias al fantástico esfuerzo de estos miembros del equipo ITBA de IEEE Computer Society. Todo, desde el diseño hasta la ejecución, fue hecho por ellos:'
 	},
-	loading: 'Cargando...'
+	loading: 'Cargando...',
+    gamejam: {
+        slogan: 'Crear, Competir, Conquistar.',
+        description: '¡Unite a tus compañeros en una carrera contra el tiempo para diseñar y desarrollar un juego en 48 horas!',
+        info: 'El evento es 100% gratuito, con la oportunidad de conocer e interactuar con oradores y líderes en el sector del desarrollo de videojuegos en Argentina, además de la oportunidad de ganar premios increíbles de nuestros sponsors. No hace falta ser un genio de la programación para inscribirte, aunque recomendamos que al menos una persona por grupo sepa programar.',
+        more_info: 'Game Jam Society te brinda la oportunidad de colaborar con compañeros que comparten tu pasión, desarrollar juegos increíbles bajo presión y adquirir experiencia práctica en el diseño de juegos.',
+        location: 'Virtual, con una ceremonia de cierre presencial',
+        participants: 'Grupos de 4 participantes, entre 18-25 años',
+        roadmap: {
+            title: 'Roadmap',
+            signups_open: {
+                date: '12/09',
+                description: 'Abren las inscripciones'
+            },
+            signups_close: {
+                date: '09/10',
+                description: 'Cierran las inscripciones'
+            },
+            competition_starts: {
+                date: '18/10',
+                description: 'Comienza la competencia'
+            },
+            competition_ends: {
+                date: '20/10',
+                description: 'Termina la competencia, comienza la votación'
+            },
+            closing_ceremony: {
+                date: '21/10',
+                description: 'Ceremonia de cierre presencial y anuncio de ganadores'
+            }
+        },
+        cta: '¡Regístrate ahora!',
+        images: {
+          gamejam1: 'Participantes mirando la pantalla',
+          gamejam2: 'Participantes riendo',
+          gamejam3: 'Foto grupal de los participantes',
+          gamejam4: 'Foto grupal de los participantes',
+          gamejam5: 'Foto de los ganadores',
+          gamejam6: 'Participantes charlando',
+          gamejam7: 'Ganador mostrando su proyecto',
+          gamejam8: 'Ganadora mostrando su proyecto',
+          gamejam9: 'Ganadores mostrando su proyecto',
+          gamejam10: 'Participantes aplaudiendo',
+          gamejam11: 'Ganadores mostrando su proyecto',
+          gamejam12: 'Ganadores mostrando sus premios',
+          gamejam13: 'Foto grupal de los participantes',
+          gamejam14: 'Organizadores charlando',
+          gamejam15: 'Participantes charlando'
+        }
+      }
 };
 
 export default i18n_es;
