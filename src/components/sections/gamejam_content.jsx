@@ -54,11 +54,11 @@ function GameJamContent () {
 
     return (
         <div className='flex flex-col items-center gap-8'>
-            <img src={gamejam_decoration_l} className='absolute left-12 h-[80vh]'/>
-            <img src={gamejam_decoration_r} className='absolute right-12 h-[80vh]'/>
+            <img src={gamejam_decoration_l} className='hidden lg:inline absolute left-12 h-[80vh]'/>
+            <img src={gamejam_decoration_r} className='hidden lg:inline absolute right-12 h-[80vh]'/>
 
             <Section padding='no' className='flex flex-col gap-6'>
-                <div className='flex flex-row'>
+                <div className='flex flex-row self-center'>
                     <img className='h-32' src={gamejam_logo_decoration} />
                     <img className='h-32' src={gamejam_logo} />
                     <img className='h-32 rotate-180' src={gamejam_logo_decoration} />
@@ -87,19 +87,19 @@ function GameJamContent () {
                 <div className='flex flex-row lg:gap-12 gap-4 self-center'>
                     <div>
                         <p className='font-gamejam text-6xl font-bold hover:text-brand_secondary'>{timeLeft.days}</p>
-                        <p className='text-xl'>Days</p>
+                        <p className='text-xl'>{i18n.t("gamejam.days")}</p>
                     </div>
                     <div>
                         <p className='font-gamejam text-6xl font-bold hover:text-brand_secondary'>{timeLeft.hours}</p>
-                        <p className='text-xl'>Hours</p>
+                        <p className='text-xl'>{i18n.t("gamejam.hours")}</p>
                     </div>
                     <div>
                         <p className='font-gamejam text-6xl font-bold hover:text-brand_secondary'>{timeLeft.minutes}</p>
-                        <p className='text-xl'>Minutes</p>
+                        <p className='text-xl'>{i18n.t("gamejam.minutes")}</p>
                     </div>
                     <div>
                         <p className='font-gamejam text-6xl font-bold hover:text-brand_secondary'>{timeLeft.seconds}</p>
-                        <p className='text-xl'>Seconds</p>
+                        <p className='text-xl'>{i18n.t("gamejam.seconds")}</p>
                     </div>
                 </div>
                 <div className='grid grid-cols-4'>

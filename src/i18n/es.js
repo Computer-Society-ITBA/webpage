@@ -168,6 +168,10 @@ const i18n_es = {
         more_info: 'Game Jam Society te brinda la oportunidad de colaborar con compañeros que comparten tu pasión, desarrollar juegos increíbles bajo presión y adquirir experiencia práctica en el diseño de juegos.',
         location: 'Virtual, con una ceremonia de cierre presencial',
         participants: 'Grupos de 4 participantes, entre 18-25 años',
+        days: 'Dias',
+        hours: 'Horas',
+        minutes: 'Minutos',
+        seconds: 'Segundos',
         roadmap: {
             title: 'Roadmap',
             signups_open: {
@@ -184,7 +188,7 @@ const i18n_es = {
             },
             competition_ends: {
                 date: '20/10',
-                description: 'Termina la competencia, comienza la votación'
+                description: 'Termina la competencia'
             },
             closing_ceremony: {
                 date: '21/10',
