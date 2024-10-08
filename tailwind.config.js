@@ -3,7 +3,12 @@ module.exports = {
 	safelist: [{ pattern: /^bg-/ }],
 	theme: {
 		extend: {
-
+            backgroundImage: {
+                'hackit-decoration-left': "url('/src/images/hackit_decoration_left.svg')",
+                'hackit-decoration-right': "url('/src/images/hackit_decoration_right.svg')",
+                'hackit-background-image': "url('images/hackitba_bg_byw.png')",
+                'gamejam-background-image': "url('images/gamejam_bg_byw.png')",
+            },
 			colors: {
 				brand_primary: '#FFAD00',
 				brand_secondary: '#F98A04',

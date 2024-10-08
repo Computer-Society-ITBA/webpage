@@ -196,24 +196,76 @@ const i18n_es = {
             }
         },
         cta: '¡Regístrate ahora!',
+        competition_ended: 'Regresa el año que viene para participar!',
         images: {
-          gamejam1: 'Participantes mirando la pantalla',
-          gamejam2: 'Participantes riendo',
-          gamejam3: 'Foto grupal de los participantes',
-          gamejam4: 'Foto grupal de los participantes',
-          gamejam5: 'Foto de los ganadores',
-          gamejam6: 'Participantes charlando',
-          gamejam7: 'Ganador mostrando su proyecto',
-          gamejam8: 'Ganadora mostrando su proyecto',
-          gamejam9: 'Ganadores mostrando su proyecto',
-          gamejam10: 'Participantes aplaudiendo',
-          gamejam11: 'Ganadores mostrando su proyecto',
-          gamejam12: 'Ganadores mostrando sus premios',
-          gamejam13: 'Foto grupal de los participantes',
-          gamejam14: 'Organizadores charlando',
-          gamejam15: 'Participantes charlando'
+            gamejam1: 'Participantes mirando la pantalla',
+            gamejam2: 'Participantes riendo',
+            gamejam3: 'Foto grupal de los participantes',
+            gamejam4: 'Foto grupal de los participantes',
+            gamejam5: 'Foto de los ganadores',
+            gamejam6: 'Participantes charlando',
+            gamejam7: 'Ganador mostrando su proyecto',
+            gamejam8: 'Ganadora mostrando su proyecto',
+            gamejam9: 'Ganadores mostrando su proyecto',
+            gamejam10: 'Participantes aplaudiendo',
+            gamejam11: 'Ganadores mostrando su proyecto',
+            gamejam12: 'Ganadores mostrando sus premios',
+            gamejam13: 'Foto grupal de los participantes',
+            gamejam14: 'Organizadores charlando',
+            gamejam15: 'Participantes charlando'
         }
-      }
+      },
+    hackit: {
+        slogan: 'Diseña, Desarrolla, Domina.',
+        description: 'Transformá tus ideas en soluciones reales.',
+        info: [
+            'Preparate para un emocionante sprint de 36 horas para desarrollar un MVP innovador que aborde problemáticas del mundo real, alineadas con el tema de nuestra competencia.',
+            'Trabajá junto a expertos de la industria, mentores y líderes del mercado que te guiarán e inspirarán en cada paso del camino.',
+            '¡Colaborá con compañeros, resolvé enormes desafíos, y divertite mientras empujas tu creatividad al límite!'
+        ],
+        more_info: [
+            "En ediciones pasadas, el equipo ganador recibio un lugar en el programa de aceleración de proyectos de <a href='https://emprelatam.com/'><img class='transition-all h-6 hover:scale-[1.1] mx-3 inline' alt='Emprelatam logo' src='/src/images/mentors_images/emprelatam_logo.png'/></a>, donde recibió mentoría experta, recursos valiosos y apoyo estratégico para llevar a su MVP al siguiente nivel.",
+            'Esta es una oportunidad increíble para perfeccionar tu idea, conectar con inversores y convertir tu proyecto en un negocio exitoso.'
+        ],
+        location: 'ITBA SDT, Parque Patricios, CABA, Argentina',
+        date: 'TBA (abril de 2025)',
+        participants: 'Grupos de 4 participantes, entre 18-25 años',
+        cta: '¡Leé más!',
+        images: {
+            hackitd1_1: 'Organizadores realizando inscripciones',
+            hackitd1_2: 'Escenario de la ceremonia de apertura',
+            hackitd1_3: 'Participantes registrándose',
+            hackitd1_4: 'Oradores en la ceremonia de apertura',
+            hackitd1_5: 'Participantes en la ceremonia de apertura',
+            hackitd1_6: 'Oradores en la ceremonia de apertura',
+            hackitd1_7: 'Participantes en la ceremonia de apertura',
+            hackitd1_8: 'Participantes charlando en la ceremonia de apertura',
+            hackitd1_9: 'Participantes charlando en la ceremonia de apertura',
+            hackitd1_10: 'Participantes trabajando en sus proyectos',
+            hackitd2_1: 'Participantes trabajando en sus proyectos',
+            hackitd2_2: 'Participantes trabajando en sus proyectos',
+            hackitd2_3: 'Participante programando',
+            hackitd2_4: 'Participantes trabajando en sus proyectos',
+            hackitd2_5: 'Participantes trabajando en sus proyectos',
+            hackitd2_6: 'Mentores ayudando a los participantes en sus proyectos',
+            hackitd3_1: 'Jurado en la ceremonia de clausura',
+            hackitd3_2: 'Participantes mostrando su proyecto en la ceremonia de clausura',
+            hackitd3_3: 'Jurado en la ceremonia de clausura',
+            hackitd3_4: 'Participantes mostrando su proyecto en la ceremonia de clausura',
+            hackitd3_5: 'Participantes en la ceremonia de clausura',
+            hackitd3_6: 'Participantes con sus premios en la ceremonia de clausura',
+            hackitd3_7: 'Foto grupal de participantes y organizadores',
+            hackitd3_8: 'Foto grupal de organizadores',
+            hackitd3_9: 'Foto grupal de organizadores'
+        },
+        mentors: {
+            title: 'Jurado y mentores de',
+            microsoft: 'Logo de Microsoft',
+            google: 'Logo de Google',
+            exxon: 'Logo de Exxon',
+            modo: 'Logo de Modo'
+        }
+        }
 };
 
 export default i18n_es;

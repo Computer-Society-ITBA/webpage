@@ -30,8 +30,8 @@ function OurEvents() {
             {
                 ourEvents.map((event, index) => {
                     return (
-                        <div key={index} className='rounded-3xl shadow-xl items-center w-full flex flex-col gap-8 pb-8'>
-                            <div className='bg-cover bg-center w-full h-40 rounded-t-3xl flex justify-center items-center'>
+                        <div key={index} className='rounded-3xl shadow-xl items-center w-full flex flex-col gap-8 pb-8' >
+                            <div className={`bg-cover bg-center w-full h-40 rounded-t-3xl flex justify-center items-center ${index==0 ? 'bg-hackit-background-image' : 'bg-gamejam-background-image'}`}>
                                 <img className={index==0 ? 'w-80' : 'w-60 mt-4'} src={index==0 ? hackitba_logo : gamejam_logo} alt={i18n.t(event.logo_alt)}/>
                             </div>
 

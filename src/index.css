@@ -79,14 +79,6 @@ p {
 	height: 120px;
 }
 
-.our-events > div:first-child > div:first-child {
-    background-image: url('images/hackitba_bg_byw.png');
-}
-
-.our-events > div:nth-child(2) > div:first-child {
-    background-image: url('images/gamejam_bg_byw.png');
-}
-
 .upcoming-card {
 	min-width: 335px;
 	max-width: 55%;

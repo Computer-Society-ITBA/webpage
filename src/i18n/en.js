@@ -199,6 +199,7 @@ const i18n_en = {
             }
         },
         cta: 'Sign up now!',
+        competition_ended: 'Come back next year for more fun!',
         images: {
             gamejam1:'Participants looking at screen',
             gamejam2:'Participants laughing',
@@ -216,7 +217,54 @@ const i18n_en = {
             gamejam14:'Organizers chatting',
             gamejam15:'Participants chatting',
         }
-    }
+    },
+    hackit:{
+        slogan: 'Design, Develop, Dominate.',
+        description:'Transform your ideas into tangible solutions.',
+        info: ['Get ready for an exciting 36-hour sprint to develop a game-changing MVP (Minimum Viable Product) that tackles real-world problems aligned with our competition theme.', 'Work alongside industry experts, mentors, and successful business leaders who will guide and inspire you every step of the way.', 'Collaborate with fellow students, solve meaningful challenges, and have a great time while pushing your creativity to the limit!'],
+        more_info: [
+            "In past editions, the winning team earned a spot in an <a href='https://emprelatam.com/'><img class='transition-all h-6 hover:scale-[1.1] mx-3 inline' alt='Emprelatam logo' src='/src/images/mentors_images/emprelatam_logo.png'/></a>  project acceleration program, where they received expert mentorship, valuable resources, and strategic support to help take their MVP to the next level.",
+            'This is an incredible chance to refine your idea, connect with investors, and turn your project into a thriving business.'
+        ],
+        location: 'ITBA SDT, Parque Patricios, CABA, Argentina',
+        date: 'TBA (April 2025)',
+        participants: 'Groups of 4 participants, aged 18-25',
+        cta: 'Read more!',
+        images: {
+            hackitd1_1:'Organizers doing sign-up',
+            hackitd1_2:'Empty opening ceremony venue',
+            hackitd1_3:'Participants signing-in',
+            hackitd1_4:'Speakers at opening ceremony',
+            hackitd1_5:'Participants at opening ceremony',
+            hackitd1_6:'Speakers at opening ceremony',
+            hackitd1_7:'Participants at opening ceremony',
+            hackitd1_8:'Participants chatting at opening ceremony',
+            hackitd1_9:'Participants chatting at opening ceremony',
+            hackitd1_10:'Participants working on their projects',
+            hackitd2_1:'Participants working on their projects',
+            hackitd2_2:'Participants working on their projects',
+            hackitd2_3:'Participant coding',
+            hackitd2_4:'Participants working on their projects',
+            hackitd2_5:'Participants working on their projects',
+            hackitd2_6:'Mentors helping participants working on their projects',
+            hackitd3_1:'Judges at the closing ceremony',
+            hackitd3_2:'Participants showing their project at the closing ceremony',
+            hackitd3_3:'Judges at the closing ceremony',
+            hackitd3_4:'Participants showing their project at the closing ceremony',
+            hackitd3_5:'Participants at the closing ceremony',
+            hackitd3_6:'Participants with their prizes at the closing ceremony',
+            hackitd3_7:'Participants and organizers group picture',
+            hackitd3_8:'Organizers group picture',
+            hackitd3_9:'Organizers group picture',
+        },
+        mentors: {
+            title: 'Featuring judges and mentors from',
+            microsoft: 'Microsoft logo',
+            google: 'Google logo',
+            exxon: 'Exxon logo',
+            modo: 'Modo logo'
+        }
+    },
 };
 
 export default i18n_en;
