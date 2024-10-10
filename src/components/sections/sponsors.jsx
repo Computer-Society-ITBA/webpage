@@ -21,6 +21,7 @@ function Sponsors() {
 
 
   const [sponsors, setSponsors] = useState([]);
+  const [mainSponsors, setMainSponsors] = useState([]);
 
 
   useEffect(() => {
@@ -29,7 +30,13 @@ function Sponsors() {
       const data = query.docs.map((doc) => doc.data());
       setSponsors(data);
     }
+    async function fetchMainSponsors() {;
+      const query = await getDocs(collection(db, "main_sponsors"));
+      const data = query.docs.map((doc) => doc.data());
+      setMainSponsors(data);
+    }
     fetchSponsors();
+    fetchMainSponsors();
   }, []);
 
 
@@ -37,11 +44,19 @@ function Sponsors() {
   return (
     <Section id="our-sponsors" bgColor='bg-white' textAlignment='center'>
       <h2>{i18n.t('sponsors.title')}</h2>
+        {mainSponsors.map((sponsor, index) => (
+          <div key={index} className="mx-5" >
+            <a href={sponsor.url} rel='noreferrer' target='_blank' className="inline-block">
+              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=" h-40 mx-auto" />
+            </a>
+          </div>
+        ))}
+      <h3 className='pt-20'>{i18n.t('sponsors.subtitle')}</h3>
       <Marquee {...settings}>
         {sponsors.map((sponsor, index) => (
           <div key={index} className="py-10 px-5 mx-10" >
             <a href={sponsor.link} rel='noreferrer' target='_blank'>
-              <img src={sponsor.src} alt={i18n.t(sponsor.alt)} className=" h-16 my-0 mx-auto" />
+              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=" h-16 my-0 mx-auto" />
             </a>
           </div>
         ))}
