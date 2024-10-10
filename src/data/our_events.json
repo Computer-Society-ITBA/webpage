@@ -1,0 +1,26 @@
+[
+     {
+          "date_prompt": "our_events.events.hackit.date_prompt",
+          "date":"our_events.events.hackit.date",
+          "location_prompt": "our_events.events.hackit.location_prompt",
+          "location":"our_events.events.hackit.location",
+          "participants_prompt": "our_events.events.hackit.participants_prompt",
+          "participants":"our_events.events.hackit.participants",
+          "cta_prompt":"our_events.events.hackit.cta_prompt",
+          "cta_link":"/hackit",
+          "logo":"../images/hackitba_logo.png",
+          "logo_alt":"our_events.events.hackit.logo_alt"
+     },
+     {
+        "date_prompt": "our_events.events.gamejam.date_prompt",
+        "date":"our_events.events.gamejam.date",
+        "location_prompt": "our_events.events.gamejam.location_prompt",
+        "location":"our_events.events.gamejam.location",
+        "participants_prompt": "our_events.events.gamejam.participants_prompt",
+        "participants":"our_events.events.gamejam.participants",
+        "cta_prompt":"our_events.events.gamejam.cta_prompt",
+        "cta_link":"/gamejam",
+        "logo":"../images/gamejam_logo_alt.png",
+        "logo_alt":"our_events.events.gamejam.logo_alt"
+   }
+]

@@ -58,6 +58,11 @@ h5 {
 	}
 }
 
+@font-face {
+    font-family: 'NineByFive';
+    src: url('../public/fonts/nine0.ttf');
+}
+
 /* Body Text */
 
 p {

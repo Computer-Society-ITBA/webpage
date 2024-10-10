@@ -1,0 +1,47 @@
+<svg id="L" xmlns="http://www.w3.org/2000/svg" width="276" height="1000" viewBox="0 0 276 1000">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke-width: 12px;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        stroke: #ff8202;
+      }
+
+      .cls-2 {
+        stroke: #8e008b;
+      }
+    </style>
+  </defs>
+  <path id="N" class="cls-1" d="M22.329,5.98V111.446L77.06,165.583V829.677L22.329,876.738V1000.55"/>
+  <g id="V">
+    <path class="cls-2" d="M206.4,991.254l0.915-236.792"/>
+    <path id="Shape_2_copy" data-name="Shape 2 copy" class="cls-2" d="M206.4,242.772L207.311,5.98"/>
+    <path class="cls-2" d="M159.613,752.794h95.4"/>
+    <path id="Shape_3_copy" data-name="Shape 3 copy" class="cls-2" d="M161.448,689.921h95.4"/>
+    <path id="Shape_3_copy_2" data-name="Shape 3 copy 2" class="cls-2" d="M159.613,627.047h95.4"/>
+    <path id="Shape_3_copy_3" data-name="Shape 3 copy 3" class="cls-2" d="M159.613,564.173h95.4"/>
+    <path id="Shape_3_copy_4" data-name="Shape 3 copy 4" class="cls-2" d="M159.613,501.3h95.4"/>
+    <path id="Shape_3_copy_5" data-name="Shape 3 copy 5" class="cls-2" d="M159.613,438.425h95.4"/>
+    <path id="Shape_3_copy_6" data-name="Shape 3 copy 6" class="cls-2" d="M161.448,375.551h95.4"/>
+    <path id="Shape_3_copy_7" data-name="Shape 3 copy 7" class="cls-2" d="M159.613,312.677h95.4"/>
+    <path id="Shape_3_copy_8" data-name="Shape 3 copy 8" class="cls-2" d="M159.613,249.8h95.4"/>
+  </g>
+  <path id="N-2" data-name="N" class="cls-1" d="M976.243,215.01v62.224l-32.29,31.94v391.81l32.29,27.765V801.8"/>
+  <g id="V-2" data-name="V">
+    <path class="cls-2" d="M867.646,796.313l-0.54-139.705"/>
+    <path id="Shape_2_copy-2" data-name="Shape 2 copy" class="cls-2" d="M867.646,354.715l-0.54-139.7"/>
+    <path class="cls-2" d="M895.247,655.624H838.965"/>
+    <path id="Shape_3_copy-2" data-name="Shape 3 copy" class="cls-2" d="M894.165,618.529H837.883"/>
+    <path id="Shape_3_copy_2-2" data-name="Shape 3 copy 2" class="cls-2" d="M895.247,581.434H838.965"/>
+    <path id="Shape_3_copy_3-2" data-name="Shape 3 copy 3" class="cls-2" d="M895.247,544.339H838.965"/>
+    <path id="Shape_3_copy_4-2" data-name="Shape 3 copy 4" class="cls-2" d="M895.247,507.244H838.965"/>
+    <path id="Shape_3_copy_5-2" data-name="Shape 3 copy 5" class="cls-2" d="M895.247,470.149H838.965"/>
+    <path id="Shape_3_copy_6-2" data-name="Shape 3 copy 6" class="cls-2" d="M894.165,433.054H837.883"/>
+    <path id="Shape_3_copy_7-2" data-name="Shape 3 copy 7" class="cls-2" d="M895.247,395.959H838.965"/>
+    <path id="Shape_3_copy_8-2" data-name="Shape 3 copy 8" class="cls-2" d="M895.247,358.864H838.965"/>
+  </g>
+</svg>
