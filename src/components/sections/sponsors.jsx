@@ -45,9 +45,9 @@ function Sponsors() {
     <Section id="our-sponsors" bgColor='bg-white' textAlignment='center'>
       <h2>{i18n.t('sponsors.title')}</h2>
         {mainSponsors.map((sponsor, index) => (
-          <div key={index} className="px-5 mx-5" >
-            <a href={sponsor.url} rel='noreferrer' target='_blank'>
-              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=" h-32 my-5 pr-10 mx-auto" />
+          <div key={index} className="mx-5" >
+            <a href={sponsor.url} rel='noreferrer' target='_blank' className="inline-block">
+              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=" h-40 mx-auto" />
             </a>
           </div>
         ))}
