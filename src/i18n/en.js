@@ -211,7 +211,7 @@ const i18n_en = {
         description:'Transform your ideas into tangible solutions.',
         info: ['Get ready for an exciting 36-hour sprint to develop a game-changing MVP (Minimum Viable Product) that tackles real-world problems aligned with our competition theme.', 'Work alongside industry experts, mentors, and successful business leaders who will guide and inspire you every step of the way.', 'Collaborate with fellow students, solve meaningful challenges, and have a great time while pushing your creativity to the limit!'],
         more_info: [
-            "In past editions, the winning team earned a spot in an <a href='https://emprelatam.com/'><img class='transition-all h-6 hover:scale-[1.1] mx-3 inline' alt='Emprelatam logo' src='/src/images/mentors_images/emprelatam_logo.png'/></a>  project acceleration program, where they received expert mentorship, valuable resources, and strategic support to help take their MVP to the next level.",
+            'In past editions, the winning team earned a spot in an', 'project acceleration program, where they received expert mentorship, valuable resources, and strategic support to help take their MVP to the next level.',
             'This is an incredible chance to refine your idea, connect with investors, and turn your project into a thriving business.'
         ],
         location: 'ITBA SDT, Parque Patricios, CABA, Argentina',

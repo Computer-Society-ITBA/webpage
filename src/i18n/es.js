@@ -212,7 +212,7 @@ const i18n_es = {
             '¡Colaborá con compañeros, resolvé enormes desafíos, y divertite mientras empujas tu creatividad al límite!'
         ],
         more_info: [
-            "En ediciones pasadas, el equipo ganador recibio un lugar en el programa de aceleración de proyectos de <a href='https://emprelatam.com/'><img class='transition-all h-6 hover:scale-[1.1] mx-3 inline' alt='Emprelatam logo' src='/src/images/mentors_images/emprelatam_logo.png'/></a>, donde recibió mentoría experta, recursos valiosos y apoyo estratégico para llevar a su MVP al siguiente nivel.",
+            'En ediciones pasadas, el equipo ganador recibio un lugar en el programa de aceleración de proyectos de', 'donde recibió mentoría experta, recursos valiosos y apoyo estratégico para llevar a su MVP al siguiente nivel.',
             'Esta es una oportunidad increíble para perfeccionar tu idea, conectar con inversores y convertir tu proyecto en un negocio exitoso.'
         ],
         location: 'ITBA SDT, Parque Patricios, CABA, Argentina',
