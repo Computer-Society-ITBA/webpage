@@ -1,8 +1,8 @@
-import React, { useState, useLayoutEffect, useRef } from 'react';
+import React, { useState, useLayoutEffect, useEffect, useRef } from 'react';
 // Translations
 import i18n from '../../i18n/index.js';
 
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 import { ReactTyped } from 'react-typed';
 import Marquee from 'react-fast-marquee';
 
@@ -10,6 +10,10 @@ import Marquee from 'react-fast-marquee';
 import PlaceIcon from '@mui/icons-material/Place';
 import Groups3Icon from '@mui/icons-material/Groups3';
 import EventIcon from '@mui/icons-material/Event';
+
+//Imports from firebase
+import { db } from '../../firebase';
+import { collection, getDocs, query, where } from 'firebase/firestore';
 
 // Images and assets
 import hackit_logo from '../../images/hackitba_logo_black.png';
@@ -25,6 +29,7 @@ const LinkButton = React.lazy(() => import('../link_button.jsx'));
 
 function HackitContent () {
     const [height, setHeight] = useState(0);
+    const [sponsor, setSponsor] = useState([])
     const ref = useRef(null);
 
     const updateHeight = () => {
@@ -38,6 +43,17 @@ function HackitContent () {
         window.addEventListener('resize', updateHeight);
         window.addEventListener('resize', updateHeight);
         return () => window.removeEventListener('resize', updateHeight);
+    }, []);
+
+    useEffect(() => {
+        async function fetchSponsor() {;
+            const q = query(collection(db, 'sponsors'), where('name', '==', 'emprelatam'));
+            const querySnapshot = await getDocs(q);
+            const sponsorData = querySnapshot.docs.map((doc) => doc.data());
+            setSponsor(sponsorData)
+            console.log(sponsorData)
+        }
+        fetchSponsor();
     }, []);
 
     return (
@@ -119,8 +135,21 @@ function HackitContent () {
             </Section>
 
             <Section padding='no' className='mx-12 lg:w-1/2 flex flex-col text-left self-center items-center gap-6'>
-                <p className='text-lg' dangerouslySetInnerHTML={{__html: i18n.t('hackit.more_info', { returnObjects: true, interpolation: { escapeValue: false } })[0]}}></p>
-                <p className='text-lg mb-4'>{i18n.t('hackit.more_info', {returnObjects: true})[1]}</p>
+                <div className='inline'>
+                    <p className='text-lg'>{i18n.t('hackit.more_info', { returnObjects: true,})[0]}
+                        {sponsor.map((s, index) => (
+                        <span key={index} className='inline-block' >
+                            <a href={s.link} rel='noreferrer' target='_blank'>
+                            <img src={s.src} alt={i18n.t('sponsors.logo').replace('{name}', s.name)} className='align-text-bottom h-6 mx-4 relative top-[6px]' />
+                            </a>
+                        </span>
+                        ))}
+                        {i18n.t('hackit.more_info', { returnObjects: true,})[1]}
+                    </p>
+                </div>
+
+                <p className='text-lg'>{i18n.t('hackit.more_info', { returnObjects: true,})[2]}</p>
+
             </Section>
         </div>
     )
