@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {
-  getFirestore,
-  collection,
-  query,
-  where,
-  getDocs,
-} from "firebase/firestore";
-import { app } from "../../firebase"; // Import your Firebase app instance
+import { getFirestore, getDoc, doc } from "firebase/firestore";
+import { app } from "../../firebase";
 
 // Translations
 import i18n from "../../i18n/index.js";
@@ -22,27 +16,24 @@ const LinkButton = React.lazy(() => import("../link_button"));
 const db = getFirestore(app);
 
 const fetchStartDate = async () => {
-  try {
-    const docRef = doc(db, "config", "submissions"); // Path: config/submissions
-    const docSnap = await getDoc(docRef);
-
-    if (docSnap.exists()) {
-      const data = docSnap.data();
-      console.log("Start Date:", data.start);
-      return data.start;
-    } else {
-      console.log("No such document!");
-      return null;
-    }
-  } catch (error) {
-    console.error("Error fetching start date:", error);
+  const docRef = doc(db, "config", "submissions"); // Path: config/submissions
+  const docSnap = await getDoc(docRef);
+  if (docSnap.exists()) {
+    const data = docSnap.data();
+    console.log("Start Date:", data.start);
+    return data.start;
+  } else {
+    console.log("No such document!");
+    return null;
   }
 };
 
 function UpcomingEvents() {
   const calculateTimeLeft = () => {
     // let startDate = fetchStartDate();
+    // QUEDA PARA REVISAR ERROR: NO SE ENCUENTRAN LOS DOCUMENTOS
 
+    // Hardcodeada la fecha del prox evento
     let difference = new Date(2025, 2, 28, 12) - new Date();
 
     let timeLeft = {};
