@@ -1,5 +1,8 @@
 import React from "react";
 
+// Hrefs
+import currentHrefs from "../../data/current_event_links.json";
+
 // Translations
 import i18n from "../../i18n/index.js";
 
@@ -40,11 +43,17 @@ function OurEvents() {
                     : "bg-gamejam-background-image"
                 }`}
               >
-                <img
-                  className={index == 0 ? "w-96" : "w-60 mt-4"}
-                  src={index == 0 ? hackitba_logo : gamejam_logo}
-                  alt={i18n.t(event.logo_alt)}
-                />
+                <a href={`${
+                  index == 0
+                    ? currentHrefs.hackitba
+                    : currentHrefs.gamejam
+                }`} target='_blank'>
+                  <img
+                    className={index == 0 ? "w-96" : "w-60 mt-4"}
+                    src={index == 0 ? hackitba_logo : gamejam_logo}
+                    alt={i18n.t(event.logo_alt)}
+                  />
+                </a>
               </div>
 
               <div className='px-14 flex flex-col w-full gap-4'>
