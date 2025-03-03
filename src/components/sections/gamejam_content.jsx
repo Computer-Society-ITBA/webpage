@@ -6,6 +6,9 @@ import { ReactTyped } from "react-typed";
 import Marquee from "react-fast-marquee";
 import Confetti from "confetti-react";
 
+// Hrefs
+import currentHrefs from "../../data/current_event_links.json";
+
 // Icons
 import PlaceIcon from "@mui/icons-material/Place";
 import Groups3Icon from "@mui/icons-material/Groups3";
@@ -79,7 +82,7 @@ function GameJamContent() {
   });
 
   return (
-    <div className='flex flex-col items-center gap-8'>
+    (<div className='flex flex-col items-center gap-8'>
       <img
         src={gamejam_decoration_l}
         className='hidden lg:inline absolute left-12 h-[80vh]'
@@ -88,13 +91,12 @@ function GameJamContent() {
         src={gamejam_decoration_r}
         className='hidden lg:inline absolute right-12 h-[80vh]'
       />
-
       <Section padding='no' className='flex flex-col gap-6'>
-        <div className='flex flex-row self-center'>
+        <a className='flex flex-row self-center' href={`${currentHrefs.gamejam}`} target='_blank'>
           <img className='h-32' src={gamejam_logo_decoration} />
           <img className='h-32' src={gamejam_logo} />
           <img className='h-32 rotate-180' src={gamejam_logo_decoration} />
-        </div>
+        </a>
         <ReactTyped
           className='font-gamejam text-2xl self-center'
           strings={[i18n.t("gamejam.slogan")]}
@@ -103,7 +105,6 @@ function GameJamContent() {
           backSpeed={50}
         ></ReactTyped>
       </Section>
-
       <Section
         padding='no'
         className='mx-12 lg:w-1/2 flex flex-col gap-6 text-left self-center'
@@ -111,7 +112,6 @@ function GameJamContent() {
         <p className='text-lg'>{i18n.t("gamejam.description")}</p>
         <p className='text-lg'>{i18n.t("gamejam.info")}</p>
       </Section>
-
       <Section padding='no'>
         {timeLeft && (
           <LinkButton
@@ -124,7 +124,6 @@ function GameJamContent() {
           />
         )}
       </Section>
-
       <Section padding='no' className='mx-8 flex flex-row items-center gap-12'>
         {/* {!timeLeft && <h3>{i18n.t('gamejam.competition_ended')}</h3>}
                 <div className='flex flex-row lg:gap-12 gap-4 self-center' ref={wrapperRef}>
@@ -156,7 +155,6 @@ function GameJamContent() {
           <p className='w-2/3'>{i18n.t("gamejam.participants")}</p>
         </div>
       </Section>
-
       <Section padding='no' className='mx-6 my-12 lg:w-1/2'>
         <div className='flex flex-col'>
           <h3 className='mb-6'>{i18n.t("gamejam.roadmap.title")}</h3>
@@ -214,7 +212,6 @@ function GameJamContent() {
           </div>
         </div>
       </Section>
-
       <Section padding='no' className='lg:w-2/3'>
         <Marquee gradient='true' direction='left' speed='70'>
           {gamejam_images.map((image, index) => (
@@ -228,14 +225,13 @@ function GameJamContent() {
           ))}
         </Marquee>
       </Section>
-
       <Section
         padding='no'
         className='mx-12 lg:w-1/2 flex flex-col text-left self-center mb-20'
       >
         <p className='text-lg'>{i18n.t("gamejam.more_info")}</p>
       </Section>
-    </div>
+    </div>)
   );
 }
 

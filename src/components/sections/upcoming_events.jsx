@@ -59,27 +59,27 @@ function UpcomingEvents() {
     return () => clearTimeout(timer);
   });
   return (
-    <Section
+    (<Section
       id='upcoming-events'
       bgColor='bg-white'
       textAlignment='center'
       className='overflow-hidden'
     >
       <h2>{i18n.t("upcoming_events.title")}</h2>
-
       <div className='upcoming-event-frame'>
         {upcomingEvents.map((event, index) => {
           return (
-            <div
+            (<div
               key={index}
               className='bg-tan overflow-hidden flex flex-col h-auto rounded-xl shadow-xl pb-10 mr-2 lg:mr-4 mb-6 upcoming-card items-center'
             >
-              <img
-                className='w-full mb-6 object-contain '
-                src={hackit}
-                alt='hackit-logo-banner'
-              />
-
+              <a href={`${event.link}`} target='_blank'>
+                <img
+                  className='w-full mb-6 object-contain '
+                  src={hackit}
+                  alt='hackit-logo-banner'
+                />
+              </a>
               <p className='font-light  mb-4'>
                 {timeLeft ? (
                   <span>
@@ -105,11 +105,11 @@ function UpcomingEvents() {
                   text={i18n.t("upcoming_events.sign_up")}
                 />
               )}
-            </div>
+            </div>)
           );
         })}
       </div>
-    </Section>
+    </Section>)
   );
 }
 
