@@ -6,6 +6,9 @@ import { motion } from "framer-motion";
 import { ReactTyped } from "react-typed";
 import Marquee from "react-fast-marquee";
 
+// Hrefs
+import currentHrefs from "../../data/current_event_links.json";
+
 // Icons
 import PlaceIcon from "@mui/icons-material/Place";
 import Groups3Icon from "@mui/icons-material/Groups3";
@@ -66,7 +69,7 @@ function HackitContent() {
   }, []);
 
   return (
-    <div
+    (<div
       className='flex flex-col items-center gap-8 pb-20 justify-normal'
       ref={ref}
     >
@@ -78,10 +81,11 @@ function HackitContent() {
         className={`hidden lg:inline absolute right-0 w-32 bg-hackit-decoration bg-contain bg-right-bottom bg-no-repeat-y`}
         style={{ height: `${height}px` }}
       ></div>
-
       <Section padding='no' className='flex flex-col'>
         <div className='flex flex-row self-center'>
-          <img className='h-16 lg:h-20' src={hackit_logo} />
+          <a href={`${currentHrefs.hackitba}`} target='_blank'>
+            <img className='h-16 lg:h-20' src={hackit_logo} />
+          </a>
         </div>
         <ReactTyped
           className='font-gamejam text-2xl self-center text-[#14192D]'
@@ -91,7 +95,6 @@ function HackitContent() {
           backSpeed={50}
         ></ReactTyped>
       </Section>
-
       <Section
         padding='no'
         className='mx-12 lg:w-1/2 flex flex-col gap-12 self-center'
@@ -103,7 +106,6 @@ function HackitContent() {
           })}
         </div>
       </Section>
-
       <Section
         padding='no'
         className='mx-8 lg:w-2/5 flex flex-col items-center gap-12'
@@ -123,7 +125,6 @@ function HackitContent() {
           </div>
         </div>
       </Section>
-
       <Section padding='no' className='lg:w-2/3'>
         <Marquee gradient='true' direction='left' speed='70'>
           {hackit_images.map((image, index) => (
@@ -137,7 +138,6 @@ function HackitContent() {
           ))}
         </Marquee>
       </Section>
-
       <Section padding='no' className='mx-20 flex flex-col items-center gap-6'>
         <h3>{i18n.t("hackit.mentors.title")}</h3>
         <div className='lg:w-1/2 grid grid-cols-4 gap-12 items-center'>
@@ -173,7 +173,6 @@ function HackitContent() {
           </motion.div>
         </div>
       </Section>
-
       <Section padding='no'>
         <LinkButton
           type='full-primary'
@@ -184,7 +183,6 @@ function HackitContent() {
           text={i18n.t("hackit.cta")}
         />
       </Section>
-
       <Section
         padding='no'
         className='mx-12 lg:w-1/2 flex flex-col text-left self-center items-center gap-6'
@@ -211,7 +209,7 @@ function HackitContent() {
           {i18n.t("hackit.more_info", { returnObjects: true })[2]}
         </p>
       </Section>
-    </div>
+    </div>)
   );
 }
 
