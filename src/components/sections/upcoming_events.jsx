@@ -95,7 +95,7 @@ function UpcomingEvents() {
                   <span>{i18n.t("upcoming_events.timeOut")}</span>
                 )}
               </p>
-              <p className='text-left mx-32'>{i18n.t(event.description)}</p>
+              <p className='text-left mx-6 md:mx-12 lg:mx-32'>{i18n.t(event.description)}</p>
               {event.link && (
                 <LinkButton
                   className='text-xl mt-3 self-center'

@@ -46,7 +46,7 @@ function Sponsors() {
         {mainSponsors.map((sponsor, index) => (
           <div key={index} className='mx-5' >
             <a href={sponsor.url} rel='noreferrer' target='_blank' className='inline-block'>
-              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=' h-24 mx-auto my-4' />
+              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=' h-48 mx-auto my-4' />
             </a>
           </div>
         ))}
