@@ -4,15 +4,15 @@ const i18n_es = {
     itba: "Instituto Tecnológico de Buenos Aires",
   },
   about_us: {
-    we_are: "Quienes somos",
+    we_are: "Quiénes somos",
     we_are_text:
-      "Somos una sociedad técnica formada por alumnos y exalumnos del ITBA, dedicada a inspirar y educar en diversas áreas de tecnología mayormente relacionadas con la informática. Formamos una sub-rama académica de IEEE Computer Society, una de las redes más grandes que conectan profesionales en todo el mundo.",
-    we_do: "Que hacemos",
+      "Somos una sociedad técnica formada por alumnos y exalumnos del ITBA, dedicada a inspirar y educar en diversas áreas de tecnología, mayormente relacionadas con la informática. Formamos una sub-rama académica de IEEE Computer Society, una de las redes más grandes que conectan profesionales en todo el mundo.",
+    we_do: "Qué hacemos",
     we_do_text:
       "Organizamos y dictamos charlas, workshops, cursos y juegos abordados desde una mirada tecnológica y actualizada. Nuestro fin es acercar toda esa información y conocimiento de forma didáctica y entretenida a los estudiantes de hoy y a cualquier interesado en aprender.",
   },
   work_with_us: {
-    button: "Contactanos",
+    button: "Contáctanos",
     work: "¿Te interesa trabajar con nosotros?",
   },
   stats: {
@@ -36,8 +36,8 @@ const i18n_es = {
         location: "Parque Patricios, CABA",
         participants_prompt: "Abierto a:",
         participants: "Estudiantes universitarios",
-        cta_prompt: "Inscribite hoy!",
-        logo_alt: "Logo de Hackitba",
+        cta_prompt: "¡Inscribite hoy!",
+        logo_alt: "Logo de HackITBA",
       },
       gamejam: {
         date_prompt: "Fecha:",
@@ -61,7 +61,7 @@ const i18n_es = {
   },
   upcoming_events: {
     title: "Próximo Evento",
-    sign_up: "Inscribite hoy!",
+    sign_up: "¡Inscribite hoy!",
     timer: "Quedan {days} días, {timer}",
     timeOut: "El evento ha finalizado",
     events: {
@@ -76,7 +76,7 @@ const i18n_es = {
   past_events: {
     title: "Eventos Pasados",
     inscriptions: "+{{n}} inscriptos",
-    watch: "Ver en Youtube",
+    watch: "Ver en YouTube",
     button: "Ver Todos",
   },
   team: {
@@ -92,7 +92,7 @@ const i18n_es = {
       codirector: "Co-director",
       codirectora: "Co-directora",
       head_it: "Head de Tecnología de la Información",
-      head_media: "Head de medios",
+      head_media: "Head de Medios",
       head_fr: "Head de Recaudación de Fondos",
       head_mentors: "Head de Mentores",
       head_pr: "Head de Relaciones Públicas",
@@ -106,14 +106,14 @@ const i18n_es = {
       fundraising: "Fundraising",
       pc: "Programación Competitiva",
       grads: "Grads",
-      director_media: "Director de Media",
+      director_media: "Director de Medios",
       co_director_logistics: "Co-Director de Logística",
       director_fundraising: "Director de Fundraising",
       director_grads: "Director de Grads",
     },
   },
   sponsors: {
-    title: "Nuestro Sponsor",
+    title: "Nuestros Sponsors",
     subtitle: "Empresas que colaboran con nosotros",
     logo: "Logo de {name}",
   },
@@ -121,8 +121,8 @@ const i18n_es = {
     title: "Contacto",
   },
   contact_us: {
-    title: "Contactanos",
-    email: "Mandanos un email",
+    title: "Contáctanos",
+    email: "Mándanos un email",
     networks: "Nuestros perfiles sociales",
     form: {
       subject: "Asunto",
@@ -140,7 +140,7 @@ const i18n_es = {
       past_events: "Eventos Pasados",
       team: "Equipo",
       sponsors: "Sponsors",
-      contact: "Contactanos",
+      contact: "Contáctanos",
     },
   },
   credits: {
@@ -158,7 +158,7 @@ const i18n_es = {
       "Game Jam Society te brinda la oportunidad de colaborar con compañeros que comparten tu pasión, desarrollar juegos increíbles bajo presión y adquirir experiencia práctica en el diseño de juegos.",
     location: "Virtual, con una ceremonia de cierre presencial",
     participants: "Grupos de 4 participantes, entre 18-25 años",
-    days: "Dias",
+    days: "Días",
     hours: "Horas",
     minutes: "Minutos",
     seconds: "Segundos",
@@ -186,7 +186,7 @@ const i18n_es = {
       },
     },
     cta: "¡Regístrate ahora!",
-    competition_ended: "Regresa el año que viene para participar!",
+    competition_ended: "¡Regresa el año que viene para participar!",
     images: {
       gamejam1: "Participantes mirando la pantalla",
       gamejam2: "Participantes riendo",
@@ -206,15 +206,15 @@ const i18n_es = {
     },
   },
   hackit: {
-    slogan: "Diseña, Desarrolla, Domina.",
+    slogan: "Diseñá, Desarrollá, Dominá.",
     description: "Transformá tus ideas en soluciones reales.",
     info: [
-      "Preparate para un emocionante sprint de 36 horas para desarrollar un MVP innovador que aborde problemáticas del mundo real, alineadas con el tema de nuestra competencia.",
+      "Prepárate para un emocionante sprint de 36 horas para desarrollar un MVP innovador que aborde problemáticas del mundo real, alineadas con el tema de nuestra competencia.",
       "Trabajá junto a expertos de la industria, mentores y líderes del mercado que te guiarán e inspirarán en cada paso del camino.",
-      "¡Colaborá con compañeros, resolvé enormes desafíos, y divertite mientras empujas tu creatividad al límite!",
+      "¡Colaborá con compañeros, resolvé enormes desafíos y divertite mientras empujás tu creatividad al límite!",
     ],
     more_info: [
-      "En ediciones pasadas, el equipo ganador recibio un lugar en el programa de aceleración de proyectos de",
+      "En ediciones pasadas, el equipo ganador recibió un lugar en el programa de aceleración de proyectos de",
       "donde recibió mentoría experta, recursos valiosos y apoyo estratégico para llevar a su MVP al siguiente nivel.",
       "Esta es una oportunidad increíble para perfeccionar tu idea, conectar con inversores y convertir tu proyecto en un negocio exitoso.",
     ],
