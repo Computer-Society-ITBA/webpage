@@ -15,25 +15,26 @@ const Section = React.lazy(() => import('../section'));
 function GoBackNav() {
   return (
     <div className='flex justify-between p-2'>
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <Link smooth to='/#'>
-              <img
-                src={logo}
-                alt='Computer Society Logo'
-                className='w-12 ml-5'
-              />
-            </Link>
-        </motion.div>
-        <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <a href='/' className='hover:text-brand_secondary py-4 px-8 flex flex-row gap-4 items-center w-auto'>
-                <ArrowBackIcon fontSize='large' />
-                Go back
-            </a>
-        </motion.div>
-
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+        <Link smooth to='/#'>
+          <img
+            src={logo}
+            alt='Computer Society Logo'
+            className='w-12 ml-5'
+          />
+        </Link>
+      </motion.div>
+      <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+        <Link
+          smooth
+          to='/#'
+          className='hover:text-brand_secondary py-4 px-8 flex flex-row gap-4 items-center w-auto'
+        >
+          <ArrowBackIcon fontSize='large' />
+          {i18n.t('go_back')}
+        </Link>
+      </motion.div>
     </div>
-
-
   );
 }
 

@@ -148,6 +148,7 @@ const i18n_en = {
     description:
       "The complete site was made possible by the fantastic effort of these members from the IEEE Computer Society ITBA team. Everything, from design to execution, was done by them:",
   },
+  go_back: "Go back",
   loading: "Loading...",
   gamejam: {
     slogan: "Craft, Compete, Conquer.",
@@ -257,6 +258,21 @@ const i18n_en = {
       modo: "Modo logo",
     },
   },
+  quantumJam: {
+    qhero:{
+    quantumJam: "QuantumJam",
+    slogan: "The Quantum Computing Hackathon",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    register: "Register now!",
+    },
+    qabout:{
+      title: "About QuantumJam",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "Date: November 1st, 2025",
+      location: "Location: ITBA, Parque Patricios, CABA, Argentina",
+      participants: "Open to: University students",
+    }
+  }
 };
 
 export default i18n_en;

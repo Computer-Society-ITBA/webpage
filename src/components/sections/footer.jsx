@@ -9,8 +9,13 @@ import { mdiInstagram, mdiYoutube, mdiLinkedin, mdiHeart } from '@mdi/js';
 
 import footer from '../../data/footer'
 
-function Footer () {
-    return <footer className='bg-brand_secondary w-full flex flex-col justify-between items-center overflow-hidden'>
+function Footer ({ color = undefined }) {
+    // Detecta si es gradiente CSS
+    const isGradient = typeof color === 'string' && (color.startsWith('linear-gradient') || color.startsWith('radial-gradient'));
+    return <footer
+        className={`w-full flex flex-col justify-between items-center overflow-hidden${color ? '' : ' bg-brand_secondary'}`}
+        style={color ? (isGradient ? { background: color } : { backgroundColor: color }) : {}}
+    >
         <div className="w-full h-4/12 sm:h-6/12 items-center justify-center flex flex-row">
             <Link smooth to="/#" className="max-h-full sm:w-4/12 md:w-4/12 my-4 justify-center items-center">
                 <img 

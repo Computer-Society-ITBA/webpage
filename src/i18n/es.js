@@ -1,3 +1,6 @@
+import QuantumJam from "../components/pages/quantum_jam";
+import QAbout from "../components/sections/quantumjam/qabout";
+
 const i18n_es = {
   welcome: {
     cs: "IEEE Computer Society",
@@ -148,6 +151,7 @@ const i18n_es = {
     description:
       "El sitio completo fue posible gracias al fantástico esfuerzo de estos miembros del equipo ITBA de IEEE Computer Society. Todo, desde el diseño hasta la ejecución, fue hecho por ellos:",
   },
+  go_back: "Volver",
   loading: "Cargando...",
   gamejam: {
     slogan: "Crear, Competir, Conquistar.",
@@ -259,6 +263,21 @@ const i18n_es = {
       modo: "Logo de Modo",
     },
   },
+  quantumJam: {
+    qhero:{
+    quantumJam: "QuantumJam",
+    slogan: "La Hackatón de Computación Cuántica",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    register: "¡Inscribite ahora!",
+    },
+    qabout:{
+      title: "Sobre QuantumJam",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "Fecha: 1ro de Noviembre de 2025",
+      location: "Ubicación: ITBA SDT, Parque Patricios, CABA, Argentina",
+      participants: "Abierto a: Estudiantes universitarios",
+    }
+  }
 };
 
 export default i18n_es;
