@@ -5,9 +5,9 @@ const QAbout = () => (
   <section className="flex justify-center items-center min-h-[50vh] w-full mb-16">
     <div className="bg-quantum-dark border-2 border-quantum-secondary1 text-quantum-white rounded-[22px] px-8 pt-10 pb-14 max-w-3xl w-full text-center shadow-none">
 
-      <h2 className="font-gamejam text-quantum-primary1 font-bold mb-5 tracking-wider text-[2.2rem]">
-        {i18n.t("quantumJam.qabout.title")}
-      </h2>
+      <h2 className="text-4xl md:text-5xl font-gamejam tracking-wider font-bold text-quantum-primary1 mb-12 text-center">
+              {i18n.t("quantumJam.qabout.title")}
+           </h2>
 
       <p className="text-[1.15rem] leading-7">
         {i18n.t("quantumJam.qabout.text")}

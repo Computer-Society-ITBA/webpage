@@ -9,7 +9,9 @@ function QSchedule() {
   return (
     (<div className='m-[8rem] text-quantum-white flex flex-col items-center'>
         <div className='flex flex-col'>
-          <h3 className='mb-6 font-gamejam tracking-wider text-4xl'>{i18n.t("quantumJam.qschedule.title")}</h3>
+           <h2 className="text-4xl md:text-5xl font-gamejam tracking-wider font-bold text-quantum-primary1 mb-12 text-center">
+              {i18n.t("quantumJam.qschedule.title")}
+           </h2>
           <div className='grid grid-cols-3'>
             <div className='flex flex-col justify-between gap-4'>
               <div>

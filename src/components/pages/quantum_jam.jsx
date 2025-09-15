@@ -17,8 +17,8 @@ function QuantumJam() {
         <GoBackNav color="#ffffff" hoverColor="#c874d9" />
         <QHero />
         <QAbout />
-        <QCountdown />
         <QWorkshops/>
+        <QCountdown />
         <QSchedule />
         <Footer color={'linear-gradient(90deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%)'} textColor='black'/>
     </React.Fragment>
