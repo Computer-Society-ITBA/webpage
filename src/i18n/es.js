@@ -300,6 +300,30 @@ const i18n_es = {
         date: "1/11",
         description: "Tercer workshop y competencia en ITBA",
       },
+    },
+    qworkshops: {
+      title: "Workshops Ofrecidos",
+      speaker: "Speaker",
+      workshops: [
+        {
+          title: "Intro a la Computación Cuántica",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "/images/workshop1.png",
+        },  
+        {
+          title: "Intro a la Computación Cuántica",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "/images/workshop1.png",
+        },  
+        {
+          title: "Intro a la Computación Cuántica",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "/images/workshop1.png",
+        },  
+      ]
     }
   }
 };

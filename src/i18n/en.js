@@ -1,3 +1,5 @@
+import QWorkshops from "../components/sections/quantumjam/qworkshops";
+
 const i18n_en = {
   welcome: {
     cs: "IEEE Computer Society",
@@ -295,6 +297,30 @@ const i18n_en = {
         date: "1/11",
         description: "Third workshop and hackathon at ITBA",
       },
+    },
+    qworkshops: {
+      title: "Workshops Offered",
+      speaker: "Speaker",
+      workshops: [
+        {
+          title: "Intro to Quantum Computing",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "workshop1",
+        },  
+        {
+          title: "Intro to Quantum Computing",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "workshop2",
+        },
+        {
+          title: "Intro to Quantum Computing",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "workshop3",
+        },
+      ]
     }
   }
 };
