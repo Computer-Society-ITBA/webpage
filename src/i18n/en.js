@@ -1,3 +1,5 @@
+import QWorkshops from "../components/sections/quantumjam/qworkshops";
+
 const i18n_en = {
   welcome: {
     cs: "IEEE Computer Society",
@@ -271,6 +273,54 @@ const i18n_en = {
       date: "Date: November 1st, 2025",
       location: "Location: ITBA, Parque Patricios, CABA, Argentina",
       participants: "Open to: University students",
+    },
+    countdown: "Time left until the QuantumJam!",
+    qschedule: {
+      title: "Roadmap - 2025",
+      signups_open: {
+        date: "DATE",
+        description: "Sign-ups open",
+      },
+      signups_close: {
+        date: "DATE",
+        description: "Sign-ups close",
+      },
+      competition_starts: {
+        date: "DATE",
+        description: "First workshop",
+      },
+      competition_ends: {
+        date: "20/10",
+        description: "Second workshop",
+      },
+      closing_ceremony: {
+        date: "1/11",
+        description: "Third workshop and hackathon at ITBA",
+      },
+    },
+    qworkshops: {
+      title: "Workshops Offered",
+      speaker: "Speaker",
+      workshops: [
+        {
+          title: "Intro to Quantum Computing",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "workshop1",
+        },  
+        {
+          title: "Intro to Quantum Computing",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "workshop2",
+        },
+        {
+          title: "Intro to Quantum Computing",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "workshop3",
+        },
+      ]
     }
   }
 };

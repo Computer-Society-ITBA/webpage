@@ -14,11 +14,30 @@ export default {
         brand_tertiary: "#75787B",
         typography_primary: "#212121",
         light: "#F7F7F7",
+        quantum: {
+          primary1: "#ff66c4", // rosa
+          primary2: "#8338ec", // violeta
+          primary3: "#454ade", // azul
+          secondary1: "#ff66c4",
+          secondary2: "#8c52ff",
+          secondary3: "#38b6ff",
+          black: "#1b1f3b",
+          white: "#ffffff",
+          dark: "#140012",
+        },
+
       },
       fontFamily: {
         text: ["Roboto", "sans-serif"],
         highlight: ["Montserrat", "sans-serif"],
         gamejam: ["NineByFive", "sans-serif"],
+        quantumjam: [
+          'NineByFive',
+          'Segoe UI Emoji',
+          'Apple Color Emoji',
+          'Noto Color Emoji',
+          'sans-serif',
+        ],
       },
       fontSize: {
         sm: "0.75rem",

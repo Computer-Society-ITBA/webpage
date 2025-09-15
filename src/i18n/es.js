@@ -276,6 +276,54 @@ const i18n_es = {
       date: "Fecha: 1ro de Noviembre de 2025",
       location: "Ubicación: ITBA SDT, Parque Patricios, CABA, Argentina",
       participants: "Abierto a: Estudiantes universitarios",
+    },
+    countdown: "Tiempo restante hasta la QuantumJam!",
+    qschedule: {
+      title: "Roadmap - 2025",
+      signups_open: {
+        date: "FECHA",
+        description: "Abren las inscripciones",
+      },
+      signups_close: {
+        date: "FECHA",
+        description: "Cierran las inscripciones",
+      },
+      competition_starts: {
+        date: "FECHA",
+        description: "Primer workshop",
+      },
+      competition_ends: {
+        date: "20/10",
+        description: "Segundo workshop",
+      },
+      closing_ceremony: {
+        date: "1/11",
+        description: "Tercer workshop y competencia en ITBA",
+      },
+    },
+    qworkshops: {
+      title: "Workshops Ofrecidos",
+      speaker: "Speaker",
+      workshops: [
+        {
+          title: "Intro a la Computación Cuántica",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "/images/workshop1.png",
+        },  
+        {
+          title: "Intro a la Computación Cuántica",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "/images/workshop1.png",
+        },  
+        {
+          title: "Intro a la Computación Cuántica",
+          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          speaker: "Santiago Feldman",
+          image: "/images/workshop1.png",
+        },  
+      ]
     }
   }
 };
