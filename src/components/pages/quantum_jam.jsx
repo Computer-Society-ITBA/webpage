@@ -18,7 +18,7 @@ function QuantumJam() {
         <QAbout />
         <QCountdown />
         <QSchedule />
-        <Footer color={'linear-gradient(90deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%)'}/>
+        <Footer color={'linear-gradient(90deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%)'} textColor='black'/>
     </React.Fragment>
   );
 }
