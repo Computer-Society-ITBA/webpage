@@ -11,7 +11,7 @@ function QuantumJam() {
   return (
     <React.Fragment>
         <QuantumStarsBackground />
-        <GoBackNav/>
+        <GoBackNav color="#ffffff" hoverColor="#c874d9" />
         <QHero />
         <QAbout />
         <Footer color={'linear-gradient(90deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%)'}/>

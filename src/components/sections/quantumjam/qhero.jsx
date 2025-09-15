@@ -1,63 +1,32 @@
-
-import React from 'react';
-import quantumjamColors from '../../../styles/quantumjamColors';
-import i18n from '../../../i18n';
+import React from "react";
+import i18n from "../../../i18n";
 
 const QHero = () => (
-    <section
-        style={{
-            color: quantumjamColors.white,
-            padding: '80px 20px',
-            textAlign: 'center',
-            minHeight: '60vh',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'center',
-        }}
+  <section className="flex flex-col justify-center items-center text-center px-5 py-20 min-h-[60vh] text-quantum-white">
+
+    <h1
+      className="font-gamejam text-5xl md:text-8xl font-extrabold mb-5 tracking-widest bg-gradient-to-tr from-quantum-primary1 to-quantum-primary2 bg-clip-text text-transparent"
     >
-        <h1
-            style={{
-                fontSize: '3rem',
-                fontWeight: 'bold',
-                marginBottom: '20px',
-                letterSpacing: '2px',
-                background: `linear-gradient(135deg, ${quantumjamColors.primary1}, ${quantumjamColors.primary2})`,
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                color: 'transparent',
-            }}
-        >
-            {i18n.t('quantumJam.qhero.quantumJam')} 2025
-        </h1>
-        <h2 style={{ fontSize: '1.5rem', fontWeight: '400', marginBottom: '30px', color: quantumjamColors.primary3 }}>
-            {i18n.t('quantumJam.qhero.slogan')}
-        </h2>
-        <p style={{ fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto 40px auto', lineHeight: 1.6, color: quantumjamColors.white }}>
-            {i18n.t('quantumJam.qhero.description')}
-        </p>
-        <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-            <a
-                href="#register"
-                style={{
-                    display: 'inline-block',
-                    background: quantumjamColors.primary2,
-                    color: quantumjamColors.white,
-                    padding: '8px 24px',
-                    borderRadius: '24px',
-                    fontWeight: 'bold',
-                    fontSize: '1rem',
-                    textDecoration: 'none',
-                    transition: 'background 0.2s',
-                    maxWidth: '320px',
-                    width: '100%',
-                    textAlign: 'center',
-                }}
-            >
-                {i18n.t('quantumJam.qhero.register')}
-            </a>
-        </div>
-    </section>
+      {i18n.t("quantumJam.qhero.quantumJam")} 2025
+    </h1>
+
+    <h2 className="font-gamejam text-2xl md:text-4xl mb-7 text-quantum-primary3">
+      {i18n.t("quantumJam.qhero.slogan")}
+    </h2>
+
+    <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+      {i18n.t("quantumJam.qhero.description")}
+    </p>
+
+    <div className="w-full flex justify-center">
+      <a
+        href="#register"
+        className="font-gamejam text-[1.7rem] mb-5 tracking-wider inline-block rounded-full px-6 py-2 text-center transition-colors max-w-xs w-full bg-quantum-primary3 text-quantum-white hover:bg-quantum-primary2"
+      >
+        {i18n.t("quantumJam.qhero.register")}
+      </a>
+    </div>
+  </section>
 );
 
 export default QHero;
