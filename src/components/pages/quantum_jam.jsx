@@ -4,6 +4,8 @@ const GoBackNav = React.lazy(() => import('../sections/go_back_nav'));
 import QuantumStarsBackground from '../QuantumStarsBackground';
 import QHero from '../sections/quantumjam/qhero';
 import QAbout from '../sections/quantumjam/qabout';
+import QCountdown from '../sections/quantumjam/qcountdown';
+import QSchedule from '../sections/quantumjam/qschedule';
 
 
 function QuantumJam() {
@@ -14,6 +16,8 @@ function QuantumJam() {
         <GoBackNav color="#ffffff" hoverColor="#c874d9" />
         <QHero />
         <QAbout />
+        <QCountdown />
+        <QSchedule />
         <Footer color={'linear-gradient(90deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%)'}/>
     </React.Fragment>
   );
