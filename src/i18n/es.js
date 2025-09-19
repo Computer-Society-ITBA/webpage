@@ -66,10 +66,11 @@ const i18n_es = {
     timeOut: "El evento ha finalizado",
     events: {
       hackit: {
-        title: "HackITBA!",
-        date: "28-30 de Marzo de 2025",
+        title: "Quantum Jam!",
+        date: "01 de Noviembre de 2025",
         description:
-          "HackITBA es una hackathon organizada por y para estudiantes, donde, en grupos de 4 personas, deben generar un MVP en 36 horas de competencia intensiva. La competencia tiene como meta promover soluciones creativas a problemas actuales en un ambiente desafiante y cooperativo.",
+          "La Quantum Jam es una hackaton precedida por workshops intencivos en la que los estudiantes podran aprender las bases sobre la computación cuantica terminando con una hackaton con ejercicios traidos por IBM",
+          // (pasar este texto a la pagina del hackitba) HackITBA es una hackathon organizada por y para estudiantes, donde, en grupos de 4 personas, deben generar un MVP en 36 horas de competencia intensiva. La competencia tiene como meta promover soluciones creativas a problemas actuales en un ambiente desafiante y cooperativo."
       },
     },
   },

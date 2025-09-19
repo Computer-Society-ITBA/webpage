@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import i18n from '../i18n/index.js';
 
-const inputClass = "font-semibold px-4 py-3 my-1 rounded-lg text-black placeholder-orange-500 w-full"
+const inputClass = "px-4 py-3 my-1 rounded-lg text-black placeholder-grey-400 w-full"
 
 function ContactForm () {
     const [subject, setSubject] = useState("");
