@@ -1,3 +1,6 @@
+import QuantumJam from "../components/pages/quantum_jam";
+import QAbout from "../components/sections/quantumjam/qabout";
+
 const i18n_es = {
   welcome: {
     cs: "IEEE Computer Society",
@@ -156,6 +159,7 @@ const i18n_es = {
     description:
       "El sitio completo fue posible gracias al fantástico esfuerzo de estos miembros del equipo ITBA de IEEE Computer Society. Todo, desde el diseño hasta la ejecución, fue hecho por ellos:",
   },
+  go_back: "Volver",
   loading: "Cargando...",
   gamejam: {
     slogan: "Crear, Competir, Conquistar.",
@@ -267,6 +271,72 @@ const i18n_es = {
       modo: "Logo de Modo",
     },
   },
+  quantumJam: {
+  qhero: {
+    quantumJam: "QuantumJam",
+    slogan: "Impulsado por IBM Quantum",
+    description: "Aprendé sobre una tecnología que podría cambiar el mundo. En este evento tendrás una introducción sencilla a la computación cuántica resolviendo problemas divertidos y para principiantes. No se requiere experiencia previa: solo traé tu curiosidad y descubrí qué hace que lo cuántico sea diferente de lo clásico.",
+    register: "¡Registrate ahora!",
+  },
+  qabout: {
+    title: "Sobre QuantumJam",
+    text: "Este evento está diseñado para introducirte al fascinante mundo de la computación cuántica a través de cuatro workshops virtuales. Cada sesión se apoya en la anterior, llevándote paso a paso desde lo básico hasta ideas más avanzadas. El evento concluirá con una competencia amistosa donde los participantes podrán poner en práctica sus nuevas habilidades cuánticas resolviendo desafíos sencillos.",
+    date: "Fecha: 1 de noviembre de 2025",
+    location: "Lugar: ITBA, Parque Patricios, CABA, Argentina",
+    participants: "Abierto a: Estudiantes universitarios",
+  },
+  countdown: "¡Tiempo restante hasta el QuantumJam!",
+  qschedule: {
+    title: "Hoja de ruta - 2025",
+    signups_open: {
+      date: "25/9",
+      description: "Apertura de inscripciones",
+    },
+    signups_close: {
+      date: "05/10",
+      description: "Cierre de inscripciones",
+    },
+    competition_starts: {
+      date: "Todos los lunes (asincrónico)",
+      description: "Workshops",
+    },
+    competition_ends: {
+      date: "1/11",
+      description: "Hackatón en el ITBA",
+    },
+  },
+  qworkshops: {
+    title: "Workshops disponibles",
+    speaker: "Orador",
+    workshops: [
+      {
+        title: "Fundamentos de la Computación Cuántica",
+        description: "Conocé los conceptos clave de la computación cuántica, incluyendo qubits, superposición y entrelazamiento, y descubrí cómo se diferencian de la computación clásica.",
+        speaker: "Santiago Feldman",
+        image: "workshop1",
+      },
+      {
+        title: "Circuitos Cuánticos",
+        description: "Aprendé cómo funcionan las compuertas y los circuitos cuánticos, y practicá construyendo circuitos simples para entender cómo se realizan los cálculos cuánticos.",
+        speaker: "Santiago Feldman",
+        image: "workshop2",
+      },
+      {
+        title: "Algoritmos y Comunicación Cuántica (Parte 1)",
+        description: "Explorá las bases de los algoritmos y la comunicación cuántica, enfocándote en ejemplos simples pero poderosos como la teleportación cuántica.",
+        speaker: "Santiago Feldman",
+        image: "workshop3",
+      },
+      {
+        title: "Algoritmos y Comunicación Cuántica (Parte 2)",
+        description: "Profundizá en algoritmos y protocolos cuánticos, descubriendo cómo la computación cuántica puede aplicarse a desafíos del mundo real y a comunicaciones seguras.",
+        speaker: "Santiago Feldman",
+        image: "workshop4",
+      },
+    ]
+  }
+}
+
 };
 
 export default i18n_es;

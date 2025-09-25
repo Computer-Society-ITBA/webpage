@@ -1,3 +1,5 @@
+import QWorkshops from "../components/sections/quantumjam/qworkshops";
+
 const i18n_en = {
   welcome: {
     cs: "IEEE Computer Society",
@@ -155,6 +157,7 @@ const i18n_en = {
     description:
       "The complete site was made possible by the fantastic effort of these members from the IEEE Computer Society ITBA team. Everything, from design to execution, was done by them:",
   },
+  go_back: "Go back",
   loading: "Loading...",
   gamejam: {
     slogan: "Craft, Compete, Conquer.",
@@ -264,6 +267,71 @@ const i18n_en = {
       modo: "Modo logo",
     },
   },
+  quantumJam: {
+    qhero:{
+    quantumJam: "QuantumJam",
+    slogan: "Powered by IBM Quantum",
+    description: "Learn about a technology that could change the world. In this event, you’ll get a simple introduction to quantum computing by solving fun, beginner-friendly problems. No prior experience is required — just bring your curiosity and explore what makes quantum different from classical computing.",
+    register: "Register now!",
+    },
+    qabout:{
+      title: "About QuantumJam",
+      text: "This event is designed to introduce you to the fascinating world of quantum computing through four virtual workshops. Each session builds on the previous one, taking you step by step from the basics to more advanced ideas. The event will conclude with a friendly competition where participants can put their new quantum skills into practice by solving simple challenges.",
+      date: "Date: November 1st, 2025",
+      location: "Location: ITBA, Parque Patricios, CABA, Argentina",
+      participants: "Open to: University students",
+    },
+    countdown: "Time left until the QuantumJam!",
+    qschedule: {
+      title: "Roadmap - 2025",
+      signups_open: {
+        date: "25/9",
+        description: "Sign-ups open",
+      },
+      signups_close: {
+        date: "05/10",
+        description: "Sign-ups close",
+      },
+      competition_starts: {
+        date: "Every Monday (asynchronous)",
+        description: " Workshops",
+      },
+      competition_ends: {
+        date: "1/11",
+        description: "Hackathon at ITBA",
+      },
+    },
+    qworkshops: {
+      title: "Workshops Offered",
+      speaker: "Speaker",
+      workshops: [
+        {
+          title: "Fundamentals of Quantum Computing",
+          description: "Get introduced to the key concepts behind quantum computing, including qubits, superposition, and entanglement, and see how they differ from classical computing.",
+          speaker: "Santiago Feldman",
+          image: "workshop1",
+        },
+        {
+          title: "Quantum Circuits",
+          description: "Learn how quantum gates and circuits work, and practice building simple circuits to understand how quantum computations are carried out.",
+          speaker: "Santiago Feldman",
+          image: "workshop2",
+        },
+        {
+          title: "Quantum Algorithms & Communication (Part 1)",
+          description: "Explore the foundations of quantum algorithms and quantum communication, focusing on simple but powerful examples like quantum teleportation.",
+          speaker: "Santiago Feldman",
+          image: "workshop3",
+        },
+        {
+          title: "Quantum Algorithms & Communication (Part 2)",
+          description: "Dive deeper into quantum algorithms and protocols, discovering how quantum computing can be applied to real-world challenges and secure communications.",
+          speaker: "Santiago Feldman",
+          image: "workshop4",
+        },
+      ]
+    }
+  }
 };
 
 export default i18n_en;
