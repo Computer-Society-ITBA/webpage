@@ -97,10 +97,10 @@ function UpcomingEvents() {
               </p>
               <p className='text-left mx-6 md:mx-12 lg:mx-32'>{i18n.t(event.description)}</p>
               {event.link && (
-                <LinkButton props='class_quantum'
+                <LinkButton 
                   className='text-xl mt-3 self-center'
                   href={event.link}
-                  type='full-primary'
+                  type='quantum'
                   external={false}
                   text={i18n.t("upcoming_events.sign_up")}
                 />

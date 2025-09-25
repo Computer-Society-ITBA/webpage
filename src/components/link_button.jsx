@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const class_outlined = 'px-4 py-2 transition duration-300 text-brand_primary hover:text-white hover:bg-brand_primary focus:text-white focus:bg-brand_primary focus:outline-none rounded border-2 border-brand_primary'
 const class_outlined_dark = 'px-4 py-2 transition duration-300 text-typography_primary hover:text-white hover:bg-typography_primary focus:text-white focus:bg-typography_primary focus:outline-none rounded border-2 border-typography_primary'
 const class_full_primary = 'px-4 py-2 transition duration-300 text-white bg-brand_primary hover:bg-brand_secondary focus:bg-brand_secondary rounded focus:outline-none'
-const class_quantum = 'px-4 py-2 transition duration-300 text-white bg-quantum hover:bg-quantum_secondary focus:bg-quantum_secondary rounded focus:outline-none'
+const class_quantum = 'px-4 py-2 transition duration-300 text-white bg-quantum-primary2 hover:bg-quantum-secondary2 focus:bg-quantum_secondary rounded focus:outline-none'
 
 function LinkButton (props) {
     let className = ''

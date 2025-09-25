@@ -1,6 +1,7 @@
 import React from 'react';
 import i18n from '../../i18n/index.js';
 import logoCompleto from '../../images/logo_completo_2.png';
+import ibmQuantumLogoImg from '../../images/quantumjam_images/IBMQuantum.png';
 import { HashLink as Link } from "react-router-hash-link";
 
 // Icons
@@ -9,7 +10,7 @@ import { mdiInstagram, mdiYoutube, mdiLinkedin, mdiHeart } from '@mdi/js';
 
 import footer from '../../data/footer';
 
-function Footer({ color = "#F98A04", textColor = 'white'}) {
+function Footer({ color = "#F98A04", textColor = 'white', ibmQuantumLogo=null}) {
     const isGradient = typeof color === 'string' && (color.startsWith('linear-gradient') || color.startsWith('radial-gradient'));
 
     const getIconClasses = (color) => `px-2 transform duration-100 text-[${textColor}] hover:text-${color} hover:scale-125 focus:outline-none`;
@@ -47,7 +48,7 @@ function Footer({ color = "#F98A04", textColor = 'white'}) {
                         default:
                             icon = mdiInstagram;
                     }
-
+                    
                     return (
                         <a key={index} href={item.href} target="_blank" rel="noreferrer" className={getIconClasses(color)}>
                             <Icon path={icon} size={2} className={`text-${textColor} hover:text-${color} focus:outline-none`} />
@@ -55,6 +56,13 @@ function Footer({ color = "#F98A04", textColor = 'white'}) {
                     );
                 })}
             </div>
+                {ibmQuantumLogo !== false && (
+                <div className="flex items-center">
+                    <a href="https://quantum-computing.ibm.com/" target="_blank" rel="noreferrer">
+                    <img src={ibmQuantumLogoImg} alt="IBM Quantum Logo" className="w-28" />
+                    </a>
+                </div>
+                )}
 
             <div className="w-full h-3/12 sm:h-2/12 flex flex-col-reverse sm:flex-row justify-start sm:justify-between px-16 mb-2 sm:mb-4 items-center">
                 <div className={`${textColor}`}>

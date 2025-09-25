@@ -28,7 +28,7 @@ function Homepage () {
       <Team/>
       <Sponsors/>
       <ContactUs/>
-      <Footer/>
+      <Footer IMBQuantumLogo={true} />
   </React.Fragment>)
 }
 
