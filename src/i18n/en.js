@@ -263,13 +263,13 @@ const i18n_en = {
   quantumJam: {
     qhero:{
     quantumJam: "QuantumJam",
-    slogan: "The Quantum Computing Hackathon",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    slogan: "Powered by IBM Quantum",
+    description: "Learn about a technology that could change the world. In this event, you’ll get a simple introduction to quantum computing by solving fun, beginner-friendly problems. No prior experience is required — just bring your curiosity and explore what makes quantum different from classical computing.",
     register: "Register now!",
     },
     qabout:{
       title: "About QuantumJam",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      text: "This event is designed to introduce you to the fascinating world of quantum computing through four virtual workshops. Each session builds on the previous one, taking you step by step from the basics to more advanced ideas. The event will conclude with a friendly competition where participants can put their new quantum skills into practice by solving simple challenges.",
       date: "Date: November 1st, 2025",
       location: "Location: ITBA, Parque Patricios, CABA, Argentina",
       participants: "Open to: University students",
@@ -278,24 +278,20 @@ const i18n_en = {
     qschedule: {
       title: "Roadmap - 2025",
       signups_open: {
-        date: "DATE",
+        date: "25/9",
         description: "Sign-ups open",
       },
       signups_close: {
-        date: "DATE",
+        date: "05/10",
         description: "Sign-ups close",
       },
       competition_starts: {
-        date: "DATE",
-        description: "First workshop",
+        date: "Every Monday (asynchronous)",
+        description: " Workshops",
       },
       competition_ends: {
-        date: "20/10",
-        description: "Second workshop",
-      },
-      closing_ceremony: {
         date: "1/11",
-        description: "Third workshop and hackathon at ITBA",
+        description: "Hackathon at ITBA",
       },
     },
     qworkshops: {
@@ -303,22 +299,28 @@ const i18n_en = {
       speaker: "Speaker",
       workshops: [
         {
-          title: "Intro to Quantum Computing",
-          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          title: "Fundamentals of Quantum Computing",
+          description: "Get introduced to the key concepts behind quantum computing, including qubits, superposition, and entanglement, and see how they differ from classical computing.",
           speaker: "Santiago Feldman",
           image: "workshop1",
-        },  
+        },
         {
-          title: "Intro to Quantum Computing",
-          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          title: "Quantum Circuits",
+          description: "Learn how quantum gates and circuits work, and practice building simple circuits to understand how quantum computations are carried out.",
           speaker: "Santiago Feldman",
           image: "workshop2",
         },
         {
-          title: "Intro to Quantum Computing",
-          description: "Learn the basics of Unity and Unreal Engine for creating games.",
+          title: "Quantum Algorithms & Communication (Part 1)",
+          description: "Explore the foundations of quantum algorithms and quantum communication, focusing on simple but powerful examples like quantum teleportation.",
           speaker: "Santiago Feldman",
           image: "workshop3",
+        },
+        {
+          title: "Quantum Algorithms & Communication (Part 2)",
+          description: "Dive deeper into quantum algorithms and protocols, discovering how quantum computing can be applied to real-world challenges and secure communications.",
+          speaker: "Santiago Feldman",
+          image: "workshop4",
         },
       ]
     }

@@ -31,7 +31,7 @@ function App() {
             <Route path="/past-events" element={<PastEvents />} />
             <Route path="/" element={<Homepage />} />
             <Route path="*" element={<Navigate to="/" />} />
-            <Route path="/quantum-jam" element={<QuantumJam />} />
+            <Route path="/quantumJam" element={<QuantumJam />} />
           </Routes>
         </Router>
       </div>

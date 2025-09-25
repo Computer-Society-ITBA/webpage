@@ -2,13 +2,15 @@ import React from "react";
 import i18n from "../../../i18n";
 
 import workshop1Img from '../../../images/quantumjam_images/workshop1.jpg';
-import workshop2Img from '../../../images/quantumjam_images/workshop1.jpg';
-import workshop3Img from '../../../images/quantumjam_images/workshop1.jpg';
+import workshop2Img from '../../../images/quantumjam_images/workshop2.jpg';
+import workshop3Img from '../../../images/quantumjam_images/workshop3.jpg';
+import workshop4Img from '../../../images/quantumjam_images/workshop4.jpg';
 
 const images = {
     workshop1: workshop1Img,
     workshop2: workshop2Img,
     workshop3: workshop3Img,
+    workshop4: workshop4Img,
 }
 
 

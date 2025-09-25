@@ -20,7 +20,7 @@ const QHero = () => (
 
     <div className="w-full flex justify-center">
       <a
-        href="#register"
+        href="https://forms.gle/jWwjb4TxUTvwJoGv5"
         className="font-gamejam text-[1.7rem] mb-5 tracking-wider inline-block rounded-full px-6 py-2 text-center transition-colors max-w-xs w-full bg-quantum-primary3 text-quantum-white hover:bg-quantum-primary2"
       >
         {i18n.t("quantumJam.qhero.register")}
