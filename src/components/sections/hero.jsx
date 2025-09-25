@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { SplitText } from '../../animations/SplitText'
-import { AnimatePresence, motion, useAnimation } from 'framer-motion'
+import { useScroll, useTransform, motion, useAnimation, useMotionValue, useMotionTemplate, AnimatePresence } from 'framer-motion';
 import i18n from '../../i18n/index.js';
 import logo from '../../images/logo_icon.png';
 
@@ -9,16 +9,23 @@ function Hero () {
     const controlsCs = useAnimation()
     const controlsItba = useAnimation()
     const controlsLogo = useAnimation()
+    const [parallaxActive, setParallaxActive] = React.useState(false);
     useEffect(() => {
         async function loadAnimations() {
             await controlsCs.start('visible')
             await controlsItba.start('visible')
-            controlsLogo.start('visible')
+            await controlsLogo.start('visible')
+            setParallaxActive(true);
         }
         loadAnimations()
-    })
+    }, [])
 
-    return <section id="main" className='bg-white h-screen w-full flex flex-col justify-center items-center overflow-hidden'>
+    const { scrollY } = useScroll();
+
+    // Para el parralax
+    const y = useTransform(scrollY, [0, 700], [0, -400]);
+
+    return <section id="main" className='bg-white h-screen w-full flex flex-col justify-start pt-40 items-center overflow-hidden'>
         <h1 className="mb-2 sm:mb-0">
             <AnimatePresence>
                 {(
@@ -77,6 +84,7 @@ function Hero () {
         src={logo} 
         className='mt-8 sm:mt-0 w-10/12 sm:w-7/12 -mb-75_ sm:-mb-40_' 
         alt='Computer Society Logo'
+        style={parallaxActive ? { y } : {}}
         initial={{ y: '100%' }}
         animate={controlsLogo}
         variants={{
