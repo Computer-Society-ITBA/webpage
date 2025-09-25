@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { HashLink as Link } from 'react-router-hash-link';
 import logo from '../../images/logo_nav.png';
 
-function GoBackNav({ color = '#212121', hoverColor = '#F98A04' }) {
+function GoBackNav({ color = '#212121', hoverColor = '#F98A04', where='/' }) {
   return (
     <div
       className="flex justify-between p-2"
@@ -20,7 +20,7 @@ function GoBackNav({ color = '#212121', hoverColor = '#F98A04' }) {
       <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
         <Link
           smooth
-          to="/#"
+          to={where}
           className="py-4 px-8 flex flex-row gap-4 items-center w-auto transition-colors duration-200 text-[var(--nav-color)] hover:text-[var(--nav-hover)]"
         >
           <ArrowBackIcon fontSize="large" />

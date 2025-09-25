@@ -101,7 +101,7 @@ function UpcomingEvents() {
                   className='text-xl mt-3 self-center'
                   href={event.link}
                   type='full-primary'
-                  external={true}
+                  external={false}
                   text={i18n.t("upcoming_events.sign_up")}
                 />
               )}
