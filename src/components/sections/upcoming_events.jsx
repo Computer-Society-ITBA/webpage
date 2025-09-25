@@ -7,7 +7,7 @@ import i18n from "../../i18n/index.js";
 
 import upcomingEvents from "../../data/upcoming_events.json";
 
-import hackit from "../../images/banner_hackit.png";
+import quantum from "../../images/banner_quantum.png";
 
 // Components
 const Section = React.lazy(() => import("../section"));
@@ -75,9 +75,9 @@ function UpcomingEvents() {
             >
               <a href={`${event.link}`} target='_blank'>
                 <img
-                  className='w-full mb-6 object-contain '
-                  src={hackit}
-                  alt='hackit-logo-banner'
+                  className='w-full mb-6 object-contain'
+                  src={quantum}
+                  alt='quantum-logo-banner'
                 />
               </a>
               <p className='font-light  mb-4'>
@@ -97,7 +97,7 @@ function UpcomingEvents() {
               </p>
               <p className='text-left mx-6 md:mx-12 lg:mx-32'>{i18n.t(event.description)}</p>
               {event.link && (
-                <LinkButton
+                <LinkButton props='class_quantum'
                   className='text-xl mt-3 self-center'
                   href={event.link}
                   type='full-primary'

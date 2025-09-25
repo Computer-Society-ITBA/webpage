@@ -66,13 +66,18 @@ const i18n_en = {
     timeOut: "The event has ended",
     events: {
       hackit: {
-        title: "Quentum Jam!",
+        title: "HackITBA!",
+        date: "28/3/2025",
+        description:
+          "HackITBA is a programming competition, consisting of 36 hours of pure creativity and adrenaline. The competition aims to promote creative solutions to current problems in a challenging and cooperative environment.",
+      },
+          // (pasar este texto a la pagina del hackitba) "HackITBA is a programming competition, consisting of 36 hours of pure creativity and adrenaline. The competition aims to promote creative solutions to current problems in a challenging and cooperative environment.",
+      quantum: {
+        title: "Quantum Jam!",
         date: "01/11/2025",
         description:
           "Quantum Jam is a hackathon preceded by intensive workshops where students can learn the basics of quantum computing, culminating in a hackaton with exercises provided by IBM.",
-          // (pasar este texto a la pagina del hackitba) "HackITBA is a programming competition, consisting of 36 hours of pure creativity and adrenaline. The competition aims to promote creative solutions to current problems in a challenging and cooperative environment.",
-      
-    },
+      },
     },
   },
   past_events: {
