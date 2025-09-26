@@ -84,7 +84,7 @@ const i18n_en = {
   },
   past_events: {
     title: "Past Events",
-    inscriptions: "+{{n}} enroled",
+    inscriptions: "+{{n}} enrolled",
     watch: "Watch on Youtube",
     button: "View All",
   },
