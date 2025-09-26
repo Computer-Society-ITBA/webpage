@@ -293,12 +293,12 @@ const i18n_en = {
         description: "Sign-ups close",
       },
       competition_starts: {
-        date: "Every Monday (asynchronous)",
-        description: " Workshops",
+        date: "Every Monday",
+        description: "asynchronous Workshops",
       },
       competition_ends: {
         date: "1/11",
-        description: "Hackathon at ITBA",
+        description: "QuantumJam at ITBA",
       },
     },
     qworkshops: {

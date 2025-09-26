@@ -37,6 +37,7 @@ export default {
           'Apple Color Emoji',
           'Noto Color Emoji',
           'sans-serif',
+          'JetBrains-Mono',
         ],
       },
       fontSize: {

@@ -297,12 +297,12 @@ const i18n_es = {
       description: "Cierre de inscripciones",
     },
     competition_starts: {
-      date: "Todos los lunes (asincrónico)",
-      description: "Workshops",
+      date: "Todos los lunes",
+      description: "Workshops asíncronos",
     },
     competition_ends: {
       date: "1/11",
-      description: "Hackatón en el ITBA",
+      description: "QuantumJam en el ITBA",
     },
   },
   qworkshops: {
