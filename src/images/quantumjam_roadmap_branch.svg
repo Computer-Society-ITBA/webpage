@@ -1,0 +1,38 @@
+<svg id="V" xmlns="http://www.w3.org/2000/svg" width="68" height="141" viewBox="0 0 68 141">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+        stroke-width: 15px;
+      }
+
+      .cls-1 {
+        stroke: #454ADE;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        fill: #454ADE;
+      }
+
+      .cls-3 {
+        stroke: #FF66C4;
+      }
+
+      .cls-4 {
+        fill: #FF66C4;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="cls-1" d="M37.745,144.524V60.9"/>
+    <path class="cls-2" d="M15.122-.347H60.368a8,8,0,0,1,8,8V52.9a8,8,0,0,1-8,8H15.122a8,8,0,0,1-8-8V7.653A8,8,0,0,1,15.122-.347Z"/>
+  </g>
+  <g>
+    <path class="cls-3" d="M30.678,144.524V60.9"/>
+    <path class="cls-4" d="M8.055-.347H53.3a8,8,0,0,1,8,8V52.9a8,8,0,0,1-8,8H8.055a8,8,0,0,1-8-8V7.653A8,8,0,0,1,8.055-.347Z"/>
+  </g>
+</svg>
