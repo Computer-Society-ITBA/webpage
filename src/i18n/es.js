@@ -36,7 +36,7 @@ const i18n_es = {
         date_prompt: "Fecha:",
         date: "28-30 de Marzo de 2025",
         location_prompt: "Ubicación:",
-        location: "Parque Patricios, CABA",
+        location: "Location: ITBA SDF, Perón 535, CABA, Argentina",
         participants_prompt: "Abierto a:",
         participants: "Estudiantes universitarios",
         cta_prompt: "¡Inscribite hoy!",
@@ -297,12 +297,12 @@ const i18n_es = {
       description: "Cierre de inscripciones",
     },
     competition_starts: {
-      date: "Todos los lunes (asincrónico)",
-      description: "Workshops",
+      date: "Todos los lunes",
+      description: "Workshops asíncronos",
     },
     competition_ends: {
       date: "1/11",
-      description: "Hackatón en el ITBA",
+      description: "QuantumJam en el ITBA",
     },
   },
   qworkshops: {

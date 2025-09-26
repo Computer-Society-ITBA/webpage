@@ -9,13 +9,11 @@ function QSchedule() {
   return (
     <div className='m-[8rem] text-quantum-white flex flex-col items-center'>
       <div className='flex flex-col'>
-        <h2 className="text-4xl md:text-5xl font-gamejam tracking-wider font-bold text-quantum-primary1 mb-12 text-center">
-          {i18n.t("quantumJam.qschedule.title")}
-        </h2>
+        
         <div className='grid grid-cols-3'>
           <div className='flex flex-col justify-between gap-4'>
             <div>
-              <p className='font-gamejam text-3xl '>
+              <p className='font-quantumjam-JetBrains-Mono text-3xl '>
                 {i18n.t("quantumJam.qschedule.signups_open.date")}
               </p>
               <p>{i18n.t("quantumJam.qschedule.signups_open.description")}</p>
@@ -24,7 +22,7 @@ function QSchedule() {
           </div>
           <div className='flex flex-col justify-between gap-4'>
             <div>
-              <p className='font-gamejam text-3xl '>
+              <p className='font-quantumjam-JetBrains-Mono text-3xl '>
                 {i18n.t("quantumJam.qschedule.competition_starts.date")}
               </p>
               <p>
@@ -39,7 +37,7 @@ function QSchedule() {
           <div className='col-start-2 flex flex-col justify-start gap-4'>
             <img className='h-20 scale-y-[-1]' src={roadmap_branch} />
             <div>
-              <p className='font-gamejam text-3xl '>
+              <p className='font-quantumjam-JetBrains-Mono text-3xl '>
                 {i18n.t("quantumJam.qschedule.signups_close.date")}
               </p>
               <p>{i18n.t("quantumJam.qschedule.signups_close.description")}</p>
@@ -48,7 +46,7 @@ function QSchedule() {
           <div className='col-start-4 flex flex-col justify-start gap-4'>
             <img className='h-20 scale-y-[-1]' src={roadmap_branch} />
             <div>
-              <p className='font-gamejam text-3xl '>
+              <p className='font-quantumjam-JetBrains-Mono text-3xl '>
                 {i18n.t("quantumJam.qschedule.competition_ends.date")}
               </p>
               <p>{i18n.t("quantumJam.qschedule.competition_ends.description")}</p>

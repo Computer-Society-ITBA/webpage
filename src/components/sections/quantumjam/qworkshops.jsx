@@ -18,7 +18,7 @@ const QWorkshops = () => {
     const workshops = i18n.t("quantumJam.qworkshops.workshops", { returnObjects: true });
     return (
         <div className="mx-[10%] my-[8rem]">
-        <h2 className="text-4xl md:text-5xl font-gamejam tracking-wider font-bold text-quantum-primary1 mb-12 text-center">
+        <h2 className="text-4xl md:text-5xl font-quantumjam-JetBrains-Mono tracking-wider font-bold text-quantum-primary1 mb-12 text-center">
             {i18n.t("quantumJam.qworkshops.title")}
         </h2>
 

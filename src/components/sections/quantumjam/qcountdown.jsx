@@ -56,24 +56,24 @@ function QCountdown() {
 
   return (
     (<div className='flex flex-col items-center gap-8'>
-        {timeLeft && <h3 className='mb-6 font-gamejam text-quantum-white tracking-wider text-4xl'>{i18n.t("quantumJam.countdown")}</h3>}
+        {timeLeft && <h3 className='mb-6 font-quantumjam-JetBrains-Mono text-quantum-white tracking-wider text-4xl'>{i18n.t("quantumJam.countdown")}</h3>}
         {!timeLeft && <h3 className="text-quantum-white">{i18n.t('gamejam.competition_ended')}</h3>}
         <div className='flex flex-row lg:gap-12 gap-4 self-center' ref={wrapperRef}>
             {!timeLeft && <Confetti height={height} recycle={false} confettiSource={confettiSource} colors={['#ff66c4', '#8338ec', '#454ade']} initialVelocityY={3} initialVelocityX={4} gravity={0.02}/>}
             <div>
-                <p className='font-gamejam text-6xl font-bold text-quantum-white hover:text-quantum-primary1'>{timeLeft ? timeLeft.days : "0"}</p>
+                <p className='font-quantumjam-JetBrains-Mono text-6xl font-bold text-quantum-white hover:text-quantum-primary1'>{timeLeft ? timeLeft.days : "0"}</p>
                 <p className='text-quantum-white text-xl'>{i18n.t("gamejam.days")}</p>
             </div>
             <div>
-                <p className='font-gamejam text-6xl font-bold text-quantum-white hover:text-quantum-primary1'>{timeLeft ? timeLeft.hours : "0"}</p>
+                <p className='font-quantumjam-JetBrains-Mono text-6xl font-bold text-quantum-white hover:text-quantum-primary1'>{timeLeft ? timeLeft.hours : "0"}</p>
                 <p className='text-quantum-white text-xl'>{i18n.t("gamejam.hours")}</p>
             </div>
             <div>
-                <p className='font-gamejam text-6xl font-bold text-quantum-white hover:text-quantum-primary1'>{timeLeft ? timeLeft.minutes : "0"}</p>
+                <p className='font-quantumjam-JetBrains-Mono text-6xl font-bold text-quantum-white hover:text-quantum-primary1'>{timeLeft ? timeLeft.minutes : "0"}</p>
                 <p className='text-quantum-white text-xl'>{i18n.t("gamejam.minutes")}</p>
             </div>
             <div>
-                <p className='font-gamejam text-6xl font-bold text-quantum-white hover:text-quantum-primary1'>{timeLeft ? timeLeft.seconds : "0"}</p>
+                <p className='font-quantumjam-JetBrains-Mono text-6xl font-bold text-quantum-white hover:text-quantum-primary1'>{timeLeft ? timeLeft.seconds : "0"}</p>
                 <p className='text-quantum-white text-xl'>{i18n.t("gamejam.seconds")}</p>
             </div>
         </div>
