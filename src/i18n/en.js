@@ -278,7 +278,7 @@ const i18n_en = {
       title: "About QuantumJam",
       text: "This event is designed to introduce you to the fascinating world of quantum computing through four virtual workshops. Each session builds on the previous one, taking you step by step from the basics to more advanced ideas. The event will conclude with a friendly competition where participants can put their new quantum skills into practice by solving simple challenges.",
       date: "Date: November 1st, 2025",
-      location: "Location: ITBA, Parque Patricios, CABA, Argentina",
+      location: "Location: ITBA SDF, Perón 535, CABA, Argentina",
       participants: "Open to: University students",
     },
     countdown: "Time left until the QuantumJam!",

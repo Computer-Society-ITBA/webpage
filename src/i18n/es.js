@@ -36,7 +36,7 @@ const i18n_es = {
         date_prompt: "Fecha:",
         date: "28-30 de Marzo de 2025",
         location_prompt: "Ubicación:",
-        location: "Parque Patricios, CABA",
+        location: "Location: ITBA SDF, Perón 535, CABA, Argentina",
         participants_prompt: "Abierto a:",
         participants: "Estudiantes universitarios",
         cta_prompt: "¡Inscribite hoy!",
