@@ -10,7 +10,7 @@ import { mdiInstagram, mdiYoutube, mdiLinkedin, mdiHeart } from '@mdi/js';
 
 import footer from '../../data/footer';
 
-function Footer({ color = "#F98A04", textColor = 'white', ibmQuantumLogo=null}) {
+function Footer({ color = "#F98A04", textColor = 'white', ibmQuantumLogo=false}) {
     const isGradient = typeof color === 'string' && (color.startsWith('linear-gradient') || color.startsWith('radial-gradient'));
 
     const getIconClasses = (color) => `px-2 transform duration-100 text-[${textColor}] hover:text-${color} hover:scale-125 focus:outline-none`;
