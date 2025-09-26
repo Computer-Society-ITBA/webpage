@@ -34,7 +34,7 @@ function UpcomingEvents() {
     // QUEDA PARA REVISAR ERROR: NO SE ENCUENTRAN LOS DOCUMENTOS
 
     // Hardcodeada la fecha del prox evento
-    let difference = new Date(2025, 11, 1, 12) - new Date();
+    let difference = new Date(2025, 10, 1, 12) - new Date();
 
     let timeLeft = {};
 
