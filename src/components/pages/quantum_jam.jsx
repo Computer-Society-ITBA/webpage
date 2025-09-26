@@ -20,7 +20,7 @@ function QuantumJam() {
         <QWorkshops/>
         <QCountdown />
         <QSchedule />
-        <Footer color={'linear-gradient(90deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%)'} textColor='black'/>
+        <Footer color={'linear-gradient(90deg, #ff006e 0%, #8338ec 50%, #3a86ff 100%)'} textColor='black' ibmQuantumLogo={true} />
     </React.Fragment>
   );
 }
