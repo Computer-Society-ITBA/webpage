@@ -7,22 +7,21 @@ import roadmap_branch from "../../../images/quantumjam_roadmap_branch.svg";
 
 function QSchedule() {
   return (
-    <div className='m-[8rem] text-quantum-white flex flex-col items-center'>
+    <div className='my-[8rem] mx-[1rem] md:mx-[3rem] lg:mx-[8rem] text-quantum-white flex flex-col items-center'>
       <div className='flex flex-col'>
-        
-        <div className='grid grid-cols-3'>
-          <div className='flex flex-col justify-between gap-4'>
+        <div className='grid grid-cols-4'>
+          <div className='col-start-1 flex flex-col justify-between gap-4'>
             <div>
-              <p className='font-quantumjam-JetBrains-Mono text-3xl '>
+              <p className='font-quantumjam-JetBrains-Mono text-2xl '>
                 {i18n.t("quantumJam.qschedule.signups_open.date")}
               </p>
               <p>{i18n.t("quantumJam.qschedule.signups_open.description")}</p>
             </div>
             <img className='h-20' src={roadmap_branch} />
           </div>
-          <div className='flex flex-col justify-between gap-4'>
+          <div className='col-start-3 flex flex-col justify-between gap-4'>
             <div>
-              <p className='font-quantumjam-JetBrains-Mono text-3xl '>
+              <p className='font-quantumjam-JetBrains-Mono text-2xl '>
                 {i18n.t("quantumJam.qschedule.competition_starts.date")}
               </p>
               <p>
@@ -33,11 +32,11 @@ function QSchedule() {
           </div>
         </div>
         <div className='h-2 !bg-quantum-primary1 rounded-xl'></div>
-        <div className='grid grid-cols-5 '>
+        <div className='grid grid-cols-4 '>
           <div className='col-start-2 flex flex-col justify-start gap-4'>
             <img className='h-20 scale-y-[-1]' src={roadmap_branch} />
             <div>
-              <p className='font-quantumjam-JetBrains-Mono text-3xl '>
+              <p className='font-quantumjam-JetBrains-Mono text-2xl '>
                 {i18n.t("quantumJam.qschedule.signups_close.date")}
               </p>
               <p>{i18n.t("quantumJam.qschedule.signups_close.description")}</p>
@@ -46,7 +45,7 @@ function QSchedule() {
           <div className='col-start-4 flex flex-col justify-start gap-4'>
             <img className='h-20 scale-y-[-1]' src={roadmap_branch} />
             <div>
-              <p className='font-quantumjam-JetBrains-Mono text-3xl '>
+              <p className='font-quantumjam-JetBrains-Mono text-2xl '>
                 {i18n.t("quantumJam.qschedule.competition_ends.date")}
               </p>
               <p>{i18n.t("quantumJam.qschedule.competition_ends.description")}</p>
