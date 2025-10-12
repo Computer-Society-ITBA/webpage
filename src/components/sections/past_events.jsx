@@ -18,7 +18,7 @@ function PastEvents() {
     <Section id="past-events" bgColor="bg-white" textAlignment="center">
       <h2>{i18n.t('past_events.title')}</h2>
       <div className="flex flex-col sm:flex-row sm:flex-wrap h-full w-full">
-        <PastEventsList orderBy="attendants" direction="desc" limit={n} />
+        <PastEventsList orderBy="date" direction="desc" limit={n} />
       </div>
       <div className="flex flex-row w-full justify-center items-center mt-4">
         <LinkButton href="/past-events/#" type="outlined-dark" text={i18n.t('past_events.button')} />
