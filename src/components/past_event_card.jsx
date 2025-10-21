@@ -32,7 +32,7 @@ function LinkButton(props) {
       key={index}
       className="flex flex-col w-full sm:w-6/12 lg:w-4/12 h-auto"
     >
-      <div className="flex flex-col rounded-xl items-center text-left shadow-xl h-full p-4 m-2 mb-4 sm:m-4 sm:mb-6">
+      <div className="flex flex-col rounded-2xl items-center text-left shadow-xl h-full p-4 m-2 mb-4 sm:m-4 sm:mb-6 border border-gray-200 hover:shadow-[0_10px_40px_rgba(0,0,0,0.5)] transition-shadow duration-300">
         <h3 className="font-bold mb-2 w-full flex flex-row justify-between self-start">
           {event.title}
           {event.link ? (
@@ -40,7 +40,7 @@ function LinkButton(props) {
               href={event.link.href}
               target="_blank"
               rel="noreferrer"
-              className={className}
+              className={`${className} transform hover:scale-110 transition-transform duration-150`}
             >
               <Icon
                 path={icon}
@@ -50,12 +50,13 @@ function LinkButton(props) {
             </a>
           ) : null}
         </h3>
-        <div className="flex flex-row justify-between mb-4 w-full">
+        <div className="flex flex-row justify-between mb-2 w-full">
           <p className="font-light">{event.date}</p>
-          <p className="text-brand_primary">
+          <p className="font-semibold text-brand_primary">
             {i18n.t("past_events.inscriptions", { n: event.attendants })}
           </p>
         </div>
+        <hr className="w-full border-t border-gray-200 my-2" />
         <p>{event.description}</p>
       </div>
     </div>
