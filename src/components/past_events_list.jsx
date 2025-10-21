@@ -14,15 +14,17 @@ export default function PastEventsList({ orderBy, direction, limit }) {
         async function getPastEvents() {
             const pastEventsRef = collection(db, "past_events");
 
+            const fetchLimit = limit > 0 ? limit * 2 : undefined;
+
             let query;
-            if (limit > 0)
-                query = fQuery(pastEventsRef, fOrderBy(orderBy, direction), fLimit(limit))
+            if (fetchLimit)
+                query = fQuery(pastEventsRef, fOrderBy(orderBy, direction), fLimit(fetchLimit));
             else
-                query = fQuery(pastEventsRef, fOrderBy(orderBy, direction))
+                query = fQuery(pastEventsRef, fOrderBy(orderBy, direction));
 
             // Get current browser's language
             let language = i18n.language.split("-")[0];
-            if (!(language === "en" || language === "es")) language = "en";
+            if (language !== "en" || language !== "es") language = "en";
 
             const result = await getDocs(query);
             const data = result.docs.map((doc) => {
@@ -30,10 +32,16 @@ export default function PastEventsList({ orderBy, direction, limit }) {
                 return {
                     "attendants": data.attendants,
                     "link": data.link,
+                    "date": data.date,
                     ...data[language],
                 };
+            }).filter(event => {
+                const eventDate = new Date(event.date?.seconds ? event.date.toDate() : event.date);
+                return eventDate < new Date();
             });
-            setPastEvents(data);
+
+            const limitedData = data.slice(0, limit);
+            setPastEvents(limitedData);
         }
         getPastEvents();
     }, []);
