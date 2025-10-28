@@ -34,6 +34,7 @@ export default function PastEventsList({ orderBy, direction, limit }) {
                     "link": data.link,
                     "date": data.date,
                     ...data[language],
+                    "date": data.date,
                 };
             }).filter(event => {
                 const eventDate = new Date(event.date?.seconds ? event.date.toDate() : event.date);
