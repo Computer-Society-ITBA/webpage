@@ -26,13 +26,11 @@ function Sponsors() {
       const query = await getDocs(collection(db, 'sponsors'));
       const data = query.docs.map((doc) => doc.data());
       setSponsors(data);
-      console.log('all sponsors', data)
     }
     async function fetchMainSponsors() {;
       const query = await getDocs(collection(db, 'main_sponsors'));
       const data = query.docs.map((doc) => doc.data());
       setMainSponsors(data);
-      console.log('main sponsor', data)
     }
     fetchSponsors();
     fetchMainSponsors();
@@ -50,7 +48,8 @@ function Sponsors() {
             </a>
           </div>
         ))}
-      <h3 className='pt-20'>{i18n.t('sponsors.subtitle')}</h3>
+        {/* I'm comenting this carrousel out, because it's not needed(also we only have one main sponsor and the other sponsors that are fetch they were sponsors but not now) */}
+      {/* <h3 className='pt-20'>{i18n.t('sponsors.subtitle')}</h3>
       <Marquee {...settings}>
         {sponsors.map((sponsor, index) => (
           <div key={index} className='py-10 px-5 mx-10' >
@@ -59,7 +58,7 @@ function Sponsors() {
             </a>
           </div>
         ))}
-      </Marquee>
+      </Marquee> */} 
     </Section>
   )
 }
