@@ -29,18 +29,27 @@ export default function PastEventsList({ orderBy, direction, limit }) {
             const result = await getDocs(query);
             const data = result.docs.map((doc) => {
                 const data = doc.data();
+                const langData = data[language] || {};
                 return {
                     "attendants": data.attendants,
                     "link": data.link,
-                    "date": data.date,
+                    "dateObj": data.date,
                     ...data[language],
                 };
             }).filter(event => {
-                const eventDate = new Date(event.date?.seconds ? event.date.toDate() : event.date);
+                const [year, month, day] = event.dateObj.split('/');
+                const eventDate = new Date( year, month - 1, day);
+                console.log(eventDate);
+                console.log(event.dateObj)
                 return eventDate < new Date();
+            }).sort((a, b) => {
+                const [ya, ma, da] = a.dateObj.split('/');
+                const [yb, mb, db] = b.dateObj.split('/');
+                const dateA = new Date(ya, ma - 1, da);
+                const dateB = new Date(yb, mb - 1, db);
+                return dateB - dateA;
             });
-
-            const limitedData = data.slice(0, limit);
+            const limitedData = data.slice(0, limit)
             setPastEvents(limitedData);
         }
         getPastEvents();
