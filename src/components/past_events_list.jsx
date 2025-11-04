@@ -24,7 +24,7 @@ export default function PastEventsList({ orderBy, direction, limit }) {
 
             // Get current browser's language
             let language = i18n.language.split("-")[0];
-            if (language !== "en" || language !== "es") language = "en";
+            if (language !== "es") language = "en";
 
             const result = await getDocs(query);
             const data = result.docs.map((doc) => {
