@@ -63,7 +63,7 @@ function Team() {
     const [team, setTeam] = useState([]);
     useEffect(() => {
         async function getTeam() {
-            const query = await getDocs(collection(db, "team_25_2Q"));
+            const query = await getDocs(collection(db, "team_26_1Q"));
             const data = query.docs
                 .map((doc) => doc.data())
                 .sort((a, b) => {
