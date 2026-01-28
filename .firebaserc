@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "webpage-36e40"
-  }
+  },
+  "targets": {
+    "webpage-36e40": {
+      "hosting": {
+        "csitba": [
+          "csitba"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
