@@ -9,6 +9,15 @@
     ],
     "rewrites": [
       {
+        "source": "/hackitba",
+        "redirect": "https://hackitba.web.app/"
+      },
+      {
+        "source": "/hackitba/**",
+        "redirect": "https://hackitba.web.app/{replaced}",
+        "type": 301
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
