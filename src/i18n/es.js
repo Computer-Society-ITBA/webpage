@@ -1,4 +1,3 @@
-import QuantumJam from "../components/pages/quantum_jam";
 import QAbout from "../components/sections/quantumjam/qabout";
 
 const i18n_es = {

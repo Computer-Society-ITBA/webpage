@@ -23,7 +23,8 @@ import gamejam_decoration_r from "../../images/gamejam_decoration_right.svg";
 // Data
 const gamejamImages = import.meta.glob("../../images/gamejam_images/*", {
   eager: true,
-  as: "url",
+  query: "?url",
+  import: "default",
 });
 import gamejam_images from "../../data/gamejam_images.json";
 

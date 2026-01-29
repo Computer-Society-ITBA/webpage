@@ -24,12 +24,14 @@ import hackit_logo from "../../images/hackitba_logo_alt.png";
 // Data
 const hackitImages = import.meta.glob("../../images/hackit_images/*", {
   eager: true,
-  as: "url",
+  query: "?url",
+  import: "default",
 });
 import hackit_images from "../../data/hackit_images.json";
 const mentorLogos = import.meta.glob("../../images/mentors_images/*", {
   eager: true,
-  as: "url",
+  query: "?url",
+  import: "default",
 });
 
 // Components
