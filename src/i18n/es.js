@@ -156,7 +156,7 @@ const i18n_es = {
   credits: {
     title: "Créditos",
     description:
-      "El sitio completo fue posible gracias al fantástico esfuerzo de estos miembros del equipo ITBA de IEEE Computer Society. Todo, desde el diseño hasta la ejecución, fue hecho por ellos:",
+      "El sitio completo fue posible gracias al fantástico esfuerzo de estos miembros del equipo ITBA de IEEE Computer Society. Todo, desde el diseño hasta la ejecución y el mantenimiento, fue hecho por ellos:",
   },
   go_back: "Volver",
   loading: "Cargando...",

@@ -155,7 +155,7 @@ const i18n_en = {
   credits: {
     title: "Credits",
     description:
-      "The complete site was made possible by the fantastic effort of these members from the IEEE Computer Society ITBA team. Everything, from design to execution, was done by them:",
+      "The complete site was made possible by the fantastic effort of these members from the IEEE Computer Society ITBA team. Everything, from design to execution and maintenance, was done by them:",
   },
   go_back: "Go back",
   loading: "Loading...",
