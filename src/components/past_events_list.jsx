@@ -39,8 +39,6 @@ export default function PastEventsList({ orderBy, direction, limit }) {
             }).filter(event => {
                 const [year, month, day] = event.dateObj.split('/');
                 const eventDate = new Date( year, month - 1, day);
-                console.log(eventDate);
-                console.log(event.dateObj)
                 return eventDate < new Date();
             }).sort((a, b) => {
                 const [ya, ma, da] = a.dateObj.split('/');

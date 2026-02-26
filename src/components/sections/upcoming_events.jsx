@@ -7,7 +7,7 @@ import i18n from "../../i18n/index.js";
 
 import upcomingEvents from "../../data/upcoming_events.json";
 
-import quantum from "../../images/banner_quantum.png";
+import img from "../../images/hackitba26.png";
 
 // Components
 const Section = React.lazy(() => import("../section"));
@@ -34,7 +34,7 @@ function UpcomingEvents() {
     // QUEDA PARA REVISAR ERROR: NO SE ENCUENTRAN LOS DOCUMENTOS
 
     // Hardcodeada la fecha del prox evento
-    let difference = new Date(2025, 10, 1, 12) - new Date();
+    let difference = new Date(2026, 2, 27) - new Date();
 
     let timeLeft = {};
 
@@ -76,8 +76,8 @@ function UpcomingEvents() {
               <a href={`${event.link}`} target='_blank'>
                 <img
                   className='w-full mb-6 object-contain'
-                  src={quantum}
-                  alt='quantum-logo-banner'
+                  src={img}
+                  alt='hackitba26-logo-banner'
                 />
               </a>
               <p className='font-light  mb-4'>
@@ -100,8 +100,8 @@ function UpcomingEvents() {
                 <LinkButton 
                   className='text-xl mt-3 self-center'
                   href={event.link}
-                  type='quantum'
-                  external={false}
+                  
+                  external={true}
                   text={i18n.t("upcoming_events.sign_up")}
                 />
               )}

@@ -69,7 +69,7 @@ const i18n_en = {
     events: {
       hackit: {
         title: "HackITBA!",
-        date: "28/3/2025",
+        date: "27/3/2026",
         description:
           "HackITBA is a programming competition, consisting of 36 hours of pure creativity and adrenaline. The competition aims to promote creative solutions to current problems in a challenging and cooperative environment.",
       },
