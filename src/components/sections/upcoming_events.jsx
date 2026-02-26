@@ -100,7 +100,6 @@ function UpcomingEvents() {
                 <LinkButton 
                   className='text-xl mt-3 self-center'
                   href={event.link}
-                  
                   external={true}
                   text={i18n.t("upcoming_events.sign_up")}
                 />
