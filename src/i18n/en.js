@@ -33,9 +33,9 @@ const i18n_en = {
     events: {
       hackit: {
         date_prompt: "Date:",
-        date: "March 28-30, 2025",
+        date: "March 27-29, 2026",
         location_prompt: "Location:",
-        location: "Parque Patricios, CABA",
+        location: "Iguazú 341, CABA",
         participants_prompt: "Open to:",
         participants: "Any university student",
         cta_prompt: "Sign up now!",

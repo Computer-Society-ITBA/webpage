@@ -33,9 +33,9 @@ const i18n_es = {
     events: {
       hackit: {
         date_prompt: "Fecha:",
-        date: "28-30 de Marzo de 2025",
+        date: "27-29 de Marzo de 2026",
         location_prompt: "Ubicación:",
-        location: "Location: ITBA SDF, Perón 535, CABA, Argentina",
+        location: "Iguazú 341, CABA",
         participants_prompt: "Abierto a:",
         participants: "Estudiantes universitarios",
         cta_prompt: "¡Inscribite hoy!",
