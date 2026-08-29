@@ -8,15 +8,12 @@ import i18n from "../../i18n/index.js";
 import { db } from "../../firebase";
 import { collection, getDocs } from "firebase/firestore";
 // Icons
-import Icon from "@mdi/react";
-import {
-    mdiInstagram,
-    mdiLinkedin,
-    mdiWeb,
-    mdiGithub,
-    mdiChevronLeft,
-    mdiChevronRight,
-} from "@mdi/js";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import LanguageIcon from "@mui/icons-material/Language";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 // Components
 const Section = React.lazy(() => import("../section"));
@@ -63,7 +60,7 @@ function Team() {
     const [team, setTeam] = useState([]);
     useEffect(() => {
         async function getTeam() {
-            const query = await getDocs(collection(db, "team_26_1Q"));
+            const query = await getDocs(collection(db, "team_26_27"));
             const data = query.docs
                 .map((doc) => doc.data())
                 .sort((a, b) => {
@@ -189,26 +186,26 @@ function Team() {
                                         </p>
                                         <div className="flex flex-row justify-center items-center w-full mt-auto">
                                             {person.social.map((item, index) => {
-                                                let icon = undefined;
+                                                let SocialIcon = InstagramIcon;
                                                 let className =
                                                     "px-2 text-typography_primary transform duration-100 ";
 
                                                 switch (item.logo) {
                                                     case "web":
-                                                        icon = mdiWeb;
+                                                        SocialIcon = LanguageIcon;
                                                         className += "hover:text-pink-700 hover:scale-125 focus:text-pink-700 focus:scale-125 focus:outline-none";
                                                         break;
                                                     case "linkedin":
-                                                        icon = mdiLinkedin;
+                                                        SocialIcon = LinkedInIcon;
                                                         className += "hover:text-blue-700 hover:scale-125 focus:text-blue-700 focus:scale-125 focus:outline-none";
                                                         break;
                                                     case "github":
-                                                        icon = mdiGithub;
+                                                        SocialIcon = GitHubIcon;
                                                         className += "hover:text-green-700 hover:scale-125 focus:text-green-700 focus:scale-125 focus:outline-none";
                                                         break;
                                                     case "instagram":
                                                     default:
-                                                        icon = mdiInstagram;
+                                                        SocialIcon = InstagramIcon;
                                                         className += "hover:text-purple-700 hover:scale-125 focus:text-purple-700 focus:scale-125 focus:outline-none";
                                                 }
 
@@ -220,9 +217,8 @@ function Team() {
                                                         rel="noreferrer"
                                                         className={className}
                                                     >
-                                                        <Icon
-                                                            path={icon}
-                                                            size={1}
+                                                        <SocialIcon
+                                                            sx={{ fontSize: "1.5rem" }}
                                                             className="focus:outline-none"
                                                         />
                                                     </a>
@@ -254,25 +250,25 @@ function Team() {
                                 </p>
                                 <div className="flex flex-row justify-center items-center w-full mt-auto">
                                     {person.social.map((item, index) => {
-                                        let icon;
+                                        let SocialIcon = InstagramIcon;
                                         let className =
                                             "px-2 text-typography_primary transform duration-100";
 
                                         switch (item.logo) {
                                             case "web":
-                                                icon = mdiWeb;
+                                                SocialIcon = LanguageIcon;
                                                 className += " hover:text-pink-700 hover:scale-125";
                                                 break;
                                             case "linkedin":
-                                                icon = mdiLinkedin;
+                                                SocialIcon = LinkedInIcon;
                                                 className += " hover:text-blue-700 hover:scale-125";
                                                 break;
                                             case "github":
-                                                icon = mdiGithub;
+                                                SocialIcon = GitHubIcon;
                                                 className += " hover:text-green-700 hover:scale-125";
                                                 break;
                                             default:
-                                                icon = mdiInstagram;
+                                                SocialIcon = InstagramIcon;
                                                 className += " hover:text-purple-700 hover:scale-125";
                                         }
 
@@ -284,7 +280,7 @@ function Team() {
                                                 rel="noreferrer"
                                                 className={className}
                                             >
-                                                <Icon path={icon} size={1} className="focus:outline-none" />
+                                                <SocialIcon sx={{ fontSize: "1.5rem" }} className="focus:outline-none" />
                                             </a>
                                         );
                                     })}
@@ -308,7 +304,7 @@ function Team() {
                             : "transition duration-150 hover:text-brand_primary")
                     }
                 >
-                    <Icon path={mdiChevronLeft} size={3} />
+                    <ChevronLeftIcon sx={{ fontSize: "4.5rem" }} />
                 </button>
                 <button
                     disabled={page >= pageLimit}
@@ -320,7 +316,7 @@ function Team() {
                             : "transition duration-150 hover:text-brand_primary")
                     }
                 >
-                    <Icon path={mdiChevronRight} size={3} />
+                    <ChevronRightIcon sx={{ fontSize: "4.5rem" }} />
                 </button>
             </div>
         </Section>
