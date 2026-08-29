@@ -5,8 +5,10 @@ import ibmQuantumLogoImg from '../../images/quantumjam_images/IBMQuantum.png';
 import { HashLink as Link } from "react-router-hash-link";
 
 // Icons
-import Icon from '@mdi/react';
-import { mdiInstagram, mdiYoutube, mdiLinkedin, mdiHeart } from '@mdi/js';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 import footer from '../../data/footer';
 
@@ -32,26 +34,26 @@ function Footer({ color = "#F98A04", textColor = 'white', ibmQuantumLogo=false})
 
             <div className="flex flex-row justify-center items-center mb-2 sm:mb-0">
                 {footer.social.map((item, index) => {
-                    let icon;
+                    let SocialIcon;
                     let color;
                     switch (item.logo) {
                         case 'youtube':
-                            icon = mdiYoutube;
+                            SocialIcon = YouTubeIcon;
                             color = "red-700"
                             break;
                         case 'linkedin':
-                            icon = mdiLinkedin;
+                            SocialIcon = LinkedInIcon;
                             color = "blue-700"
                             break;
                         case 'instagram':
                             color = "purple-700"
                         default:
-                            icon = mdiInstagram;
+                            SocialIcon = InstagramIcon;
                     }
-                    
+
                     return (
                         <a key={index} href={item.href} target="_blank" rel="noreferrer" className={getIconClasses(color)}>
-                            <Icon path={icon} size={2} className={`text-${textColor} hover:text-${color} focus:outline-none`} />
+                            <SocialIcon sx={{ fontSize: "3rem" }} className={`text-${textColor} hover:text-${color} focus:outline-none`} />
                         </a>
                     );
                 })}
@@ -68,9 +70,8 @@ function Footer({ color = "#F98A04", textColor = 'white', ibmQuantumLogo=false})
                 <div className={`${textColor}`}>
                     {i18n.t('footer.love_1')}
                     <Link smooth to="/credits">
-                        <Icon
-                            path={mdiHeart}
-                            size={1}
+                        <FavoriteIcon
+                            sx={{ fontSize: "1.5rem" }}
                             className={`inline mx-1 transform duration-100 hover:text-red-700 hover:animate-pulse text-${textColor} `}
                         />
                     </Link>
