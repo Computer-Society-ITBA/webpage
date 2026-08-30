@@ -29,12 +29,12 @@ function OurEvents() {
         <h2 className='!mb-0 text-[2rem] !leading-[1.15] sm:text-[2.25rem]'>
           {i18n.t("our_events.title")}
         </h2>
-        <div className='mt-[18px] h-[3px] w-[50px] bg-[#B2E713]' />
+        <div className='mt-[18px] h-[3px] w-[50px] bg-brand_secondary' />
       </div>
 
       <div className='our-events mx-auto mt-11 grid max-w-[1536px] grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12'>
         {/* Quantum Jam */}
-        <article className='relative flex w-full flex-col overflow-hidden rounded-[26px] bg-[#0A0A0A] shadow-[0_14px_28px_rgba(33,33,33,0.16)] lg:aspect-[743/653] [container-type:inline-size]'>
+        <article className='relative flex w-full flex-col overflow-hidden rounded-[26px] bg-[#0A0A0A] shadow-[0_14px_28px_rgba(33,33,33,0.16)] transition-shadow duration-300 ease-out hover:shadow-[0_18px_34px_rgba(33,33,33,0.20)] focus-within:shadow-[0_18px_34px_rgba(33,33,33,0.20)] lg:aspect-[743/653] [container-type:inline-size]'>
           <div
             className='relative aspect-[5/2] shrink-0 bg-cover bg-center'
             style={{ backgroundImage: `url(${quantumjam_bg})` }}
@@ -88,7 +88,7 @@ function OurEvents() {
         </article>
 
         {/* hackITBA */}
-        <article className='relative flex w-full flex-col overflow-hidden rounded-[26px] bg-light shadow-[0_14px_28px_rgba(33,33,33,0.16)] lg:aspect-[743/653] [container-type:inline-size]'>
+        <article className='relative flex w-full flex-col overflow-hidden rounded-[26px] bg-light shadow-[0_14px_28px_rgba(33,33,33,0.16)] transition-shadow duration-300 ease-out hover:shadow-[0_18px_34px_rgba(33,33,33,0.20)] focus-within:shadow-[0_18px_34px_rgba(33,33,33,0.20)] lg:aspect-[743/653] [container-type:inline-size]'>
           <img
             src={hackit_circuit_decoration}
             alt=''
