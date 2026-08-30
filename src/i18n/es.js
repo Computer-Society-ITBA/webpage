@@ -1,4 +1,3 @@
-import QuantumJam from "../components/pages/quantum_jam";
 import QAbout from "../components/sections/quantumjam/qabout";
 
 const i18n_es = {
@@ -33,24 +32,23 @@ const i18n_es = {
     title: "Nuestros eventos principales",
     events: {
       hackit: {
-        date_prompt: "Fecha:",
-        date: "28-30 de Marzo de 2025",
-        location_prompt: "Ubicación:",
-        location: "Location: ITBA SDF, Perón 535, CABA, Argentina",
-        participants_prompt: "Abierto a:",
+        badge: "Hackathon 2026",
+        title: "hackITBA 2026",
+        date: "27–29 MAR 2026",
+        location: "ITBA SDR · Iguazú 341",
         participants: "Estudiantes universitarios",
-        cta_prompt: "¡Inscribite hoy!",
+        cta: "Leer más",
         logo_alt: "Logo de HackITBA",
       },
-      gamejam: {
-        date_prompt: "Fecha:",
-        date: "18 de octubre de 2024",
-        location_prompt: "Ubicación:",
-        location: "Virtual, con una ceremonia de cierre presencial",
-        participants_prompt: "Abierto a:",
+      quantumjam: {
+        badge: "Próximo evento",
+        day: "27",
+        month: "NOV",
+        title: "Quantum Jam!",
+        location: "ITBA SDF · San Martín 202",
         participants: "Estudiantes universitarios",
-        cta_prompt: "Leer más",
-        logo_alt: "Logo de GameJam Society",
+        cta: "Más información",
+        logo_alt: "Logo de Quantum Jam",
       },
     },
   },
@@ -70,7 +68,7 @@ const i18n_es = {
     events: {
       hackit: {
         title: "HackITBA!",
-        date: "28-30 de Marzo de 2025",
+        date: "27-29 de Marzo de 2026",
         description:
           "HackITBA es una hackathon organizada por y para estudiantes, donde, en grupos de 4 personas, deben generar un MVP en 36 horas de competencia intensiva. La competencia tiene como meta promover soluciones creativas a problemas actuales en un ambiente desafiante y cooperativo.",
           // (pasar este texto a la pagina del hackitba) HackITBA es una hackathon organizada por y para estudiantes, donde, en grupos de 4 personas, deben generar un MVP en 36 horas de competencia intensiva. La competencia tiene como meta promover soluciones creativas a problemas actuales en un ambiente desafiante y cooperativo."
@@ -157,7 +155,7 @@ const i18n_es = {
   credits: {
     title: "Créditos",
     description:
-      "El sitio completo fue posible gracias al fantástico esfuerzo de estos miembros del equipo ITBA de IEEE Computer Society. Todo, desde el diseño hasta la ejecución, fue hecho por ellos:",
+      "El sitio completo fue posible gracias al fantástico esfuerzo de estos miembros del equipo ITBA de IEEE Computer Society. Todo, desde el diseño hasta la ejecución y el mantenimiento, fue hecho por ellos:",
   },
   go_back: "Volver",
   loading: "Cargando...",

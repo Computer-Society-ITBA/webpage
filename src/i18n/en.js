@@ -32,24 +32,23 @@ const i18n_en = {
     title: "Our main events",
     events: {
       hackit: {
-        date_prompt: "Date:",
-        date: "March 28-30, 2025",
-        location_prompt: "Location:",
-        location: "Parque Patricios, CABA",
-        participants_prompt: "Open to:",
+        badge: "Hackathon 2026",
+        title: "hackITBA 2026",
+        date: "MAR 27–29, 2026",
+        location: "ITBA SDR · Iguazú 341",
         participants: "Any university student",
-        cta_prompt: "Sign up now!",
+        cta: "Learn more",
         logo_alt: "Hackitba logo",
       },
-      gamejam: {
-        date_prompt: "Date:",
-        date: "October 18th, 2024",
-        location_prompt: "Location:",
-        location: "Virtual, with an in-person closing ceremony",
-        participants_prompt: "Open to:",
+      quantumjam: {
+        badge: "Upcoming event",
+        day: "27",
+        month: "NOV",
+        title: "Quantum Jam!",
+        location: "ITBA SDF · San Martín 202",
         participants: "Any university student",
-        cta_prompt: "Learn more",
-        logo_alt: "Gamejam Society logo",
+        cta: "Learn more",
+        logo_alt: "Quantum Jam logo",
       },
     },
   },
@@ -69,7 +68,7 @@ const i18n_en = {
     events: {
       hackit: {
         title: "HackITBA!",
-        date: "28/3/2025",
+        date: "27/3/2026",
         description:
           "HackITBA is a programming competition, consisting of 36 hours of pure creativity and adrenaline. The competition aims to promote creative solutions to current problems in a challenging and cooperative environment.",
       },
@@ -155,7 +154,7 @@ const i18n_en = {
   credits: {
     title: "Credits",
     description:
-      "The complete site was made possible by the fantastic effort of these members from the IEEE Computer Society ITBA team. Everything, from design to execution, was done by them:",
+      "The complete site was made possible by the fantastic effort of these members from the IEEE Computer Society ITBA team. Everything, from design to execution and maintenance, was done by them:",
   },
   go_back: "Go back",
   loading: "Loading...",

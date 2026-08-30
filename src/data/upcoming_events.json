@@ -1,8 +1,8 @@
 [
      {
-          "title": "upcoming_events.events.quantum.title",
-          "date": "upcoming_events.events.quantum.date",
-          "description": "upcoming_events.events.quantum.description",
-          "link": "quantumJam"
+          "title": "upcoming_events.events.hackit.title",
+          "date": "upcoming_events.events.hackit.date",
+          "description": "upcoming_events.events.hackit.description",
+          "link": "https://hackitba.com.ar"
      }
 ]

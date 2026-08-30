@@ -7,6 +7,18 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "redirects": [
+      {
+        "source": "/hackitba",
+        "destination": "https://hackitba.web.app/",
+        "type": 301
+      },
+      {
+        "source": "/hackitba/**",
+        "destination": "https://hackitba.web.app/:splat",
+        "type": 301
+      }
+    ],
     "rewrites": [
       {
         "source": "**",

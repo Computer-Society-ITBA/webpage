@@ -9,15 +9,8 @@ import { collection, getDocs } from 'firebase/firestore';
 
 // Components
 const Section = React.lazy(() => import('../section'));
-import Marquee from 'react-fast-marquee';
 
 function Sponsors() {
-  const settings = {
-    gradient: 'true',
-    direction: 'left',
-    speed: 70,
-  }
-
   const [sponsors, setSponsors] = useState([]);
   const [mainSponsors, setMainSponsors] = useState([]);
 
@@ -26,13 +19,11 @@ function Sponsors() {
       const query = await getDocs(collection(db, 'sponsors'));
       const data = query.docs.map((doc) => doc.data());
       setSponsors(data);
-      console.log('all sponsors', data)
     }
     async function fetchMainSponsors() {;
       const query = await getDocs(collection(db, 'main_sponsors'));
       const data = query.docs.map((doc) => doc.data());
       setMainSponsors(data);
-      console.log('main sponsor', data)
     }
     fetchSponsors();
     fetchMainSponsors();
@@ -43,23 +34,29 @@ function Sponsors() {
   return (
     <Section id='our-sponsors' bgColor='bg-white' textAlignment='center'>
       <h2>{i18n.t('sponsors.title')}</h2>
+      <div className='flex flex-wrap justify-center gap-8 my-12 px-4'>
         {mainSponsors.map((sponsor, index) => (
-          <div key={index} className='mx-5' >
+          <div key={index} className='flex justify-center'>
             <a href={sponsor.url} rel='noreferrer' target='_blank' className='inline-block'>
-              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=' h-48 mx-auto my-4' />
+              <div className='w-96 h-56 flex items-center justify-center hover:scale-105 transition-transform'>
+                <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className='max-w-full max-h-full object-contain' />
+              </div>
             </a>
           </div>
         ))}
+      </div>
       <h3 className='pt-20'>{i18n.t('sponsors.subtitle')}</h3>
-      <Marquee {...settings}>
+      <div className='flex flex-wrap justify-center gap-8 my-12 px-4'>
         {sponsors.map((sponsor, index) => (
-          <div key={index} className='py-10 px-5 mx-10' >
+          <div key={index} className='flex items-center justify-center'>
             <a href={sponsor.link} rel='noreferrer' target='_blank'>
-              <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className=' h-16 my-0 mx-auto' />
+              <div className='w-40 h-20 flex items-center justify-center'>
+                <img src={sponsor.src} alt={i18n.t('sponsors.logo').replace('{name}', sponsor.name)} className='max-w-full max-h-full object-contain' />
+              </div>
             </a>
           </div>
         ))}
-      </Marquee>
+      </div>
     </Section>
   )
 }
