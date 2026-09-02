@@ -85,7 +85,8 @@ function Team() {
     const [page, handleLeftClick, handleRightClick, pageLimit] = usePaging(
         cardWidth,
         dynamicTeam,
-        2
+        2,
+        3
     );
     const { width } = useWindowDimensions();
     const [currentRole, setCurrentRole] = useState(0);
@@ -155,13 +156,28 @@ function Team() {
                 </select>
             </div>
 
-            <div
-                className="flex mt-2 mb-2"
+            <div 
+                className="flex items-center justify-center mt-2 mb-2"
             >
+                <button
+                    disabled={page === 0}
+                    onClick={handleLeftClick}
+                    aria-label="Previous team members"
+                    className={
+                        "hidden lg:flex flex-shrink-0 items-center justify-center p-2 mr-2 rounded-full bg-white shadow-md focus:outline-none " +
+                        (page === 0
+                            ? "opacity-40"
+                            : "transition duration-150 hover:text-brand_primary hover:scale-105")
+                    }
+                >
+                    <Icon path={mdiChevronLeft} size={2} />
+                </button>
+
+
                 {/* Desktop View: Centered Carousel with Flexbox */}
                 <div
-                    className={`hidden lg:flex w-full ${dynamicTeam.length <= 6 ? "justify-center" : "justify-start"}`}
-                    style={{ overflow: 'hidden' }}
+                    className={`hidden lg:flex flex-none w-[810px] xl:w-[1080px] 2xl:w-[1350px] ${dynamicTeam.length <= 6 ? "justify-center" : "justify-start"}`}
+                    style={{ overflow: "hidden" }}
                 >
                     <motion.div
                         //   className="flex grid grid-rows-2 grid-flow-col w-10"
@@ -183,10 +199,14 @@ function Team() {
                                             src={person.image.src}
                                             alt={person.image.alt}
                                         />
-                                        <h4 className="px-4 mt-4 text-center font-semibold">{person.name}</h4>
-                                        <p className="px-4 font-semibold uppercase text-brand_secondary mb-4">
-                                            {i18n.t(person.title)}
-                                        </p>
+                                        <div className="flex flex-col items-center w-full min-h-[136px] px-4 py-4">
+                                            <h4 className="flex items-center justify-center w-full min-h-[64px] text-center font-semibold mb-0">
+                                                {person.name}
+                                            </h4>
+                                            <p className="text-sm leading-sm text-center font-semibold uppercase text-brand_secondary mt-2 mb-0">
+                                                {i18n.t(person.title)}
+                                            </p>
+                                        </div>
                                         <div className="flex flex-row justify-center items-center w-full mt-auto py-3 gap-1 border-t border-gray-100">
                                             {person.social.map((item, index) => {
                                                 let icon = undefined;
@@ -236,22 +256,40 @@ function Team() {
                     </motion.div>
                 </div>
 
+                <button
+                    disabled={page >= pageLimit}
+                    onClick={handleRightClick}
+                    aria-label="Next team members"
+                    className={
+                        "hidden lg:flex flex-shrink-0 items-center justify-center p-2 ml-2 rounded-full bg-white shadow-md focus:outline-none " +
+                        (page >= pageLimit
+                            ? "opacity-40"
+                            : "transition duration-150 hover:text-brand_primary hover:scale-105")
+                    }
+                >
+                    <Icon path={mdiChevronRight} size={2} />
+                </button>
+
                 {/* Mobile View: Horizontal Scrollable Carousel */}
                 <div
-                    className={`lg:hidden flex overflow-x-scroll grid grid-rows-2 grid-flow-col space-x-4 snap-x snap-mandatory scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100`}
+                    className={`lg:hidden flex overflow-x-auto gap-8 px-4 py-2 snap-x snap-mandatory`}
                 >
                     {dynamicTeam.map((person, index) => (
-                        <div key={index} className="flex flex-col h-auto team-card snap-start">
+                        <div key={index} className="flex flex-col h-auto team-card mobile-team-card flex-shrink-0 snap-center">
                             <div className="flex flex-col rounded-xl overflow-hidden items-center shadow-xl m-4 mb-6 h-full border-b-[6px] border-b-brand_secondary bg-white">
                                 <img
                                     className="object-cover"
                                     src={person.image.src}
                                     alt={person.image.alt}
                                 />
-                                <h4 className="px-4 mt-4 text-center font-semibold">{person.name}</h4>
-                                <p className="px-4 font-semibold uppercase text-brand_secondary mb-4">
-                                    {i18n.t(person.title)}
-                                </p>
+                                <div className="flex flex-col items-center w-full min-h-[136px] px-4 py-4">
+                                    <h4 className="flex items-center justify-center w-full min-h-[64px] text-center font-semibold mb-0">
+                                        {person.name}
+                                    </h4>
+                                    <p className="text-sm leading-sm text-center font-semibold uppercase text-brand_secondary mt-2 mb-0">
+                                        {i18n.t(person.title)}
+                                    </p>
+                                </div>
                                 <div className="flex flex-row justify-center items-center w-full mt-auto py-3 gap-1 border-t border-gray-100">
                                     {person.social.map((item, index) => {
                                         let icon;
@@ -295,34 +333,7 @@ function Team() {
                 </div>
             </div>
 
-            <div
-                className="hidden lg:flex flex-row w-full items-center justify-center"
-            >
-                <button
-                    disabled={page === 0}
-                    onClick={handleLeftClick}
-                    className={
-                        "focus:outline-none mr-4 rounded-full bg-light " +
-                        (page === 0
-                            ? "opacity-50"
-                            : "transition duration-150 hover:text-brand_primary")
-                    }
-                >
-                    <Icon path={mdiChevronLeft} size={3} />
-                </button>
-                <button
-                    disabled={page >= pageLimit}
-                    onClick={handleRightClick}
-                    className={
-                        "focus:outline-none rounded-full bg-light " +
-                        (page >= pageLimit
-                            ? "opacity-50"
-                            : "transition duration-150 hover:text-brand_primary")
-                    }
-                >
-                    <Icon path={mdiChevronRight} size={3} />
-                </button>
-            </div>
+  
         </Section>
     );
 }

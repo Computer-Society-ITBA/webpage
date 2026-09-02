@@ -74,6 +74,11 @@ p {
     max-width: 270px;
 }
 
+.mobile-team-card {
+    min-width: calc(100vw - 64px);
+    max-width: calc(100vw - 64px);
+}
+
 .team-card img {
     width: 100%;
     height: 210px;
