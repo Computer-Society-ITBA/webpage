@@ -132,9 +132,9 @@ function Team() {
                         >
                             <h5
                                 className={`${i === currentRole
-                                    ? "bg-brand_secondary"
-                                    : "bg-brand_primary"
-                                    } p-3 rounded-xl cursor-pointer text-white`}
+                                    ? "text-typography_primary border-brand_secondary"
+                                    : "text-brand_tertiary border-transparent"
+                                    } px-1 py-3 border-b-4 cursor-pointer font-semibold`}
                                 onClick={() => setTeamByRole(role)}
                             >
                                 {i18n.t(role)}
