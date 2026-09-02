@@ -21,7 +21,7 @@ import {
 // Components
 const Section = React.lazy(() => import("../section"));
 
-const cardWidth = 225;
+const cardWidth = 270;
 const roles = [
     "team.roles.all",
     "team.roles.directors",
@@ -177,21 +177,21 @@ function Team() {
                         {dynamicTeam.map((person, index) => {
                             return (
                                 <div key={index} className="flex flex-col h-auto team-card">
-                                    <div className="flex flex-col rounded-xl items-center shadow-xl p-2 m-4 mb-6 h-full">
+                                    <div className="flex flex-col rounded-xl overflow-hidden items-center shadow-xl m-4 mb-6 h-full border-b-[6px] border-b-brand_secondary bg-white">
                                         <img
-                                            className="rounded-full object-cover"
+                                            className="object-cover"
                                             src={person.image.src}
                                             alt={person.image.alt}
                                         />
-                                        <h4>{person.name}</h4>
-                                        <p className="font-light uppercase opacity-75 mb-2">
+                                        <h4 className="px-4 mt-4 text-center font-semibold">{person.name}</h4>
+                                        <p className="px-4 font-semibold uppercase text-brand_secondary mb-4">
                                             {i18n.t(person.title)}
                                         </p>
-                                        <div className="flex flex-row justify-center items-center w-full mt-auto">
+                                        <div className="flex flex-row justify-center items-center w-full mt-auto py-3 gap-1 border-t border-gray-100">
                                             {person.social.map((item, index) => {
                                                 let icon = undefined;
                                                 let className =
-                                                    "px-2 text-typography_primary transform duration-100 ";
+                                                    "p-2 rounded-full text-typography_primary transform duration-150 hover:bg-light focus:bg-light ";
 
                                                 switch (item.logo) {
                                                     case "web":
@@ -242,21 +242,21 @@ function Team() {
                 >
                     {dynamicTeam.map((person, index) => (
                         <div key={index} className="flex flex-col h-auto team-card snap-start">
-                            <div className="flex flex-col rounded-xl items-center shadow-xl p-2 m-4 mb-6 h-full">
+                            <div className="flex flex-col rounded-xl overflow-hidden items-center shadow-xl m-4 mb-6 h-full border-b-[6px] border-b-brand_secondary bg-white">
                                 <img
-                                    className="rounded-full object-cover"
+                                    className="object-cover"
                                     src={person.image.src}
                                     alt={person.image.alt}
                                 />
-                                <h4>{person.name}</h4>
-                                <p className="font-light uppercase opacity-75 mb-2">
+                                <h4 className="px-4 mt-4 text-center font-semibold">{person.name}</h4>
+                                <p className="px-4 font-semibold uppercase text-brand_secondary mb-4">
                                     {i18n.t(person.title)}
                                 </p>
-                                <div className="flex flex-row justify-center items-center w-full mt-auto">
+                                <div className="flex flex-row justify-center items-center w-full mt-auto py-3 gap-1 border-t border-gray-100">
                                     {person.social.map((item, index) => {
                                         let icon;
                                         let className =
-                                            "px-2 text-typography_primary transform duration-100";
+                                            "p-2 rounded-full text-typography_primary transform duration-150 hover:bg-light focus:bg-light";
 
                                         switch (item.logo) {
                                             case "web":
