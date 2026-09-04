@@ -2,13 +2,6 @@ import React from 'react';
 // Translations
 import i18n from '../../i18n/index.js';
 
-import Icon from "@mdi/react";
-import {
-  mdiInstagram,
-  mdiLinkedin,
-  mdiYoutube
-} from "@mdi/js";
-
 import social from '../../data/social'
 
 // Components

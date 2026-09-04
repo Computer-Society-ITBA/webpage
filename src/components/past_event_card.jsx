@@ -2,27 +2,28 @@ import React from "react";
 // Translations
 import i18n from "../i18n/index.js";
 // Icons
-import Icon from "@mdi/react";
-import { mdiYoutube, mdiWeb, mdiInstagram } from "@mdi/js";
+import LanguageIcon from "@mui/icons-material/Language";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function LinkButton(props) {
   const { event, index } = props;
   let className =
     "animate-pulse hover:animate-none focus:animate-none focus:outline-none text-typography_primary transform cursor-pointer duration-100 ";
-  let icon = null;
+  let LinkIcon = null;
   if (event.link) {
     switch (event.link.logo) {
       case "web":
-        icon = mdiWeb;
+        LinkIcon = LanguageIcon;
         className = className + "hover:text-pink-700 focus:text-pink-700";
         break;
       case "youtube":
-        icon = mdiYoutube;
+        LinkIcon = YouTubeIcon;
         className = className + "hover:text-red-700 focus:text-red-700";
         break;
       case "instagram":
       default:
-        icon = mdiInstagram;
+        LinkIcon = InstagramIcon;
         className = className + "hover:text-purple-700 focus:text-purple-700";
     }
   }
@@ -42,9 +43,8 @@ function LinkButton(props) {
               rel="noreferrer"
               className={`${className} transform hover:scale-110 transition-transform duration-150`}
             >
-              <Icon
-                path={icon}
-                size={1.5}
+              <LinkIcon
+                sx={{ fontSize: "2.25rem" }}
                 className="ml-1 text-h5 leading-h5 focus:outline-none"
               />
             </a>
