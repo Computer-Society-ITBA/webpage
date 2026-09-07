@@ -18,8 +18,8 @@ function Homepage () {
       <NavBar/>
       <Hero/>
       <Nosotros/>
-      <OurEvents/>
       <MisionVision/>
+      <OurEvents/>
       <Stats/>
       <PastEvents/>
       <WorkWithUs/>

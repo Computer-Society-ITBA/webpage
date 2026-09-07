@@ -18,7 +18,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 // Components
 const Section = React.lazy(() => import("../section"));
 
-const cardWidth = 270;
+const cardWidth = 220;
 const roles = [
     "team.roles.all",
     "team.roles.directors",
@@ -114,7 +114,8 @@ function Team() {
             id="our-team"
             bgColor="bg-white"
             textAlignment="center"
-            className="h-full overflow-hidden"
+            padding="no"
+            className="h-full overflow-hidden px-4 py-8 sm:px-12 sm:py-10"
         >
             <h2>{i18n.t("team.title")}</h2>
             <div className="flex justify-center w-100 mt-2 mb-2">
@@ -173,7 +174,7 @@ function Team() {
 
                 {/* Desktop View: Centered Carousel with Flexbox */}
                 <div
-                    className={`hidden lg:flex flex-none w-[810px] xl:w-[1080px] 2xl:w-[1350px] ${dynamicTeam.length <= 6 ? "justify-center" : "justify-start"}`}
+                    className={`hidden lg:flex flex-none w-[660px] xl:w-[880px] 2xl:w-[1100px] ${dynamicTeam.length <= 6 ? "justify-center" : "justify-start"}`}
                     style={{ overflow: "hidden" }}
                 >
                     <motion.div
@@ -190,21 +191,21 @@ function Team() {
                         {dynamicTeam.map((person, index) => {
                             return (
                                 <div key={index} className="flex flex-col h-auto team-card">
-                                    <div className="flex flex-col rounded-xl overflow-hidden items-center shadow-xl m-4 mb-6 h-full border-b-[6px] border-b-brand_secondary bg-white">
+                                    <div className="flex flex-col rounded-xl overflow-hidden items-center shadow-xl m-3 mb-4 h-full border-b-[6px] border-b-brand_secondary bg-white">
                                         <img
                                             className="object-cover"
                                             src={person.image.src}
                                             alt={person.image.alt}
                                         />
-                                        <div className="flex flex-col items-center w-full min-h-[136px] px-4 py-4">
-                                            <h4 className="flex items-center justify-center w-full min-h-[64px] text-center font-semibold mb-0">
+                                        <div className="flex flex-col items-center w-full min-h-[112px] px-3 py-3">
+                                            <h4 className="flex items-center justify-center w-full min-h-[48px] text-center font-semibold mb-0 text-base leading-snug">
                                                 {person.name}
                                             </h4>
-                                            <p className="text-sm leading-sm text-center font-semibold uppercase text-brand_secondary mt-2 mb-0">
+                                            <p className="text-xs leading-tight text-center font-semibold uppercase text-brand_secondary mt-2 mb-0">
                                                 {i18n.t(person.title)}
                                             </p>
                                         </div>
-                                        <div className="flex flex-row justify-center items-center w-full mt-auto py-3 gap-1 border-t border-gray-100">
+                                        <div className="flex flex-row justify-center items-center w-full mt-auto py-2 gap-1 border-t border-gray-100">
                                             {person.social.map((item, index) => {
                                                 let SocialIcon = InstagramIcon;
                                                 let className =
