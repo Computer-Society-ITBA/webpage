@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useWindowDimensions from "./useWindowDimensions";
 
-export default function usePaging(elemWidth, elems, rows) {
+export default function usePaging(elemWidth, elems, rows, step = 1) {
 
   const { width } = useWindowDimensions();
   const [page, setPage] = useState(0);
@@ -23,14 +23,10 @@ export default function usePaging(elemWidth, elems, rows) {
   }, [elems, elemWidth, rows, width]);
 
   const pageLeft = () => {
-    if (page > 0) {
-      setPage(page - 1);
-    }
+    setPage((currentPage) => Math.max(currentPage - step, 0));
   };
   const pageRight = () => {
-    if (page < pageLimit) {
-      setPage(page + 1);
-    }
+    setPage((currentPage) => Math.min(currentPage + step, pageLimit));
   };
 
   return [page, pageLeft, pageRight, pageLimit, limitLeft];

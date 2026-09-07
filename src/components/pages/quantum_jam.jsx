@@ -14,7 +14,7 @@ function QuantumJam() {
   return (
     <React.Fragment>
         <QuantumStarsBackground />
-        <GoBackNav color="#ffffff" hoverColor="#c874d9" where='/#upcoming-events'/>
+        <GoBackNav color="#ffffff" hoverColor="#c874d9" where='/#our-events'/>
         <QHero />
         <QAbout />
         <QWorkshops/>
