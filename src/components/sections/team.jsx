@@ -121,7 +121,7 @@ function Team() {
             <div className="flex justify-center w-100 mt-2 mb-2">
                 <div
                     className={`hidden lg:flex items-center justify-between ${width > 810 ? "flex-1" : ""
-                        } max-w-screen-xl `}
+                        } flex-none w-[660px] xl:w-[880px] 2xl:w-[1100px]`}
                 >
                     {roles.map((role, i) => (
                         <motion.div
@@ -267,31 +267,29 @@ function Team() {
                     <ChevronRightIcon sx={{ fontSize: "2rem" }} />
                 </button>
 
-                {/* Mobile View: Horizontal Scrollable Carousel */}
-                <div
-                    className={`lg:hidden flex overflow-x-auto gap-8 px-4 py-2 snap-x snap-mandatory`}
-                >
+                {/* Mobile View: Tiled Grid */}
+                <div className="lg:hidden grid grid-cols-2 gap-3 w-full">
                     {dynamicTeam.map((person, index) => (
-                        <div key={index} className="flex flex-col h-auto team-card mobile-team-card flex-shrink-0 snap-center">
-                            <div className="flex flex-col rounded-xl overflow-hidden items-center shadow-xl m-4 mb-6 h-full border-b-[6px] border-b-brand_secondary bg-white">
+                        <div key={index} className="flex flex-col h-full">
+                            <div className="flex flex-col rounded-xl overflow-hidden items-center shadow-md h-full border-b-[4px] border-b-brand_secondary bg-white">
                                 <img
-                                    className="object-cover"
+                                    className="object-cover w-full h-[130px]"
                                     src={person.image.src}
                                     alt={person.image.alt}
                                 />
-                                <div className="flex flex-col items-center w-full min-h-[136px] px-4 py-4">
-                                    <h4 className="flex items-center justify-center w-full min-h-[64px] text-center font-semibold mb-0">
+                                <div className="flex flex-col items-center w-full flex-1 px-2 py-2">
+                                    <h4 className="flex items-center justify-center w-full text-center font-semibold mb-0 text-sm leading-tight">
                                         {person.name}
                                     </h4>
-                                    <p className="text-sm leading-sm text-center font-semibold uppercase text-brand_secondary mt-2 mb-0">
+                                    <p className="text-[10px] leading-tight text-center font-semibold uppercase text-brand_secondary mt-1 mb-0">
                                         {i18n.t(person.title)}
                                     </p>
                                 </div>
-                                <div className="flex flex-row justify-center items-center w-full mt-auto py-3 gap-1 border-t border-gray-100">
+                                <div className="flex flex-row justify-center items-center w-full mt-auto py-1 gap-0.5 border-t border-gray-100">
                                     {person.social.map((item, index) => {
                                         let SocialIcon = InstagramIcon;
                                         let className =
-                                            "p-2 rounded-full text-typography_primary transform duration-150 hover:bg-light focus:bg-light";
+                                            "p-1 rounded-full text-typography_primary transform duration-150 hover:bg-light focus:bg-light";
 
                                         switch (item.logo) {
                                             case "web":
@@ -319,7 +317,7 @@ function Team() {
                                                 rel="noreferrer"
                                                 className={className}
                                             >
-                                                <SocialIcon sx={{ fontSize: "1.5rem" }} className="focus:outline-none" />
+                                                <SocialIcon sx={{ fontSize: "1.1rem" }} className="focus:outline-none" />
                                             </a>
                                         );
                                     })}
