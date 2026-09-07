@@ -167,7 +167,7 @@ function Team() {
                             : "transition duration-150 hover:text-brand_primary hover:scale-105")
                     }
                 >
-                    <Icon path={mdiChevronLeft} size={2} />
+                    <ChevronLeftIcon sx={{ fontSize: "2rem" }} />
                 </button>
 
 
@@ -263,7 +263,7 @@ function Team() {
                             : "transition duration-150 hover:text-brand_primary hover:scale-105")
                     }
                 >
-                    <Icon path={mdiChevronRight} size={2} />
+                    <ChevronRightIcon sx={{ fontSize: "2rem" }} />
                 </button>
 
                 {/* Mobile View: Horizontal Scrollable Carousel */}
