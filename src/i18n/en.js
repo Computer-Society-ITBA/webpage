@@ -81,6 +81,17 @@ const i18n_en = {
       },
     },
   },
+  branch: {
+    club: "Club",
+    hackit: "hackITBA",
+    quantum: "Quantum Jam",
+    gamejam: "Game Jam",
+  },
+  news: {
+    title: "News",
+    all: "See all news",
+    months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  },
   past_events: {
     title: "Past Events",
     inscriptions: "+{{n}} enrolled",

@@ -1,0 +1,70 @@
+/* Noticias: el mosaico de bloques de la home.
+   Sale del sistema de diseño (cs-shared.css y cs-news.css). Cada var() lleva su valor de respaldo, así que no hace falta cargar los tokens.
+   Los títulos de la app (h1–h3) tienen márgenes globales en index.css: estas clases los pisan con margin explícito. */
+
+/* ---------- Ramas (rama = evento) ---------- */
+.cs-branch--club    { --b: var(--branch-club, #212121);    --on-b: var(--on-branch-club, #fff); }
+.cs-branch--hackit  { --b: var(--branch-hackit, #F98A04);  --on-b: var(--on-branch-hackit, #212121); }
+.cs-branch--quantum { --b: var(--branch-quantum, #B2E713); --on-b: var(--on-branch-quantum, #212121); }
+.cs-branch--gamejam { --b: var(--branch-gamejam, #5C008B); --on-b: var(--on-branch-gamejam, #fff); }
+
+/* ---------- Noticias: el mosaico de bloques ---------- */
+.cs-news { container-type: inline-size; --news-ground: var(--light, #F7F7F7); background: var(--news-ground); color: var(--typography_primary, #212121); text-align: left; }
+.cs-news__inner { max-width: var(--container-max, 1536px); margin: 0 auto; padding: 48px 16px; }
+@container (min-width: 640px) { .cs-news__inner { padding: 64px 48px; } }
+@container (min-width: 1024px) { .cs-news__inner { padding-left: 64px; padding-right: 64px; } }
+.cs-news--white { --news-ground: var(--white, #fff); }
+
+.cs-news-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--news-gap, 16px); margin: 56px 0 0; padding: 0; list-style: none; }
+@container (min-width: 640px) {
+  .cs-news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cs-news-grid--home > .cs-tile--lead, .cs-news-grid--home > .cs-tile--wide { grid-column: 1 / -1; }
+}
+@container (min-width: 900px) { .cs-news-grid--home > .cs-tile--lead .cs-tile__photo { aspect-ratio: 2 / 1; } }
+@container (min-width: 1200px) {
+  .cs-news-grid--home { grid-template-columns: repeat(12, minmax(0, 1fr)); }
+  .cs-news-grid--home > .cs-tile--lead { grid-column: 1 / 7; grid-row: 1 / 3; }
+  .cs-news-grid--home > .cs-tile--sm { grid-column: span 3; }
+  .cs-news-grid--home > .cs-tile--wide { grid-column: 7 / 13; }
+}
+
+/* bloque: el color de la rama es el fondo */
+.cs-tile { position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border-radius: var(--radius-xl, 12px); background: var(--b, #212121); color: var(--on-b, #fff); }
+.cs-tile__photo { position: relative; margin: 0; aspect-ratio: 3 / 2; background: var(--brand_tertiary, #75787B); }
+.cs-tile__photo img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1); transition: filter .25s ease; }
+.cs-tile:hover .cs-tile__photo img, .cs-tile:focus-within .cs-tile__photo img { filter: none; }
+.cs-tile__text { display: flex; flex: 1; flex-direction: column; padding: var(--news-tile-pad, 28px) var(--news-tile-pad, 28px) 32px; min-width: 0; }
+.cs-tile__label { display: flex; justify-content: space-between; gap: 16px; margin: 0 0 14px; font: 700 .875rem/1.25rem var(--font-highlight, "Montserrat", sans-serif); }
+.cs-tile__label time { font: 400 .875rem/1.25rem var(--font-text, "Roboto", sans-serif); }
+.cs-tile__title { margin: 0; font: 800 1.5rem/1.8rem var(--font-highlight, "Montserrat", sans-serif); letter-spacing: -.005em; }
+.cs-tile__title a { color: inherit; text-decoration: none; }
+.cs-tile__title a::after { content: ""; position: absolute; inset: 0; z-index: 2; }
+.cs-tile__title a:focus-visible { outline: none; }
+.cs-tile:hover .cs-tile__title a { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.cs-tile__summary { margin: 12px 0 0; font: 400 .9375rem/1.45rem var(--font-text, "Roboto", sans-serif); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+/* foco de teclado: un anillo de tinta alrededor del bloque, sobre el fondo de la sección */
+.cs-tile:has(a:focus-visible) { outline: 3px solid var(--focus-ring, #212121); outline-offset: 4px; }
+
+/* bloque principal */
+.cs-tile--lead .cs-tile__title { font-size: 1.75rem; line-height: 1.9rem; letter-spacing: -.015em; }
+.cs-tile--lead .cs-tile__summary { font-size: 1.0625rem; line-height: 1.6rem; -webkit-line-clamp: 2; }
+@container (min-width: 640px) {
+  .cs-tile--lead .cs-tile__title { font-size: 2.5rem; line-height: 2.7rem; }
+  .cs-tile--lead .cs-tile__text { flex: none; padding: 32px 32px 36px; }
+}
+@container (min-width: 1200px) {
+  .cs-news-grid--home > .cs-tile--lead .cs-tile__photo { flex: 1; aspect-ratio: auto; min-height: var(--news-lead-photo-min, 320px); }
+}
+/* bloque ancho: foto al costado desde 640 px */
+@container (min-width: 640px) {
+  .cs-tile--wide { flex-direction: row; }
+  .cs-tile--wide .cs-tile__photo { flex: 0 0 42%; aspect-ratio: auto; min-height: 220px; }
+  .cs-tile--wide .cs-tile__text { flex: 1 1 58%; }
+}
+/* bloque de solo texto: sin foto, la altura la da el contenido */
+.cs-tile--sm .cs-tile__text { padding-bottom: 36px; }
+
+/* pie de la sección */
+.cs-news-more { display: flex; margin-top: 32px; }
+@container (min-width: 640px) { .cs-news-more { justify-content: flex-end; } }
+@media (prefers-reduced-motion: reduce) { .cs-tile__photo img { transition: none; } }

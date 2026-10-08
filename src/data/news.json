@@ -1,0 +1,64 @@
+[
+    {
+        "slug": "quantum-jam-vuelve-el-27-de-noviembre",
+        "sample": true,
+        "date": "2026/10/06",
+        "branch": "quantum",
+        "image": "news_images/quantum-jam-2025.jpg",
+        "es": {
+            "title": "Quantum Jam vuelve el 27 de noviembre",
+            "summary": "Aprendé computación cuántica desde cero en el ITBA, en San Martín 202. No hace falta experiencia previa: traé tu curiosidad.",
+            "image_alt": "Estudiantes sentados en un aula mirando una charla"
+        },
+        "en": {
+            "title": "Quantum Jam returns on November 27",
+            "summary": "Learn quantum computing from scratch at ITBA, at San Martín 202. No prior experience needed: just bring your curiosity.",
+            "image_alt": "Students seated in a classroom watching a talk"
+        }
+    },
+    {
+        "slug": "sumate-al-equipo-de-computer-society",
+        "sample": true,
+        "date": "2026/09/15",
+        "branch": "club",
+        "es": {
+            "title": "Sumate al equipo de Computer Society",
+            "summary": "Buscamos gente para Tecnología, Medios, Relaciones Públicas y Recaudación de Fondos. Escribinos a computersociety@itba.edu.ar."
+        },
+        "en": {
+            "title": "Join the Computer Society team",
+            "summary": "We're looking for people for Technology, Media, Public Relations and Fundraising. Write to us at computersociety@itba.edu.ar."
+        }
+    },
+    {
+        "slug": "game-jam-society-2024-ceremonia-de-cierre-y-ganadores",
+        "sample": true,
+        "date": "2024/10/21",
+        "branch": "gamejam",
+        "es": {
+            "title": "Game Jam Society 2024: ceremonia de cierre y ganadores",
+            "summary": "48 horas de competencia virtual terminaron con una ceremonia presencial y el anuncio de los equipos ganadores."
+        },
+        "en": {
+            "title": "Game Jam Society 2024: closing ceremony and winners",
+            "summary": "48 hours of virtual competition ended with an in-person ceremony and the announcement of the winning teams."
+        }
+    },
+    {
+        "slug": "hackitba-2026-36-horas-para-llegar-a-un-mvp",
+        "sample": true,
+        "date": "2026/04/01",
+        "branch": "hackit",
+        "image": "news_images/hackitba-auditorio.jpg",
+        "es": {
+            "title": "hackITBA 2026: 36 horas para llegar a un MVP",
+            "summary": "Equipos de cuatro personas construyeron su MVP con mentores de la industria al lado. Mirá cómo fue el fin de semana.",
+            "image_alt": "Participantes conversan sentados en las butacas de un auditorio"
+        },
+        "en": {
+            "title": "hackITBA 2026: 36 hours to an MVP",
+            "summary": "Teams of four built their MVP with industry mentors by their side. See how the weekend went.",
+            "image_alt": "Participants chat while seated in an auditorium"
+        }
+    }
+]
