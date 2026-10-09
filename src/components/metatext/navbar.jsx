@@ -15,6 +15,7 @@ function NavBar() {
     nonCollapsed: {
       x: 0,
       opacity: 1,
+      display: "flex",
     },
     open: {
       x: 0,
@@ -60,7 +61,7 @@ function NavBar() {
         <motion.div
           variants={variants}
           animate={
-            width > 1020 ? "nonCollapsed" : !collapsed ? "open" : "closed"
+            width >= 1024 ? "nonCollapsed" : !collapsed ? "open" : "closed"
           }
           className="w-full flex-grow lg:mr-12 lg:flex lg:items-center lg:w-auto lg:pt-2"
         >
