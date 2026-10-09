@@ -94,10 +94,15 @@ const i18n_es = {
     months: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
   },
   past_events: {
-    title: "Eventos Pasados",
+    title: "Eventos pasados",
     inscriptions: "+{{n}} inscriptos",
     watch: "Ver en YouTube",
-    button: "Ver Todos",
+    button: "Ver todos los eventos",
+    link: {
+      youtube: "Ver en YouTube",
+      instagram: "Ver en Instagram",
+      web: "Ver sitio web",
+    },
   },
   team: {
     title: "Nuestro Equipo",
