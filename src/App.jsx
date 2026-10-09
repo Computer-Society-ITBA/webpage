@@ -16,6 +16,7 @@ const Credits = React.lazy(() => import("./components/pages/credits"));
 const Homepage = React.lazy(() => import("./components/pages/homepage"));
 const PastEvents = React.lazy(() => import("./components/pages/past_events"));
 const News = React.lazy(() => import("./components/pages/news"));
+const NewsArchive = React.lazy(() => import("./components/pages/news_archive"));
 const GameJam = React.lazy(() => import("./components/pages/gamejam"));
 const Hackit = React.lazy(() => import("./components/pages/hackit"));
 const QuantumJam = React.lazy(() => import("./components/pages/quantum_jam"));
@@ -30,7 +31,7 @@ function App() {
             <Route path="/gamejam" element={<GameJam />} />
             <Route path="/hackit" element={<Hackit />} />
             <Route path="/past-events" element={<PastEvents />} />
-            <Route path="/news" element={<News />} />
+            <Route path="/news" element={<NewsArchive />} />
             <Route path="/news/:slug" element={<News />} />
             <Route path="/" element={<Homepage />} />
             <Route path="*" element={<Navigate to="/" />} />

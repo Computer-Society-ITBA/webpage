@@ -47,13 +47,16 @@
         "sample": true,
         "date": "2026/09/15",
         "branch": "club",
+        "image": "news_images/computer-society-equipo.png",
         "es": {
             "title": "Sumate al equipo de Computer Society",
-            "summary": "Buscamos gente para Tecnología, Medios, Relaciones Públicas y Recaudación de Fondos. Escribinos a computersociety@itba.edu.ar."
+            "summary": "Buscamos gente para Tecnología, Medios, Relaciones Públicas y Recaudación de Fondos. Escribinos a computersociety@itba.edu.ar.",
+            "image_alt": "Equipo de Computer Society ITBA sosteniendo la bandera del capítulo"
         },
         "en": {
             "title": "Join the Computer Society team",
-            "summary": "We're looking for people for Technology, Media, Public Relations and Fundraising. Write to us at computersociety@itba.edu.ar."
+            "summary": "We're looking for people for Technology, Media, Public Relations and Fundraising. Write to us at computersociety@itba.edu.ar.",
+            "image_alt": "Computer Society ITBA team holding the chapter banner"
         }
     },
     {
@@ -61,13 +64,16 @@
         "sample": true,
         "date": "2024/10/21",
         "branch": "gamejam",
+        "image": "news_images/game-jam-society.png",
         "es": {
             "title": "Game Jam Society 2024: ceremonia de cierre y ganadores",
-            "summary": "48 horas de competencia virtual terminaron con una ceremonia presencial y el anuncio de los equipos ganadores."
+            "summary": "48 horas de competencia virtual terminaron con una ceremonia presencial y el anuncio de los equipos ganadores.",
+            "image_alt": "Pantalla con la presentación de Game Jam Society ITBA"
         },
         "en": {
             "title": "Game Jam Society 2024: closing ceremony and winners",
-            "summary": "48 hours of virtual competition ended with an in-person ceremony and the announcement of the winning teams."
+            "summary": "48 hours of virtual competition ended with an in-person ceremony and the announcement of the winning teams.",
+            "image_alt": "Screen displaying the Game Jam Society ITBA presentation"
         }
     },
     {
@@ -85,6 +91,23 @@
             "title": "hackITBA 2026: 36 hours to an MVP",
             "summary": "Teams of four built their MVP with industry mentors by their side. See how the weekend went.",
             "image_alt": "Participants chat while seated in an auditorium"
+        }
+    },
+    {
+        "slug": "quantum-jam-2025-cerro-con-una-competencia-entre-amigos",
+        "sample": true,
+        "date": "2025/11/03",
+        "branch": "quantum",
+        "image": "news_images/quantum-jam-2025-competencia.jpg",
+        "es": {
+            "title": "Quantum Jam 2025 cerró con una competencia entre amigos",
+            "summary": "Después de los workshops, los equipos resolvieron ejercicios de IBM Quantum en el ITBA.",
+            "image_alt": "Participantes trabajando con sus notebooks"
+        },
+        "en": {
+            "title": "Quantum Jam 2025 ended with a competition among friends",
+            "summary": "After the workshops, teams solved IBM Quantum exercises at ITBA.",
+            "image_alt": "Participants working on their laptops"
         }
     }
 ]

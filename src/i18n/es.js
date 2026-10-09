@@ -83,7 +83,7 @@ const i18n_es = {
     },
   },
   branch: {
-    club: "Club",
+    club: "Computer Society",
     hackit: "hackITBA",
     quantum: "Quantum Jam",
     gamejam: "Game Jam",
