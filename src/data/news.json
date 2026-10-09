@@ -8,12 +8,38 @@
         "es": {
             "title": "Quantum Jam vuelve el 27 de noviembre",
             "summary": "Aprendé computación cuántica desde cero en el ITBA, en San Martín 202. No hace falta experiencia previa: traé tu curiosidad.",
-            "image_alt": "Estudiantes sentados en un aula mirando una charla"
+            "lead": "Una introducción sencilla a la computación cuántica, con problemas para principiantes y la tecnología de IBM Quantum.",
+            "image_alt": "Estudiantes sentados en un aula mirando una charla",
+            "image_caption": "Participantes de la Quantum Jam 2025 en el ITBA.",
+            "body": [
+                "La Quantum Jam es un evento para entender qué hace diferente a lo cuántico de lo clásico. No hace falta experiencia previa: solo traé tu curiosidad.",
+                { "h2": "Cómo fue la edición 2025" },
+                "En 2025 organizamos la primera hackathon cuántica de Argentina hecha por y para estudiantes. Antes de la competencia hubo cuatro workshops virtuales, uno por semana: empezamos con qubits, superposición y entrelazamiento, seguimos con circuitos cuánticos y cerramos con algoritmos y comunicación cuántica.",
+                "Se inscribieron 46 estudiantes. El 1 de noviembre pasaron un sábado entero en el ITBA programando y resolviendo ejercicios de IBM, algunos en grupo y otros con gente que no conocían.",
+                { "h2": "Cuándo y dónde" },
+                "Es el 27 de noviembre en el ITBA, en San Martín 202. Está abierto a estudiantes universitarios.",
+                { "h2": "Cómo participar" },
+                "Toda la información y la inscripción están en quantumjam.com.ar.",
+                "Si tenés dudas, escribinos a computersociety@itba.edu.ar."
+            ]
         },
         "en": {
             "title": "Quantum Jam returns on November 27",
             "summary": "Learn quantum computing from scratch at ITBA, at San Martín 202. No prior experience needed: just bring your curiosity.",
-            "image_alt": "Students seated in a classroom watching a talk"
+            "lead": "A simple introduction to quantum computing, with beginner-friendly problems and IBM Quantum technology.",
+            "image_alt": "Students seated in a classroom watching a talk",
+            "image_caption": "Quantum Jam 2025 participants at ITBA.",
+            "body": [
+                "Quantum Jam is an event to understand what makes quantum different from classical computing. No prior experience needed: just bring your curiosity.",
+                { "h2": "How the 2025 edition went" },
+                "In 2025 we organized Argentina's first quantum hackathon by and for students. Before the competition there were four virtual workshops, one a week: we started with qubits, superposition and entanglement, moved on to quantum circuits and finished with quantum algorithms and communication.",
+                "46 students signed up. On November 1 they spent a whole Saturday at ITBA coding and solving IBM exercises, some in groups and others with people they had just met.",
+                { "h2": "When and where" },
+                "It takes place on November 27 at ITBA, San Martín 202. It is open to university students.",
+                { "h2": "How to join" },
+                "All the information and the registration are at quantumjam.com.ar.",
+                "If you have questions, write to us at computersociety@itba.edu.ar."
+            ]
         }
     },
     {

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 // Translations
 import i18n from "../../i18n/index.js";
@@ -9,11 +8,8 @@ import "../../styles/news.css";
 
 // Data
 import news from "../../data/news.json";
-const newsImages = import.meta.glob("../../images/news_images/*", {
-  eager: true,
-  query: "?url",
-  import: "default",
-});
+
+import NewsTile from "../news_tile";
 
 // Components
 const Section = React.lazy(() => import("../section"));
@@ -22,16 +18,7 @@ const LinkButton = React.lazy(() => import("../link_button"));
 // Bloques del mosaico, en el orden de news.json
 const tiles = ["lead", "sm", "sm", "wide"];
 
-function formatDate(date) {
-  const [year, month, day] = date.split("/");
-  const months = i18n.t("news.months", { returnObjects: true });
-  return `${Number(day)} ${months[Number(month) - 1]} ${year}`;
-}
-
 function News() {
-  let language = i18n.language.split("-")[0];
-  if (language !== "es") language = "en";
-
   return (
     <Section
       id='news'
@@ -47,30 +34,9 @@ function News() {
         <div className='mt-[18px] h-[3px] w-[50px] bg-brand_secondary' />
 
         <ol className='cs-news-grid cs-news-grid--home'>
-          {news.slice(0, tiles.length).map((item, index) => {
-            const tile = tiles[index];
-            const text = item[language];
-            const image = tile !== "sm" && item.image && newsImages[`../../images/${item.image}`];
-            return (
-              <li key={item.slug} className={`cs-tile cs-tile--${tile} cs-branch--${item.branch}`}>
-                {image && (
-                  <figure className='cs-tile__photo'>
-                    <img src={image} alt={text.image_alt} loading='lazy' />
-                  </figure>
-                )}
-                <div className='cs-tile__text'>
-                  <p className='cs-tile__label'>
-                    <span>{i18n.t(`branch.${item.branch}`)}</span>
-                    <time dateTime={item.date.replace(/\//g, "-")}>{formatDate(item.date)}</time>
-                  </p>
-                  <h3 className='cs-tile__title'>
-                    <Link to={`/news/${item.slug}`}>{text.title}</Link>
-                  </h3>
-                  <p className='cs-tile__summary'>{text.summary}</p>
-                </div>
-              </li>
-            );
-          })}
+          {news.slice(0, tiles.length).map((item, index) => (
+            <NewsTile key={item.slug} item={item} tile={tiles[index]} />
+          ))}
         </ol>
 
         <div className='cs-news-more'>

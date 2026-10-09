@@ -90,6 +90,7 @@ const i18n_en = {
   news: {
     title: "News",
     all: "See all news",
+    read_on: "Keep reading",
     months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
   },
   past_events: {

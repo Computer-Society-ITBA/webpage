@@ -91,6 +91,7 @@ const i18n_es = {
   news: {
     title: "Noticias",
     all: "Ver todas las noticias",
+    read_on: "Seguir leyendo",
     months: ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"],
   },
   past_events: {
