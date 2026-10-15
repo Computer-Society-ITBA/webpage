@@ -81,11 +81,28 @@ const i18n_en = {
       },
     },
   },
+  branch: {
+    club: "Computer Society",
+    hackit: "hackITBA",
+    quantum: "Quantum Jam",
+    gamejam: "Game Jam",
+  },
+  news: {
+    title: "News",
+    all: "See all news",
+    read_on: "Keep reading",
+    months: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+  },
   past_events: {
-    title: "Past Events",
+    title: "Past events",
     inscriptions: "+{{n}} enrolled",
     watch: "Watch on Youtube",
-    button: "View All",
+    button: "See all events",
+    link: {
+      youtube: "Watch on YouTube",
+      instagram: "View on Instagram",
+      web: "Visit website",
+    },
   },
   team: {
     title: "Our Team",

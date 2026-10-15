@@ -1,0 +1,34 @@
+/* Noticias: la nota completa (/news/:slug).
+   Sale del sistema de diseño (cs-news.css). Cada var() lleva su valor de respaldo, así que no hace falta cargar los tokens.
+   Los títulos de la app (h1–h3) tienen márgenes globales en index.css: estas clases los pisan con margin explícito.
+   Los bloques de "Seguir leyendo" y los colores de las ramas vienen de news.css. */
+
+/* ---------- Noticias: nota ---------- */
+.cs-article { max-width: 720px; margin: 0 auto; padding: 24px 16px 64px; color: var(--typography_primary, #212121); text-align: left; }
+/* página completa: la barra de navegación es fija y mide ~72 px, así que se suma espacio arriba */
+.cs-article--page { padding-top: 104px; }
+/* cabecera: un bloque del color de la rama, como el principal del mosaico */
+.cs-article__head { margin-top: 24px; padding: 32px 24px 36px; border-radius: var(--radius-xl, 12px); background: var(--b, #212121); color: var(--on-b, #fff); }
+.cs-article__meta { display: flex; justify-content: space-between; gap: 16px; margin: 0; font: 700 .875rem/1.25rem var(--font-highlight, "Montserrat", sans-serif); }
+.cs-article__meta time { font: 400 .875rem/1.25rem var(--font-text, "Roboto", sans-serif); }
+.cs-article__title { margin: 16px 0 0; font: 800 2rem/2.25rem var(--font-highlight, "Montserrat", sans-serif); letter-spacing: -.01em; }
+.cs-article__lead { margin: 16px 0 0; font: 400 1.25rem/1.875rem var(--font-text, "Roboto", sans-serif); max-width: 62ch; }
+.cs-article__figure { margin: 24px 0 0; }
+.cs-article__figure img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-xl, 12px); }
+.cs-article__figure figcaption { margin-top: 8px; font: 500 .875rem/1.25rem var(--font-text, "Roboto", sans-serif); color: var(--ink-muted, #595C5F); }
+.cs-article__body { margin-top: 32px; }
+.cs-article__body p { margin: 0 0 16px; max-width: var(--news-measure, 68ch); font: 400 1.0625rem/1.75rem var(--font-text, "Roboto", sans-serif); }
+.cs-article__body h2 { margin: 40px 0 12px; font: 700 1.5rem/2rem var(--font-highlight, "Montserrat", sans-serif); }
+.cs-article__more { margin-top: 48px; }
+.cs-article__more h2 { margin: 0 0 16px; font: 700 1.5rem/2rem var(--font-highlight, "Montserrat", sans-serif); }
+@media (min-width: 640px) { .cs-article { padding-left: 24px; padding-right: 24px; } .cs-article__head { padding: 48px 48px 52px; } .cs-article__title { font-size: 2.5rem; line-height: 2.75rem; } }
+
+/* Seguir leyendo: bloques chicos del mosaico, sin el relleno de la sección */
+.cs-news--bare .cs-news-grid { margin-top: 0; }
+
+
+/* enlace "Volver" de la nota */
+.cs-back { display: inline-flex; align-items: center; gap: 12px; padding: 12px 0; color: var(--typography_primary, #212121); font: 500 1rem/1.5rem var(--font-text, "Roboto", sans-serif); text-decoration: none; }
+.cs-back svg { width: 24px; height: 24px; fill: currentColor; }
+.cs-back:hover { text-decoration: underline; text-underline-offset: 4px; }
+.cs-back:focus-visible { outline: 3px solid var(--focus-ring, #212121); outline-offset: 3px; }
