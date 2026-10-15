@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import news from "../../data/news.json";
+import useNews from "../../hooks/useNews.js";
+
 import "../../styles/news-archive.css";
 
 const Footer = React.lazy(() => import("../sections/footer"));
 const NavBar = React.lazy(() => import("../metatext/navbar"));
 const branches = ["club", "hackit", "quantum", "gamejam"];
 
-// La imagen y su descripción vienen de news.json, igual que en la home y la nota.
 const localImages = import.meta.glob("../../images/news_images/*", {
   eager: true,
   query: "?url",
@@ -18,20 +18,18 @@ const localImages = import.meta.glob("../../images/news_images/*", {
 
 function NewsArchive() {
   const { t, i18n } = useTranslation();
+  const { news, loading, error } = useNews(200); // archive: fetch everything, not the default 50
   const language = i18n.language.split("-")[0] === "es" ? "es" : "en";
   const [selectedBranch, setSelectedBranch] = useState("all");
   const labels = language === "es"
-    ? { all: "Todas", filter: "Filtrar por evento", empty: "No hay noticias de este evento por ahora." }
-    : { all: "All", filter: "Filter by event", empty: "There are no news stories for this event yet." };
+    ? { all: "Todas", filter: "Filtrar por evento", empty: "No hay noticias de este evento por ahora.", error: "No pudimos cargar las noticias. Probá de nuevo más tarde." }
+    : { all: "All", filter: "Filter by event", empty: "There are no news stories for this event yet.", error: "We couldn't load the news. Please try again later." };
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
-  const visibleNews = news
-    .filter((item) => selectedBranch === "all" || item.branch === selectedBranch)
-    .slice()
-    .sort((a, b) => b.date.localeCompare(a.date));
+  const visibleNews = news.filter((item) => selectedBranch === "all" || item.branch === selectedBranch);
   const years = [...new Set(visibleNews.map((item) => item.date.slice(0, 4)))];
   const months = t("news.months", { returnObjects: true });
 
@@ -97,7 +95,10 @@ function NewsArchive() {
                   </ol>
                 </section>
               ))}
-              {visibleNews.length === 0 && <p className="cs-news-archive__empty">{labels.empty}</p>}
+              {!loading && error && <p className="cs-news-archive__empty">{labels.error}</p>}
+              {!loading && !error && visibleNews.length === 0 && (
+                <p className="cs-news-archive__empty">{labels.empty}</p>
+              )}
             </div>
           </div>
         </main>

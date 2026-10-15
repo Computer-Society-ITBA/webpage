@@ -7,7 +7,7 @@ import i18n from "../../i18n/index.js";
 import "../../styles/news.css";
 
 // Data
-import news from "../../data/news.json";
+import useNews from "../../hooks/useNews.js";
 
 import NewsTile from "../news_tile";
 
@@ -15,10 +15,12 @@ import NewsTile from "../news_tile";
 const Section = React.lazy(() => import("../section"));
 const LinkButton = React.lazy(() => import("../link_button"));
 
-// Bloques del mosaico, en el orden de news.json
+// Bloques del mosaico, en el orden de más nueva a más vieja
 const tiles = ["lead", "sm", "sm", "wide"];
 
 function News() {
+  const { news } = useNews(tiles.length);
+
   return (
     <Section
       id='news'
@@ -34,7 +36,7 @@ function News() {
         <div className='mt-[18px] h-[3px] w-[50px] bg-brand_secondary' />
 
         <ol className='cs-news-grid cs-news-grid--home'>
-          {news.slice(0, tiles.length).map((item, index) => (
+          {news.map((item, index) => (
             <NewsTile key={item.slug} item={item} tile={tiles[index]} />
           ))}
         </ol>
