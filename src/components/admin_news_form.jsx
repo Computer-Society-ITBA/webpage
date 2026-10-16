@@ -116,17 +116,25 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
   const dirty = !!form && JSON.stringify(form) !== saved.current;
 
   useEffect(() => {
+    if (credentials) setMessage(null);
+  }, [credentials]);
+
+  useEffect(() => {
     if (!dirty) return;
     const warn = (event) => { event.preventDefault(); event.returnValue = ""; };
     window.addEventListener("beforeunload", warn);
     return () => window.removeEventListener("beforeunload", warn);
   }, [dirty]);
 
-  // Se carga una sola vez: el slug no cambia mientras el formulario está abierto
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "instant" });
-    if (!slug) return;
+  }, []);
+
+  // Al volver a entrar, solo se recarga si todavía no había una edición abierta.
+  useEffect(() => {
+    if (!slug || form || !credentials) return;
     let cancelled = false;
+    setLoadError("");
     getAdminNews(credentials, slug)
       .then((item) => {
         if (cancelled) return;
@@ -137,13 +145,15 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
       })
       .catch((err) => {
         if (cancelled) return;
-        if (err instanceof AdminAuthError) onSessionClosed();
-        else setLoadError(err.status === 404 ? "La noticia no existe" : "No se pudo cargar la noticia");
+        if (err instanceof AdminAuthError) {
+          setLoadError("Volvé a ingresar para cargar la noticia.");
+          onSessionClosed();
+        } else setLoadError(err.status === 404 ? "La noticia no existe" : "No se pudo cargar la noticia");
       });
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [credentials, slug, form, onSessionClosed]);
 
   async function save(nextPublished) {
     const slugToSave = savedSlug || slugify(form.es.title);
@@ -165,7 +175,10 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
       setPublished(nextPublished);
       setMessage({ text: nextPublished === published ? "Guardado" : nextPublished ? "Publicada" : "Despublicada" });
     } catch (err) {
-      if (err instanceof AdminAuthError) return onSessionClosed();
+      if (err instanceof AdminAuthError) {
+        setMessage({ text: "No pudimos validar tu sesión. Tu edición se conserva; volvé a ingresar y reintentá guardar.", error: true });
+        return onSessionClosed();
+      }
       // 400, 404 y 409 traen un mensaje para mostrar; el resto es un problema de red o del servidor
       setMessage({ text: err.status < 500 ? err.message : "No se pudo guardar", error: true });
     } finally {
@@ -190,7 +203,10 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
       setForm((current) => ({ ...current, image: url })); // sin pisar lo que se escribió mientras subía
       setMessage({ text: "Imagen subida: guardá para que quede en la noticia" });
     } catch (err) {
-      if (err instanceof AdminAuthError) return onSessionClosed();
+      if (err instanceof AdminAuthError) {
+        setMessage({ text: "No pudimos validar tu sesión. Tu edición se conserva; volvé a ingresar y elegí la imagen de nuevo.", error: true });
+        return onSessionClosed();
+      }
       setMessage({ text: err.status < 500 ? err.message : "No se pudo subir la imagen", error: true });
     } finally {
       setBusy(false);

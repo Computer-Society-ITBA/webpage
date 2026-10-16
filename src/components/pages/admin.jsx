@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { AdminAuthError, listAdminNews } from "../../data/adminNewsService.js";
 import AdminNewsForm from "../admin_news_form";
@@ -12,6 +12,8 @@ const SESSION_CLOSED = "Tu sesión se cerró: el usuario o la contraseña ya no 
 // Backoffice de noticias. Las credenciales viven solo en memoria: al recargar hay que volver a entrar.
 function Admin() {
   const credentials = useRef(null);
+  const loginDialog = useRef(null);
+  const [needsLogin, setNeedsLogin] = useState(false);
   const [news, setNews] = useState(null);
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
@@ -20,6 +22,16 @@ function Admin() {
   const [status, setStatus] = useState("all");
   const [branch, setBranch] = useState("all");
   const [editing, setEditing] = useState(null); // null: listado; { slug }: formulario (slug null = nueva)
+
+  useEffect(() => {
+    if (needsLogin) loginDialog.current?.showModal();
+  }, [needsLogin]);
+
+  function requireLogin() {
+    credentials.current = null;
+    setError("");
+    setNeedsLogin(true);
+  }
 
   async function login(event) {
     event.preventDefault();
@@ -32,6 +44,7 @@ function Admin() {
       const items = await listAdminNews(attempt);
       credentials.current = attempt;
       setNews(items);
+      setNeedsLogin(false);
     } catch (err) {
       setError(err instanceof AdminAuthError ? "Usuario o contraseña incorrectos" : "No se pudo conectar");
     } finally {
@@ -58,6 +71,7 @@ function Admin() {
 
   function logout(message = "") {
     credentials.current = null;
+    setNeedsLogin(false);
     setNews(null);
     setQuery("");
     setStatus("all");
@@ -68,18 +82,56 @@ function Admin() {
     setLoading(false);
   }
 
+  const loginForm = (
+    <form onSubmit={login} className='flex flex-col gap-4'>
+      <label className='flex flex-col gap-1'>
+        Usuario
+        <input name='username' autoComplete='username' required className='rounded border border-gray-400 px-3 py-2' />
+      </label>
+      <label className='flex flex-col gap-1'>
+        Contraseña
+        <input
+          name='password'
+          type='password'
+          autoComplete='current-password'
+          required
+          className='rounded border border-gray-400 px-3 py-2'
+        />
+      </label>
+      {error && (
+        <p role='alert' className='text-red-700'>
+          {error}
+        </p>
+      )}
+      <button type='submit' disabled={loading} className='cs-admin-button cs-admin-button--primary'>
+        {loading ? "Entrando…" : "Entrar"}
+      </button>
+    </form>
+  );
+
   if (news && editing) {
     return (
-      <AdminNewsForm
-        credentials={credentials.current}
-        slug={editing.slug}
-        onBack={() => {
-          setEditing(null);
-          refresh();
-        }}
-        onSessionClosed={() => logout(SESSION_CLOSED)}
-        onLogout={() => logout()}
-      />
+      <>
+        <AdminNewsForm
+          credentials={credentials.current}
+          slug={editing.slug}
+          onBack={() => {
+            setEditing(null);
+            refresh();
+          }}
+          onSessionClosed={requireLogin}
+          onLogout={() => logout()}
+        />
+        {needsLogin && (
+          <dialog ref={loginDialog} className='cs-admin cs-admin-reauth' aria-labelledby='reauth-title' aria-describedby='reauth-description'
+            onCancel={(event) => { event.preventDefault(); if (!loading) setNeedsLogin(false); }}>
+            <h2 id='reauth-title'>Volver a ingresar</h2>
+            <p id='reauth-description'>No pudimos validar tu sesión. Tu edición sigue abierta en esta pestaña. Ingresá de nuevo y después reintentá guardar o subir la imagen.</p>
+            {loginForm}
+            <button type='button' className='cs-admin-button cs-admin-reauth__back' disabled={loading} onClick={() => setNeedsLogin(false)}>Volver al editor</button>
+          </dialog>
+        )}
+      </>
     );
   }
 
@@ -168,30 +220,7 @@ function Admin() {
           {notice}
         </p>
       )}
-      <form onSubmit={login} className='flex flex-col gap-4'>
-        <label className='flex flex-col gap-1'>
-          Usuario
-          <input name='username' autoComplete='username' required className='rounded border border-gray-400 px-3 py-2' />
-        </label>
-        <label className='flex flex-col gap-1'>
-          Contraseña
-          <input
-            name='password'
-            type='password'
-            autoComplete='current-password'
-            required
-            className='rounded border border-gray-400 px-3 py-2'
-          />
-        </label>
-        {error && (
-          <p role='alert' className='text-red-700'>
-            {error}
-          </p>
-        )}
-        <button type='submit' disabled={loading} className='cs-admin-button cs-admin-button--primary'>
-          {loading ? "Entrando…" : "Entrar"}
-        </button>
-      </form>
+      {loginForm}
     </main></div>
   );
 }

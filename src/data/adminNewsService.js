@@ -9,6 +9,7 @@ function basicAuth({ username, password }) {
 
 // Un error que no es 401 trae el mensaje del servidor y su status. Un Blob (una imagen) se manda tal cual.
 async function request(credentials, path, { method = "GET", body } = {}) {
+  if (!credentials) throw new AdminAuthError();
   const isFile = body instanceof Blob;
   const res = await fetch(path, {
     method,
