@@ -45,7 +45,7 @@ function toModel(data) {
 const BRANCHES = ["club", "hackit", "quantum", "gamejam"];
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const isObject = (value) => typeof value === "object" && value !== null && !Array.isArray(value);
-const isHeading = (block) => isObject(block) && Object.keys(block).length === 1 && typeof block.h2 === "string";
+const isHeading = (block) => isObject(block) && Object.keys(block).length === 1 && (typeof block.h2 === "string" || typeof block.h3 === "string");
 // Los textos vacíos no se guardan: las noticias que ya existen no tienen campos vacíos
 const isEmpty = (value) => value === undefined || value === "" || (Array.isArray(value) && value.length === 0);
 const withoutEmpty = (object = {}) => Object.fromEntries(Object.entries(object).filter(([, value]) => !isEmpty(value)));

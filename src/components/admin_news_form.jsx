@@ -4,16 +4,23 @@ import { AdminAuthError, createAdminNews, getAdminNews, updateAdminNews, uploadA
 import { bodyToText, slugify, textToBody } from "../data/newsFormat.js";
 import NewsArticle from "./news_article";
 
-const BRANCHES = { club: "Computer Society", hackit: "hackITBA", quantum: "Quantum Jam", gamejam: "Game Jam" };
+import { AdminHeader, BRANCHES, formatDate, newsImage, NewsStatus } from "./admin_news_ui";
+import ArrowBack from "@mui/icons-material/ArrowBack";
+import Lock from "@mui/icons-material/Lock";
+import Check from "@mui/icons-material/Check";
+import CheckCircle from "@mui/icons-material/CheckCircle";
+import RadioButtonUnchecked from "@mui/icons-material/RadioButtonUnchecked";
+import "../styles/news-archive.css";
+import i18n from "../i18n/index.js";
 const LANGS = { es: "Español", en: "English" };
 // Textos de cada idioma, en el orden del formulario. Con rows es un textarea.
 const TEXT_FIELDS = [
-  { key: "title", label: "Título" },
-  { key: "summary", label: "Resumen", rows: 2 },
-  { key: "lead", label: "Bajada", rows: 2 },
-  { key: "body", label: "Cuerpo", rows: 14 },
+  { key: "title", label: "Título", limit: 60 },
+  { key: "summary", label: "Resumen", rows: 3, limit: 140 },
+  { key: "lead", label: "Bajada", rows: 2, optional: true },
+  { key: "body", label: "Cuerpo", rows: 9 },
   { key: "image_alt", label: "Texto alternativo de la imagen" },
-  { key: "image_caption", label: "Epígrafe de la imagen" },
+  { key: "image_caption", label: "Epígrafe", optional: true },
 ];
 
 const MAX_UPLOAD_BYTES = 30 * 1024 * 1024; // antes de achicar: lo que se sube pesa mucho menos
@@ -82,21 +89,42 @@ function confirmText(published, nextPublished) {
   return "";
 }
 
+function imageFilename(path) {
+  try {
+    return decodeURIComponent(path.split("?")[0]).split("/").pop();
+  } catch {
+    return path.split("/").pop();
+  }
+}
+
 // Crear o editar una noticia. slug: null si es nueva.
-function AdminNewsForm({ credentials, slug, onBack, onSessionClosed }) {
+function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout }) {
   const [form, setForm] = useState(() => (slug ? null : toForm()));
   const [savedSlug, setSavedSlug] = useState(slug);
   const [published, setPublished] = useState(false);
   const [lang, setLang] = useState("es");
-  const [preview, setPreview] = useState(false);
+  const [previewMode, setPreviewMode] = useState("article");
+  const [previewLang, setPreviewLang] = useState("es");
+  const [imageInfo, setImageInfo] = useState(null);
+  const [dragging, setDragging] = useState(false);
+  const fileInput = useRef(null);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState(null); // { text, error }
   const [loadError, setLoadError] = useState("");
   // El formulario tal como se guardó por última vez, para avisar si hay cambios sin guardar
   const saved = useRef(JSON.stringify(form));
+  const dirty = !!form && JSON.stringify(form) !== saved.current;
+
+  useEffect(() => {
+    if (!dirty) return;
+    const warn = (event) => { event.preventDefault(); event.returnValue = ""; };
+    window.addEventListener("beforeunload", warn);
+    return () => window.removeEventListener("beforeunload", warn);
+  }, [dirty]);
 
   // Se carga una sola vez: el slug no cambia mientras el formulario está abierto
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     if (!slug) return;
     let cancelled = false;
     getAdminNews(credentials, slug)
@@ -146,10 +174,8 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed }) {
   }
 
   // La imagen se sube enseguida, pero queda en la noticia recién al guardar
-  async function uploadImage(event) {
-    const file = event.target.files[0];
-    event.target.value = ""; // para poder volver a elegir el mismo archivo
-    if (!file) return;
+  async function uploadImage(file) {
+    if (!file || busy || !savedSlug) return;
     if (!file.type.startsWith("image/") || file.size > MAX_UPLOAD_BYTES) {
       setMessage({ text: "Elegí una imagen de hasta 30 MB", error: true });
       return;
@@ -157,7 +183,9 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed }) {
     setBusy(true);
     setMessage({ text: "Subiendo imagen…" });
     try {
-      const url = await uploadAdminNewsImage(credentials, savedSlug, await shrinkImage(file));
+      const compressed = await shrinkImage(file);
+      const url = await uploadAdminNewsImage(credentials, savedSlug, compressed);
+      setImageInfo({ name: file.name, size: compressed.size });
       setForm((current) => ({ ...current, image: url })); // sin pisar lo que se escribió mientras subía
       setMessage({ text: "Imagen subida: guardá para que quede en la noticia" });
     } catch (err) {
@@ -168,167 +196,163 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed }) {
     }
   }
 
-  function back() {
-    if (form && JSON.stringify(form) !== saved.current && !window.confirm("Hay cambios sin guardar. ¿Salir igual?")) return;
-    onBack();
+  function leave(action) {
+    if (busy || (dirty && !window.confirm("Hay cambios sin guardar. ¿Salir igual?"))) return;
+    action();
   }
 
   const backButton = (
-    <button type='button' onClick={back} disabled={busy} className='rounded border border-black px-4 py-2 disabled:opacity-50'>
-      Volver al listado
+    <button type='button' onClick={() => leave(onBack)} disabled={busy} className='cs-admin-back'>
+      <ArrowBack fontSize='small' /> Noticias
     </button>
   );
 
   if (!form) {
     return (
-      <main className='mx-auto max-w-3xl p-6 text-left'>
-        {loadError ? (
-          <p role='alert' className='mb-4 text-red-700'>
-            {loadError}
-          </p>
-        ) : (
-          <p className='mb-4'>Cargando…</p>
-        )}
-        {backButton}
-      </main>
+      <div className='cs-admin'>
+        <AdminHeader onLogout={onLogout} />
+        <main className='cs-admin-loading'>
+          {backButton}
+          <p role={loadError ? "alert" : "status"}>{loadError || "Cargando noticia…"}</p>
+          {loadError && <button type='button' className='cs-admin-button' onClick={onBack}>Volver al listado</button>}
+        </main>
+      </div>
     );
   }
 
   const setText = (key, value) => setForm({ ...form, [lang]: { ...form[lang], [key]: value } });
-  const inputClass = "rounded border border-gray-400 px-3 py-2";
+  const complete = (language) => !!(form[language].title.trim() && form[language].summary.trim());
+  const image = newsImage(form.image);
+  const imageName = imageInfo?.name || imageFilename(form.image);
+  const address = `/news/${savedSlug || slugify(form.es.title) || "…"}`;
+  const previewItem = asSaved(toItem(form, published));
+  const previewText = previewItem[previewLang];
 
   return (
-    <main className='mx-auto max-w-3xl p-6 text-left'>
-      <div className='mb-2 flex flex-wrap items-center justify-between gap-4'>
-        <h1 className='text-2xl font-bold'>{savedSlug ? "Editar noticia" : "Nueva noticia"}</h1>
-        {backButton}
-      </div>
-      <p className='mb-6 break-all text-sm'>
-        {published ? "Publicada" : "Borrador"} · Slug: <code>{savedSlug || slugify(form.es.title) || "—"}</code>
-        {!savedSlug && " (sale del título en español y queda fijo al guardar)"}
-      </p>
+    <div className='cs-admin cs-admin--editor'>
+      <AdminHeader onLogout={() => leave(onLogout)} busy={busy} />
+      <main className='cs-admin-editor'>
+        <section className='cs-admin-form' aria-labelledby='admin-form-title'>
+          {backButton}
+          <h1 id='admin-form-title'>{savedSlug ? "Editar noticia" : "Nueva noticia"}</h1>
+          <fieldset className='cs-admin-branches'>
+            <legend>Rama</legend>
+            <div>
+              {Object.entries(BRANCHES).map(([value, label]) => (
+                <label key={value} className={`cs-admin-branch-choice cs-branch--${value}`}>
+                  <input type='radio' name='branch' value={value} checked={form.branch === value} onChange={() => setForm({ ...form, branch: value })} />
+                  <span>{label}</span>
+                  {form.branch === value ? <CheckCircle fontSize='small' /> : <RadioButtonUnchecked fontSize='small' />}
+                </label>
+              ))}
+            </div>
+          </fieldset>
 
-      <div className='mb-6 flex flex-wrap gap-4'>
-        <label className='flex flex-col gap-1'>
-          Rama
-          <select value={form.branch} onChange={(e) => setForm({ ...form, branch: e.target.value })} className={inputClass}>
-            {Object.entries(BRANCHES).map(([value, label]) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </select>
-        </label>
-        <label className='flex flex-col gap-1'>
-          Fecha
-          <input type='date' value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} className={inputClass} />
-        </label>
-      </div>
-
-      <div className='mb-6 flex flex-col gap-2'>
-        <label className='flex flex-col gap-1'>
-          Imagen
-          <input type='file' accept='image/*' onChange={uploadImage} disabled={busy || !savedSlug} aria-describedby='image-help' />
-        </label>
-        <p id='image-help' className='text-sm text-gray-600'>
-          {savedSlug
-            ? "Una foto de hasta 30 MB. Se achica a 1600 px de ancho antes de subirla."
-            : "Guardá el borrador para poder subir una imagen."}
-        </p>
-        {form.image.startsWith("http") ? (
-          <img src={form.image} alt='Vista previa de la imagen' className='max-h-48 max-w-full self-start rounded border border-gray-400' />
-        ) : (
-          form.image && (
-            <p className='text-sm'>
-              Imagen actual: <code>{form.image}</code>
-            </p>
-          )
-        )}
-      </div>
-
-      <div className='mb-4 flex flex-wrap items-center justify-between gap-2'>
-        <div role='group' aria-label='Idioma' className='flex gap-2'>
-          {Object.entries(LANGS).map(([value, label]) => (
-            <button
-              key={value}
-              type='button'
-              aria-pressed={lang === value}
-              onClick={() => setLang(value)}
-              className={`rounded border border-black px-4 py-2 ${lang === value ? "bg-black text-white" : ""}`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-        <button
-          type='button'
-          aria-pressed={preview}
-          onClick={() => setPreview(!preview)}
-          className={`rounded border border-black px-4 py-2 ${preview ? "bg-black text-white" : ""}`}
-        >
-          Vista previa
-        </button>
-      </div>
-
-      {preview && (
-        // El mismo componente que /news/:slug, con lo que hay en el formulario aunque no esté guardado
-        <article className='cs-article'>
-          <NewsArticle item={asSaved(toItem(form, published))} language={lang} />
-        </article>
-      )}
-
-      <div className={preview ? "hidden" : "flex flex-col gap-4"}>
-        {TEXT_FIELDS.map(({ key, label, rows }) => (
-          <React.Fragment key={key}>
-            <label className='flex flex-col gap-1'>
-              {label} ({lang.toUpperCase()})
-              {rows ? (
-                <textarea
-                  rows={rows}
-                  value={form[lang][key]}
-                  onChange={(e) => setText(key, e.target.value)}
-                  aria-describedby={key === "body" ? "body-help" : undefined}
-                  className={`${inputClass} ${key === "body" ? "font-mono text-sm" : ""}`}
-                />
-              ) : (
-                <input value={form[lang][key]} onChange={(e) => setText(key, e.target.value)} className={inputClass} />
-              )}
+          <div className='cs-admin-form__metadata'>
+            <label className='cs-admin-field'>
+              <span>Fecha</span>
+              <input type='date' value={form.date} onChange={(event) => setForm({ ...form, date: event.target.value })} />
             </label>
-            {key === "body" && (
-              <p id='body-help' className='-mt-3 text-sm text-gray-600'>
-                Párrafos separados por una línea en blanco. <code>## Subtítulo</code>, <code>**negrita**</code>,{" "}
-                <code>*cursiva*</code>, <code>[link](https://...)</code> y listas con <code>- </code>.
-              </p>
-            )}
-          </React.Fragment>
-        ))}
-      </div>
+            <div className='cs-admin-field cs-admin-address'>
+              <span>Dirección</span>
+              <div title={address}><Lock fontSize='small' /><code>{address}</code></div>
+              <p>{savedSlug ? "Queda fija desde que se creó la noticia, para no romper enlaces." : "Sale del título en español y queda fija al guardar el borrador."}</p>
+            </div>
+          </div>
 
-      {message && (
-        <p role={message.error ? "alert" : "status"} className={`mt-6 ${message.error ? "text-red-700" : ""}`}>
-          {message.text}
-        </p>
-      )}
+          <div className='cs-admin-upload'>
+            <span className='cs-admin-label'>Imagen</span>
+            <div className={`cs-admin-upload__drop ${dragging ? "is-dragging" : ""}`}
+              onDragOver={(event) => { event.preventDefault(); if (savedSlug && !busy) setDragging(true); }}
+              onDragLeave={() => setDragging(false)}
+              onDrop={(event) => { event.preventDefault(); setDragging(false); uploadImage(event.dataTransfer.files[0]); }}
+            >
+              {image ? (
+                <div className='cs-admin-upload__file'>
+                  <img key={image} src={image} alt='Imagen seleccionada' onLoad={(event) => {
+                    const { naturalWidth: width, naturalHeight: height, src } = event.currentTarget;
+                    const size = performance.getEntriesByName(src).at(-1)?.encodedBodySize;
+                    setImageInfo((current) => ({ ...current, width, height, size: current?.size || size }));
+                  }} />
+                  <div><strong>{imageName}</strong>{imageInfo?.width && <p>{imageInfo.width} × {imageInfo.height} px{imageInfo.size ? ` · ${Math.round(imageInfo.size / 1024)} KB` : ""}</p>}</div>
+                </div>
+              ) : <p className='cs-admin-upload__empty'>Arrastrá una foto acá</p>}
+              <input ref={fileInput} type='file' accept='image/*' hidden disabled={busy || !savedSlug} aria-label='Elegir imagen' aria-describedby='image-help'
+                onChange={(event) => { uploadImage(event.target.files[0]); event.target.value = ""; }} />
+              <button type='button' className='cs-admin-button' onClick={() => fileInput.current.click()} disabled={busy || !savedSlug}>{image ? "Reemplazar" : "Elegir archivo"}</button>
+            </div>
+            <p id='image-help' className='cs-admin-help'>{savedSlug ? "Arrastrá otra foto o elegí un archivo. JPG, PNG o WebP de hasta 30 MB." : "Guardá el borrador para poder subir una imagen."}</p>
+          </div>
 
-      <div className='mt-6 flex flex-wrap gap-2'>
-        <button
-          type='button'
-          onClick={() => save(published)}
-          disabled={busy}
-          className='rounded border border-black px-4 py-2 disabled:opacity-50'
-        >
-          {published ? "Guardar cambios" : "Guardar borrador"}
-        </button>
-        <button
-          type='button'
-          onClick={() => save(!published)}
-          disabled={busy}
-          className='rounded bg-black px-4 py-2 text-white disabled:opacity-50'
-        >
-          {published ? "Despublicar" : "Publicar"}
-        </button>
-      </div>
-    </main>
+          <div className='cs-admin-segments cs-admin-language' role='group' aria-label='Idioma del formulario'>
+            {Object.entries(LANGS).map(([value, label]) => (
+              <button key={value} type='button' aria-pressed={lang === value} onClick={() => setLang(value)}>
+                {label}<span>{complete(value) ? <><Check fontSize='inherit' /> completo</> : "incompleto"}</span>
+              </button>
+            ))}
+          </div>
+          <div className='cs-admin-form__texts' key={lang}>
+            {TEXT_FIELDS.map(({ key, label, rows, limit, optional }) => (
+              <div key={key} className='cs-admin-field'>
+                <label htmlFor={`admin-${key}`} className='cs-admin-field__label'>
+                  <span>{label}{optional && <span className='cs-admin-optional'> · opcional</span>}</span>
+                  {limit && <span className={`cs-admin-counter ${form[lang][key].length > limit ? "is-over" : ""}`}>{form[lang][key].length} / {limit}</span>}
+                </label>
+                {rows ? <textarea id={`admin-${key}`} rows={rows} value={form[lang][key]} onChange={(event) => setText(key, event.target.value)}
+                  placeholder={key === "lead" ? "Si la dejás vacía, la nota muestra el resumen." : undefined} aria-describedby={key === "body" ? "body-help" : undefined} />
+                  : <input id={`admin-${key}`} value={form[lang][key]} onChange={(event) => setText(key, event.target.value)} aria-describedby={key === "image_alt" ? "alt-help" : undefined} />}
+                {key === "body" && <p id='body-help' className='cs-admin-format-help'>
+                  <strong>Formato:</strong> <code>## Subtítulo</code> <code>### Sección</code> <code>**negrita**</code> <code>*cursiva*</code><br />
+                  <code>[texto](https://…)</code> <code>- lista</code> <span>Línea en blanco entre párrafos.</span>
+                </p>}
+                {key === "image_alt" && <p id='alt-help' className='cs-admin-help'>Describí la escena para quien no la ve.</p>}
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <aside className='cs-admin-preview' aria-labelledby='admin-preview-title'>
+          <div className='cs-admin-preview__toolbar'>
+            <h2 id='admin-preview-title'>Vista previa</h2>
+            <div className='cs-admin-segments' role='group' aria-label='Formato de vista previa'>
+              {[["article", "Nota"], ["archive", "Tarjeta en /news"]].map(([value, label]) => (
+                <button key={value} type='button' aria-pressed={previewMode === value} onClick={() => setPreviewMode(value)}>{label}</button>
+              ))}
+            </div>
+            <div className='cs-admin-segments' role='group' aria-label='Idioma de la vista previa'>
+              {["es", "en"].map((value) => <button key={value} type='button' aria-pressed={previewLang === value} onClick={() => setPreviewLang(value)}>{value.toUpperCase()}</button>)}
+            </div>
+          </div>
+          <p className='cs-admin-preview__help'>Muestra lo que está en el formulario, aunque todavía no lo hayas guardado.</p>
+          <div className='cs-admin-preview__stage' tabIndex={0} role='region' aria-label='Contenido de la vista previa'>
+            {previewMode === "article" && <article className='cs-article'><NewsArticle item={previewItem} language={previewLang} /></article>}
+            {previewMode === "archive" && <ul className='cs-news-archive cs-admin-preview__archive'>
+              <li className='cs-news-archive__card' data-branch={form.branch}>
+                {image && <figure className='cs-news-archive__photo'><img src={image} alt={previewText.image_alt || ""} /></figure>}
+                <div className='cs-news-archive__text'>
+                  <p className='cs-news-archive__meta'><span>{i18n.t(`branch.${form.branch}`, { lng: previewLang })}</span><time dateTime={form.date}>{formatDate(previewItem.date, previewLang)}</time></p>
+                  <h3 className='cs-news-archive__title'>{previewText.title}</h3>
+                  <p className='cs-news-archive__summary'>{previewText.summary}</p>
+                </div>
+              </li>
+            </ul>}
+          </div>
+        </aside>
+      </main>
+      <footer className='cs-admin-savebar'>
+        <div className='cs-admin-savebar__state'>
+          <NewsStatus published={published} />
+          <span className='cs-admin-dirty'>{dirty ? "Cambios sin guardar" : "Sin cambios pendientes"}</span>
+          <span className='cs-admin-savebar__hint'>{published ? "Al guardar se actualiza en el sitio." : "El borrador no se muestra en el sitio."}</span>
+        </div>
+        {message && <p role={message.error ? "alert" : "status"} className={`cs-admin-savebar__message ${message.error ? "is-error" : ""}`}>{message.text}</p>}
+        <div className='cs-admin-savebar__actions'>
+          {published && <button type='button' className='cs-admin-button' disabled={busy} onClick={() => save(false)}>Despublicar</button>}
+          <button type='button' className={`cs-admin-button ${published ? "cs-admin-button--primary" : ""}`} disabled={busy} onClick={() => save(published)}>{busy ? "Guardando…" : published ? "Guardar cambios" : "Guardar borrador"}</button>
+          {!published && <button type='button' className='cs-admin-button cs-admin-button--primary' disabled={busy} onClick={() => save(true)}>Publicar</button>}
+        </div>
+      </footer>
+    </div>
   );
 }
 

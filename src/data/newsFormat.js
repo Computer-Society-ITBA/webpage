@@ -10,24 +10,25 @@ export function slugify(title) {
     .replace(/^-+|-+$/g, "");
 }
 
-// Markdown básico → body: un bloque por párrafo (separados por una línea en blanco) y "## " → { h2 }.
+// Markdown básico → body: párrafos, "## " → { h2 } y "### " → { h3 }.
 // Negrita, cursiva, links y listas quedan tal cual dentro del string.
 export function textToBody(text) {
   return text
-    .split(/\n\s*\n|\n(?=## )/) // como en markdown, un "## " corta el párrafo aunque no haya línea en blanco
+    .split(/\n\s*\n|\n(?=#{2,3} )/) // un subtítulo corta el párrafo aunque no haya línea en blanco
     .map((block) => block.trim())
     .filter(Boolean)
     .flatMap((block) => {
-      if (!block.startsWith("## ")) return [block];
-      // "## Título" con texto en la línea de abajo: ese texto sigue como un bloque aparte
-      const [heading, ...rest] = block.split("\n");
-      return [{ h2: heading.slice(3).trim() }, ...textToBody(rest.join("\n"))];
+      const heading = block.match(/^(#{2,3}) ([^\n]*)/);
+      if (!heading) return [block];
+      // El texto debajo del subtítulo sigue como un bloque aparte
+      const [, ...rest] = block.split("\n");
+      return [{ [`h${heading[1].length}`]: heading[2].trim() }, ...textToBody(rest.join("\n"))];
     });
 }
 
 // body → markdown básico: lo inverso de textToBody
 export function bodyToText(body = []) {
-  return body.map((block) => (typeof block === "string" ? block : `## ${block.h2}`)).join("\n\n");
+  return body.map((block) => (typeof block === "string" ? block : block.h3 !== undefined ? `### ${block.h3}` : `## ${block.h2}`)).join("\n\n");
 }
 
 // **negrita**, *cursiva* y [texto](url). Como en markdown, la marca no puede tener un espacio justo adentro,

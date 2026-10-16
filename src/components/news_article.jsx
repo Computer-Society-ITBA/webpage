@@ -77,9 +77,10 @@ function NewsArticle({ item, language }) {
 
       {text.body && (
         <div className='cs-article__body'>
-          {text.body.map((block, index) =>
-            typeof block === "string" ? <React.Fragment key={index}>{renderBlock(block)}</React.Fragment> : <h2 key={index}>{block.h2}</h2>
-          )}
+          {text.body.map((block, index) => {
+            if (typeof block === "string") return <React.Fragment key={index}>{renderBlock(block)}</React.Fragment>;
+            return block.h3 !== undefined ? <h3 key={index}>{block.h3}</h3> : <h2 key={index}>{block.h2}</h2>;
+          })}
         </div>
       )}
     </React.Fragment>

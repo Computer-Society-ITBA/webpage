@@ -2,15 +2,12 @@ import React, { useRef, useState } from "react";
 
 import { AdminAuthError, listAdminNews } from "../../data/adminNewsService.js";
 import AdminNewsForm from "../admin_news_form";
+import { AdminHeader, BRANCHES, formatDate, newsImage, NewsStatus } from "../admin_news_ui";
+import Add from "@mui/icons-material/Add";
+import Search from "@mui/icons-material/Search";
+import "../../styles/admin.css";
 
 const SESSION_CLOSED = "Tu sesión se cerró: el usuario o la contraseña ya no son válidos. Volvé a entrar.";
-
-// "2026/10/06" → "6 oct 2026"; una fecha con otro formato se muestra tal cual
-function formatDate(date) {
-  if (!/^\d{4}\/\d{2}\/\d{2}$/.test(date || "")) return date || "—";
-  const [year, month, day] = date.split("/").map(Number);
-  return new Date(year, month - 1, day).toLocaleDateString("es-AR", { day: "numeric", month: "short", year: "numeric" });
-}
 
 // Backoffice de noticias. Las credenciales viven solo en memoria: al recargar hay que volver a entrar.
 function Admin() {
@@ -19,6 +16,9 @@ function Admin() {
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [loading, setLoading] = useState(false);
+  const [query, setQuery] = useState("");
+  const [status, setStatus] = useState("all");
+  const [branch, setBranch] = useState("all");
   const [editing, setEditing] = useState(null); // null: listado; { slug }: formulario (slug null = nueva)
 
   async function login(event) {
@@ -59,6 +59,9 @@ function Admin() {
   function logout(message = "") {
     credentials.current = null;
     setNews(null);
+    setQuery("");
+    setStatus("all");
+    setBranch("all");
     setEditing(null);
     setError("");
     setNotice(message);
@@ -75,6 +78,7 @@ function Admin() {
           refresh();
         }}
         onSessionClosed={() => logout(SESSION_CLOSED)}
+        onLogout={() => logout()}
       />
     );
   }
@@ -82,72 +86,83 @@ function Admin() {
   if (news) {
     // Las fechas YYYY/MM/DD se ordenan bien como texto
     const sorted = [...news].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
+    const drafts = news.filter((item) => !item.published).length;
+    const normalize = (text) => text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const visible = sorted.filter((item) =>
+      (status === "all" || (status === "published" ? item.published : !item.published)) &&
+      (branch === "all" || item.branch === branch) &&
+      normalize(item.es?.title || item.slug).includes(normalize(query.trim()))
+    );
     return (
-      <main className='mx-auto max-w-4xl p-6 text-left'>
-        <div className='mb-6 flex flex-wrap items-center justify-between gap-4'>
-          <h1 className='text-2xl font-bold'>Noticias</h1>
-          <div className='flex flex-wrap gap-2'>
-            <button type='button' onClick={() => setEditing({ slug: null })} className='rounded bg-black px-4 py-2 text-white'>
-              Nueva noticia
-            </button>
-            <button type='button' onClick={refresh} disabled={loading} className='rounded border border-black px-4 py-2 disabled:opacity-50'>
-              {loading ? "Actualizando…" : "Actualizar"}
-            </button>
-            <button type='button' onClick={() => logout()} className='rounded border border-black px-4 py-2'>
-              Salir
+      <div className='cs-admin'>
+        <AdminHeader onLogout={() => logout()} />
+        <main className='cs-admin-list'>
+          <div className='cs-admin-list__heading'>
+            <div><h1>Noticias</h1><span>{news.length} noticias · {drafts} borradores</span></div>
+            <button type='button' onClick={() => setEditing({ slug: null })} className='cs-admin-button cs-admin-button--primary'>
+              <Add fontSize='small' /> Nueva noticia
             </button>
           </div>
-        </div>
-
-        {error && (
-          <p role='alert' className='mb-4 text-red-700'>
-            {error}
-          </p>
-        )}
-
-        {sorted.length === 0 ? (
-          <p>Todavía no hay noticias.</p>
-        ) : (
-          // En celular cada fila se apila como tarjeta; desde 640px (sm) es una tabla común
-          <table className='block w-full border-collapse sm:table' aria-busy={loading}>
-            <thead className='hidden sm:table-header-group'>
-              <tr className='border-b border-black text-left'>
-                <th scope='col' className='py-2 pr-4'>Título</th>
-                <th scope='col' className='py-2 pr-4'>Fecha</th>
-                <th scope='col' className='py-2 pr-4'>Estado</th>
-                <th scope='col' className='py-2'>
-                  <span className='sr-only'>Acciones</span>
-                </th>
+          <div className='cs-admin-filters'>
+            <label className='cs-admin-search'>
+              <Search aria-hidden='true' />
+              <input type='search' value={query} onChange={(event) => setQuery(event.target.value)} placeholder='Buscar por título' aria-label='Buscar por título' />
+            </label>
+            <div className='cs-admin-segments' role='group' aria-label='Filtrar por estado'>
+              {[["all", "Todas", news.length], ["draft", "Borradores", drafts], ["published", "Publicadas", news.length - drafts]].map(([value, label, count]) => (
+                <button key={value} type='button' aria-pressed={status === value} onClick={() => setStatus(value)}>{label} · {count}</button>
+              ))}
+            </div>
+            <select className='cs-admin-branch-filter' value={branch} onChange={(event) => setBranch(event.target.value)} aria-label='Filtrar por rama'>
+              <option value='all'>Rama: todas</option>
+              {Object.entries(BRANCHES).map(([value, label]) => <option key={value} value={value}>{label}</option>)}
+            </select>
+          </div>
+          {error && <p role='alert' className='cs-admin-message is-error'>{error} <button type='button' onClick={refresh} disabled={loading}>Reintentar</button></p>}
+          <table className='cs-admin-table' aria-busy={loading}>
+            <caption className='sr-only'>Noticias ordenadas de la más nueva a la más vieja</caption>
+            <thead>
+              <tr>
+                <th scope='col'><span className='sr-only'>Imagen</span></th>
+                <th scope='col'>Título</th>
+                <th scope='col'>Rama</th>
+                <th scope='col'>Fecha</th>
+                <th scope='col'>Estado</th>
+                <th scope='col'><span className='sr-only'>Acciones</span></th>
               </tr>
             </thead>
-            <tbody className='block sm:table-row-group'>
-              {sorted.map((item) => (
-                <tr key={item.slug} className='block border-b border-gray-300 py-3 sm:table-row sm:py-0'>
-                  <td className='block font-bold sm:table-cell sm:py-2 sm:pr-4 sm:font-normal'>{item.es?.title || item.slug}</td>
-                  <td className='mr-3 inline-block sm:table-cell sm:whitespace-nowrap sm:py-2 sm:pr-4'>{formatDate(item.date)}</td>
-                  <td className='inline-block sm:table-cell sm:py-2 sm:pr-4'>{item.published ? "Publicada" : "Borrador"}</td>
-                  <td className='mt-2 block sm:mt-0 sm:table-cell sm:py-2 sm:text-right'>
-                    <button
-                      type='button'
-                      onClick={() => setEditing({ slug: item.slug })}
-                      aria-label={`Editar ${item.es?.title || item.slug}`}
-                      className='rounded border border-black px-3 py-1'
-                    >
-                      Editar
-                    </button>
-                  </td>
-                </tr>
-              ))}
+            <tbody>
+              {visible.map((item) => {
+                const image = newsImage(item.image);
+                const edit = () => setEditing({ slug: item.slug });
+                return (
+                  <tr key={item.slug}>
+                    <td className='cs-admin-table__image'>
+                      {image ? <img src={image} alt='' loading='lazy' /> : <span className='cs-admin-no-photo'>Sin foto</span>}
+                    </td>
+                    <td className='cs-admin-table__title'>
+                      <button type='button' onClick={edit}>{item.es?.title || item.slug}</button>
+                      <span>/news/{item.slug}</span>
+                    </td>
+                    <td className='cs-admin-table__branch'><span className={`cs-admin-branch cs-branch--${item.branch}`}>{BRANCHES[item.branch] || item.branch}</span></td>
+                    <td className='cs-admin-table__date'><time dateTime={item.date?.replaceAll("/", "-")}>{formatDate(item.date)}</time></td>
+                    <td className='cs-admin-table__status'><NewsStatus published={item.published} /></td>
+                    <td className='cs-admin-table__action'><button type='button' onClick={edit} aria-label={`Editar ${item.es?.title || item.slug}`} className='cs-admin-button'>Editar</button></td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
-        )}
-      </main>
+          {visible.length === 0 && <p className='cs-admin-empty'>{news.length ? "No hay noticias que coincidan con los filtros." : "Todavía no hay noticias."}</p>}
+          <p className='cs-admin-list__count' role='status'>{visible.length} {visible.length === 1 ? "noticia" : "noticias"}, de la más nueva a la más vieja.</p>
+        </main>
+      </div>
     );
   }
 
   return (
-    <main className='mx-auto max-w-sm p-6 text-left'>
-      <h1 className='mb-6 text-2xl font-bold'>Backoffice de noticias</h1>
+    <div className='cs-admin'><AdminHeader /><main className='cs-admin-login'>
+      <h1>Ingresar al backoffice</h1>
       {notice && (
         <p role='status' className='mb-4 text-amber-800'>
           {notice}
@@ -173,11 +188,11 @@ function Admin() {
             {error}
           </p>
         )}
-        <button type='submit' disabled={loading} className='rounded bg-black px-4 py-2 text-white disabled:opacity-50'>
+        <button type='submit' disabled={loading} className='cs-admin-button cs-admin-button--primary'>
           {loading ? "Entrando…" : "Entrar"}
         </button>
       </form>
-    </main>
+    </main></div>
   );
 }
 

@@ -1,0 +1,279 @@
+/* Backoffice: estilos acotados a /admin; el sitio público conserva sus estilos. */
+.cs-admin {
+  min-height: 100dvh;
+  background: #fff;
+  color: #212121;
+  text-align: left;
+  font: 400 16px/1.5 Roboto, Arial, sans-serif;
+}
+.cs-admin h1, .cs-admin h2, .cs-admin h3, .cs-admin p, .cs-admin figure { margin: 0; }
+.cs-admin button, .cs-admin input, .cs-admin select, .cs-admin textarea { font: inherit; }
+.cs-admin button { cursor: pointer; }
+.cs-admin button:disabled { cursor: default; opacity: .5; }
+.cs-admin :is(button, input, select, textarea):focus-visible { outline: 3px solid #212121; outline-offset: 3px; }
+.cs-admin-header { display: flex; align-items: center; gap: 16px; min-height: 64px; padding: 10px 5%; background: #212121; color: #fff; }
+.cs-admin-header__brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; font: 700 15px/1.4 Montserrat, Arial, sans-serif; }
+.cs-admin-header__brand img { width: 36px; height: 36px; object-fit: contain; }
+.cs-admin-header__label { border-left: 1px solid #75787b; padding-left: 12px; line-height: 22px; }
+.cs-admin-header > button { margin-left: auto; border-color: #fff; color: #fff; }
+.cs-admin-header :is(button, input):focus-visible { outline-color: #fff; }
+.cs-admin-button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; flex-shrink: 0; min-height: 44px; padding: 10px 16px; border: 2px solid #212121; border-radius: 4px; background: transparent; font-weight: 600 !important; line-height: 20px !important; white-space: nowrap; }
+.cs-admin-button:hover:not(:disabled) { background: #f1f1f1; }
+.cs-admin-button--primary { background: #212121; color: #fff; }
+.cs-admin-button--primary:hover:not(:disabled) { background: #3c3c3c; }
+.cs-admin-header .cs-admin-button:hover { background: #3c3c3c; }
+.cs-admin-list { width: 90%; margin: 0 auto; padding: 40px 0 96px; }
+.cs-admin-list__heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+.cs-admin-list__heading > div { display: flex; align-items: baseline; gap: 16px; }
+.cs-admin-list h1 { font: 700 32px/1.25 Montserrat, Arial, sans-serif; }
+.cs-admin-list__heading span { color: #686b6e; }
+.cs-admin-filters { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-bottom: 24px; }
+.cs-admin-search { display: flex; align-items: center; gap: 12px; width: 420px; max-width: 100%; min-height: 48px; padding: 0 12px; border: 2px solid #85888a; border-radius: 4px; color: #686b6e; }
+.cs-admin-search input { width: 100%; min-width: 0; padding: 10px 0; border: 0; outline: none; color: #212121; background: transparent; }
+.cs-admin-search:focus-within { outline: 3px solid #212121; outline-offset: 3px; }
+.cs-admin-search input:focus-visible { outline: none; }
+.cs-admin-segments { display: inline-flex; align-items: stretch; border: 2px solid #212121; border-radius: 4px; overflow: hidden; }
+.cs-admin-segments button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 10px 16px; font-weight: 600; line-height: 20px; background: #fff; white-space: nowrap; }
+.cs-admin-segments button + button { border-left: 2px solid #212121; }
+.cs-admin-segments button[aria-pressed='true'] { background: #212121; color: #fff; }
+.cs-admin-segments button:hover[aria-pressed='false'] { background: #f1f1f1; }
+.cs-admin-segments button:focus-visible { outline-offset: -4px; }
+.cs-admin-segments button[aria-pressed='true']:focus-visible { outline-color: #fff; }
+.cs-admin-filters .cs-admin-segments button { padding-left: 12px; padding-right: 12px; }
+.cs-admin-branch-filter { min-height: 48px; padding: 8px 12px; border: 2px solid #212121; border-radius: 4px; font-weight: 600 !important; background: #fff; }
+.cs-admin-table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+.cs-admin-table th { padding: 12px 16px 12px 0; border-bottom: 2px solid #333; text-align: left; font: 700 14px/20px Montserrat, Arial, sans-serif; }
+.cs-admin-table th:nth-child(1) { width: 12.5%; }
+.cs-admin-table th:nth-child(2) { width: 35.4%; }
+.cs-admin-table th:nth-child(3) { width: 15.8%; }
+.cs-admin-table th:nth-child(4) { width: 14.1%; }
+.cs-admin-table th:nth-child(5) { width: 14%; }
+.cs-admin-table th:nth-child(6) { width: 8.2%; }
+.cs-admin-table td { padding: 12px 24px 12px 0; border-bottom: 1px solid #e8e8e8; vertical-align: middle; }
+.cs-admin-table td:last-child { padding-right: 0; text-align: right; }
+.cs-admin-table tbody tr:hover, .cs-admin-table tbody tr:focus-within { background: #f7f7f7; }
+.cs-admin-table__image img, .cs-admin-no-photo { display: block; width: 96px; height: 64px; border-radius: 6px; object-fit: cover; }
+.cs-admin-table__image img { filter: grayscale(1); }
+.cs-admin-table tbody tr:hover img, .cs-admin-table tbody tr:focus-within img { filter: none; }
+.cs-admin-no-photo { display: flex; align-items: center; justify-content: center; border: 2px dashed #85888a; color: #686b6e; font-size: 12px; font-weight: 600; }
+.cs-admin-table__title button { text-align: left; font-weight: 600; line-height: 22px; }
+.cs-admin-table__title button:hover, .cs-admin-table tbody tr:focus-within .cs-admin-table__title button { text-decoration: underline; text-underline-offset: 3px; }
+.cs-admin-table__title > span { display: block; margin-top: 4px; font: 400 12px/18px ui-monospace, SFMono-Regular, Consolas, monospace; color: #686b6e; overflow-wrap: anywhere; }
+.cs-admin-table__date { white-space: nowrap; }
+.cs-admin-table__action .cs-admin-button { padding-left: 14px; padding-right: 14px; }
+.cs-admin-table tbody tr:hover .cs-admin-table__action button, .cs-admin-table tbody tr:focus-within .cs-admin-table__action button { background: #212121; color: #fff; }
+.cs-admin-branch { display: inline-block; padding: 4px 10px; border-radius: 30px; background: var(--b); color: var(--on-b); font-size: 14px; font-weight: 700; line-height: 18px; white-space: nowrap; }
+.cs-admin-status { display: inline-flex; align-items: center; min-height: 28px; padding: 3px 12px; border: 2px solid #212121; border-radius: 30px; font-size: 14px; font-weight: 700; line-height: 18px; white-space: nowrap; }
+.cs-admin-status.is-published { background: #212121; color: #fff; }
+.cs-admin-status.is-draft { border-style: dashed; background: #fff; color: #212121; }
+.cs-admin-list__count { margin-top: 16px !important; color: #686b6e; font-size: 14px; }
+.cs-admin-empty { padding: 32px 0; }
+.cs-admin-message { margin: 16px 0 !important; }
+.cs-admin-message button { margin-left: 12px; text-decoration: underline; }
+.cs-admin .is-error { color: #b42318; }
+.cs-admin-login { width: min(100% - 32px, 380px); margin: 64px auto; }
+.cs-admin-login h1 { margin-bottom: 24px; font: 700 24px/1.3 Montserrat, Arial, sans-serif; }
+.cs-admin-login label { font-weight: 600; }
+.cs-admin-login input { min-height: 48px; border: 2px solid #85888a; border-radius: 3px; font-weight: 400; }
+.cs-admin-loading { padding: 32px; }
+.cs-admin-loading p { margin: 24px 0; }
+
+/* Editor y vista previa comparten el ancho de la pantalla. */
+.cs-admin--editor .cs-admin-header { padding-left: 32px; padding-right: 32px; }
+.cs-admin-editor { display: grid; grid-template-columns: minmax(0, 41.15%) minmax(0, 1fr); min-height: calc(100dvh - 136px); }
+.cs-admin-form { min-width: 0; padding: 32px 32px 48px; }
+.cs-admin-back { display: inline-flex; align-items: center; gap: 8px; font-size: 14px !important; font-weight: 600 !important; line-height: 28px !important; }
+.cs-admin-back:hover { text-decoration: underline; text-underline-offset: 3px; }
+.cs-admin-form h1 { margin-top: 16px; margin-bottom: 28px; font: 700 28px/36px Montserrat, Arial, sans-serif; }
+.cs-admin-branches { margin: 0 0 28px; min-width: 0; }
+.cs-admin-branches legend, .cs-admin-label, .cs-admin-field__label, .cs-admin-field > span { font: 600 16px/24px Montserrat, Arial, sans-serif; }
+.cs-admin-branches legend { margin-bottom: 8px; }
+.cs-admin-branches > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.cs-admin-branch-choice { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 60px; padding: 14px 18px; border-radius: 12px; background: var(--b); color: var(--on-b); cursor: pointer; font: 700 16px/24px Montserrat, Arial, sans-serif; }
+.cs-admin-branch-choice input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.cs-admin-branch-choice:has(input:checked) { outline: 3px solid #212121; outline-offset: 3px; }
+.cs-admin-branch-choice:has(input:focus-visible) { outline: 3px solid #212121; outline-offset: 5px; }
+.cs-admin-form__metadata { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 2.9fr); gap: 16px; margin-bottom: 28px; }
+.cs-admin-field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.cs-admin-field input, .cs-admin-field textarea { width: 100%; min-width: 0; min-height: 48px; padding: 10px 14px; border: 2px solid #85888a; border-radius: 3px; background: #fff; line-height: 24px; }
+.cs-admin-field input[type='date'] { padding-right: 10px; }
+.cs-admin-field textarea { display: block; resize: vertical; }
+.cs-admin-field input:hover, .cs-admin-field textarea:hover { border-color: #212121; }
+.cs-admin-field__label { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.cs-admin-address > div { display: flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 14px; border-radius: 4px; background: #f7f7f7; }
+.cs-admin-address svg { flex-shrink: 0; width: 16px; height: 16px; }
+.cs-admin-address code { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 400 12px/20px ui-monospace, SFMono-Regular, Consolas, monospace; }
+.cs-admin-address p, .cs-admin-help { color: #686b6e; font: 400 13px/18px Roboto, Arial, sans-serif; }
+.cs-admin-upload { margin-bottom: 28px; }
+.cs-admin-label { display: block; margin-bottom: 8px; }
+.cs-admin-upload__drop { padding: 12px; border: 2px dashed #85888a; border-radius: 12px; }
+.cs-admin-upload__drop.is-dragging { border-color: #212121; background: #fff6e6; }
+.cs-admin-upload__file { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+.cs-admin-upload__file > img { width: 144px; height: 96px; object-fit: cover; border-radius: 8px; flex-shrink: 0; }
+.cs-admin-upload__file > div { min-width: 0; }
+.cs-admin-upload__file strong { display: block; overflow-wrap: anywhere; font-size: 14px; font-weight: 600; }
+.cs-admin-upload__file p { margin-top: 4px; color: #686b6e; font-size: 13px; line-height: 18px; }
+.cs-admin-upload__drop .cs-admin-button { padding: 10px 14px; font-size: 14px; }
+.cs-admin-upload__empty { padding: 12px 0 24px; color: #686b6e; }
+.cs-admin-upload > .cs-admin-help { margin-top: 8px; }
+.cs-admin-language { display: flex; width: 100%; margin-bottom: 28px; }
+.cs-admin-language button { flex: 1; min-width: 0; padding-left: 8px; padding-right: 8px; }
+.cs-admin-language button > span { display: flex; align-items: center; gap: 4px; color: #686b6e; font-size: 12px; }
+.cs-admin-language button[aria-pressed='true'] > span { color: #fff; }
+.cs-admin-form__texts { display: flex; flex-direction: column; gap: 28px; }
+.cs-admin-counter { color: #686b6e; font: 600 13px/20px Roboto, Arial, sans-serif; white-space: nowrap; }
+.cs-admin-counter.is-over { color: #b42318; }
+.cs-admin-optional { color: #686b6e; font: 400 14px/24px Roboto, Arial, sans-serif; }
+.cs-admin-format-help { padding: 10px 12px; border-radius: 3px; background: #f7f7f7; font: 400 12px/24px Roboto, Arial, sans-serif; }
+.cs-admin-format-help code { margin-left: 8px; font-size: 12px; }
+.cs-admin-format-help span { margin-left: 8px; color: #686b6e; }
+.cs-admin-preview { min-width: 0; padding: 24px 32px 64px; background: #f7f7f7; }
+.cs-admin-preview__toolbar { display: flex; align-items: center; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
+.cs-admin-preview__toolbar h2 { margin-right: auto; font: 700 18px/26px Montserrat, Arial, sans-serif; }
+.cs-admin-preview__toolbar .cs-admin-segments { flex-shrink: 0; }
+.cs-admin-preview__toolbar button { min-height: 40px; padding: 10px 12px; font-size: 13px; line-height: 20px; }
+.cs-admin-preview__help { margin: 14px 0 16px !important; color: #686b6e; font: 400 14px/20px Roboto, Arial, sans-serif; }
+.cs-admin-preview__stage { padding: 24px; border-radius: 12px; background: #fff; }
+.cs-admin-preview .cs-article { max-width: 100%; margin: 0; padding: 24px 0 40px; }
+.cs-admin-preview .cs-article__head { margin: 0; }
+.cs-admin-preview .cs-article__title { margin-top: 16px; }
+.cs-admin-preview .cs-article__lead { margin-top: 16px; }
+.cs-admin-preview .cs-article__figure { margin-top: 24px; }
+.cs-admin-preview .cs-article__figure figcaption { margin-top: 8px; }
+.cs-admin-preview .cs-article__body { margin-top: 32px; }
+.cs-admin-preview .cs-article__body p { margin-bottom: 16px; }
+.cs-admin-preview .cs-article__body h2 { margin: 40px 0 12px; }
+.cs-admin-preview .cs-article__body h3 { margin: 28px 0 10px; }
+.cs-admin-preview .cs-article__body ul { margin: 0 0 16px; }
+.cs-admin-preview__archive.cs-news-archive { max-width: 380px; min-height: 0; padding: 0; margin: 0 auto; list-style: none; }
+.cs-admin-preview__archive .cs-news-archive__meta { margin-bottom: 14px; }
+.cs-admin-preview__archive .cs-news-archive__summary { margin-top: 12px; }
+.cs-admin-savebar { position: sticky; bottom: 0; z-index: 5; display: flex; align-items: center; flex-wrap: wrap; gap: 12px 20px; min-height: 74px; padding: 14px 32px; border-top: 2px solid #333; background: #fff; }
+.cs-admin-savebar__state { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; }
+.cs-admin-savebar .cs-admin-status { min-height: 28px; padding: 3px 12px; font-size: 12px; line-height: 18px; }
+.cs-admin-dirty { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; }
+.cs-admin-dirty::before { content: ''; width: 10px; height: 10px; border-radius: 50%; background: #212121; }
+.cs-admin-savebar__hint { color: #686b6e; font-size: 14px; }
+.cs-admin-savebar__actions { display: flex; gap: 8px; margin-left: auto; }
+.cs-admin-savebar .cs-admin-button { font-size: 14px; }
+.cs-admin-savebar__message { flex-basis: 100%; order: -1; font-size: 14px; }
+
+/* Cada columna conserva su posición mientras se escribe y se revisa la nota. */
+@media (min-width: 900px) {
+  .cs-admin--editor { display: grid; grid-template-rows: auto minmax(0, 1fr) auto; height: 100dvh; overflow: hidden; }
+  .cs-admin--editor .cs-admin-editor { min-height: 0; }
+  .cs-admin-form { min-height: 0; overflow-y: auto; overscroll-behavior-y: contain; }
+  .cs-admin-preview { display: flex; flex-direction: column; min-height: 0; padding-bottom: 24px; overflow: hidden; }
+  .cs-admin-preview__toolbar, .cs-admin-preview__help { flex-shrink: 0; }
+  .cs-admin-preview__stage { flex: 1; min-height: 0; overflow-y: auto; overscroll-behavior-y: contain; scrollbar-gutter: stable; }
+  .cs-admin--editor .cs-admin-savebar { position: static; }
+}
+
+@media (min-width: 1440px) {
+  .cs-admin-preview__toolbar button { font-size: 14px; padding-left: 16px; padding-right: 16px; }
+}
+@media (max-width: 1199px) {
+  .cs-admin-filters { gap: 12px; }
+  .cs-admin-search { flex: 1; min-width: 240px; }
+  .cs-admin-table th:nth-child(1) { width: 11%; }
+  .cs-admin-table th:nth-child(2) { width: 35%; }
+  .cs-admin-table th:nth-child(3) { width: 17%; }
+  .cs-admin-table th:nth-child(4) { width: 14%; }
+  .cs-admin-table th:nth-child(5) { width: 14%; }
+  .cs-admin-table th:nth-child(6) { width: 9%; }
+  .cs-admin-table td { padding-right: 12px; }
+  .cs-admin-table__image img, .cs-admin-no-photo { width: 80px; height: 56px; }
+  .cs-admin-form, .cs-admin-preview { padding-left: 24px; padding-right: 24px; }
+  .cs-admin-preview__toolbar h2 { flex-basis: 100%; margin-bottom: 8px; }
+  .cs-admin-preview__toolbar { justify-content: flex-start; }
+  .cs-admin-branch-choice { font-size: 14px; padding-left: 12px; padding-right: 12px; }
+  .cs-admin-upload__file { gap: 12px; }
+  .cs-admin-upload__file > img { width: 112px; height: 80px; }
+  .cs-admin-preview__stage { padding: 16px; }
+  .cs-admin-preview .cs-article__head { padding: 32px 24px; }
+  .cs-admin-preview .cs-article__title { font-size: 32px; line-height: 36px; }
+  .cs-admin-language button { flex-wrap: wrap; gap: 2px 8px; }
+  .cs-admin-savebar__hint { display: none; }
+}
+@media (max-width: 899px) {
+  .cs-admin-editor { grid-template-columns: minmax(0, 1fr); }
+  .cs-admin-form { padding: 24px 24px 40px; }
+  .cs-admin-preview { padding: 24px; }
+  .cs-admin-preview__toolbar h2 { flex-basis: auto; margin-bottom: 0; }
+  .cs-admin-preview .cs-article { max-width: 720px; margin: 0 auto; }
+  .cs-admin-preview .cs-article__head { padding: 40px; }
+  .cs-admin-language button { flex-wrap: nowrap; }
+  .cs-admin-table__image img, .cs-admin-no-photo { width: 64px; height: 48px; }
+  .cs-admin-table th:nth-child(1) { width: 11%; }
+  .cs-admin-table th:nth-child(2) { width: 31%; }
+  .cs-admin-table th:nth-child(3) { width: 16%; }
+  .cs-admin-table th:nth-child(4) { width: 14%; }
+  .cs-admin-table th:nth-child(5) { width: 16%; }
+  .cs-admin-table th:nth-child(6) { width: 12%; }
+  .cs-admin-branch { font-size: 12px; padding: 4px 8px; }
+  .cs-admin-table__date { font-size: 14px; }
+  .cs-admin-status { font-size: 12px; padding: 3px 8px; }
+  .cs-admin-table__action .cs-admin-button { font-size: 14px; padding: 10px; }
+  .cs-admin-header__label { font-size: 14px; }
+}
+@media (max-width: 639px) {
+  .cs-admin-header, .cs-admin--editor .cs-admin-header { min-height: 72px; gap: 12px; padding: 12px 16px; }
+  .cs-admin-header__brand { flex: 1; gap: 8px; min-width: 0; font-size: 13px; }
+  .cs-admin-header__brand img { width: 32px; height: 32px; }
+  .cs-admin-header__label { display: none; }
+  .cs-admin-header > button { min-height: 44px; padding: 8px 12px; font-size: 14px; }
+  .cs-admin-header > button svg { display: none; }
+  .cs-admin-list { width: auto; padding: 28px 16px 48px; }
+  .cs-admin-list__heading { align-items: flex-start; gap: 12px; margin-bottom: 24px; }
+  .cs-admin-list__heading > div { display: block; }
+  .cs-admin-list h1 { font-size: 26px; }
+  .cs-admin-list__heading span { display: block; margin-top: 8px; font-size: 13px; }
+  .cs-admin-list__heading .cs-admin-button { padding: 10px; gap: 4px; font-size: 14px; }
+  .cs-admin-filters { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .cs-admin-search { width: 100%; min-width: 0; }
+  .cs-admin-filters .cs-admin-segments { width: 100%; }
+  .cs-admin-filters .cs-admin-segments button { flex: 1; min-width: 0; padding: 10px 8px; gap: 4px; font-size: 13px; }
+  .cs-admin-branch-filter { width: 100%; }
+  .cs-admin-table, .cs-admin-table tbody { display: block; }
+  .cs-admin-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .cs-admin-table tbody tr { display: grid; grid-template-columns: 80px minmax(0, 1fr) auto; gap: 12px; padding: 20px 0; border-bottom: 1px solid #e8e8e8; }
+  .cs-admin-table td, .cs-admin-table td:last-child { display: block; padding: 0; border: 0; text-align: left; }
+  .cs-admin-table__image { grid-row: 1; grid-column: 1; }
+  .cs-admin-table__image img, .cs-admin-no-photo { width: 80px; height: 60px; }
+  .cs-admin-table__title { grid-column: 2 / -1; }
+  .cs-admin-table__title button { font-size: 16px; }
+  .cs-admin-table__title > span { font-size: 11px; line-height: 16px; }
+  .cs-admin-table__branch { grid-column: 1 / 3; grid-row: 2; align-self: center; }
+  .cs-admin-table__date { grid-column: 1 / 3; grid-row: 3; align-self: center; }
+  .cs-admin-table__status { grid-column: 3; grid-row: 2; justify-self: end; }
+  .cs-admin-table__action { grid-column: 3; grid-row: 3; justify-self: end; }
+  .cs-admin-table__action .cs-admin-button { min-height: 44px; padding: 8px 16px; }
+  .cs-admin-form { padding: 24px 16px 40px; }
+  .cs-admin-form h1 { font-size: 26px; }
+  .cs-admin-branch-choice { font-size: 14px; }
+  .cs-admin-form__metadata { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .cs-admin-upload__file > img { width: 112px; height: 80px; }
+  .cs-admin-language button { flex-wrap: wrap; padding-top: 8px; padding-bottom: 8px; }
+  .cs-admin-language button > span { font-size: 11px; }
+  .cs-admin-field__label { font-size: 15px; }
+  .cs-admin-format-help { line-height: 22px; }
+  .cs-admin-preview { padding: 24px 16px; }
+  .cs-admin-preview__toolbar { gap: 12px 8px; }
+  .cs-admin-preview__toolbar h2 { flex-basis: 100%; }
+  .cs-admin-preview__toolbar button { font-size: 11px; padding: 10px 8px; }
+  .cs-admin-preview__toolbar > .cs-admin-segments:first-of-type { flex: 1; }
+  .cs-admin-preview__toolbar > .cs-admin-segments:first-of-type button { flex: 1; }
+  .cs-admin-preview__stage { padding: 12px; }
+  .cs-admin-preview .cs-article { padding-top: 8px; padding-bottom: 16px; }
+  .cs-admin-preview .cs-article__head { padding: 24px 20px; }
+  .cs-admin-preview .cs-article__title { font-size: 28px; line-height: 32px; }
+  .cs-admin-preview .cs-article__meta { flex-wrap: wrap; gap: 8px; font-size: 12px; }
+  .cs-admin-preview .cs-article__meta time { font-size: 12px; }
+  .cs-admin-preview .cs-article__lead { font-size: 17px; line-height: 26px; }
+  .cs-admin-savebar { padding: 12px 16px; gap: 12px; }
+  .cs-admin-savebar__state { width: 100%; justify-content: space-between; gap: 8px; }
+  .cs-admin-dirty { font-size: 12px; }
+  .cs-admin-dirty::before { width: 8px; height: 8px; }
+  .cs-admin-savebar__actions { width: 100%; }
+  .cs-admin-savebar__actions button { flex: 1; padding-left: 10px; padding-right: 10px; }
+}
