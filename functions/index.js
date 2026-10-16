@@ -1,15 +1,32 @@
-import { createHash, timingSafeEqual } from "node:crypto";
+import { createHash, randomUUID, timingSafeEqual } from "node:crypto";
 import { onRequest } from "firebase-functions/https";
 import { defineSecret } from "firebase-functions/params";
 import { logger } from "firebase-functions";
 import { initializeApp } from "firebase-admin/app";
 import { FieldValue, getFirestore } from "firebase-admin/firestore";
+import { getDownloadURL, getStorage } from "firebase-admin/storage";
+
+// En el emulador, si falta el de Firestore o el de Storage, el Admin SDK escribiría en producción
+if (process.env.FUNCTIONS_EMULATOR === "true" && !(process.env.FIRESTORE_EMULATOR_HOST && process.env.FIREBASE_STORAGE_EMULATOR_HOST)) {
+  throw new Error("Faltan emuladores: levantá Firestore, Storage y Functions juntos");
+}
 
 const USERNAME = defineSecret("QUANTUMJAM_ADMIN_USERNAME");
 const PASSWORD = defineSecret("QUANTUMJAM_ADMIN_PASSWORD");
 
 initializeApp();
 const db = getFirestore(); // base (default), donde están las noticias
+const bucket = getStorage().bucket("webpage-36e40.appspot.com"); // compartido con otros sitios: solo se escribe en news_cs/
+
+const IMAGE_EXTENSIONS = { "image/jpeg": "jpg", "image/webp": "webp" };
+const MAX_IMAGE_BYTES = 2 * 1024 * 1024; // llega achicada en el navegador: una foto de 1600 px pesa bastante menos
+
+// Los primeros bytes tienen que ser los del formato que dice el Content-Type
+function isImage(data, type) {
+  if (!Buffer.isBuffer(data)) return false;
+  if (type === "image/jpeg") return data[0] === 0xff && data[1] === 0xd8 && data[2] === 0xff;
+  return data.toString("latin1", 0, 4) === "RIFF" && data.toString("latin1", 8, 12) === "WEBP";
+}
 
 // Campos del modelo de una noticia: lo demás no sale de la función
 const FIELDS = ["slug", "date", "branch", "published", "image", "es", "en"];
@@ -114,6 +131,37 @@ export const csitbaAdminApi = onRequest(
     }
 
     try {
+      // /api/admin/news/<slug>/image: el archivo llega crudo, con el Content-Type de la imagen
+      const upload = req.path.match(/^\/api\/admin\/news\/([a-z0-9-]+)\/image$/);
+      if (upload && req.method === "POST") {
+        const type = req.get("Content-Type");
+        if (!IMAGE_EXTENSIONS[type] || !isImage(req.rawBody, type)) {
+          res.status(400).json({ error: "invalid", message: "La imagen tiene que ser JPG o WebP" });
+          return;
+        }
+        if (req.rawBody.length > MAX_IMAGE_BYTES) {
+          res.status(400).json({ error: "invalid", message: "La imagen pesa más de 2 MB" });
+          return;
+        }
+        const slug = upload[1];
+        if (!(await db.collection("news").doc(slug).get()).exists) {
+          res.status(404).json({ error: "not-found", message: "La noticia no existe" });
+          return;
+        }
+        // Nunca se pisa ni se borra: cada subida es un archivo nuevo
+        const file = bucket.file(`news_cs/${slug}/${Date.now()}.${IMAGE_EXTENSIONS[type]}`);
+        await file.save(req.rawBody, {
+          contentType: type,
+          metadata: {
+            cacheControl: "public, max-age=31536000",
+            // getDownloadURL no crea el token: lo lee de acá
+            metadata: { firebaseStorageDownloadTokens: randomUUID() },
+          },
+        });
+        res.status(201).json({ url: await getDownloadURL(file) });
+        return;
+      }
+
       // /api/admin/news o /api/admin/news/<slug>
       const route = req.path.match(/^\/api\/admin\/news(?:\/([a-z0-9-]+))?$/);
       const slug = route?.[1];

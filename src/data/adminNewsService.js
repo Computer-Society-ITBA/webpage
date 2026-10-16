@@ -7,12 +7,13 @@ function basicAuth({ username, password }) {
   return "Basic " + btoa(String.fromCharCode(...bytes));
 }
 
-// Un error que no es 401 trae el mensaje del servidor y su status
+// Un error que no es 401 trae el mensaje del servidor y su status. Un Blob (una imagen) se manda tal cual.
 async function request(credentials, path, { method = "GET", body } = {}) {
+  const isFile = body instanceof Blob;
   const res = await fetch(path, {
     method,
-    headers: { Authorization: basicAuth(credentials), ...(body && { "Content-Type": "application/json" }) },
-    body: body && JSON.stringify(body),
+    headers: { Authorization: basicAuth(credentials), ...(body && { "Content-Type": isFile ? body.type : "application/json" }) },
+    body: body && (isFile ? body : JSON.stringify(body)),
     credentials: "omit",
     cache: "no-store",
   });
@@ -44,4 +45,11 @@ export function createAdminNews(credentials, item) {
 
 export function updateAdminNews(credentials, slug, item) {
   return request(credentials, `/api/admin/news/${slug}`, { method: "PUT", body: item });
+}
+
+// Sube la imagen ya achicada y devuelve su URL de descarga
+export async function uploadAdminNewsImage(credentials, slug, image) {
+  const { url } = await request(credentials, `/api/admin/news/${slug}/image`, { method: "POST", body: image });
+  if (typeof url !== "string") throw new Error("Respuesta inesperada");
+  return url;
 }

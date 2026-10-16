@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import { AdminAuthError, createAdminNews, getAdminNews, updateAdminNews } from "../data/adminNewsService.js";
+import { AdminAuthError, createAdminNews, getAdminNews, updateAdminNews, uploadAdminNewsImage } from "../data/adminNewsService.js";
 import { bodyToText, slugify, textToBody } from "../data/newsFormat.js";
 
 const BRANCHES = { club: "Computer Society", hackit: "hackITBA", quantum: "Quantum Jam", gamejam: "Game Jam" };
@@ -15,6 +15,26 @@ const TEXT_FIELDS = [
   { key: "image_caption", label: "Epígrafe de la imagen" },
 ];
 
+const MAX_UPLOAD_BYTES = 30 * 1024 * 1024; // antes de achicar: lo que se sube pesa mucho menos
+const MAX_IMAGE_WIDTH = 1600;
+
+// Achica la foto antes de subirla: menos espacio en Storage y menos datos para cada visitante
+async function shrinkImage(file) {
+  const bitmap = await createImageBitmap(file); // respeta la orientación de las fotos del celular
+  const scale = Math.min(1, MAX_IMAGE_WIDTH / bitmap.width);
+  const canvas = document.createElement("canvas");
+  canvas.width = Math.round(bitmap.width * scale);
+  canvas.height = Math.round(bitmap.height * scale);
+  const context = canvas.getContext("2d");
+  context.fillStyle = "#fff"; // un PNG con transparencia no queda con fondo negro en JPG
+  context.fillRect(0, 0, canvas.width, canvas.height);
+  context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
+  const toBlob = (type) => new Promise((resolve) => canvas.toBlob(resolve, type, 0.8));
+  // Safari no sabe generar WebP: devuelve PNG, y en ese caso va JPG
+  const webp = await toBlob("image/webp");
+  return webp?.type === "image/webp" ? webp : toBlob("image/jpeg");
+}
+
 // Hoy en el formato del input date (YYYY-MM-DD), en hora local
 function today() {
   const now = new Date();
@@ -27,7 +47,13 @@ function toForm(item = {}) {
     Object.fromEntries(
       TEXT_FIELDS.map(({ key }) => [key, key === "body" ? bodyToText(item[lang]?.body) : item[lang]?.[key] ?? ""])
     );
-  return { date: item.date ? item.date.replaceAll("/", "-") : today(), branch: item.branch ?? "club", es: texts("es"), en: texts("en") };
+  return {
+    date: item.date ? item.date.replaceAll("/", "-") : today(),
+    branch: item.branch ?? "club",
+    image: item.image ?? "",
+    es: texts("es"),
+    en: texts("en"),
+  };
 }
 
 // Estado del formulario → noticia. Los textos vacíos los descarta la función.
@@ -39,7 +65,7 @@ function toItem(form, published) {
         return [key, key === "body" ? textToBody(value) : value];
       })
     );
-  return { date: form.date.replaceAll("-", "/"), branch: form.branch, published, es: texts("es"), en: texts("en") };
+  return { date: form.date.replaceAll("-", "/"), branch: form.branch, image: form.image, published, es: texts("es"), en: texts("en") };
 }
 
 function confirmText(published, nextPublished) {
@@ -111,6 +137,29 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed }) {
     }
   }
 
+  // La imagen se sube enseguida, pero queda en la noticia recién al guardar
+  async function uploadImage(event) {
+    const file = event.target.files[0];
+    event.target.value = ""; // para poder volver a elegir el mismo archivo
+    if (!file) return;
+    if (!file.type.startsWith("image/") || file.size > MAX_UPLOAD_BYTES) {
+      setMessage({ text: "Elegí una imagen de hasta 30 MB", error: true });
+      return;
+    }
+    setBusy(true);
+    setMessage({ text: "Subiendo imagen…" });
+    try {
+      const url = await uploadAdminNewsImage(credentials, savedSlug, await shrinkImage(file));
+      setForm((current) => ({ ...current, image: url })); // sin pisar lo que se escribió mientras subía
+      setMessage({ text: "Imagen subida: guardá para que quede en la noticia" });
+    } catch (err) {
+      if (err instanceof AdminAuthError) return onSessionClosed();
+      setMessage({ text: err.status < 500 ? err.message : "No se pudo subir la imagen", error: true });
+    } finally {
+      setBusy(false);
+    }
+  }
+
   function back() {
     if (form && JSON.stringify(form) !== saved.current && !window.confirm("Hay cambios sin guardar. ¿Salir igual?")) return;
     onBack();
@@ -166,6 +215,27 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed }) {
           Fecha
           <input type='date' value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} className={inputClass} />
         </label>
+      </div>
+
+      <div className='mb-6 flex flex-col gap-2'>
+        <label className='flex flex-col gap-1'>
+          Imagen
+          <input type='file' accept='image/*' onChange={uploadImage} disabled={busy || !savedSlug} aria-describedby='image-help' />
+        </label>
+        <p id='image-help' className='text-sm text-gray-600'>
+          {savedSlug
+            ? "Una foto de hasta 30 MB. Se achica a 1600 px de ancho antes de subirla."
+            : "Guardá el borrador para poder subir una imagen."}
+        </p>
+        {form.image.startsWith("http") ? (
+          <img src={form.image} alt='Vista previa de la imagen' className='max-h-48 max-w-full self-start rounded border border-gray-400' />
+        ) : (
+          form.image && (
+            <p className='text-sm'>
+              Imagen actual: <code>{form.image}</code>
+            </p>
+          )
+        )}
       </div>
 
       <div role='group' aria-label='Idioma' className='mb-4 flex gap-2'>
