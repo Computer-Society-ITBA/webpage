@@ -32,3 +32,10 @@
 .cs-back svg { width: 24px; height: 24px; fill: currentColor; }
 .cs-back:hover { text-decoration: underline; text-underline-offset: 4px; }
 .cs-back:focus-visible { outline: 3px solid var(--focus-ring, #212121); outline-offset: 3px; }
+
+/* markdown del cuerpo (listas, negrita, links): el reset de Tailwind les saca el estilo del navegador */
+.cs-article__body ul { margin: 0 0 16px; padding-left: 1.5em; list-style: disc; max-width: var(--news-measure, 68ch); font: 400 1.0625rem/1.75rem var(--font-text, "Roboto", sans-serif); }
+.cs-article__body li + li { margin-top: 4px; }
+.cs-article__body strong { font-weight: 700; }
+.cs-article__body a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.cs-article__body a:focus-visible { outline: 3px solid var(--focus-ring, #212121); outline-offset: 2px; }

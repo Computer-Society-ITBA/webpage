@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import { AdminAuthError, createAdminNews, getAdminNews, updateAdminNews, uploadAdminNewsImage } from "../data/adminNewsService.js";
 import { bodyToText, slugify, textToBody } from "../data/newsFormat.js";
+import NewsArticle from "./news_article";
 
 const BRANCHES = { club: "Computer Society", hackit: "hackITBA", quantum: "Quantum Jam", gamejam: "Game Jam" };
 const LANGS = { es: "Español", en: "English" };
@@ -68,6 +69,12 @@ function toItem(form, published) {
   return { date: form.date.replaceAll("-", "/"), branch: form.branch, image: form.image, published, es: texts("es"), en: texts("en") };
 }
 
+// La noticia como la guarda la función, sin textos vacíos: así la vista previa es igual a la publicada
+function asSaved(item) {
+  const clean = (texts) => Object.fromEntries(Object.entries(texts).filter(([, value]) => value.length > 0));
+  return { ...item, es: clean(item.es), en: clean(item.en) };
+}
+
 function confirmText(published, nextPublished) {
   if (nextPublished && published) return "La noticia está publicada: los cambios se van a ver en el sitio enseguida. ¿Guardar?";
   if (nextPublished) return "¿Publicar la noticia? Va a aparecer en el sitio.";
@@ -81,6 +88,7 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed }) {
   const [savedSlug, setSavedSlug] = useState(slug);
   const [published, setPublished] = useState(false);
   const [lang, setLang] = useState("es");
+  const [preview, setPreview] = useState(false);
   const [busy, setBusy] = useState(false);
   const [message, setMessage] = useState(null); // { text, error }
   const [loadError, setLoadError] = useState("");
@@ -238,21 +246,38 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed }) {
         )}
       </div>
 
-      <div role='group' aria-label='Idioma' className='mb-4 flex gap-2'>
-        {Object.entries(LANGS).map(([value, label]) => (
-          <button
-            key={value}
-            type='button'
-            aria-pressed={lang === value}
-            onClick={() => setLang(value)}
-            className={`rounded border border-black px-4 py-2 ${lang === value ? "bg-black text-white" : ""}`}
-          >
-            {label}
-          </button>
-        ))}
+      <div className='mb-4 flex flex-wrap items-center justify-between gap-2'>
+        <div role='group' aria-label='Idioma' className='flex gap-2'>
+          {Object.entries(LANGS).map(([value, label]) => (
+            <button
+              key={value}
+              type='button'
+              aria-pressed={lang === value}
+              onClick={() => setLang(value)}
+              className={`rounded border border-black px-4 py-2 ${lang === value ? "bg-black text-white" : ""}`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        <button
+          type='button'
+          aria-pressed={preview}
+          onClick={() => setPreview(!preview)}
+          className={`rounded border border-black px-4 py-2 ${preview ? "bg-black text-white" : ""}`}
+        >
+          Vista previa
+        </button>
       </div>
 
-      <div className='flex flex-col gap-4'>
+      {preview && (
+        // El mismo componente que /news/:slug, con lo que hay en el formulario aunque no esté guardado
+        <article className='cs-article'>
+          <NewsArticle item={asSaved(toItem(form, published))} language={lang} />
+        </article>
+      )}
+
+      <div className={preview ? "hidden" : "flex flex-col gap-4"}>
         {TEXT_FIELDS.map(({ key, label, rows }) => (
           <React.Fragment key={key}>
             <label className='flex flex-col gap-1'>
