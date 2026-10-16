@@ -7,9 +7,12 @@ function basicAuth({ username, password }) {
   return "Basic " + btoa(String.fromCharCode(...bytes));
 }
 
-export async function listAdminNews(credentials) {
-  const res = await fetch("/api/admin/news", {
-    headers: { Authorization: basicAuth(credentials) },
+// Un error que no es 401 trae el mensaje del servidor y su status
+async function request(credentials, path, { method = "GET", body } = {}) {
+  const res = await fetch(path, {
+    method,
+    headers: { Authorization: basicAuth(credentials), ...(body && { "Content-Type": "application/json" }) },
+    body: body && JSON.stringify(body),
     credentials: "omit",
     cache: "no-store",
   });
@@ -17,7 +20,28 @@ export async function listAdminNews(credentials) {
 
   // Si /api/admin no llega a la función, el servidor contesta index.html con un 200
   const isJson = res.headers.get("content-type")?.includes("application/json");
-  const body = isJson ? await res.json() : null;
-  if (!res.ok || !Array.isArray(body?.news)) throw new Error(`Respuesta inesperada (${res.status})`);
-  return body.news;
+  const data = isJson ? await res.json() : null;
+  if (!data) throw new Error(`Respuesta inesperada (${res.status})`);
+  if (!res.ok) throw Object.assign(new Error(data.message || `Error ${res.status}`), { status: res.status });
+  return data;
+}
+
+export async function listAdminNews(credentials) {
+  const { news } = await request(credentials, "/api/admin/news");
+  if (!Array.isArray(news)) throw new Error("Respuesta inesperada");
+  return news;
+}
+
+export async function getAdminNews(credentials, slug) {
+  const { news } = await request(credentials, `/api/admin/news/${slug}`);
+  if (!news || typeof news !== "object") throw new Error("Respuesta inesperada");
+  return news;
+}
+
+export function createAdminNews(credentials, item) {
+  return request(credentials, "/api/admin/news", { method: "POST", body: item });
+}
+
+export function updateAdminNews(credentials, slug, item) {
+  return request(credentials, `/api/admin/news/${slug}`, { method: "PUT", body: item });
 }

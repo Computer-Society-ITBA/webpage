@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 
 import { AdminAuthError, listAdminNews } from "../../data/adminNewsService.js";
+import AdminNewsForm from "../admin_news_form";
 
 const SESSION_CLOSED = "Tu sesión se cerró: el usuario o la contraseña ya no son válidos. Volvé a entrar.";
 
@@ -18,6 +19,7 @@ function Admin() {
   const [error, setError] = useState("");
   const [notice, setNotice] = useState("");
   const [loading, setLoading] = useState(false);
+  const [editing, setEditing] = useState(null); // null: listado; { slug }: formulario (slug null = nueva)
 
   async function login(event) {
     event.preventDefault();
@@ -57,9 +59,24 @@ function Admin() {
   function logout(message = "") {
     credentials.current = null;
     setNews(null);
+    setEditing(null);
     setError("");
     setNotice(message);
     setLoading(false);
+  }
+
+  if (news && editing) {
+    return (
+      <AdminNewsForm
+        credentials={credentials.current}
+        slug={editing.slug}
+        onBack={() => {
+          setEditing(null);
+          refresh();
+        }}
+        onSessionClosed={() => logout(SESSION_CLOSED)}
+      />
+    );
   }
 
   if (news) {
@@ -70,7 +87,7 @@ function Admin() {
         <div className='mb-6 flex flex-wrap items-center justify-between gap-4'>
           <h1 className='text-2xl font-bold'>Noticias</h1>
           <div className='flex flex-wrap gap-2'>
-            <button type='button' disabled title='Próximamente' className='rounded bg-black px-4 py-2 text-white disabled:opacity-50'>
+            <button type='button' onClick={() => setEditing({ slug: null })} className='rounded bg-black px-4 py-2 text-white'>
               Nueva noticia
             </button>
             <button type='button' onClick={refresh} disabled={loading} className='rounded border border-black px-4 py-2 disabled:opacity-50'>
@@ -110,7 +127,12 @@ function Admin() {
                   <td className='mr-3 inline-block sm:table-cell sm:whitespace-nowrap sm:py-2 sm:pr-4'>{formatDate(item.date)}</td>
                   <td className='inline-block sm:table-cell sm:py-2 sm:pr-4'>{item.published ? "Publicada" : "Borrador"}</td>
                   <td className='mt-2 block sm:mt-0 sm:table-cell sm:py-2 sm:text-right'>
-                    <button type='button' disabled title='Próximamente' className='rounded border border-black px-3 py-1 disabled:opacity-50'>
+                    <button
+                      type='button'
+                      onClick={() => setEditing({ slug: item.slug })}
+                      aria-label={`Editar ${item.es?.title || item.slug}`}
+                      className='rounded border border-black px-3 py-1'
+                    >
                       Editar
                     </button>
                   </td>
