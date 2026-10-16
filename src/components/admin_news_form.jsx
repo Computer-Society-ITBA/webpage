@@ -175,7 +175,8 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
 
   // La imagen se sube enseguida, pero queda en la noticia recién al guardar
   async function uploadImage(file) {
-    if (!file || busy || !savedSlug) return;
+    const target = savedSlug || slugify(form.es.title); // antes del primer guardado, el slug que sale del título
+    if (!file || busy || !target) return;
     if (!file.type.startsWith("image/") || file.size > MAX_UPLOAD_BYTES) {
       setMessage({ text: "Elegí una imagen de hasta 30 MB", error: true });
       return;
@@ -184,7 +185,7 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
     setMessage({ text: "Subiendo imagen…" });
     try {
       const compressed = await shrinkImage(file);
-      const url = await uploadAdminNewsImage(credentials, savedSlug, compressed);
+      const url = await uploadAdminNewsImage(credentials, target, compressed);
       setImageInfo({ name: file.name, size: compressed.size });
       setForm((current) => ({ ...current, image: url })); // sin pisar lo que se escribió mientras subía
       setMessage({ text: "Imagen subida: guardá para que quede en la noticia" });
@@ -224,7 +225,8 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
   const complete = (language) => !!(form[language].title.trim() && form[language].summary.trim());
   const image = newsImage(form.image);
   const imageName = imageInfo?.name || imageFilename(form.image);
-  const address = `/news/${savedSlug || slugify(form.es.title) || "…"}`;
+  const uploadSlug = savedSlug || slugify(form.es.title);
+  const address = `/news/${uploadSlug || "…"}`;
   const previewItem = asSaved(toItem(form, published));
   const previewText = previewItem[previewLang];
 
@@ -263,7 +265,7 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
           <div className='cs-admin-upload'>
             <span className='cs-admin-label'>Imagen</span>
             <div className={`cs-admin-upload__drop ${dragging ? "is-dragging" : ""}`}
-              onDragOver={(event) => { event.preventDefault(); if (savedSlug && !busy) setDragging(true); }}
+              onDragOver={(event) => { event.preventDefault(); if (uploadSlug && !busy) setDragging(true); }}
               onDragLeave={() => setDragging(false)}
               onDrop={(event) => { event.preventDefault(); setDragging(false); uploadImage(event.dataTransfer.files[0]); }}
             >
@@ -277,11 +279,11 @@ function AdminNewsForm({ credentials, slug, onBack, onSessionClosed, onLogout })
                   <div><strong>{imageName}</strong>{imageInfo?.width && <p>{imageInfo.width} × {imageInfo.height} px{imageInfo.size ? ` · ${Math.round(imageInfo.size / 1024)} KB` : ""}</p>}</div>
                 </div>
               ) : <p className='cs-admin-upload__empty'>Arrastrá una foto acá</p>}
-              <input ref={fileInput} type='file' accept='image/*' hidden disabled={busy || !savedSlug} aria-label='Elegir imagen' aria-describedby='image-help'
+              <input ref={fileInput} type='file' accept='image/*' hidden disabled={busy || !uploadSlug} aria-label='Elegir imagen' aria-describedby='image-help'
                 onChange={(event) => { uploadImage(event.target.files[0]); event.target.value = ""; }} />
-              <button type='button' className='cs-admin-button' onClick={() => fileInput.current.click()} disabled={busy || !savedSlug}>{image ? "Reemplazar" : "Elegir archivo"}</button>
+              <button type='button' className='cs-admin-button' onClick={() => fileInput.current.click()} disabled={busy || !uploadSlug}>{image ? "Reemplazar" : "Elegir archivo"}</button>
             </div>
-            <p id='image-help' className='cs-admin-help'>{savedSlug ? "Arrastrá otra foto o elegí un archivo. JPG, PNG o WebP de hasta 30 MB." : "Guardá el borrador para poder subir una imagen."}</p>
+            <p id='image-help' className='cs-admin-help'>{uploadSlug ? "Arrastrá otra foto o elegí un archivo. JPG, PNG o WebP de hasta 30 MB." : "Escribí el título en español para poder subir una imagen."}</p>
           </div>
 
           <div className='cs-admin-segments cs-admin-language' role='group' aria-label='Idioma del formulario'>

@@ -143,13 +143,9 @@ export const csitbaAdminApi = onRequest(
           res.status(400).json({ error: "invalid", message: "La imagen pesa más de 2 MB" });
           return;
         }
-        const slug = upload[1];
-        if (!(await db.collection("news").doc(slug).get()).exists) {
-          res.status(404).json({ error: "not-found", message: "La noticia no existe" });
-          return;
-        }
+        // La noticia puede no existir todavía: la foto se sube antes del primer guardado.
         // Nunca se pisa ni se borra: cada subida es un archivo nuevo
-        const file = bucket.file(`news_cs/${slug}/${Date.now()}.${IMAGE_EXTENSIONS[type]}`);
+        const file = bucket.file(`news_cs/${upload[1]}/${Date.now()}.${IMAGE_EXTENSIONS[type]}`);
         await file.save(req.rawBody, {
           contentType: type,
           metadata: {

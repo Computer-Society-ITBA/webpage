@@ -49,8 +49,10 @@
 .cs-admin-table th:nth-child(4) { width: 14.1%; }
 .cs-admin-table th:nth-child(5) { width: 14%; }
 .cs-admin-table th:nth-child(6) { width: 8.2%; }
-.cs-admin-table td { padding: 12px 24px 12px 0; border-bottom: 1px solid #e8e8e8; vertical-align: middle; }
-.cs-admin-table td:last-child { padding-right: 0; text-align: right; }
+.cs-admin-table td { padding: 16px 24px 16px 0; border-bottom: 1px solid #e8e8e8; vertical-align: middle; }
+.cs-admin-table td:last-child { padding-right: 16px; text-align: right; }
+/* aire a los costados: el gris del hover no llega al borde de la foto ni del botón */
+.cs-admin-table th:first-child, .cs-admin-table td:first-child { padding-left: 16px; }
 .cs-admin-table tbody tr:hover, .cs-admin-table tbody tr:focus-within { background: #f7f7f7; }
 .cs-admin-table__image img, .cs-admin-no-photo { display: block; width: 96px; height: 64px; border-radius: 6px; object-fit: cover; }
 .cs-admin-table__image img { filter: grayscale(1); }
@@ -176,11 +178,11 @@
   .cs-admin-filters { gap: 12px; }
   .cs-admin-search { flex: 1; min-width: 240px; }
   .cs-admin-table th:nth-child(1) { width: 11%; }
-  .cs-admin-table th:nth-child(2) { width: 35%; }
+  .cs-admin-table th:nth-child(2) { width: 32%; }
   .cs-admin-table th:nth-child(3) { width: 17%; }
   .cs-admin-table th:nth-child(4) { width: 14%; }
   .cs-admin-table th:nth-child(5) { width: 14%; }
-  .cs-admin-table th:nth-child(6) { width: 9%; }
+  .cs-admin-table th:nth-child(6) { width: 12%; }
   .cs-admin-table td { padding-right: 12px; }
   .cs-admin-table__image img, .cs-admin-no-photo { width: 80px; height: 56px; }
   .cs-admin-form, .cs-admin-preview { padding-left: 24px; padding-right: 24px; }
@@ -214,6 +216,8 @@
   .cs-admin-table__date { font-size: 14px; }
   .cs-admin-status { font-size: 12px; padding: 3px 8px; }
   .cs-admin-table__action .cs-admin-button { font-size: 14px; padding: 10px; }
+  .cs-admin-table th:first-child, .cs-admin-table td:first-child { padding-left: 8px; }
+  .cs-admin-table td:last-child { padding-right: 8px; }
   .cs-admin-header__label { font-size: 14px; }
 }
 @media (max-width: 639px) {
@@ -236,8 +240,8 @@
   .cs-admin-branch-filter { width: 100%; }
   .cs-admin-table, .cs-admin-table tbody { display: block; }
   .cs-admin-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-  .cs-admin-table tbody tr { display: grid; grid-template-columns: 80px minmax(0, 1fr) auto; gap: 12px; padding: 20px 0; border-bottom: 1px solid #e8e8e8; }
-  .cs-admin-table td, .cs-admin-table td:last-child { display: block; padding: 0; border: 0; text-align: left; }
+  .cs-admin-table tbody tr { display: grid; grid-template-columns: 80px minmax(0, 1fr) auto; gap: 12px; padding: 20px 12px; border-bottom: 1px solid #e8e8e8; }
+  .cs-admin-table td, .cs-admin-table td:first-child, .cs-admin-table td:last-child { display: block; padding: 0; border: 0; text-align: left; }
   .cs-admin-table__image { grid-row: 1; grid-column: 1; }
   .cs-admin-table__image img, .cs-admin-no-photo { width: 80px; height: 60px; }
   .cs-admin-table__title { grid-column: 2 / -1; }

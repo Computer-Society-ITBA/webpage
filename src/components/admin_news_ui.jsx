@@ -25,7 +25,7 @@ export function AdminHeader({ onLogout, busy = false }) {
         <img src={logo} alt='' width='36' height='36' />
         <span>Computer Society ITBA</span>
       </div>
-      <span className='cs-admin-header__label'>Backoffice de noticias</span>
+      <span className='cs-admin-header__label'>Backoffice</span>
       {onLogout && <button type='button' className='cs-admin-button' onClick={onLogout} disabled={busy}><Logout fontSize='small' />Salir</button>}
     </header>
   );
