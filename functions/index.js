@@ -3,7 +3,7 @@ import { onRequest } from "firebase-functions/https";
 import { defineSecret } from "firebase-functions/params";
 import { logger } from "firebase-functions";
 import { initializeApp } from "firebase-admin/app";
-import { getFirestore } from "firebase-admin/firestore";
+import { FieldValue, getFirestore } from "firebase-admin/firestore";
 
 const USERNAME = defineSecret("QUANTUMJAM_ADMIN_USERNAME");
 const PASSWORD = defineSecret("QUANTUMJAM_ADMIN_PASSWORD");
@@ -23,6 +23,60 @@ function toModel(data) {
   const item = pick(data, FIELDS);
   for (const lang of ["es", "en"]) if (item[lang]) item[lang] = pick(item[lang], TEXT_FIELDS);
   return item;
+}
+
+const BRANCHES = ["club", "hackit", "quantum", "gamejam"];
+const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const isObject = (value) => typeof value === "object" && value !== null && !Array.isArray(value);
+const isHeading = (block) => isObject(block) && Object.keys(block).length === 1 && typeof block.h2 === "string";
+// Los textos vacíos no se guardan: las noticias que ya existen no tienen campos vacíos
+const isEmpty = (value) => value === undefined || value === "" || (Array.isArray(value) && value.length === 0);
+const withoutEmpty = (object = {}) => Object.fromEntries(Object.entries(object).filter(([, value]) => !isEmpty(value)));
+
+// Primer problema del pedido, en español, o "" si está bien. slug: el de la URL (PUT) o undefined (POST)
+function validate(item, slug) {
+  if (!isObject(item)) return "El pedido tiene que ser un objeto JSON";
+  const extra = Object.keys(item).filter((key) => !FIELDS.includes(key));
+  if (extra.length) return `Campos no permitidos: ${extra.join(", ")}`;
+  if (!slug && !(typeof item.slug === "string" && SLUG.test(item.slug))) return "El slug solo puede tener minúsculas, números y guiones";
+  if (slug && item.slug !== undefined && item.slug !== slug) return "El slug no se puede cambiar";
+  if (typeof item.date !== "string" || !/^\d{4}\/\d{2}\/\d{2}$/.test(item.date)) return "La fecha tiene que tener el formato AAAA/MM/DD";
+  if (!BRANCHES.includes(item.branch)) return `La rama tiene que ser una de: ${BRANCHES.join(", ")}`;
+  if (typeof item.published !== "boolean") return "published tiene que ser true o false";
+  if (item.image !== undefined && typeof item.image !== "string") return "image tiene que ser un texto";
+
+  for (const lang of ["es", "en"]) {
+    const text = item[lang] ?? {};
+    if (!isObject(text)) return `${lang} tiene que ser un objeto`;
+    const extraText = Object.keys(text).filter((key) => !TEXT_FIELDS.includes(key));
+    if (extraText.length) return `Campos no permitidos en ${lang}: ${extraText.join(", ")}`;
+    for (const key of TEXT_FIELDS) {
+      const value = text[key];
+      const valid =
+        value === undefined ||
+        (key === "body"
+          ? Array.isArray(value) && value.every((block) => typeof block === "string" || isHeading(block))
+          : typeof value === "string");
+      if (!valid) return `${lang}.${key} tiene un formato inválido`;
+    }
+    if (item.published && !(text.title?.trim() && text.summary?.trim())) {
+      return `Para publicar hacen falta el título y el resumen en ${lang.toUpperCase()}`;
+    }
+  }
+  return "";
+}
+
+// PUT: reemplaza los campos del modelo (un texto vacío o ausente se borra) y no toca los que el modelo no conoce
+function toChanges(item) {
+  const changes = { date: item.date, branch: item.branch, published: item.published };
+  if (item.image !== undefined) changes.image = isEmpty(item.image) ? FieldValue.delete() : item.image;
+  for (const lang of ["es", "en"]) {
+    for (const key of TEXT_FIELDS) {
+      const value = item[lang]?.[key];
+      changes[`${lang}.${key}`] = isEmpty(value) ? FieldValue.delete() : value;
+    }
+  }
+  return changes;
 }
 
 // sha256 de los dos lados: mismo largo para timingSafeEqual, sin revelar el largo real
@@ -60,13 +114,49 @@ export const csitbaAdminApi = onRequest(
     }
 
     try {
-      if (req.method === "GET" && req.path === "/api/admin/news") {
+      // /api/admin/news o /api/admin/news/<slug>
+      const route = req.path.match(/^\/api\/admin\/news(?:\/([a-z0-9-]+))?$/);
+      const slug = route?.[1];
+
+      if (route && !slug && req.method === "GET") {
         const snapshot = await db.collection("news").get();
         res.json({ news: snapshot.docs.map((doc) => toModel(doc.data())) });
         return;
       }
+      if (route && slug && req.method === "GET") {
+        const doc = await db.collection("news").doc(slug).get();
+        if (doc.exists) res.json({ news: toModel(doc.data()) });
+        else res.status(404).json({ error: "not-found", message: "La noticia no existe" });
+        return;
+      }
+      if (route && ((!slug && req.method === "POST") || (slug && req.method === "PUT"))) {
+        const message = validate(req.body, slug);
+        if (message) {
+          res.status(400).json({ error: "invalid", message });
+          return;
+        }
+        const item = req.body;
+        // create() falla si el slug ya existe y update() si no existe: ver el catch
+        if (slug) {
+          await db.collection("news").doc(slug).update(toChanges(item));
+        } else {
+          const doc = { ...withoutEmpty(item), es: withoutEmpty(item.es), en: withoutEmpty(item.en) };
+          await db.collection("news").doc(item.slug).create(doc);
+        }
+        res.status(slug ? 200 : 201).json({ ok: true });
+        return;
+      }
       res.status(404).json({ error: "not-found" });
     } catch (error) {
+      // Códigos de Firestore: 6 = ALREADY_EXISTS (create), 5 = NOT_FOUND (update)
+      if (error.code === 6) {
+        res.status(409).json({ error: "already-exists", message: "Ya existe una noticia con ese slug: cambiá el título" });
+        return;
+      }
+      if (error.code === 5) {
+        res.status(404).json({ error: "not-found", message: "La noticia no existe" });
+        return;
+      }
       logger.error("csitbaAdminApi", error);
       res.status(500).json({ error: "internal" });
     }
