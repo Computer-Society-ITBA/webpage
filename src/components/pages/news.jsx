@@ -12,25 +12,10 @@ import "../../styles/news-article.css";
 
 import { getNews, getNewsBySlug } from "../../data/newsService.js";
 import NewsTile from "../news_tile";
-
-const newsImages = import.meta.glob("../../images/news_images/*", {
-  eager: true,
-  query: "?url",
-  import: "default",
-});
+import NewsArticle from "../news_article";
 
 const Footer = React.lazy(() => import("../sections/footer"));
 const NavBar = React.lazy(() => import("../metatext/navbar"));
-
-// "6 de octubre de 2026" / "October 6, 2026"
-function formatLongDate(date, language) {
-  const [year, month, day] = date.split("/").map(Number);
-  return new Date(year, month - 1, day).toLocaleDateString(language === "es" ? "es-AR" : "en-US", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
 
 // Una nota (/news/:slug): cabecera del color de la rama, foto y texto.
 // Una nota sin cuerpo (body) muestra solo la cabecera con el resumen.
@@ -63,11 +48,6 @@ function News() {
 
   let language = i18n.language.split("-")[0];
   if (language !== "es") language = "en";
-  const text = item[language];
-  
-  const image = item.image?.startsWith("http")
-  ? item.image
-  : newsImages[`../../images/${item.image}`];
 
   return (
     <React.Fragment>
@@ -79,29 +59,7 @@ function News() {
             {i18n.t("go_back")}
           </Link>
 
-          <header className={`cs-article__head cs-branch--${item.branch}`}>
-            <p className='cs-article__meta'>
-              <span>{i18n.t(`branch.${item.branch}`)}</span>
-              <time dateTime={item.date.replace(/\//g, "-")}>{formatLongDate(item.date, language)}</time>
-            </p>
-            <h1 className='cs-article__title'>{text.title}</h1>
-            <p className='cs-article__lead'>{text.lead || text.summary}</p>
-          </header>
-
-          {image && (
-            <figure className='cs-article__figure'>
-              <img src={image} alt={text.image_alt} />
-              {text.image_caption && <figcaption>{text.image_caption}</figcaption>}
-            </figure>
-          )}
-
-          {text.body && (
-            <div className='cs-article__body'>
-              {text.body.map((block, index) =>
-                typeof block === "string" ? <p key={index}>{block}</p> : <h2 key={index}>{block.h2}</h2>
-              )}
-            </div>
-          )}
+          <NewsArticle item={item} language={language} />
 
           <div className='cs-article__more'>
             <h2>{i18n.t("news.read_on")}</h2>

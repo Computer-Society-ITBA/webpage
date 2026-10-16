@@ -20,7 +20,7 @@ function NewsTile({ item, tile }) {
   let language = i18n.language.split("-")[0];
   if (language !== "es") language = "en";
   const text = item[language];
-  const image = tile !== "sm" && item.image && newsImages[`../images/${item.image}`];
+  const image = tile !== "sm" && item.image && (item.image.startsWith("http") ? item.image : newsImages[`../images/${item.image}`]);
 
   return (
     <li className={`cs-tile cs-tile--${tile} cs-branch--${item.branch}`}>

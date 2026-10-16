@@ -20,6 +20,7 @@ const NewsArchive = React.lazy(() => import("./components/pages/news_archive"));
 const GameJam = React.lazy(() => import("./components/pages/gamejam"));
 const Hackit = React.lazy(() => import("./components/pages/hackit"));
 const QuantumJam = React.lazy(() => import("./components/pages/quantum_jam"));
+const Admin = React.lazy(() => import("./components/pages/admin"));
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path="/news" element={<NewsArchive />} />
             <Route path="/news/:slug" element={<News />} />
             <Route path="/" element={<Homepage />} />
+            <Route path="/admin" element={<Admin />} />
             <Route path="*" element={<Navigate to="/" />} />
             <Route path="/quantumJam" element={<QuantumJam />} />
           </Routes>

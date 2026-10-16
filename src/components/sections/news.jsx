@@ -16,7 +16,7 @@ const Section = React.lazy(() => import("../section"));
 const LinkButton = React.lazy(() => import("../link_button"));
 
 // Bloques del mosaico, en el orden de más nueva a más vieja
-const tiles = ["lead", "sm", "sm", "wide"];
+const tiles = ["lead", "wide", "sm", "sm"];
 
 function News() {
   const { news } = useNews(tiles.length);
