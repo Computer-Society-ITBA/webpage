@@ -1,7 +1,7 @@
 import React from 'react';
 import i18n from '../../i18n/index.js';
 import logoCompleto from '../../images/logo_completo_2.png';
-import ibmQuantumLogoImg from '../../images/quantum/IBMQuantum.png';
+import ibmQuantumLogoImg from '../../images/quantumjam_images/IBMQuantum.png';
 import { HashLink as Link } from "react-router-hash-link";
 
 // Icons

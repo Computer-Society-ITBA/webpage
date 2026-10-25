@@ -7,7 +7,7 @@ import i18n from "../../i18n/index.js";
 
 import upcomingEvents from "../../data/upcoming_events.json";
 
-import img from "../../images/hackitba/hackitba26.png";
+import img from "../../images/hackitba26.png";
 
 // Components
 const Section = React.lazy(() => import("../section"));

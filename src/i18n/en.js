@@ -1,3 +1,5 @@
+import QWorkshops from "../components/sections/quantumjam/qworkshops";
+
 const i18n_en = {
   welcome: {
     cs: "IEEE Computer Society",
@@ -182,6 +184,179 @@ const i18n_en = {
   },
   go_back: "Go back",
   loading: "Loading...",
+  gamejam: {
+    slogan: "Craft, Compete, Conquer.",
+    description:
+      "Join your peers in a race against the clock, to design and develop a game in 48 hours!",
+    info: "The event is 100% free, with the opportunity to meet and interact with amazing speakers who are leaders in the game-dev sector in Argentina, as well as the chance to win incredible prizes from our sponsors. You don’t need to be a programming genius to sign-up, though we do recommend at least one person per group know how to code.",
+    more_info:
+      "Game Jam Society gives you the chance to collaborate with peers who share your passion, develop amazing games under tight deadlines, and gain hands-on experience in game design.",
+    location: "Virtual, with an in-person closing ceremony",
+    participants: "Groups of 4 participants, aged 18-25",
+    days: "Days",
+    hours: "Hours",
+    minutes: "Minutes",
+    seconds: "Seconds",
+    roadmap: {
+      title: "Roadmap - 2024 Edition",
+      signups_open: {
+        date: "09/12",
+        description: "Sign-ups open",
+      },
+      signups_close: {
+        date: "10/09",
+        description: "Sign-ups close",
+      },
+      competition_starts: {
+        date: "10/18",
+        description: "Competition starts",
+      },
+      competition_ends: {
+        date: "10/20",
+        description: "Competition is over",
+      },
+      closing_ceremony: {
+        date: "10/21",
+        description: "In-person closing ceremony and winners announcement",
+      },
+    },
+    cta: "Sign up now!",
+    competition_ended: "Come back next year for more fun!",
+    images: {
+      gamejam1: "Participants looking at screen",
+      gamejam2: "Participants laughing",
+      gamejam3: "Participants group picture",
+      gamejam4: "Participants group picture",
+      gamejam5: "Winners picture",
+      gamejam6: "Participants chatting",
+      gamejam7: "Winner showing his project",
+      gamejam8: "Winner showing her project",
+      gamejam9: "Winners showing their project",
+      gamejam10: "Participants clapping",
+      gamejam11: "Winners showing their project",
+      gamejam12: "Winners showing their prizes",
+      gamejam13: "Participants group picture",
+      gamejam14: "Organizers chatting",
+      gamejam15: "Participants chatting",
+    },
+  },
+  hackit: {
+    slogan: "Design, Develop, Dominate.",
+    description: "Transform your ideas into tangible solutions.",
+    info: [
+      "Get ready for an exciting 36-hour sprint to develop a game-changing MVP (Minimum Viable Product) that tackles real-world problems aligned with our competition theme.",
+      "Work alongside industry experts, mentors, and successful business leaders who will guide and inspire you every step of the way.",
+      "Collaborate with fellow students, solve meaningful challenges, and have a great time while pushing your creativity to the limit!",
+    ],
+    more_info: [
+      "In past editions, the winning team earned a spot in an",
+      "project acceleration program, where they received expert mentorship, valuable resources, and strategic support to help take their MVP to the next level.",
+      "This is an incredible chance to refine your idea, connect with investors, and turn your project into a thriving business.",
+    ],
+    location: "ITBA SDT, Parque Patricios, CABA, Argentina",
+    date: "March 28-30, 2025",
+    participants: "Groups of 4 participants, aged 18-25",
+    cta: "Read more!",
+    images: {
+      hackitd1_1: "Organizers doing sign-up",
+      hackitd1_2: "Empty opening ceremony venue",
+      hackitd1_3: "Participants signing-in",
+      hackitd1_4: "Speakers at opening ceremony",
+      hackitd1_5: "Participants at opening ceremony",
+      hackitd1_6: "Speakers at opening ceremony",
+      hackitd1_7: "Participants at opening ceremony",
+      hackitd1_8: "Participants chatting at opening ceremony",
+      hackitd1_9: "Participants chatting at opening ceremony",
+      hackitd1_10: "Participants working on their projects",
+      hackitd2_1: "Participants working on their projects",
+      hackitd2_2: "Participants working on their projects",
+      hackitd2_3: "Participant coding",
+      hackitd2_4: "Participants working on their projects",
+      hackitd2_5: "Participants working on their projects",
+      hackitd2_6: "Mentors helping participants working on their projects",
+      hackitd3_1: "Judges at the closing ceremony",
+      hackitd3_2: "Participants showing their project at the closing ceremony",
+      hackitd3_3: "Judges at the closing ceremony",
+      hackitd3_4: "Participants showing their project at the closing ceremony",
+      hackitd3_5: "Participants at the closing ceremony",
+      hackitd3_6: "Participants with their prizes at the closing ceremony",
+      hackitd3_7: "Participants and organizers group picture",
+      hackitd3_8: "Organizers group picture",
+      hackitd3_9: "Organizers group picture",
+    },
+    mentors: {
+      title: "Featuring judges and mentors from",
+      microsoft: "Microsoft logo",
+      google: "Google logo",
+      exxon: "Exxon logo",
+      modo: "Modo logo",
+    },
+  },
+  quantumJam: {
+    qhero:{
+    quantumJam: "QuantumJam",
+    slogan: "Powered by IBM Quantum",
+    description: "Learn about a technology that could change the world. In this event, you’ll get a simple introduction to quantum computing by solving fun, beginner-friendly problems. No prior experience is required — just bring your curiosity and explore what makes quantum different from classical computing.",
+    register: "Register now!",
+    },
+    qabout:{
+      title: "About QuantumJam",
+      text: "This event is designed to introduce you to the fascinating world of quantum computing through four virtual workshops. Each session builds on the previous one, taking you step by step from the basics to more advanced ideas. The event will conclude with a friendly competition where participants can put their new quantum skills into practice by solving simple challenges.",
+      date: "Date: November 1st, 2025",
+      location: "Location: ITBA SDF, Perón 535, CABA, Argentina",
+      participants: "Open to: University students",
+    },
+    countdown: "Time left until the QuantumJam!",
+    qschedule: {
+      title: "Roadmap - 2025",
+      signups_open: {
+        date: "25/9",
+        description: "Sign-ups open",
+      },
+      signups_close: {
+        date: "05/10",
+        description: "Sign-ups close",
+      },
+      competition_starts: {
+        date: "Every Monday",
+        description: "asynchronous Workshops",
+      },
+      competition_ends: {
+        date: "1/11",
+        description: "QuantumJam at ITBA",
+      },
+    },
+    qworkshops: {
+      title: "Workshops Offered",
+      speaker: "Speaker",
+      workshops: [
+        {
+          title: "Fundamentals of Quantum Computing",
+          description: "Get introduced to the key concepts behind quantum computing, including qubits, superposition, and entanglement, and see how they differ from classical computing.",
+          speaker: "Santiago Feldman",
+          image: "workshop1",
+        },
+        {
+          title: "Quantum Circuits",
+          description: "Learn how quantum gates and circuits work, and practice building simple circuits to understand how quantum computations are carried out.",
+          speaker: "Santiago Feldman",
+          image: "workshop2",
+        },
+        {
+          title: "Quantum Algorithms & Communication (Part 1)",
+          description: "Explore the foundations of quantum algorithms and quantum communication, focusing on simple but powerful examples like quantum teleportation.",
+          speaker: "Santiago Feldman",
+          image: "workshop3",
+        },
+        {
+          title: "Quantum Algorithms & Communication (Part 2)",
+          description: "Dive deeper into quantum algorithms and protocols, discovering how quantum computing can be applied to real-world challenges and secure communications.",
+          speaker: "Santiago Feldman",
+          image: "workshop4",
+        },
+      ]
+    }
+  }
 };
 
 export default i18n_en;
