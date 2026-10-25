@@ -6,10 +6,10 @@ import currentHrefs from "../../data/current_event_links.json";
 // Translations
 import i18n from "../../i18n/index.js";
 
-import hackitba_logo from "../../images/hackitba_logo.png";
-import hackit_circuit_decoration from "../../images/hackit_circuit_decoration.png";
-import quantumjam_bg from "../../images/quantumjam_bg_byw.png";
-import quantumjam_logo from "../../images/quantumjam_logo_primary.svg";
+import hackitba_logo from "../../images/hackitba/hackitba_logo.png";
+import hackit_circuit_decoration from "../../images/hackitba/hackit_circuit_decoration.png";
+import quantumjam_bg from "../../images/quantum/quantumjam_bg_byw.png";
+import quantumjam_logo from "../../images/quantum/quantumjam_logo_primary.svg";
 
 import PlaceIcon from "@mui/icons-material/Place";
 import Groups3Icon from "@mui/icons-material/Groups3";
