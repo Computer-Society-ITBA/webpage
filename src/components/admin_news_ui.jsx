@@ -3,7 +3,7 @@ import Logout from "@mui/icons-material/Logout";
 import logo from "../images/logo_icon.png";
 import i18n from "../i18n/index.js";
 
-export const BRANCHES = { club: "Computer Society", hackit: "hackITBA", quantum: "Quantum Jam", gamejam: "Game Jam" };
+export const BRANCHES = { club: "Computer Society", hackit: "hackITBA", quantum: "QuantumJam", gamejam: "Game Jam" };
 
 const images = import.meta.glob("../images/news_images/*", { eager: true, query: "?url", import: "default" });
 

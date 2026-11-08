@@ -33,20 +33,20 @@ const i18n_es = {
         badge: "Hackathon 2026",
         title: "hackITBA 2026",
         date: "27–29 MAR 2026",
-        location: "ITBA SDR · Iguazú 341",
+        location: "ITBA SDR, Iguazú 341",
         participants: "Estudiantes universitarios",
         cta: "Leer más",
         logo_alt: "Logo de HackITBA",
       },
       quantumjam: {
         badge: "Próximo evento",
-        day: "27",
+        day: "21",
         month: "NOV",
-        title: "Quantum Jam!",
-        location: "ITBA SDF · San Martín 202",
-        participants: "Estudiantes universitarios",
+        title: "QuantumJam!",
+        location: "Coworking (dirección por mail)",
+        participants: "Sin experiencia previa",
         cta: "Más información",
-        logo_alt: "Logo de Quantum Jam",
+        logo_alt: "Logo de QuantumJam",
       },
     },
   },
@@ -72,10 +72,10 @@ const i18n_es = {
           // (pasar este texto a la pagina del hackitba) HackITBA es una hackathon organizada por y para estudiantes, donde, en grupos de 4 personas, deben generar un MVP en 36 horas de competencia intensiva. La competencia tiene como meta promover soluciones creativas a problemas actuales en un ambiente desafiante y cooperativo."
       },
       quantum: {
-        title: "Quantum Jam!",
+        title: "QuantumJam!",
         date: "01 de Noviembre de 2025",
         description:
-          "La Quantum Jam es una hackaton precedida por workshops intencivos en la que los estudiantes podran aprender las bases sobre la computación cuantica terminando con una hackaton con ejercicios traidos por IBM",
+          "La QuantumJam es una hackathon precedida por workshops intensivos en la que los estudiantes pueden aprender las bases de la computación cuántica, y que termina con una competencia con ejercicios traídos por IBM.",
           // (pasar este texto a la pagina del hackitba) HackITBA es una hackathon organizada por y para estudiantes, donde, en grupos de 4 personas, deben generar un MVP en 36 horas de competencia intensiva. La competencia tiene como meta promover soluciones creativas a problemas actuales en un ambiente desafiante y cooperativo."
       },
     },
@@ -83,7 +83,7 @@ const i18n_es = {
   branch: {
     club: "Computer Society",
     hackit: "hackITBA",
-    quantum: "Quantum Jam",
+    quantum: "QuantumJam",
     gamejam: "Game Jam",
   },
   news: {
