@@ -1,0 +1,83 @@
+/* Eventos pasados: el riel de la home.
+   Sale del sistema de diseño (cs-shared.css y cs-past-events.css), con la foto de cada evento: grande en la primera fila y en miniatura en las demás.
+   Cada var() lleva su valor de respaldo, así que no hace falta cargar los tokens.
+   Los títulos de la app (h1–h3) tienen márgenes globales en index.css: estas clases los pisan con margin explícito. */
+
+/* ---------- Ramas (las mismas que en news.css) y chip ---------- */
+.cs-branch--club    { --b: var(--branch-club, #212121);    --on-b: var(--on-branch-club, #fff); }
+.cs-branch--hackit  { --b: var(--branch-hackit, #F98A04);  --on-b: var(--on-branch-hackit, #212121); }
+.cs-branch--quantum { --b: var(--branch-quantum, #B2E713); --on-b: var(--on-branch-quantum, #212121); }
+.cs-branch--gamejam { --b: var(--branch-gamejam, #5C008B); --on-b: var(--on-branch-gamejam, #fff); }
+.cs-tag { display: inline-flex; align-items: center; min-height: 24px; padding: 4px 10px; border-radius: var(--radius-full, 9999px); background: var(--b, #212121); color: var(--on-b, #fff); font: 700 .8125rem/1rem var(--font-text, "Roboto", sans-serif); white-space: nowrap; }
+
+/* ---------- Eventos Pasados: el riel ---------- */
+.cs-past { container-type: inline-size; --ground: var(--white, #fff); background: var(--ground); color: var(--typography_primary, #212121); text-align: left; }
+.cs-past__inner { max-width: var(--container-max, 1536px); margin: 0 auto; padding: 48px 16px; }
+@container (min-width: 640px) { .cs-past__inner { padding: 64px 48px; } }
+@container (min-width: 1024px) { .cs-past__inner { padding-left: 64px; padding-right: 64px; } }
+.cs-past--light { --ground: var(--light, #F7F7F7); }
+.cs-past .loader { margin: 72px auto; }
+
+/* lista: una línea continua y un nodo por fila */
+.cs-rail { --rail-x: 11px; margin: 44px 0 0; padding: 0; list-style: none; }
+@container (min-width: 640px) { .cs-rail { --rail-x: 103px; } }
+.cs-rail-row { position: relative; display: grid; grid-template-columns: 24px minmax(0, 1fr); grid-template-areas: "node date" ". body"; column-gap: 12px; row-gap: 4px; padding: 24px 0; }
+.cs-rail-row::before { content: ""; position: absolute; left: var(--rail-x); top: 0; bottom: 0; width: var(--rail-line, 2px); background: var(--rail, #75787B); }
+.cs-rail-row:first-child::before { top: 36px; }
+.cs-rail-row:last-child::before { bottom: auto; height: 36px; }
+.cs-rail-row:first-child:last-child::before { display: none; }
+@container (min-width: 640px) {
+  .cs-rail-row { grid-template-columns: var(--rail-date-col, 88px) var(--rail-col, 32px) minmax(0, 1fr); grid-template-areas: "date node body"; column-gap: 0; row-gap: 0; align-items: start; }
+}
+
+/* nodo: relleno de la rama, aro de tinta y un halo del color del fondo que corta la línea */
+.cs-rail-node { grid-area: node; justify-self: center; align-self: start; position: relative; z-index: 1; width: var(--rail-node, 14px); height: var(--rail-node, 14px); margin-top: 5px; border: 2px solid var(--typography_primary, #212121); border-radius: 50%; background: var(--b, #212121); box-shadow: 0 0 0 4px var(--ground, #fff); }
+
+/* fecha del evento */
+.cs-rail-date { grid-area: date; display: flex; gap: 6px; align-items: baseline; }
+.cs-rail-date__dm { font: 700 1rem/1.5rem var(--font-highlight, "Montserrat", sans-serif); color: var(--typography_primary, #212121); }
+.cs-rail-date__y { font: 500 .875rem/1.25rem var(--font-text, "Roboto", sans-serif); color: var(--ink-muted, #595C5F); }
+@container (min-width: 640px) {
+  .cs-rail-date { display: block; padding-right: 16px; text-align: right; }
+  .cs-rail-date__y { display: block; }
+}
+
+/* cuerpo: el texto y, si hay, la foto del evento */
+.cs-rail-body { grid-area: body; display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; min-width: 0; }
+@container (min-width: 640px) { .cs-rail-body { column-gap: 24px; padding-left: 16px; } }
+.cs-rail-text { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
+.cs-rail-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 0; font: 500 .875rem/1.25rem var(--font-text, "Roboto", sans-serif); color: var(--ink-muted, #595C5F); }
+.cs-rail-title { margin: 0; font: 700 1.25rem/1.5rem var(--font-highlight, "Montserrat", sans-serif); color: var(--typography_primary, #212121); }
+.cs-rail-summary { margin: 0; font: 400 1rem/1.5rem var(--font-text, "Roboto", sans-serif); color: var(--ink-muted, #595C5F); }
+
+/* enlace al registro del evento: lleva texto, no solo un ícono */
+.cs-rail-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin: -8px 0; color: var(--typography_primary, #212121); font: 500 1rem/1.5rem var(--font-text, "Roboto", sans-serif); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.cs-rail-link svg { width: 24px; height: 24px; flex-shrink: 0; fill: currentColor; }
+.cs-rail-link:hover { text-decoration-thickness: 2px; }
+.cs-rail-link:focus-visible { outline: 3px solid var(--focus-ring, #212121); outline-offset: 3px; border-radius: var(--radius-sm, 4px); }
+
+/* foto del evento: en blanco y negro hasta que se apunta la fila, como en Noticias */
+.cs-rail-photo { display: block; align-self: start; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 8px; background: var(--brand_tertiary, #75787B); filter: grayscale(1); transition: filter .25s ease; }
+.cs-rail-row:hover .cs-rail-photo { filter: none; }
+/* miniatura a la derecha desde 640 px; en móvil no entra al lado del texto */
+.cs-rail-body--photo .cs-rail-photo { display: none; }
+@container (min-width: 640px) {
+  .cs-rail-body--photo { grid-template-columns: minmax(0, 1fr) 120px; }
+  .cs-rail-body--photo .cs-rail-photo { display: block; grid-column: 2; grid-row: 1; }
+}
+
+/* primera fila: nodo y titular más grandes; la foto va debajo del texto y, desde 1024 px, ocupa la mitad derecha */
+.cs-rail-row--featured .cs-rail-node { width: 20px; height: 20px; margin-top: 2px; }
+.cs-rail-row--featured .cs-rail-title { font-size: 1.75rem; line-height: 2rem; }
+.cs-rail-row--featured .cs-rail-body--photo { grid-template-columns: minmax(0, 1fr); }
+.cs-rail-row--featured .cs-rail-photo { display: block; grid-column: 1; grid-row: auto; border-radius: var(--radius-btn, 10px); }
+@container (min-width: 640px) { .cs-rail-row--featured .cs-rail-title { font-size: 2rem; line-height: 2.25rem; } }
+@container (min-width: 1024px) {
+  .cs-rail-row--featured .cs-rail-body--photo { grid-template-columns: minmax(0, 1fr) 50%; }
+  .cs-rail-row--featured .cs-rail-photo { grid-column: 2; grid-row: 1; }
+}
+
+/* pie de la sección */
+.cs-past-more { display: flex; margin-top: 24px; padding-left: 36px; }
+@container (min-width: 640px) { .cs-past-more { padding-left: 136px; } }
+@media (prefers-reduced-motion: reduce) { .cs-rail-photo { transition: none; } }

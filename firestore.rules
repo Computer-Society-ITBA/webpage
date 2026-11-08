@@ -1,0 +1,60 @@
+rules_version = '2';
+
+service cloud.firestore {
+
+  match /databases/{database}/documents {
+
+    function isAdmin() {
+      return request.auth != null && request.auth.token.admin == true;
+    }
+
+    // Public read-only config. The site reads featureFlags/registration to
+    // decide whether each sign-up flow is open; the flags are set by hand
+    // in the console (or by an admin tool), never by the client. Cloud
+    // Functions re-check the same flags before accepting a sign-up, so a
+    // client that ignores this is still rejected server-side.
+    match /featureFlags/{flagId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /news/{id} {
+      allow read: if resource.data.published == true || isAdmin();
+      allow write: if isAdmin();
+    }
+
+    // Contact form: anyone can submit a valid message, nobody can read it from the client
+    match /contactMessages/{id} {
+      allow create: if request.resource.data.keys().hasOnly(
+                         ['email', 'contactType', 'subject', 'body', 'createdAt'])
+                    && request.resource.data.email is string
+                    && request.resource.data.email.size() > 0
+                    && request.resource.data.email.size() <= 254
+                    && request.resource.data.contactType in ['sponsor', 'other']
+                    && request.resource.data.subject is string
+                    && request.resource.data.subject.size() > 0
+                    && request.resource.data.subject.size() <= 120
+                    && request.resource.data.body is string
+                    && request.resource.data.body.size() > 0
+                    && request.resource.data.body.size() <= 3000
+                    && request.resource.data.createdAt == request.time;
+      allow read: if isAdmin();
+      allow update, delete: if false;
+    }
+
+    // Public read-only collections used by the site sections
+    match /past_events/{id}   { allow read: if true; allow write: if false; }
+    match /team_26_27/{id}    { allow read: if true; allow write: if false; }
+    match /sponsors/{id}      { allow read: if true; allow write: if false; }
+    match /main_sponsors/{id} { allow read: if true; allow write: if false; }
+    match /stats/{id} { allow read: if true; allow write: if false; }
+
+    // All sign-up data (emailVerifications, workshopSignups,
+    // competitionSignups, teams) is written and read exclusively by Cloud
+    // Functions through the Admin SDK, which bypasses these rules entirely.
+    // No client should ever read or write Firestore directly here.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -9,6 +9,10 @@
             "href": "/#our-events"
         },
         {
+            "text": "news.title",
+            "href": "/#news"
+        },
+        {
             "text": "footer.nav.past_events",
             "href": "/#past-events"
         },

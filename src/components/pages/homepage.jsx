@@ -5,6 +5,7 @@ const Footer = React.lazy(() => import('../sections/footer'));
 const Hero = React.lazy(() => import('../sections/hero'));
 const MisionVision = React.lazy(() => import('../sections/mision_vision'));
 const NavBar = React.lazy(() => import('../metatext/navbar'));
+const News = React.lazy(() => import('../sections/news'));
 const Nosotros = React.lazy(() => import('../sections/nosotros'));
 const PastEvents = React.lazy(() => import('../sections/past_events'));
 const Sponsors = React.lazy(() => import('../sections/sponsors'));
@@ -21,6 +22,7 @@ function Homepage () {
       <MisionVision/>
       <OurEvents/>
       <Stats/>
+      <News/>
       <PastEvents/>
       <WorkWithUs/>
       <Team/>
