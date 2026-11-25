@@ -14,7 +14,7 @@
         "type": 301
       },
       {
-        "source": "/hackitba/**",
+        "source": "/hackitba/:splat*",
         "destination": "https://hackitba.web.app/:splat",
         "type": 301
       },
@@ -24,7 +24,7 @@
         "type": 301
       },
       {
-        "source": "/hackaiol/**",
+        "source": "/hackaiol/:splat*",
         "destination": "https://csitba-hackaiol.firebaseapp.com/:splat",
         "type": 301
       }
