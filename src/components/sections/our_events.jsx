@@ -8,11 +8,18 @@ import i18n from "../../i18n/index.js";
 
 import hackitba_logo from "../../images/hackitba/hackitba_logo.png";
 import hackit_circuit_decoration from "../../images/hackitba/hackit_circuit_decoration.png";
-import quantumjam_bg from "../../images/quantum/quantumjam_bg_byw.png";
-import quantumjam_logo from "../../images/quantum/quantumjam_logo_primary.svg";
-
 import PlaceIcon from "@mui/icons-material/Place";
 import Groups3Icon from "@mui/icons-material/Groups3";
+import ScheduleIcon from "@mui/icons-material/Schedule";
+
+const tickers = [
+  ["GGAL", "+2.4%"],
+  ["AL30", "+0.8%"],
+  ["YPFD", "-1.1%"],
+  ["MELI", "+1.7%"],
+  ["PAMP", "+0.6%"],
+  ["TXAR", "-0.9%"],
+];
 
 // Components
 const Section = React.lazy(() => import("../section"));
@@ -33,56 +40,66 @@ function OurEvents() {
       </div>
 
       <div className='our-events mx-auto mt-11 grid max-w-[1536px] grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12'>
-        {/* Quantum Jam */}
-        <article className='relative flex w-full flex-col overflow-hidden rounded-[26px] bg-[#0A0A0A] shadow-[0_14px_28px_rgba(33,33,33,0.16)] transition-shadow duration-300 ease-out hover:shadow-[0_18px_34px_rgba(33,33,33,0.20)] focus-within:shadow-[0_18px_34px_rgba(33,33,33,0.20)] lg:aspect-[743/653] [container-type:inline-size]'>
-          <div
-            className='relative aspect-[5/2] shrink-0 bg-cover bg-center'
-            style={{ backgroundImage: `url(${quantumjam_bg})` }}
-          >
-            <div className='absolute inset-0 bg-gradient-to-b from-black/25 via-black/35 to-[#0A0A0A]' />
-            <span className='absolute left-[4cqw] top-[5cqw] rounded-full bg-[#B2E713] px-[2.7cqw] py-[1.25cqw] text-[clamp(0.75rem,2.15cqw,1rem)] font-bold uppercase leading-none text-black'>
-              {i18n.t("our_events.events.quantumjam.badge")}
-            </span>
-            <img
-              src={quantumjam_logo}
-              alt={i18n.t("our_events.events.quantumjam.logo_alt")}
-              className='absolute bottom-[7.5cqw] left-[6.5cqw] w-[71cqw]'
+        {/* HackaIOL */}
+        <article className='relative flex w-full flex-col overflow-hidden rounded-[26px] bg-[#160934] font-hackaiol shadow-[0_14px_28px_rgba(33,33,33,0.16)] transition-shadow duration-300 ease-out hover:shadow-[0_18px_34px_rgba(33,33,33,0.20)] focus-within:shadow-[0_18px_34px_rgba(33,33,33,0.20)] lg:aspect-[743/653] [container-type:inline-size]'>
+          <div className='relative aspect-[2/1] shrink-0 overflow-hidden sm:aspect-[5/2] bg-[radial-gradient(120%_90%_at_15%_0%,#353587_0%,#160934_70%)]'>
+            <div
+              aria-hidden='true'
+              className='absolute inset-0 opacity-[0.12] [background-image:linear-gradient(#fff_1px,transparent_1px),linear-gradient(90deg,#fff_1px,transparent_1px)] [background-size:6cqw_6cqw] [mask-image:linear-gradient(to_bottom,black,transparent)]'
             />
+            <span className='absolute left-[4cqw] top-[5cqw] rounded-full bg-[#00D37F] px-[2.7cqw] py-[1.25cqw] text-[clamp(0.75rem,2.15cqw,1rem)] font-bold uppercase leading-none text-[#072016]'>
+              {i18n.t("our_events.events.hackaiol.badge")}
+            </span>
+            <p
+              aria-label={i18n.t("our_events.events.hackaiol.logo_alt")}
+              className='absolute bottom-[11cqw] left-[6cqw] text-[clamp(2.75rem,15cqw,7rem)] sm:bottom-[10.5cqw] font-extrabold leading-[0.85] tracking-[-0.02em] text-white'
+            >
+              Hacka<span className='italic text-[#00D37F]'>IOL</span>
+            </p>
+            <div aria-hidden='true' className='absolute inset-x-0 bottom-0 flex h-[7cqw] items-center overflow-hidden bg-[#00D37F]/95 text-[clamp(0.6875rem,2.15cqw,1rem)] font-bold text-[#072016]'>
+              <div className='flex w-max animate-[hackaiol-ticker_28s_linear_infinite] motion-reduce:animate-none'>
+                {[...tickers, ...tickers, ...tickers, ...tickers].map(([symbol, change], index) => (
+                  <span key={index} className='mx-[2.5cqw] whitespace-nowrap'>
+                    {symbol} {change.startsWith("-") ? "▼" : "▲"} {change}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
-          <div className='flex min-h-0 flex-1 flex-col px-[5.7cqw] pb-[5.7cqw] pt-[9.5cqw]'>
-            <div className='flex items-stretch gap-[5.2cqw]'>
+          <div className='flex min-h-0 flex-1 flex-col px-[5.7cqw] pb-[5.7cqw] pt-[6.5cqw]'>
+            <div className='flex items-stretch gap-[4.5cqw]'>
               <div className='flex shrink-0 flex-col items-center leading-none'>
-                <span className='text-[clamp(3.25rem,9.7cqw,4.5rem)] font-bold leading-[0.82] text-white'>
-                  {i18n.t("our_events.events.quantumjam.day")}
+                <span className='text-[clamp(2.5rem,9.7cqw,4.5rem)] font-extrabold leading-[0.82] text-white'>
+                  {i18n.t("our_events.events.hackaiol.day")}
                 </span>
-                <span className='mt-[1.2cqw] text-[clamp(2.75rem,8.6cqw,4rem)] font-bold leading-[0.82] text-[#B2E713]'>
-                  {i18n.t("our_events.events.quantumjam.month")}
+                <span className='mt-[1.2cqw] text-[clamp(2.125rem,8.6cqw,4rem)] font-extrabold italic leading-[0.82] text-[#00D37F]'>
+                  {i18n.t("our_events.events.hackaiol.month")}
                 </span>
               </div>
-              <div className='w-px shrink-0 bg-white/70' />
+              <div className='w-px shrink-0 bg-white/30' />
               <div className='flex min-w-0 flex-col justify-center gap-[1.7cqw]'>
-                <p className='text-[clamp(1.25rem,4.3cqw,2rem)] font-bold leading-tight text-white'>
-                  {i18n.t("our_events.events.quantumjam.title")}
+                <p className='text-[clamp(0.9375rem,3.1cqw,1.5rem)] font-semibold leading-snug text-white'>
+                  {i18n.t("our_events.events.hackaiol.tagline")}
                 </p>
-                <div className='flex items-center gap-[1.7cqw] text-[clamp(0.875rem,2.7cqw,1.25rem)] leading-tight text-white/90'>
-                  <PlaceIcon fontSize='inherit' className='shrink-0 !text-[1.5em]' />
-                  <span>{i18n.t("our_events.events.quantumjam.location")}</span>
+                <div className='flex items-center gap-[1.7cqw] text-[clamp(0.875rem,2.7cqw,1.25rem)] leading-tight text-[#C7CEDB]'>
+                  <ScheduleIcon fontSize='inherit' className='shrink-0 !text-[1.4em]' />
+                  <span>{i18n.t("our_events.events.hackaiol.time")}</span>
                 </div>
-                <div className='flex items-center gap-[1.7cqw] text-[clamp(0.875rem,2.7cqw,1.25rem)] leading-tight text-white/90'>
+                <div className='flex items-center gap-[1.7cqw] text-[clamp(0.875rem,2.7cqw,1.25rem)] leading-tight text-[#C7CEDB]'>
                   <Groups3Icon fontSize='inherit' className='shrink-0 !text-[1.55em]' />
-                  <span>{i18n.t("our_events.events.quantumjam.participants")}</span>
+                  <span>{i18n.t("our_events.events.hackaiol.participants")}</span>
                 </div>
               </div>
             </div>
 
             <a
-              href={currentHrefs.quantumjam}
+              href={currentHrefs.hackaiol}
               target='_blank'
               rel='noreferrer'
-              className='mt-[7.8cqw] inline-flex min-h-[clamp(3.25rem,8.8cqw,4.25rem)] w-fit items-center whitespace-nowrap rounded-[10px] bg-[#B2E713] px-[clamp(1.5rem,4.2cqw,2rem)] text-[clamp(1rem,2.7cqw,1.25rem)] font-bold leading-none text-black shadow-[3px_-3px_0_0_#FF2FB0,-3px_3px_0_0_#00E5FF] transition-transform duration-200 hover:-translate-y-1 hover:shadow-[5px_-5px_0_0_#FF2FB0,-5px_5px_0_0_#00E5FF] active:translate-y-px'
+              className='mt-7 inline-flex min-h-[clamp(3rem,8.8cqw,4.25rem)] lg:mt-auto w-fit items-center gap-[1.5cqw] whitespace-nowrap rounded-[10px] bg-[#00D37F] px-[clamp(1.5rem,4.2cqw,2rem)] text-[clamp(1rem,2.7cqw,1.25rem)] font-extrabold uppercase leading-none tracking-wide text-[#072016] shadow-[0_0_0_0_rgba(0,211,127,0)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_10px_24px_rgba(0,211,127,0.35)] active:translate-y-px'
             >
-              {i18n.t("our_events.events.quantumjam.cta")} →
+              {i18n.t("our_events.events.hackaiol.cta")} <span aria-hidden='true'>▲</span>
             </a>
           </div>
         </article>

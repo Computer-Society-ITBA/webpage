@@ -104,3 +104,8 @@ p {
 	visibility: hidden;
 	height: 0;
 }
+
+@keyframes hackaiol-ticker {
+	from { transform: translateX(0); }
+	to { transform: translateX(-50%); }
+}

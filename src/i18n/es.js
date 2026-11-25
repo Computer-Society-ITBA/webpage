@@ -27,7 +27,7 @@ const i18n_es = {
     },
   },
   our_events: {
-    title: "Nuestros eventos principales",
+    title: "Próximos eventos",
     events: {
       hackit: {
         badge: "Hackathon 2026",
@@ -38,15 +38,15 @@ const i18n_es = {
         cta: "Leer más",
         logo_alt: "Logo de HackITBA",
       },
-      quantumjam: {
+      hackaiol: {
         badge: "Próximo evento",
-        day: "21",
-        month: "NOV",
-        title: "QuantumJam!",
-        location: "Coworking (dirección por mail)",
-        participants: "Sin experiencia previa",
-        cta: "Más información",
-        logo_alt: "Logo de QuantumJam",
+        day: "12",
+        month: "DIC",
+        tagline: "Una hackathon de un día para construir con IA sobre el MCP de IOL Inversiones.",
+        time: "11 a 19 h",
+        participants: "Equipos de 3",
+        cta: "Inscribite",
+        logo_alt: "HackaIOL",
       },
     },
   },

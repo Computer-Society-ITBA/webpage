@@ -31,6 +31,7 @@ export default {
         text: ["Roboto", "sans-serif"],
         highlight: ["Montserrat", "sans-serif"],
         gamejam: ["NineByFive", "sans-serif"],
+        hackaiol: ["Barlow", "sans-serif"],
         quantumjam: [
           'NineByFive',
           'Segoe UI Emoji',
