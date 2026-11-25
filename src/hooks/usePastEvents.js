@@ -7,10 +7,12 @@ import { db } from "../firebase";
 // así que hoy no se usan. Un evento sin foto acá se muestra sin miniatura.
 import hackitba2026 from "../images/past_events_images/hackitba-2026-grupo.jpg";
 import quantumJam2025 from "../images/news_images/quantum-jam-2025.jpg";
+import quantumJam2026 from "../images/news_images/quantum-jam-2026-grupo.jpg";
 
 const localPhotos = {
   HACKITBA_2026: hackitba2026,
   QUANTUM_JAM_2025: quantumJam2025,
+  QUANTUM_JAM_2026: quantumJam2026,
 };
 
 const branches = ["club", "hackit", "quantum", "gamejam"];

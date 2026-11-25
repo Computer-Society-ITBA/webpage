@@ -49,13 +49,19 @@ function renderBlock(text) {
   );
 }
 
+// "news_images/foto.jpg" (en el repo) o una URL completa
+function imageUrl(src) {
+  if (!src) return null;
+  return src.startsWith("http") ? src : newsImages[`../images/${src}`];
+}
+
 // Cabecera del color de la rama, foto y cuerpo de una nota. La usan /news/:slug y la vista previa del admin.
 function NewsArticle({ item, language }) {
   const text = item[language];
 
-  const image = item.image?.startsWith("http")
-  ? item.image
-  : newsImages[`../images/${item.image}`];
+  const image = imageUrl(item.image);
+  // Fotos extra al final de la nota: [{ src, es, en }], con el texto alternativo en cada idioma
+  const gallery = (item.gallery || []).map((photo) => ({ src: imageUrl(photo.src), alt: photo[language] || "" })).filter((photo) => photo.src);
 
   return (
     <React.Fragment>
@@ -81,6 +87,14 @@ function NewsArticle({ item, language }) {
             if (typeof block === "string") return <React.Fragment key={index}>{renderBlock(block)}</React.Fragment>;
             return block.h3 !== undefined ? <h3 key={index}>{block.h3}</h3> : <h2 key={index}>{block.h2}</h2>;
           })}
+        </div>
+      )}
+
+      {gallery.length > 0 && (
+        <div className='cs-article__gallery'>
+          {gallery.map((photo) => (
+            <img key={photo.src} src={photo.src} alt={photo.alt} loading='lazy' />
+          ))}
         </div>
       )}
     </React.Fragment>
