@@ -17,6 +17,16 @@
         "source": "/hackitba/**",
         "destination": "https://hackitba.web.app/:splat",
         "type": 301
+      },
+      {
+        "source": "/hackaiol",
+        "destination": "https://csitba-hackaiol.firebaseapp.com/",
+        "type": 301
+      },
+      {
+        "source": "/hackaiol/**",
+        "destination": "https://csitba-hackaiol.firebaseapp.com/:splat",
+        "type": 301
       }
     ],
     "rewrites": [
