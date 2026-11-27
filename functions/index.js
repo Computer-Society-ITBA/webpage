@@ -11,8 +11,8 @@ if (process.env.FUNCTIONS_EMULATOR === "true" && !(process.env.FIRESTORE_EMULATO
   throw new Error("Faltan emuladores: levantá Firestore, Storage y Functions juntos");
 }
 
-const USERNAME = defineSecret("QUANTUMJAM_ADMIN_USERNAME");
-const PASSWORD = defineSecret("QUANTUMJAM_ADMIN_PASSWORD");
+const USERNAME = defineSecret("CS_ADMIN_USERNAME");
+const PASSWORD = defineSecret("CS_ADMIN_PASSWORD");
 
 initializeApp();
 const db = getFirestore(); // base (default), donde están las noticias
